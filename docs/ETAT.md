@@ -689,3 +689,22 @@ sections claires (H2 navy), mentions légales, page service (séparateurs), mobi
   cartes /conseils (Builder, signalé §3undecies), question de l'email contact@ (DEMO, boîte
   inexistante : créer une redirection OVH ou attendre). Puis Étape 6 : retrait
   `SEO_NOINDEX=1`, Search Console, test Action.
+
+## 🚀 MISE EN LIGNE : 26/07/2026
+
+**https://www.sos-electricien-annecy.fr est EN PRODUCTION, indexable.** Séquence exécutée
+sur go explicite de Rémy : DNS OVH posés par Rémy (A apex → 76.76.21.21, CNAME www →
+cname.vercel-dns.com, anciens A/TXT supprimés), propagation vérifiée, HTTPS actif, apex en
+308 vers www, `SEO_NOINDEX` retiré de production, rebuild, contrôles en ligne : robots.txt
+ouvert (crawlers IA explicitement autorisés, GEO), meta `index, follow`, canonical
+`https://www.sos-electricien-annecy.fr`, sitemap 23 URLs, blog actif (1er article publié,
+10 en file dont le #6 garage/dépendance, cron lun/mer/ven).
+
+Reste en post-lancement :
+- [ ] Rémy : redirection email contact@sos-electricien-annecy.fr (guide transmis)
+- [ ] Rémy : Google Search Console, propriété Domaine + TXT AFNIC + soumettre le sitemap
+  (guide transmis ; le TXT vient du compte Google de Rémy)
+- [ ] Builder : fix cosmétique date brute des cartes /conseils (message transmis)
+- [ ] Vérifier la publication cron de lundi (1re exécution automatique réelle)
+- [ ] Nom commercial : toujours DEMO (« SOS Électricien Annecy » par défaut), email DEMO
+  affiché jusqu'à création de la redirection
