@@ -672,3 +672,20 @@ sections claires (H2 navy), mentions légales, page service (séparateurs), mobi
 - La date des cartes de `/conseils` s'affiche au format brut « 2026-07-25 » alors que la page
   d'article utilise `formatDateFr`. Non corrigé (hors périmètre, ça change du texte rendu),
   mais c'est un détail visible sur le hub blog.
+
+## 3duodecies. SESSION CEO DU 26/07/2026 (fin) : DOMAINE ACTIF, PRÊT POUR L'ÉTAPE 6
+
+- **Domaine sos-electricien-annecy.fr ENREGISTRÉ** (visible dans le manager OVH de Rémy,
+  zone DNS OVH par défaut avec parking 213.186.33.5).
+- **Côté Vercel, FAIT par le CEO** : www.sos-electricien-annecy.fr et l'apex ajoutés au
+  projet, apex configuré en redirection 308 vers www (canonique = www, comme le pilote).
+  En attente : les 4 modifications DNS côté OVH (instructions transmises à Rémy :
+  supprimer A apex, A www, TXT apex « 1|www… », TXT www « 3|welcome » ; ajouter
+  A apex → 76.76.21.21 et CNAME www → cname.vercel-dns.com.).
+- Retouches Builder + article #6 contrôlés et poussés (91ef897), build vert 35 pages.
+  4e USP « Rappel sous 30 min » approuvé par le CEO (promesse déjà validée par Rémy).
+- **Reste avant retrait du noindex (go final Rémy requis)** : DNS posés et propagés,
+  `seo.canonicalBase` → https://www.sos-electricien-annecy.fr (Builder), fix date brute des
+  cartes /conseils (Builder, signalé §3undecies), question de l'email contact@ (DEMO, boîte
+  inexistante : créer une redirection OVH ou attendre). Puis Étape 6 : retrait
+  `SEO_NOINDEX=1`, Search Console, test Action.
