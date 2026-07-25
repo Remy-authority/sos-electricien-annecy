@@ -827,3 +827,19 @@ MX 10 mx1.forwardemail.net + MX 20 mx2.forwardemail.net + TXT
 `v=spf1 include:spf.forwardemail.net ~all`. Caveat signalé à Rémy : sur le plan gratuit
 la règle de redirection est lisible publiquement en DNS (alternative privée si besoin :
 Cloudflare Email Routing, migration DNS plus lourde).
+
+## 3sexdecies. EMAIL OPÉRATIONNEL + RÈGLE COVER ARTICLES (26/07/2026 soir)
+
+- **Email : DNS vérifiés propagés par le CEO** (MX forwardemail 10/20, SPF avec include,
+  TXT forward-email contact@ → remy@remyzaoui.com, TXT Google intact). Posés par Rémy via
+  le mode textuel OVH (les formulaires OVH ont échoué 3 fois : leçon, passer directement
+  par « Modifier en mode textuel » ou par l'API). Test d'envoi à confirmer par Rémy.
+- **Anomalie blog identifiée par Rémy : aucun article n'a d'image de couverture.** Cause :
+  le gabarit affiche le frontmatter `cover` optionnel, mais la mission Autoblog ne
+  l'exigeait pas → les 11 articles n'ont pas le champ. Correctif Builder demandé (11 covers
+  public/conseils/<slug>.jpg + champ cover dans les 11 frontmatters).
+- **RÈGLE AUTOBLOG (vagues T2+)** : tout article DOIT inclure `cover: "/conseils/<slug>.jpg"`
+  et son image doit exister dans public/conseils/ avant publication.
+- Rappel du rythme (question Rémy) : 1 article publié (test manuel), 10 en file, cron
+  lun/mer/ven 05:00 UTC, prochaine publication auto lundi 27/07 ~7h Paris, vague T2 vers
+  octobre 2026.
