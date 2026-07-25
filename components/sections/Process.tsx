@@ -34,7 +34,7 @@ export default function Process() {
         <div className="mb-10 text-center">
           <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-accent">Notre méthode</p>
           <h2 id="process-title" className="text-2xl font-bold text-slate-900 md:text-3xl">
-            Comment ça se passe ?
+            Comment <span className="accent-serif text-primary">ça se passe</span> ?
           </h2>
         </div>
 
@@ -55,7 +55,7 @@ export default function Process() {
                       <span className="text-lg font-bold">{i + 1}</span>
                     )}
                   </span>
-                  <span className="mt-2 text-3xl font-extrabold text-slate-100 leading-none select-none">
+                  <span className="mt-1 font-display text-4xl font-semibold italic text-slate-200 leading-none select-none">
                     {String(i + 1).padStart(2, '0')}
                   </span>
                 </div>

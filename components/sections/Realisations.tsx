@@ -47,7 +47,7 @@ export default function Realisations() {
         <div className="mb-10 text-center">
           <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-accent">Notre travail</p>
           <h2 id="realisations-title" className="text-2xl font-bold text-slate-900 md:text-3xl">
-            Nos réalisations
+            Nos <span className="accent-serif text-primary">réalisations</span>
           </h2>
           <p className="mt-3 text-slate-500 text-sm max-w-xl mx-auto">
             Quelques interventions récentes sur Annecy et la Haute-Savoie.
@@ -56,7 +56,7 @@ export default function Realisations() {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {REALISATIONS.map((real) => (
-            <article key={real.id} className="card overflow-hidden p-0">
+            <article key={real.id} className="card card-interactive overflow-hidden p-0">
               {/* Visuel, photo d'intervention */}
               <div className="relative aspect-square w-full bg-slate-800">
                 <Image

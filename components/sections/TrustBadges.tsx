@@ -25,9 +25,16 @@ const ICONS: Record<string, React.ReactNode> = {
   ),
 }
 
+/**
+ * Bandeau d'engagements.
+ * Le 2e badge disait encore « Intervention non destructive », vocabulaire hérité du
+ * site pilote (recherche de fuite d'eau) et hors sujet pour un électricien. Il reprend
+ * désormais l'engagement métier déjà défini dans la config (`usps`), ce qui évite au
+ * passage de recoder ce libellé sur les prochains sites du template.
+ */
 const BADGES = [
   { icon: 'clock', label: siteConfig.availability },
-  { icon: 'shield', label: 'Intervention non destructive' },
+  { icon: 'shield', label: siteConfig.usps[1] },
   { icon: 'check', label: 'Devis gratuit & sans engagement' },
   { icon: 'star', label: 'Artisan local indépendant' },
 ]

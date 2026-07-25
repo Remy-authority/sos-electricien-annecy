@@ -9,7 +9,17 @@ export default function Footer() {
   const year = 2026
 
   return (
-    <footer className="mb-14 bg-dark text-slate-300 md:mb-0" role="contentinfo">
+    <footer
+      className="texture-noise relative isolate mb-14 overflow-hidden bg-dark text-slate-300 md:mb-0"
+      role="contentinfo"
+    >
+      {/* Halo primaire très diffus : évite l'aplat sombre uniforme sur toute la hauteur.
+          `isolate` sur le footer + `-z-10` ici = le halo passe au-dessus du fond sombre
+          mais reste sous le contenu, sans avoir à positionner chaque bloc. */}
+      <div
+        className="pointer-events-none absolute -left-32 top-0 -z-10 h-72 w-72 rounded-full bg-primary/15 blur-3xl"
+        aria-hidden="true"
+      />
       {/* Bande téléphone */}
       <div className="border-b border-white/10 bg-primary/10">
         <div className="container-site flex flex-col items-center justify-between gap-3 py-5 sm:flex-row">
@@ -38,7 +48,7 @@ export default function Footer() {
           </Link>
           <p className="mt-3 text-sm">{siteConfig.city} · {siteConfig.region}</p>
           <p className="mt-1 text-sm">
-            <a href={`mailto:${siteConfig.email}`} className="hover:text-white transition-colors">
+            <a href={`mailto:${siteConfig.email}`} className="text-slate-300 transition-colors hover:text-white">
               {siteConfig.email}
             </a>
           </p>
@@ -55,7 +65,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             {services.map((s) => (
               <li key={s.slug}>
-                <Link href={`/services/${s.slug}`} className="transition-colors hover:text-white">{s.navTitle}</Link>
+                <Link href={`/services/${s.slug}`} className="text-slate-300 transition-colors hover:text-white">{s.navTitle}</Link>
               </li>
             ))}
           </ul>
@@ -67,7 +77,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             {zones.map((z) => (
               <li key={z.slug}>
-                <Link href={`/zones/${z.slug}`} className="transition-colors hover:text-white">{z.name}</Link>
+                <Link href={`/zones/${z.slug}`} className="text-slate-300 transition-colors hover:text-white">{z.name}</Link>
               </li>
             ))}
             <li>
@@ -80,13 +90,13 @@ export default function Footer() {
         <nav aria-label="Informations légales">
           <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-slate-300">Informations</p>
           <ul className="space-y-2 text-sm">
-            <li><Link href="/contact" className="transition-colors hover:text-white">Contact & devis</Link></li>
+            <li><Link href="/contact" className="text-slate-300 transition-colors hover:text-white">Contact & devis</Link></li>
             {siteConfig.features.blog && (
-              <li><Link href="/conseils" className="transition-colors hover:text-white">Conseils</Link></li>
+              <li><Link href="/conseils" className="text-slate-300 transition-colors hover:text-white">Conseils</Link></li>
             )}
-            <li><Link href="/mentions-legales" className="transition-colors hover:text-white">Mentions légales</Link></li>
-            <li><Link href="/politique-confidentialite" className="transition-colors hover:text-white">Confidentialité</Link></li>
-            <li><Link href="/cgu" className="transition-colors hover:text-white">CGU</Link></li>
+            <li><Link href="/mentions-legales" className="text-slate-300 transition-colors hover:text-white">Mentions légales</Link></li>
+            <li><Link href="/politique-confidentialite" className="text-slate-300 transition-colors hover:text-white">Confidentialité</Link></li>
+            <li><Link href="/cgu" className="text-slate-300 transition-colors hover:text-white">CGU</Link></li>
           </ul>
         </nav>
       </div>

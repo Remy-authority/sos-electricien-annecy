@@ -18,7 +18,9 @@ export default function ConseilsListing() {
 
   return (
     <section className="container-site section">
-      <h1 className="text-3xl md:text-4xl text-center sm:text-left">Conseils</h1>
+      <h1 className="text-3xl md:text-4xl text-center sm:text-left">
+        <span className="accent-serif text-primary">Conseils</span>
+      </h1>
       <p className="mt-3 mx-auto max-w-2xl text-center text-slate-600 sm:mx-0 sm:text-left">
         Nos guides pour comprendre, diagnostiquer et sécuriser votre installation électrique.
       </p>
@@ -29,7 +31,7 @@ export default function ConseilsListing() {
         <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {articles.map((a) => (
             <li key={a.slug}>
-              <Link href={`/conseils/${a.slug}`} className="card block h-full overflow-hidden p-0 transition hover:-translate-y-0.5">
+              <Link href={`/conseils/${a.slug}`} className="card card-interactive block h-full overflow-hidden p-0">
                 {a.cover && (
                   <div className="relative aspect-[16/9] w-full">
                     <Image src={a.cover} alt={a.title} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover" />

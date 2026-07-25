@@ -1,5 +1,6 @@
 import { faqJsonLd, jsonLdScript } from '@/lib/seo'
 import type { FaqItem } from '@/lib/content'
+import AccentWord from './AccentWord'
 
 /**
  * Faq, section accordéon accessible (<details>) + JSON-LD FAQPage.
@@ -13,7 +14,9 @@ export default function Faq({ items, title = 'Questions fréquentes' }: { items:
       <div className="container-site max-w-3xl">
         <div className="text-center sm:text-left">
           <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-accent">FAQ</p>
-          <h2 id="faq-title" className="text-2xl font-bold text-slate-900 md:text-3xl">{title}</h2>
+          <h2 id="faq-title" className="text-2xl font-bold text-slate-900 md:text-3xl">
+            <AccentWord text={title} word="fréquentes" />
+          </h2>
         </div>
         <script
           type="application/ld+json"
@@ -23,7 +26,7 @@ export default function Faq({ items, title = 'Questions fréquentes' }: { items:
           {items.map((item, i) => (
             <details
               key={i}
-              className="group rounded-xl border border-slate-200 bg-white shadow-sm open:shadow-md"
+              className="group rounded-xl border border-slate-200/80 bg-white shadow-card transition-shadow open:shadow-card-hover"
             >
               <summary className="flex cursor-pointer list-none items-center justify-between px-5 py-4 font-semibold text-slate-900 marker:hidden [&::-webkit-details-marker]:hidden">
                 {item.q}

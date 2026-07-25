@@ -8,6 +8,7 @@ import { siteConfig } from '@/config/site.config'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import Faq from '@/components/ui/Faq'
 import CtaBanner from '@/components/ui/CtaBanner'
+import AccentWord from '@/components/ui/AccentWord'
 
 export const dynamicParams = false
 
@@ -64,7 +65,9 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
       />
 
       <article className="container-site section">
-        <h1 className="text-3xl md:text-4xl">{zone.h1}</h1>
+        <h1 className="text-3xl md:text-4xl">
+          <AccentWord text={zone.h1} word={zone.name} />
+        </h1>
         <p className="mt-2 text-sm text-slate-500">{zone.name} ({zone.postalCode}) · {siteConfig.region}</p>
 
         {/* Image d'en-tête */}
@@ -124,7 +127,7 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
       </article>
 
       <Faq items={zone.faq} />
-      <CtaBanner title={`Panne électrique à ${zone.name} ?`} />
+      <CtaBanner title={`Panne électrique à ${zone.name} ?`} accentWord={zone.name} />
     </>
   )
 }

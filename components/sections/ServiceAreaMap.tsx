@@ -11,7 +11,10 @@ const REASSURANCE_CARDS = [
       </svg>
     ),
     title: 'Intervention rapide',
-    desc: `Déplacement sous ${siteConfig.responseTime.toLowerCase()} et réponse garantie en 30 min, week-ends et jours fériés inclus.`,
+    /* Phrase reconstruite : la version héritée du pilote injectait `responseTime` en
+       minuscules derrière « Déplacement sous », ce qui donnait « Déplacement sous
+       intervention rapide sur annecy » (phrase cassée + nom propre décapitalisé). */
+    desc: `${siteConfig.responseTime}. Réponse garantie en 30 min, week-ends et jours fériés inclus.`,
   },
   {
     icon: (
@@ -37,7 +40,8 @@ export default function ServiceAreaMap() {
             Zone d'intervention
           </p>
           <h2 id="area-title" className="text-2xl font-bold text-slate-900 md:text-3xl">
-            Basés à {siteConfig.city}, nous couvrons un rayon de {siteConfig.serviceArea.radiusKm} km
+            Basés à <span className="accent-serif text-primary">{siteConfig.city}</span>, nous
+            couvrons un rayon de {siteConfig.serviceArea.radiusKm} km
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-slate-600">
             Artisan local en {siteConfig.region}, nous intervenons rapidement dans toute
@@ -49,7 +53,15 @@ export default function ServiceAreaMap() {
         <div className="grid gap-6 lg:grid-cols-[3fr_2fr] lg:items-start">
 
           {/* Carte sombre premium, villes et quartiers */}
-          <div className="rounded-card bg-dark p-7 md:p-8 border border-white/10">
+          <div className="texture-noise relative overflow-hidden rounded-card border border-white/10 bg-dark p-7 shadow-card-hover md:p-8">
+            {/* Motif grille + halo : profondeur de la carte sombre */}
+            <div className="pointer-events-none absolute inset-0 pattern-grid" aria-hidden="true" />
+            <div
+              className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-primary/25 blur-3xl"
+              aria-hidden="true"
+            />
+            {/* Contenu au-dessus des calques décoratifs (motif + halo) */}
+            <div className="relative">
             {/* Label département */}
             <div className="mb-3 flex items-center gap-2">
               <svg
@@ -118,6 +130,7 @@ export default function ServiceAreaMap() {
                 <path d="m9 18 6-6-6-6" />
               </svg>
             </Link>
+            </div>
           </div>
 
           {/* Colonne droite : cartes réassurance + CTA orange */}

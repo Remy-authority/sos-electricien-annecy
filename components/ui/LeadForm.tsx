@@ -150,16 +150,24 @@ export default function LeadForm() {
 
   return (
     <div
-      className="rounded-card p-6 md:p-8"
+      className="texture-noise relative overflow-hidden rounded-card p-6 shadow-card-hover md:p-8"
       style={{ background: 'rgb(var(--color-dark-rgb))' }}
       role="region"
       aria-label="Formulaire de devis"
     >
+      {/* Calques décoratifs : motif grille + halo accent (profondeur) */}
+      <div className="pointer-events-none absolute inset-0 pattern-grid" aria-hidden="true" />
+      <div
+        className="pointer-events-none absolute -bottom-20 -left-20 h-56 w-56 rounded-full bg-accent/15 blur-3xl"
+        aria-hidden="true"
+      />
+
       {/* Honeypot invisible */}
       <div className="hidden" aria-hidden="true">
         <input type="text" name="company" tabIndex={-1} autoComplete="off" readOnly />
       </div>
 
+      <div className="relative">
       <ProgressBar step={step} />
 
       {/* ── Étape 1, Sélection vignettes ── */}
@@ -374,7 +382,7 @@ export default function LeadForm() {
 
           <p className="mt-3 text-xs text-white/40 leading-relaxed">
             En envoyant ce formulaire, vous acceptez d'être recontacté au sujet de votre demande. Vos données ne sont pas revendues (voir notre{' '}
-            <a href="/politique-confidentialite" className="underline hover:text-white/70 transition">
+            <a href="/politique-confidentialite" className="text-white/70 underline transition hover:text-white">
               politique de confidentialité
             </a>
             ).
@@ -410,6 +418,7 @@ export default function LeadForm() {
           </div>
         </div>
       )}
+      </div>
     </div>
   )
 }

@@ -35,13 +35,13 @@ export default function WhyUs() {
         <div className="mb-10 text-center md:mb-12 sm:text-left">
           <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-accent">Pourquoi nous choisir</p>
           <h2 id="why-title" className="text-2xl font-bold text-slate-900 md:text-3xl">
-            Le diagnostic qui va droit à la cause
+            Le diagnostic qui va droit à la <span className="accent-serif text-primary">cause</span>
           </h2>
         </div>
 
         <dl className="grid gap-6 sm:grid-cols-2">
           {reasons.map((r) => (
-            <div key={r.title} className="flex flex-col items-center gap-4 rounded-2xl border border-slate-100 bg-white p-6 text-center shadow-sm sm:flex-row sm:items-start sm:gap-5 sm:text-left">
+            <div key={r.title} className="card flex flex-col items-center gap-4 text-center sm:flex-row sm:items-start sm:gap-5 sm:text-left">
               <dt className="shrink-0">
                 <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
                   {ICONS[r.icon] ?? (

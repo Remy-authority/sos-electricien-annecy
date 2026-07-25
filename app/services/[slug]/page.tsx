@@ -10,6 +10,7 @@ import Faq from '@/components/ui/Faq'
 import CtaBanner from '@/components/ui/CtaBanner'
 import ServiceQuickFacts from '@/components/ui/ServiceQuickFacts'
 import ServiceBlock from '@/components/ui/ServiceBlock'
+import AccentWord from '@/components/ui/AccentWord'
 
 // 100% SSG : une page statique par service.
 export const dynamicParams = false
@@ -51,7 +52,9 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       />
 
       <article className="container-site section">
-        <h1 className="text-3xl md:text-4xl">{service.h1}</h1>
+        <h1 className="text-3xl md:text-4xl">
+          <AccentWord text={service.h1} word={siteConfig.city} />
+        </h1>
 
         {/* Image hero du service */}
         {service.image && (

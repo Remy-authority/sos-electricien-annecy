@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { siteConfig } from '@/config/site.config'
+import AccentWord from '@/components/ui/AccentWord'
 
 export default function About() {
   return (
@@ -18,9 +19,9 @@ export default function About() {
             />
           </div>
           {/* Badge flottant, DEMO – à remplacer par les infos du loueur */}
-          <div className="absolute -bottom-4 -right-4 hidden rounded-xl bg-primary px-5 py-3 text-center text-white shadow-lg sm:block">
+          <div className="absolute -bottom-4 -right-4 hidden rounded-xl bg-primary px-5 py-3 text-center text-white shadow-card-hover sm:block">
             {/* DEMO – à remplacer par les infos du loueur */}
-            <p className="text-2xl font-extrabold leading-none">+400</p>
+            <p className="font-display text-3xl font-semibold leading-none">+400</p>
             <p className="mt-0.5 text-xs font-medium text-white/90">pannes résolues</p>
           </div>
         </div>
@@ -32,7 +33,7 @@ export default function About() {
             {siteConfig.persona.name}
           </p>
           <h2 id="about-title" className="text-2xl font-bold text-slate-900 md:text-3xl">
-            {siteConfig.about.title}
+            <AccentWord text={siteConfig.about.title} word={siteConfig.city} />
           </h2>
           <p className="mt-4 leading-relaxed text-slate-600">{siteConfig.about.body}</p>
 

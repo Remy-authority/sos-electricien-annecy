@@ -37,14 +37,16 @@ export default function HomePage() {
         <div className="container-site">
           <div className="mb-8 text-center sm:text-left">
             <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-accent">Ce que nous faisons</p>
-            <h2 id="services-title" className="text-2xl font-bold text-slate-900 md:text-3xl">Nos prestations</h2>
+            <h2 id="services-title" className="text-2xl font-bold text-slate-900 md:text-3xl">
+              Nos <span className="accent-serif text-primary">prestations</span>
+            </h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => (
               <Link
                 key={s.slug}
                 href={`/services/${s.slug}`}
-                className="group card block text-center transition hover:-translate-y-1 hover:border-primary/30 hover:shadow-md sm:text-left"
+                className="group card card-interactive block text-center sm:text-left"
               >
                 <div className="mb-3 mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary sm:mx-0">
                   <ServiceIcon icon={s.icon} className="h-5 w-5" />
@@ -82,7 +84,7 @@ export default function HomePage() {
             <div className="mb-6 text-center">
               <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-accent">Devis gratuit</p>
               <h2 id="devis-title" className="text-2xl font-bold text-slate-900 md:text-3xl">
-                Décrivez votre problème en 3 étapes
+                Décrivez votre problème en <span className="accent-serif text-primary">3 étapes</span>
               </h2>
               <p className="mt-2 text-sm text-slate-600">
                 Nous vous rappelons sous 30 minutes, sans engagement.

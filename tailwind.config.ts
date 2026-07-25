@@ -32,9 +32,19 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-sora)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        // Police signature (Fraunces), réservée aux accents de titre + grands chiffres.
+        display: ['var(--font-fraunces)', 'ui-serif', 'Georgia', 'serif'],
       },
       borderRadius: {
         card: '20px',
+      },
+      /* Ombres à 2 couches (contact + diffusion) : donnent de la profondeur réelle
+         aux cartes, là où `shadow-sm` restait plat. Teintées avec le bleu du fond
+         sombre plutôt qu'en noir pur, pour rester dans la palette. */
+      boxShadow: {
+        card: '0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -8px rgb(15 23 42 / 0.10)',
+        'card-hover': '0 4px 12px rgb(15 23 42 / 0.08), 0 24px 48px -12px rgb(15 23 42 / 0.20)',
+        glow: '0 0 40px -10px rgb(var(--color-accent-rgb) / 0.45)',
       },
       keyframes: {
         'hero-shine': {

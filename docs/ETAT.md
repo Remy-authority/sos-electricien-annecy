@@ -1,8 +1,10 @@
 # ETAT.md — Journal de bord SOS Électricien Annecy
 
 > Mémoire du projet. Chaque session lit ce fichier en arrivant et le met à jour avant de finir.
-> Dernière mise à jour : 2026-07-25 (session Builder : contenu, config, design et images réécrits
-> pour électricien/Annecy, réalignés sur le plan SEO produit en parallèle).
+> Dernière mise à jour : 2026-07-25 (session Builder : itération design, photo hero d'accueil +
+> signature typographique et textures, détail en §3quater). Session Autoblog juste avant :
+> `relatedServices` des 10 drafts recalé sur les 6 slugs définitifs, cannibalisation vs
+> `docs/CALENDRIER-EDITORIAL.md` consignée en §3ter, décision Rémy nécessaire avant publication.
 
 ---
 
@@ -67,21 +69,21 @@ Vercel en attendant).
   Hero/Realisations/WhyUs/ServiceAreaMap/LeadForm réécrits pour électricien)
 - [x] Agent SEO : carte mots-clés + `docs/SEO-GEO-PLAN.md` + `docs/CALENDRIER-EDITORIAL.md`
   (149 titres/12 mois)
-- [ ] Autoblog : les 10 drafts déjà présents dans `content/drafts/` (001-010) restent à recaler
-  sur les 6 slugs de service définitifs avant publication (`relatedServices` vide dans les
-  drafts actuels, donc rien n'est cassé, juste à compléter puis publier)
+- [x] Autoblog : `relatedServices` des 10 drafts `content/drafts/001-010` recalé sur les 6 slugs
+  de service définitifs (2 slugs pertinents par article)
+- [ ] Rémy/CEO : trancher le sort des 8 drafts qui recoupent des titres déjà planifiés dans
+  `docs/CALENDRIER-EDITORIAL.md` (détail §3ter) avant toute publication
 - [x] `robots.ts` reste en noindex automatique en preview ; en ligne le verrou `SEO_NOINDEX=1`
   est déjà posé sur Vercel
 - [x] CEO : contenu commité et poussé (commit a6891da), redéployé sur
   https://sos-electricien-annecy.vercel.app, vérifications en ligne OK (noindex conservé,
   pages 200, zéro trace Angers), contrôle visuel CEO fait le 25/07/2026 (verdict et réserves
   en §3bis)
-- [ ] Builder sur Opus : itération design demandée par le CEO (voir §3bis) : photo hero accueil
-  + signature typographique/texture pour se rapprocher du niveau Sniper
+- [x] Builder sur Opus : itération design demandée par le CEO (voir §3bis et §3quater) : photo hero
+  accueil + signature typographique/texture, faite le 25/07/2026
 - [ ] Rémy : trancher les valeurs DEMO affichées (stats « +400 pannes résolues », « 8 ans
   d'expérience », promesses « rappel 30 min » et « 100 % panne réparée ou nous revenons »)
   avant toute mise en ligne
-- [ ] Autoblog : recaler `relatedServices` des drafts 001-010 sur les 6 slugs définitifs
 - [ ] Validation Rémy → mise en ligne (Étape 6 du playbook)
 
 ## 3. RÉALIGNEMENT BUILDER ↔ PLAN SEO (25/07/2026, résolu dans la même session Builder)
@@ -132,6 +134,96 @@ Réserves avant validation finale :
 4. `/conseils` vide (normal pré-lancement) ; mentions légales avec assureur « à compléter »
    (infos décennale à fournir par Rémy).
 
+## 3ter. CANNIBALISATION AUTOBLOG : DRAFTS 001-010 vs `docs/CALENDRIER-EDITORIAL.md` (25/07/2026)
+
+Les 10 drafts `content/drafts/001-010` ont été rédigés **avant** que le calendrier éditorial
+n'existe (à partir du brief générique de la mission Autoblog, pas du calendrier). Une fois le
+calendrier disponible (149 titres), comparaison systématique titre par titre : **8 des 10 drafts
+recoupent fortement un titre déjà planifié**, dont 5 des 6 « articles de lancement » (§2 du
+calendrier, un par service).
+
+| Draft | Titre du draft | Titre calendrier en conflit | Sévérité |
+|---|---|---|---|
+| 001 | Panne de courant : ce qu'il faut vérifier avant d'appeler un électricien | **#1** Coupure de courant chez soi : que vérifier avant d'appeler un électricien | Quasi identique (même angle, même requête cible) |
+| 002 | Disjoncteur qui saute sans arrêt : les causes les plus fréquentes | **#2** Disjoncteur qui saute sans arrêt : les causes les plus fréquentes | **Titre strictement identique** |
+| 003 | Prise électrique qui chauffe : signes de danger et bons réflexes | **#7** Prise électrique qui chauffe : un signe à ne jamais ignorer | Même sujet, même requête cible |
+| 004 | Norme électrique NF C 15-100 : ce qu'elle impose dans un logement | **#13** Norme NF C 15-100 expliquée simplement : ce qu'elle impose vraiment | Même sujet, même requête cible |
+| 005 | Odeur de brûlé près du tableau électrique : que faire immédiatement | **#8** Odeur de brûlé près d'une prise ou d'un interrupteur : la conduite à tenir | Chevauchement partiel (même déclencheur « odeur de brûlé », objet différent tableau/prise) |
+| 007 | Mise aux normes électriques avant une vente ou une location | **#5** Diagnostic électrique avant une vente + **#46** (vente) + recoupe aussi **#14** (bailleur/location) | Chevauchement fort, mon draft fusionne 3 angles que le calendrier différencie volontairement |
+| 008 | Tableau électrique vétuste : les signes qu'il est temps de le remplacer | **#3** Tableau électrique ancien : les signes qu'il faut le remettre aux normes | Même sujet, même requête cible |
+| 009 | Rénover l'électricité d'une maison ancienne à Annecy : par où commencer | **#4** Rénover l'électricité d'une maison ancienne : par où commencer | **Titre quasi identique** (le mien ajoute juste « à Annecy ») |
+| 006 | Disjoncteur, fusible, interrupteur différentiel : quelles différences ? | Aucun titre équivalent. Adjacence légère avec **#37** (lexique électricité) et **#16** (différentiel 30 mA obligatoire), mais angle propre (comparatif des 3 dispositifs) | Pas de doublon, à conserver tel quel |
+| 010 | Court-circuit à la maison : comprendre et sécuriser | Aucun titre « court-circuit » dans les 149 du calendrier | Pas de doublon, sujet propre, à conserver tel quel |
+
+**Constat** : sur les 6 « articles de lancement » du calendrier (un par service, pensés pour que
+chaque page service ait un maillage entrant dès le lancement), 5 sont déjà quasi rédigés dans mes
+drafts (001↔#1, 002↔#2, 008↔#3, 009↔#4, 007↔#5 partiellement). Seul **#6 (installation électrique
+garage/dépendance, `installation-electrique-neuve`)** n'a aucun équivalent parmi mes 10 drafts,
+ce service reste donc sans article de lancement pour l'instant.
+
+**Recommandation (à trancher par Rémy/CEO, je ne publie ni ne renomme rien)** :
+- soit **traiter mes 5 drafts (001, 002, 007, 008, 009) comme remplissant directement les
+  emplacements #1, #2, #5, #3, #4 du calendrier** (qualité déjà conforme aux exigences §0 du
+  calendrier : réponse courte citable, FAQ en frontmatter, zéro chiffre inventé, zéro tiret
+  cadratin) pour éviter de les faire réécrire une seconde fois par l'Autoblog,
+  ce qui économise du travail sans dupliquer,
+- soit les **écarter et laisser l'Autoblog suivre le calendrier à la lettre** dès la prochaine
+  session, auquel cas 003, 004, 005 sont aussi à écarter (chevauchement avec #7, #13, #8).
+- Dans les deux cas, **rédiger en priorité un article sur le service #6** (garage/dépendance,
+  `installation-electrique-neuve`), seul service sans aucun contenu de lancement à ce stade.
+- 006 et 010 n'ont pas d'équivalent dans le calendrier : à intégrer soit comme deux titres
+  supplémentaires (hors 149), soit à faire valider par l'agent SEO pour insertion formelle dans
+  `docs/CALENDRIER-EDITORIAL.md` (hors périmètre Autoblog, ce fichier n'appartient qu'à l'agent SEO).
+
+## 3quater. ITÉRATION DESIGN BUILDER (25/07/2026, réponse aux réserves 1 et 2 du §3bis)
+
+Objectif CEO : photo dans le hero d'accueil + sortir du rendu « template SaaS soigné » pour se
+rapprocher de la référence sniperpestcontrol3dservices.fr. Analyse préalable du code source local
+de la référence : sa personnalité tient à quatre leviers (police serif Fraunces en display, texture
+de grain SVG, motif grille masqué en fondu, ombres à 2 couches). Ces quatre leviers ont été
+transposés à la charte indigo/orange, sans copier son vert/or.
+
+**1. Hero d'accueil avec photo.** Nouvelle image dédiée `public/hero.jpg` générée (2 candidats
+comparés, retenu : électricien testant un tableau, lac d'Annecy et Alpes visibles par la baie
+vitrée, ambiance heure bleue). Le second candidat, très enneigé, a été écarté pour ne pas enfermer
+le site dans une saison. Empilement retenu : photo → teinte globale légère (25 %) → scrim local
+dégradé sous la seule colonne de texte → fondu vertical → motif grille → halo accent animé →
+grain. Voile volontairement léger après un premier essai trop dense qui rendait la photo
+invisible. Carte Garantie passée en verre dépoli (`backdrop-blur-xl`) posée sur la photo.
+
+**2. Signature visuelle.**
+- **Typographie** : ajout de Fraunces (serif) en `font-display`, utilisée UNIQUEMENT en italique
+  sur un mot-clé des titres et sur les grands chiffres (stats, numéros d'étapes, « 100 % »).
+  Composant `components/ui/AccentWord.tsx` créé : accentue un mot dans un titre venant de la
+  config ou du contenu (h1 des pages service et commune, titre About, bandeau CTA), sans jamais
+  modifier le texte rendu. Générique et réutilisable tel quel sur les prochains sites (N+1).
+- **Textures** : utilitaires `.texture-noise` (grain SVG inline, aucune requête réseau) et
+  `.pattern-grid` (motif grille masqué en fondu radial) dans `globals.css`, appliqués aux sections
+  sombres (hero, bandeau stats, carte zone, bandeau CTA, formulaire, footer).
+- **Profondeur** : tokens d'ombre `card` / `card-hover` / `glow` (2 couches, teintées bleu et non
+  noir) dans `tailwind.config.ts` ; `.card` enrichi + variante `.card-interactive`. Le bandeau
+  stats passe d'un aplat primaire à un dégradé texturé.
+
+**3. Défauts corrigés au passage** (repérés pendant le contrôle visuel, non demandés) :
+- `TrustBadges` affichait encore « Intervention non destructive », vocabulaire de recherche de
+  fuite d'eau hérité du pilote. Le badge lit maintenant `siteConfig.usps[1]` (« Sans coupure
+  inutile »), ce qui évite en plus de recoder ce libellé sur les prochains sites.
+- `ServiceAreaMap` affichait « Déplacement sous intervention rapide sur **annecy** et réponse
+  garantie en 30 min » : phrase cassée et nom propre décapitalisé, parce que le template injectait
+  `responseTime.toLowerCase()` derrière « Déplacement sous » (cohérent quand cette valeur était une
+  durée sur le pilote, plus du tout ici). Phrase reconstruite, promesses inchangées.
+- **Accessibilité** : les liens du footer et le lien RGPD du formulaire n'avaient pas de couleur
+  explicite et héritaient donc de la règle globale `a { text-primary }`, soit de l'indigo sur fond
+  sombre (contraste très insuffisant). Passés en `text-slate-300` / `text-white/70`, l'effet
+  `hover:text-white` déjà présent dans le code confirmait que c'était bien un oubli.
+
+**Contrôles** : build vert (34 pages), zéro erreur console, aucun débordement horizontal en 390 px,
+zéro tiret cadratin, contenu et slugs inchangés (`git status` ne montre aucune modification de
+`content/services`, `content/zones` ni `config/`), valeurs DEMO intactes.
+
+**Non traité** (hors périmètre de cette itération) : les réserves 3 et 4 du §3bis (arbitrage Rémy
+sur les valeurs DEMO affichées, assureur à compléter dans les mentions légales) restent ouvertes.
+
 ## 4. DÉCISIONS RÉMY
 
 - 25/07/2026 : top 5 vague 2 validé ; Annecy (électricien) lancé en n°1, Metz (débouchage) suivra en n°2.
@@ -181,3 +273,22 @@ Réserves avant validation finale :
   consignées en §3bis (photo hero accueil, itération direction artistique vers le niveau
   Sniper, valeurs DEMO à faire trancher par Rémy). Messages préparés pour le Builder
   (itération design) et l'Autoblog (recalage relatedServices).
+- **25/07/2026 (Autoblog)** : `relatedServices` des 10 drafts `content/drafts/001-010` complété
+  (2 slugs pertinents par article, sur les 6 slugs définitifs). Comparaison systématique des 10
+  titres avec les 149 titres de `docs/CALENDRIER-EDITORIAL.md` (désormais disponible) : 8 drafts
+  sur 10 recoupent fortement un titre déjà planifié, dont 5 des 6 articles de lancement du
+  calendrier (détail et recommandation en §3ter). Seuls 006 et 010 sont des sujets propres sans
+  équivalent dans le calendrier. Aucune publication effectuée, aucun draft renommé ni fusionné :
+  décision laissée à Rémy/CEO. Périmètre respecté (`content/drafts/` + ce journal uniquement).
+- **25/07/2026 (Builder sur Opus, itération design)** : réponse aux réserves 1 et 2 du contrôle
+  visuel CEO. Photo dédiée générée pour le hero d'accueil (2 candidats comparés) et signature
+  visuelle ajoutée sur tout le site (serif Fraunces en accent italique, grain, motif grille,
+  ombres à 2 couches), après analyse du code source local de la référence Sniper. Composant
+  réutilisable `components/ui/AccentWord.tsx` créé pour accentuer un mot dans les titres pilotés
+  par la config/le contenu. Trois défauts corrigés au passage : badge « Intervention non
+  destructive » (vocabulaire fuite d'eau hérité du pilote), phrase cassée « Déplacement sous
+  intervention rapide sur annecy » dans la carte zone, et contraste insuffisant des liens du
+  footer et du lien RGPD du formulaire (héritage de la règle globale `a { text-primary }` sur
+  fond sombre). Contenu, slugs et valeurs DEMO strictement inchangés. Build vert (34 pages),
+  zéro erreur console, aucun débordement mobile. Détail complet en §3quater. Rien commité :
+  le CEO commite après contrôle.
