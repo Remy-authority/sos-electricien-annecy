@@ -237,6 +237,23 @@ sur les valeurs DEMO affichées, assureur à compléter dans les mentions légal
   accroches serif italique à la Sniper, immersion sombre étendue, badge de marque éclair,
   + finitions RGPD/grain/écusson hero + numéro réel).
 
+## 4bis. DÉCISIONS RÉMY DU 26/07/2026 (session CEO)
+
+- **Site VALIDÉ visuellement par Rémy** (« très propre, j'aime bien, validé »).
+- **Téléphone : UNE SEULE ligne partagée pour tout le portefeuille tant que les sites ne sont
+  pas loués** (07 56 85 31 25, déjà sur Angers). Le numéro dédié viendra avec le locataire.
+- **Chiffres DEMO validés** : +400 pannes, 8 ans, rayon, rappel 30 min, garantie 100 %.
+- **Drafts blog : feu vert conditionné à une validation SEO/GEO** (à faire par l'agent SEO :
+  mapping sur le calendrier, intégration 006/010, contrôle cannibalisation).
+- **Pas d'assurance décennale** → retirer l'USP « Assurance décennale » du hero
+  (config/site.config.ts:57) et la ligne « couverture » de content/legal.json (Builder).
+- **Rayon d'intervention : extension souhaitée au-delà de 20 km** ; recommandation CEO 30 km
+  (couvre Rumilly, Faverges, Thônes, tour du lac complet, sans promettre des délais
+  intenables vers les stations à 35 km).
+- **Micro-finitions design validées** (couleur H2 fonds clairs, différenciation squelette),
+  exécution Builder.
+- **Domaine : achat OVH par Rémy**, instructions transmises. DNS à configurer à l'Étape 6.
+
 ## 5. HISTORIQUE DES SESSIONS
 
 - **25/07/2026 (CEO-portefeuille)** : création du dossier par duplication du pilote, nettoyage
