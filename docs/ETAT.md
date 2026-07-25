@@ -819,6 +819,11 @@ photos zones inspectées une à une par le CEO (distinctes, cohérence géo, zé
 logo vérifié (token ambre, éclair recentré, tracé unifié BOLT_PATH), fix icon-192/512
 approuvé (vrais 404 en prod). Commit f3ed483 déployé. Vérifié en ligne : les 11 pages zones
 servent chacune leur photo dédiée, 0 filigrane, icônes 200.
-Email : OVH abandonné (2 échecs d'instructions, offre payante) → solution retenue :
-ImprovMX gratuit (alias contact@ → boîte perso), instructions transmises à Rémy
-(2 MX + modification du SPF existant dans la zone OVH).
+Email : OVH abandonné (offre payante), ImprovMX abandonné aussi (limite 1 domaine
+gratuite déjà consommée par voltapro.io) → solution retenue : **forwardemail.net**
+(gratuit, domaines illimités, config 100 % DNS, sans compte). Instructions transmises :
+MX 10 mx1.forwardemail.net + MX 20 mx2.forwardemail.net + TXT
+`forward-email=contact:remy@remyzaoui.com` + SPF modifié en
+`v=spf1 include:spf.forwardemail.net ~all`. Caveat signalé à Rémy : sur le plan gratuit
+la règle de redirection est lisible publiquement en DNS (alternative privée si besoin :
+Cloudflare Email Routing, migration DNS plus lourde).
