@@ -4,25 +4,23 @@
 
 ## Session du 26/07/2026 (CEO)
 
-- [x] Vérifier les livrables Builder (itération design) : périmètre respecté (contenu/config
-  intacts), 0 tiret cadratin ajouté, build vert 34 pages
-- [x] Vérifier les livrables Autoblog : relatedServices valides sur les 10 drafts
-- [x] Commit + push + déploiement (commit 499ef7a), noindex conservé, hero.jpg servi
-- [ ] Contrôle visuel CEO v2 (QA navigateur en cours sur le design itéré)
-- [ ] Mettre à jour docs/ETAT.md en fin de session
+- [x] Contrôle + commit + déploiement des 3 finitions Builder (contraste RGPD/optionnel,
+  grain, écusson hero gommé), commit 18166fa, vérifié en ligne, noindex conservé
+- [ ] Passe d'identité visuelle Builder (palette propre métier, accroches serif italique,
+  immersion sombre, badge éclair) + numéro réel en config : message transmis à Rémy,
+  PAS ENCORE EXÉCUTÉE par le Builder
+- [ ] Contrôle visuel CEO complet après la passe d'identité
 
 ## Décisions attendues de Rémy
 
 - [ ] Valeurs DEMO affichées : stats (+400 pannes, 8 ans, 20 km) et promesses (30 min, 100 %)
 - [ ] Cannibalisation drafts/calendrier (ETAT.md §3ter) : recommandation CEO = garder les
-  drafts et les mapper sur les emplacements du calendrier, faire écrire l'article #6
-  (installation neuve), faire valider 006/010 par l'agent SEO
-- [ ] Achat domaine + téléphone dédié + email + nom commercial + assureur décennale
+  drafts mappés sur le calendrier, écrire l'article #6, faire valider 006/010 par le SEO
+- [ ] Email + nom commercial (téléphone déjà fourni : +33 7 56 85 31 25, à intégrer par le
+  Builder lors de la passe d'identité)
+- [ ] Achat domaine + références assurance décennale
 
 ## Points ouverts
 
-- [ ] Écusson type marque sur la veste de la photo hero (règle : aucun logo/marque) : à gommer
-  par le Builder (retouche image, pas de régénération complète)
-- [ ] Autoblog : écrire l'article de lancement #6 (installation-electrique-neuve) une fois
-  l'arbitrage cannibalisation rendu
-- [ ] Agent SEO : intégrer/valider 006 et 010 dans le calendrier éditorial
+- [ ] Autoblog : article de lancement #6 (installation-electrique-neuve) après arbitrage
+- [ ] Agent SEO : intégrer/valider drafts 006 et 010 dans le calendrier éditorial
