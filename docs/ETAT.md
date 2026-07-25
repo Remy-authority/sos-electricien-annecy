@@ -72,8 +72,17 @@ Vercel en attendant).
   drafts actuels, donc rien n'est cassé, juste à compléter puis publier)
 - [x] `robots.ts` reste en noindex automatique en preview ; en ligne le verrou `SEO_NOINDEX=1`
   est déjà posé sur Vercel
-- [ ] CEO : commiter/pousser le contenu réécrit, redéployer, contrôle visuel → validation Rémy →
-  mise en ligne (Étape 6 du playbook)
+- [x] CEO : contenu commité et poussé (commit a6891da), redéployé sur
+  https://sos-electricien-annecy.vercel.app, vérifications en ligne OK (noindex conservé,
+  pages 200, zéro trace Angers), contrôle visuel CEO fait le 25/07/2026 (verdict et réserves
+  en §3bis)
+- [ ] Builder sur Opus : itération design demandée par le CEO (voir §3bis) : photo hero accueil
+  + signature typographique/texture pour se rapprocher du niveau Sniper
+- [ ] Rémy : trancher les valeurs DEMO affichées (stats « +400 pannes résolues », « 8 ans
+  d'expérience », promesses « rappel 30 min » et « 100 % panne réparée ou nous revenons »)
+  avant toute mise en ligne
+- [ ] Autoblog : recaler `relatedServices` des drafts 001-010 sur les 6 slugs définitifs
+- [ ] Validation Rémy → mise en ligne (Étape 6 du playbook)
 
 ## 3. RÉALIGNEMENT BUILDER ↔ PLAN SEO (25/07/2026, résolu dans la même session Builder)
 
@@ -105,6 +114,23 @@ session CEO concurrente), le Builder a tout réaligné avant de livrer :
   l'Autoblog, pas bloquant puisque leur `relatedServices` est vide. Codes postaux « à confirmer »
   listés par le plan SEO (Meythet, Pringy, Saint-Jorioz, Veyrier-du-Lac) utilisés tels quels
   (meilleure donnée disponible), à vérifier par Rémy avant Gate C.
+
+## 3bis. CONTRÔLE VISUEL CEO (25/07/2026, sur le site déployé)
+
+QA navigateur complet (7 pages × desktop 1440 + mobile 390, double passe avec captures) :
+**zéro bug bloquant.** Aucune image cassée, aucun débordement mobile, aucune erreur console,
+zéro résidu Angers/fuite, zéro tiret cadratin, FAQ et CTA partout, sticky mobile OK.
+
+Réserves avant validation finale :
+1. **Hero accueil sans vraie photo** (dégradé + icônes) alors que toutes les pages
+   services/zones en ont une : incohérence sur la page la plus importante.
+2. **Direction artistique en retrait de la référence Sniper** : propre et pro mais palette
+   indigo/orange sur blanc sans texture ni typographie signature, rendu « template SaaS
+   soigné » plus que marque bespoke. Itération Builder demandée.
+3. **Valeurs DEMO visibles** (stats +400 / 8 ans / rayon 20 km, promesses 30 min et 100 %) :
+   conformes au playbook en phase dev, mais à faire trancher par Rémy avant mise en ligne.
+4. `/conseils` vide (normal pré-lancement) ; mentions légales avec assureur « à compléter »
+   (infos décennale à fournir par Rémy).
 
 ## 4. DÉCISIONS RÉMY
 
@@ -147,4 +173,11 @@ session CEO concurrente), le Builder a tout réaligné avant de livrer :
   découvrant la divergence à la relecture finale de ce journal, réalignement complet sur
   `docs/SEO-GEO-PLAN.md` avant livraison (détail en §3 ci-dessus). Build local vert, contrôle
   visuel navigateur OK. Repo non commité par le Builder (règle CLAUDE.md : le CEO gère git/commits
-  de coordination), à faire à la prochaine session CEO avant contrôle Rémy.
+  de coordination), à faire à la prochaine session CEO avant contrôle Rémy.- **25/07/2026 (CEO, consolidation + contrôle)** : vérification indépendante des livrables
+  (slugs services/zones conformes au plan, zéro tiret cadratin, formulations secteurs 2017
+  correctes, FAQ >=3 partout, build local vert 34 pages), commit et push du contenu (a6891da),
+  redéploiement Vercel OK, vérifications en ligne OK (noindex conservé, pages 200, zéro trace
+  Angers). Contrôle visuel CEO complet sur le site déployé : zéro bug bloquant, réserves
+  consignées en §3bis (photo hero accueil, itération direction artistique vers le niveau
+  Sniper, valeurs DEMO à faire trancher par Rémy). Messages préparés pour le Builder
+  (itération design) et l'Autoblog (recalage relatedServices).
