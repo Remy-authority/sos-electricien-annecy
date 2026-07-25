@@ -843,3 +843,16 @@ Cloudflare Email Routing, migration DNS plus lourde).
 - Rappel du rythme (question Rémy) : 1 article publié (test manuel), 10 en file, cron
   lun/mer/ven 05:00 UTC, prochaine publication auto lundi 27/07 ~7h Paris, vague T2 vers
   octobre 2026.
+
+## 3septdecies. DÉCISIONS RÉMY (26/07 soir) : LOT DE LANCEMENT + AUTOMATISATION 6 MOIS
+
+- Email contact@ : **testé et fonctionnel** (confirmé par Rémy).
+- **Process pilote confirmé par Rémy** (correction du CEO) : les 11 articles de lancement se
+  publient D'UN COUP au départ (pas au fil du cron), puis les vagues suivantes sont
+  préparées À L'AVANCE dans content/drafts/.
+- **Plan validé** : (1) Builder : 11 covers + champ cover ; (2) CEO : contrôle, commit,
+  publication en bloc des 10 drafts restants (déclenchements manuels de l'Action) ;
+  (3) Autoblog : écrire la file jusqu'à fin janvier 2027 (~68 articles, ordre du
+  calendrier, slots §1bis sautés, préfixes 012+, champ cover obligatoire) ;
+  (4) Builder : covers de la vague ; contrôle CEO. Ensuite : zéro intervention pendant
+  6 mois, le cron publie lun/mer/ven.
