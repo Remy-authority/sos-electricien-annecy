@@ -1,0 +1,58 @@
+{
+  "slug": "urgence-depannage-electrique",
+  "order": 1,
+  "icon": "alert",
+  "navTitle": "Urgence dépannage électrique",
+  "h1": "Urgence dépannage électrique à Annecy",
+  "metaTitle": "Urgence dépannage électrique à Annecy : intervention rapide",
+  "metaDescription": "Panne électrique urgente à Annecy ? Intervention rapide pour sécuriser votre installation. Contactez-nous, on vous rappelle vite.",
+  "intro": "Vous avez une panne électrique urgente à Annecy ou dans les environs : disjoncteur qui saute en continu, odeur de brûlé, étincelles, coupure totale ? Appelez-nous : nous intervenons rapidement pour sécuriser votre installation. Nous couvrons Annecy et un rayon de 20 km, disponibles 7j/7.",
+  "bullets": [
+    "Intervention rapide",
+    "Mise en sécurité immédiate",
+    "Diagnostic sur place"
+  ],
+  "blocks": [
+    {
+      "heading": "Que faire en attendant (les bons réflexes)",
+      "body": "En attendant notre arrivée, voici les gestes essentiels. 1. Coupez le disjoncteur général si vous sentez une odeur de brûlé ou si vous voyez des étincelles. 2. Ne touchez pas à un fil dénudé ni à un appareil qui semble en cause. 3. Éloignez les enfants et les animaux de la zone concernée. 4. Si un disjoncteur saute en permanence, ne le réenclenchez pas plusieurs fois : cela peut aggraver le problème et endommager davantage l'installation. Appelez-nous, nous vous guidons par téléphone en attendant notre arrivée.",
+      "image": "/services/urgence-depannage-electrique-disjoncteur.jpg",
+      "imageAlt": "Réenclenchement d'un disjoncteur sur un tableau électrique",
+      "imageCaption": "Le disjoncteur général se trouve sur le tableau électrique, généralement dans l'entrée, le garage ou un local technique."
+    },
+    {
+      "heading": "Notre intervention en urgence",
+      "body": "À votre appel, nous évaluons la situation avec vous par téléphone. Nous nous déplaçons avec le matériel de diagnostic complet : multimètre, pince ampèremétrique, caméra thermique et traceur de câbles. Sur place, nous sécurisons d'abord l'installation avant de rechercher la cause précise de la panne. Une fois le problème identifié, nous réparons ou remplaçons les éléments défectueux et vérifions l'ensemble du circuit avant de repartir.",
+      "image": "/services/urgence-depannage-electrique-materiel.jpg",
+      "imageAlt": "Mallette d'outils d'électricien : multimètre, pince ampèremétrique, testeur",
+      "imageCaption": "Le matériel que nous déplaçons à chaque intervention d'urgence."
+    },
+    {
+      "heading": "Zones couvertes",
+      "body": "Nous intervenons à Annecy, dans les secteurs d'Annecy-le-Vieux, Cran-Gevrier, Meythet, Seynod et Pringy, et dans les communes de l'agglomération dans un rayon de 20 km : Poisy, Épagny Metz-Tessy, Argonay, Sevrier, Saint-Jorioz, Veyrier-du-Lac et les communes voisines. En cas de doute sur notre zone de couverture, appelez-nous."
+    }
+  ],
+  "relatedServices": [
+    "recherche-panne-electrique",
+    "remise-aux-normes-tableau-electrique"
+  ],
+  "faq": [
+    {
+      "q": "Que faire si mon disjoncteur général ne se réenclenche pas du tout ?",
+      "a": "Ne forcez pas et n'insistez pas. Un disjoncteur qui refuse de se réenclencher indique souvent un défaut sérieux sur l'installation. Appelez-nous : nous diagnostiquons la cause avant de remettre le courant en sécurité."
+    },
+    {
+      "q": "Intervenez-vous la nuit ou le week-end ?",
+      "a": "Nous intervenons 7j/7. Appelez-nous pour les urgences en dehors des horaires habituels : nous vous rappelons le plus vite possible."
+    },
+    {
+      "q": "Une odeur de brûlé près d'une prise est-elle dangereuse ?",
+      "a": "Oui, c'est un signe d'alerte à prendre au sérieux : cela peut indiquer un échauffement anormal, un début de court-circuit ou un risque d'incendie. Coupez immédiatement le disjoncteur du circuit concerné (ou le disjoncteur général en cas de doute) et appelez-nous sans attendre."
+    },
+    {
+      "q": "Comment savoir si la coupure vient de mon logement ou du réseau Enedis ?",
+      "a": "Si vos voisins ont également coupé le courant, l'origine est probablement une panne de réseau (Enedis). Si vous êtes seul concerné, vérifiez d'abord votre disjoncteur général et votre compteur : la panne est alors interne à votre installation. En cas de doute, appelez-nous."
+    }
+  ],
+  "image": "/services/urgence-depannage-electrique.jpg"
+}

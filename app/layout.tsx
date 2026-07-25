@@ -3,7 +3,7 @@ import { Sora } from 'next/font/google'
 import './globals.css'
 import { siteConfig } from '@/config/site.config'
 import { themeCssVars } from '@/lib/theme'
-import { absUrl, buildMetadata, jsonLdScript, plumberJsonLd } from '@/lib/seo'
+import { absUrl, buildMetadata, jsonLdScript, businessJsonLd } from '@/lib/seo'
 import Header from '@/components/sections/Header'
 import Footer from '@/components/sections/Footer'
 import MobileStickyBar from '@/components/ui/MobileStickyBar'
@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: jsonLdScript(plumberJsonLd()) }}
+          dangerouslySetInnerHTML={{ __html: jsonLdScript(businessJsonLd()) }}
         />
       </head>
       <body>

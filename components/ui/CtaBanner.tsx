@@ -3,7 +3,7 @@ import PhoneButton from './PhoneButton'
 import { siteConfig } from '@/config/site.config'
 
 export default function CtaBanner({
-  title = `Une fuite d'eau à ${siteConfig.city} ? On intervient vite.`,
+  title = `Une panne électrique à ${siteConfig.city} ? On intervient vite.`,
   subtitle = siteConfig.responseTime,
 }: {
   title?: string

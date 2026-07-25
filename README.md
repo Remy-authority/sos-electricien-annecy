@@ -1,11 +1,12 @@
-# Template « Site Local » — SOS Fuite d'Eau Angers
+# Template « Site Local » — SOS Électricien Annecy
 
 Site **Next.js (App Router, 100% SSG)** + **Tailwind**, déployé sur **Vercel**.
 Conçu comme un **template de site local paramétrable** : un site N+1 (autre métier /
 ville / nom commercial / locataire) est déployable **en < 1 jour** en changeant
 uniquement la **config** et le **contenu**, sans toucher au code ni au SEO.
 
-Pilote : SOS Fuite d'Eau Angers (recherche de fuite d'eau à Angers).
+Site n°2 du portefeuille (dupliqué depuis le pilote SOS Fuite d'Eau Angers) :
+SOS Électricien Annecy (dépannage électrique à Annecy, 74).
 
 ---
 
@@ -53,7 +54,7 @@ content/
   legal.json               # gabarit mentions légales / RGPD
 lib/
   content.ts               # loaders fs + typage (services, zones, articles)
-  seo.ts                   # Metadata API + JSON-LD (Plumber, Service, FAQPage, Breadcrumb, Article)
+  seo.ts                   # Metadata API + JSON-LD (Electrician, Service, FAQPage, Breadcrumb, Article)
   theme.ts                 # config.colors (hex) → CSS variables → tailwind
 components/
   ui/                      # PhoneButton, CtaBanner, LeadForm, Faq, Breadcrumbs
@@ -97,7 +98,7 @@ SEO / Rédacteur : les fichiers livrés ici contiennent la **structure** + des
 
 - **Metadata API** (`generateMetadata`) sur toutes les pages : title, description,
   canonical absolu, OpenGraph, robots.
-- **JSON-LD** : `Plumber` (global, layout, avec `areaServed`, **sans `address`** par
+- **JSON-LD** : `Electrician` (global, layout, avec `areaServed`, **sans `address`** par
   défaut, **sans avis**), `Service`, `FAQPage`, `BreadcrumbList`, `Article`.
 - **`sitemap.xml`** (pages indexables uniquement), **`robots.txt`**, **`manifest`**.
 - **Preview = noindex** automatique (`VERCEL_ENV !== 'production'` ou `SEO_NOINDEX=1`).

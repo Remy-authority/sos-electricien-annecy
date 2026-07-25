@@ -30,9 +30,9 @@ const HERO_POOL = [
   '/zones/zone-interieur.jpg',
 ]
 const BODY_POOL = [
-  { src: '/zones/zone-sol.jpg', alt: 'Corrélateur acoustique et géophone posés sur une pelouse pour localiser une fuite enterrée', caption: 'Localisation d’une fuite enterrée par corrélation acoustique, sans tranchée à l’aveugle.' },
-  { src: '/zones/zone-thermique.jpg', alt: 'Caméra thermique révélant une zone froide sur un mur intérieur', caption: 'La caméra thermique repère l’humidité et la fuite cachées sous l’enduit.' },
-  { src: '/zones/zone-rapport.jpg', alt: 'Marquage à la craie de l’emplacement exact d’une fuite sur un carrelage', caption: 'Emplacement exact marqué au sol : votre plombier n’ouvre qu’au bon endroit.' },
+  { src: '/zones/zone-tableau.jpg', alt: 'Électricien testant un tableau électrique dans une maison individuelle', caption: 'Chaque circuit du tableau électrique est testé avant d’identifier la cause de la panne.' },
+  { src: '/zones/zone-diagnostic.jpg', alt: 'Contrôle d’une prise électrique avec un testeur', caption: 'Un diagnostic précis évite de multiplier les interventions au hasard.' },
+  { src: '/zones/zone-cablage.jpg', alt: 'Câblage électrique posé dans une gaine murale', caption: 'Chaque circuit est reposé selon un plan de câblage adapté à l’usage de la pièce.' },
 ]
 
 export default function ZonePage({ params }: { params: { slug: string } }) {
@@ -44,9 +44,9 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
   const hero = HERO_POOL[idx % HERO_POOL.length]
   const body = BODY_POOL[(idx + 1) % BODY_POOL.length]
 
-  // Maillage : service principal = détection non destructive + urgence.
+  // Maillage : service principal = recherche de panne + urgence.
   const mainServices = getServices().filter((s) =>
-    ['detection-fuite-non-destructive', 'urgence-fuite-eau'].includes(s.slug),
+    ['recherche-panne-electrique', 'urgence-depannage-electrique'].includes(s.slug),
   )
 
   return (
@@ -71,7 +71,7 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
         <div className="relative mt-6 aspect-[16/9] w-full overflow-hidden rounded-card shadow-sm md:aspect-[21/9]">
           <Image
             src={hero}
-            alt={`Recherche de fuite d'eau à ${zone.name}`}
+            alt={`Électricien à ${zone.name}`}
             fill
             sizes="(min-width: 1200px) 1152px, 100vw"
             className="object-cover"
@@ -110,7 +110,7 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
         </div>
 
         <nav aria-label="Nos services" className="mt-10 mx-auto max-w-3xl">
-          <h2 className="text-xl">Nos services de recherche de fuite</h2>
+          <h2 className="text-xl">Nos services d'électricien</h2>
           <ul className="mt-3 flex flex-wrap gap-2">
             {mainServices.map((s) => (
               <li key={s.slug}>
@@ -124,7 +124,7 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
       </article>
 
       <Faq items={zone.faq} />
-      <CtaBanner title={`Recherche de fuite à ${zone.name} ?`} />
+      <CtaBanner title={`Panne électrique à ${zone.name} ?`} />
     </>
   )
 }

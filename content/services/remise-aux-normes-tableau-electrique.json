@@ -1,0 +1,58 @@
+{
+  "slug": "remise-aux-normes-tableau-electrique",
+  "order": 3,
+  "icon": "panel",
+  "navTitle": "Mise aux normes du tableau",
+  "h1": "Mise aux normes du tableau électrique à Annecy",
+  "metaTitle": "Mise aux normes électriques à Annecy, NF C 15-100",
+  "metaDescription": "Mise aux normes de tableau électrique à Annecy : diagnostic, remplacement, disjoncteur différentiel. Devis gratuit, intervention par artisan local.",
+  "intro": "Tableau électrique vétuste, disjoncteurs qui sautent régulièrement, fusibles à l'ancienne encore en place ? Nous intervenons à Annecy pour diagnostiquer et remettre votre tableau électrique aux normes NF C 15-100. Devis gratuit avant toute intervention.",
+  "bullets": [
+    "Diagnostic du tableau existant",
+    "Remise aux normes NF C 15-100",
+    "Devis gratuit"
+  ],
+  "blocks": [
+    {
+      "heading": "Pourquoi remettre un tableau électrique aux normes",
+      "body": "Un tableau ancien à fusibles porcelaine ne protège plus efficacement l'installation moderne : il ne coupe pas assez vite en cas de défaut et n'intègre généralement aucun disjoncteur différentiel, pourtant obligatoire dans chaque logement. Avec le temps, l'ajout de nouveaux circuits (cuisine, chauffage, prises supplémentaires) sature souvent un tableau qui n'a pas été prévu pour un tel usage. Un tableau vétuste ou saturé augmente le risque de surchauffe et d'incendie électrique. Le remettre aux normes est l'une des mises à niveau les plus efficaces pour sécuriser un logement.",
+      "image": "/services/remise-aux-normes-tableau-electrique-ancien.jpg",
+      "imageAlt": "Ancien tableau électrique à fusibles porcelaine",
+      "imageCaption": "Les tableaux à fusibles porcelaine, encore présents dans certains logements anciens d'Annecy, ne protègent plus efficacement l'installation."
+    },
+    {
+      "heading": "Notre méthode de remise aux normes",
+      "body": "Nous commençons par un diagnostic complet de l'installation existante et de vos besoins (nombre de circuits, puissance souscrite, projets futurs). Nous vous remettons un devis détaillé avant toute intervention. Le jour du chantier, nous coupons l'alimentation en sécurité, posons ou complétons le tableau avec un disjoncteur différentiel 30 mA par groupe de circuits, puis testons chaque ligne individuellement avant remise sous tension. Une attestation de conformité peut être fournie sur demande, notamment en cas de contrôle Consuel.",
+      "image": "/services/remise-aux-normes-tableau-electrique-pose.jpg",
+      "imageAlt": "Pose d'un tableau électrique neuf avec disjoncteurs différentiels",
+      "imageCaption": "Chaque circuit est protégé individuellement par un disjoncteur dédié."
+    },
+    {
+      "heading": "Zones couvertes",
+      "body": "Nous intervenons à Annecy, dans les secteurs d'Annecy-le-Vieux, Cran-Gevrier, Meythet, Seynod et Pringy, et dans les communes de l'agglomération dans un rayon de 20 km : Poisy, Épagny Metz-Tessy, Argonay, Sevrier, Saint-Jorioz, Veyrier-du-Lac et les communes voisines. En cas de doute sur notre zone de couverture, appelez-nous."
+    }
+  ],
+  "relatedServices": [
+    "mise-en-conformite-diagnostic-electrique",
+    "recherche-panne-electrique"
+  ],
+  "faq": [
+    {
+      "q": "Combien de temps prend une remise aux normes de tableau électrique ?",
+      "a": "Pour un logement standard, l'intervention se fait généralement en une journée, coupure de courant comprise. Un tableau desservant une installation plus complexe ou nécessitant une remise à niveau de plusieurs circuits peut demander davantage de temps. Nous vous donnons un délai précis après le diagnostic."
+    },
+    {
+      "q": "Serai-je privé d'électricité pendant les travaux ?",
+      "a": "Oui, une coupure est nécessaire pendant la durée de l'intervention sur le tableau. Nous organisons le chantier pour la limiter au strict nécessaire et vous prévenons à l'avance de la plage horaire concernée."
+    },
+    {
+      "q": "Comment savoir si mon tableau électrique doit être remis aux normes ?",
+      "a": "Plusieurs signes doivent alerter : fusibles à visser ou en porcelaine, absence de disjoncteur différentiel, tableau plein sans place pour de nouveaux circuits, ou disjoncteurs qui sautent fréquemment sans cause identifiée. Un diagnostic sur place permet de confirmer l'ampleur des travaux nécessaires."
+    },
+    {
+      "q": "Le disjoncteur différentiel 30 mA est-il vraiment obligatoire ?",
+      "a": "Oui. La réglementation impose au moins un dispositif différentiel à haute sensibilité (30 mA) en tête d'installation pour protéger les personnes contre les risques d'électrisation. Un tableau qui en est dépourvu doit être mis à niveau en priorité."
+    }
+  ],
+  "image": "/services/remise-aux-normes-tableau-electrique.jpg"
+}

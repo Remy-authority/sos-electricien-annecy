@@ -1,0 +1,47 @@
+{
+  "slug": "seynod",
+  "name": "Seynod",
+  "postalCode": "74600",
+  "context": "Ancienne commune fusionnée avec Annecy en 2017, aujourd'hui secteur résidentiel et commerçant au sud d'Annecy.",
+  "metaTitle": "Électricien à Seynod (74)",
+  "metaDescription": "Électricien dans le secteur de Seynod : dépannage, tableau électrique, mise aux normes. Intervention rapide. Contactez-nous.",
+  "h1": "Électricien dans le secteur de Seynod",
+  "intro": "Nous intervenons dans le secteur de Seynod (74600) pour tout dépannage électrique, remise aux normes de tableau ou rénovation électrique. Ancienne commune devenue secteur d'Annecy depuis la fusion de 2017, Seynod compte de nombreux pavillons des années 1970-1980 ainsi que des zones commerçantes et pavillonnaires plus récentes. Nous diagnostiquons précisément avant toute intervention.",
+  "blocks": [
+    {
+      "heading": "Nos prestations dans le secteur de Seynod",
+      "body": "Nous intervenons dans le secteur de Seynod pour toutes les situations électriques : recherche de panne, remise aux normes de tableau électrique, rénovation électrique complète pour les pavillons les plus anciens, ou installation électrique neuve. Nous établissons un diagnostic clair et un devis détaillé avant toute intervention."
+    },
+    {
+      "heading": "Panne urgente à Seynod",
+      "body": "En cas de panne urgente dans le secteur de Seynod, appelez-nous directement. En attendant notre arrivée, coupez le disjoncteur du circuit concerné (ou le disjoncteur général en cas de doute ou d'odeur de brûlé) pour limiter les risques. Nous intervenons 7j/7 sur Seynod et les secteurs voisins."
+    },
+    {
+      "heading": "Secteurs et communes voisines desservis",
+      "body": "En plus de Seynod, nous intervenons dans le centre-ville d'Annecy, le secteur de Cran-Gevrier, et les communes de Poisy et Montagny-les-Lanches au sud-ouest de l'agglomération. Notre zone de couverture s'étend sur un rayon de 20 km autour d'Annecy."
+    }
+  ],
+  "neighbours": [
+    "Annecy centre-ville",
+    "Cran-Gevrier",
+    "Poisy"
+  ],
+  "faq": [
+    {
+      "q": "Seynod est-elle toujours une commune indépendante ?",
+      "a": "Non. Depuis le 1er janvier 2017, Seynod a fusionné avec Annecy et quatre autres anciennes communes pour former la commune nouvelle d'Annecy. C'est aujourd'hui un secteur d'Annecy avec sa propre identité et son code postal (74600), mais plus une commune autonome."
+    },
+    {
+      "q": "Intervenez-vous dans le secteur de Seynod pour le dépannage électrique ?",
+      "a": "Oui. Nous intervenons dans le secteur de Seynod (74600) pour tout dépannage électrique : recherche de panne, disjoncteur qui saute, remise aux normes de tableau. Diagnostic précis, devis avant travaux."
+    },
+    {
+      "q": "Les pavillons des années 1970-1980 de Seynod ont-ils souvent un tableau à remettre aux normes ?",
+      "a": "C'est fréquent. Ces pavillons ont souvent conservé leur tableau d'origine, parfois sans disjoncteur différentiel. Un diagnostic sur place permet de confirmer si une remise aux normes est nécessaire."
+    },
+    {
+      "q": "Intervenez-vous aussi à Cran-Gevrier et Poisy ?",
+      "a": "Oui. Nous couvrons le secteur de Cran-Gevrier, la commune de Poisy et les autres secteurs et communes de l'agglomération annécienne dans le cadre de notre zone d'intervention de 20 km."
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "slug": "pringy",
+  "name": "Pringy",
+  "postalCode": "74370",
+  "context": "Ancienne commune fusionnée avec Annecy en 2017, aujourd'hui secteur résidentiel au nord de l'agglomération.",
+  "metaTitle": "Électricien à Pringy (74)",
+  "metaDescription": "Électricien dans le secteur de Pringy : dépannage, tableau électrique, mise aux normes. Intervention rapide. Contactez-nous.",
+  "h1": "Électricien dans le secteur de Pringy",
+  "intro": "Nous intervenons dans le secteur de Pringy (74370) pour tout dépannage électrique, remise aux normes de tableau ou installation électrique neuve. Ancienne commune devenue secteur d'Annecy depuis la fusion de 2017, Pringy est un secteur résidentiel au nord de l'agglomération, entre pavillons et zones pavillonnaires calmes. Nous diagnostiquons précisément avant toute intervention.",
+  "blocks": [
+    {
+      "heading": "Nos prestations dans le secteur de Pringy",
+      "body": "Nous intervenons dans le secteur de Pringy pour toutes les situations électriques : recherche de panne, remise aux normes de tableau électrique, diagnostic avant vente, et installation électrique neuve pour une extension ou une dépendance. Nous établissons un diagnostic clair et un devis détaillé avant toute intervention."
+    },
+    {
+      "heading": "Panne urgente à Pringy",
+      "body": "En cas de panne urgente dans le secteur de Pringy, appelez-nous directement. En attendant notre arrivée, coupez le disjoncteur du circuit concerné (ou le disjoncteur général en cas de doute ou d'odeur de brûlé) pour limiter les risques. Nous intervenons 7j/7 sur Pringy et les secteurs et communes voisines."
+    },
+    {
+      "heading": "Secteurs et communes voisines desservis",
+      "body": "En plus de Pringy, nous intervenons dans le secteur d'Argonay, et la commune d'Épagny Metz-Tessy au nord de l'agglomération. Notre zone de couverture s'étend sur un rayon de 20 km autour d'Annecy."
+    }
+  ],
+  "neighbours": [
+    "Argonay",
+    "Épagny Metz-Tessy",
+    "Annecy centre-ville"
+  ],
+  "faq": [
+    {
+      "q": "Pringy est-elle toujours une commune indépendante ?",
+      "a": "Non. Depuis le 1er janvier 2017, Pringy a fusionné avec Annecy et quatre autres anciennes communes pour former la commune nouvelle d'Annecy. C'est aujourd'hui un secteur d'Annecy avec sa propre identité et son code postal (74370), mais plus une commune autonome."
+    },
+    {
+      "q": "Intervenez-vous dans le secteur de Pringy pour le dépannage électrique ?",
+      "a": "Oui. Nous intervenons dans le secteur de Pringy (74370) pour tout dépannage électrique : recherche de panne, disjoncteur qui saute, remise aux normes de tableau. Diagnostic précis, devis avant travaux."
+    },
+    {
+      "q": "Quel est le délai d'intervention à Pringy ?",
+      "a": "Pringy est un secteur proche du centre d'Annecy, accessible rapidement depuis notre zone d'intervention. Nous vous donnons un délai estimatif lors de votre appel en fonction de notre planning du moment."
+    },
+    {
+      "q": "Intervenez-vous aussi à Argonay et Épagny Metz-Tessy ?",
+      "a": "Oui. Nous couvrons Argonay, Épagny Metz-Tessy et les autres secteurs et communes du nord de l'agglomération annécienne dans le cadre de notre zone d'intervention de 20 km."
+    }
+  ]
+}

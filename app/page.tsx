@@ -16,9 +16,9 @@ import ServiceAreaMap from '@/components/sections/ServiceAreaMap'
 import Realisations from '@/components/sections/Realisations'
 import { ServiceIcon } from '@/components/ui/ServiceIcon'
 
-const TITLE = "Recherche de fuite d'eau à Angers, détection non destructive"
+const TITLE = "Électricien d'urgence à Annecy, dépannage rapide"
 const DESC =
-  "Recherche et détection de fuite d'eau à Angers et environs. Méthode non destructive, intervention rapide. Devis et prise de contact en ligne."
+  "Électricien à Annecy et environs : dépannage, tableau électrique, mise aux normes. Intervention rapide. Devis et prise de contact en ligne."
 
 export const metadata: Metadata = buildMetadata({ title: TITLE, description: DESC, path: '/' })
 

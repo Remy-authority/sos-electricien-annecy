@@ -6,7 +6,7 @@ import PhoneButton from '@/components/ui/PhoneButton'
 
 export const metadata: Metadata = buildMetadata({
   title: `Contact, ${siteConfig.businessName}`,
-  description: `Contactez ${siteConfig.businessName} pour une recherche de fuite d'eau à ${siteConfig.city}. Devis gratuit, réponse rapide.`,
+  description: `Contactez ${siteConfig.businessName} pour un dépannage électrique à ${siteConfig.city}. Devis gratuit, réponse rapide.`,
   path: '/contact',
 })
 
@@ -17,7 +17,7 @@ export default function ContactPage() {
         <div>
           <h1 className="text-3xl md:text-4xl">Contact & devis gratuit</h1>
           <p className="mt-4 text-slate-600">
-            Une fuite d'eau à {siteConfig.city} ou dans les environs ? Appelez-nous ou
+            Une panne électrique à {siteConfig.city} ou dans les environs ? Appelez-nous ou
             remplissez le formulaire : nous vous recontactons rapidement.
           </p>
           <div className="mt-6 space-y-3 text-slate-700">

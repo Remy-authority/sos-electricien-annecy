@@ -8,8 +8,8 @@ import Faq from '@/components/ui/Faq'
 import CtaBanner from '@/components/ui/CtaBanner'
 
 export const metadata: Metadata = buildMetadata({
-  title: `Zones d'intervention, recherche de fuite près d'${siteConfig.city}`,
-  description: `Communes desservies autour d'${siteConfig.city} pour la recherche de fuite d'eau : rayon d'environ ${siteConfig.serviceArea.radiusKm} km.`,
+  title: `Zones d'intervention, électricien près d'${siteConfig.city}`,
+  description: `Communes desservies autour d'${siteConfig.city} pour le dépannage électrique : rayon d'environ ${siteConfig.serviceArea.radiusKm} km.`,
   path: '/zones',
 })
 
@@ -17,7 +17,7 @@ export default function ZonesHub() {
   const zones = getZones()
   const names = zones.map((z) => z.name)
   // Réponse courte factuelle « citable » (activité + zone + liste des communes).
-  const citable = `${siteConfig.businessName} couvre ${siteConfig.city} et ${zones.length} communes de l'agglomération angevine dans un rayon de ${siteConfig.serviceArea.radiusKm} km : ${names.join(', ')}. Recherche et détection de fuite d'eau en méthode non destructive, 7j/7.`
+  const citable = `${siteConfig.businessName} couvre ${siteConfig.city} et ${zones.length} communes de l'agglomération annécienne dans un rayon de ${siteConfig.serviceArea.radiusKm} km : ${names.join(', ')}. Dépannage électrique et diagnostic précis, 7j/7.`
 
   const hubFaq = [
     {
@@ -29,12 +29,12 @@ export default function ZonesHub() {
       a: `La liste ci-dessus regroupe les communes disposant d'une page dédiée, mais notre zone est plus large. Nous couvrons ${siteConfig.city} et ses environs dans un rayon d'environ ${siteConfig.serviceArea.radiusKm} km. En cas de doute sur votre secteur, appelez-nous : nous étudions chaque demande au cas par cas.`,
     },
     {
-      q: 'Quel est le délai pour une intervention en dehors d’Angers ?',
+      q: 'Quel est le délai pour une intervention en dehors d’Annecy ?',
       a: "Le délai dépend de la commune et de notre planning du moment. Les communes limitrophes sont accessibles rapidement. Nous vous donnons une estimation lors de votre appel et intervenons 7j/7, y compris les week-ends et jours fériés pour les urgences.",
     },
     {
       q: 'Le déplacement dans les communes voisines est-il facturé en plus ?',
-      a: `Le déplacement et le diagnostic de base sont gratuits et sans engagement dans notre zone d'intervention autour d'${siteConfig.city}. Le tarif de l'intervention dépend ensuite de la méthode nécessaire pour localiser la fuite. Contactez-nous pour un devis.`,
+      a: `Le déplacement et le diagnostic de base sont gratuits et sans engagement dans notre zone d'intervention autour d'${siteConfig.city}. Le tarif de l'intervention dépend ensuite de la nature de la panne et des pièces à remplacer. Contactez-nous pour un devis.`,
     },
   ]
 
@@ -63,7 +63,7 @@ export default function ZonesHub() {
                 </div>
                 {z.context && <p className="mt-2 text-sm leading-relaxed text-slate-600">{z.context}</p>}
                 <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">
-                  Recherche de fuite à {z.name}
+                  Électricien à {z.name}
                   <svg className="h-4 w-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
                     <path d="m9 18 6-6-6-6" />
                   </svg>

@@ -1,0 +1,58 @@
+{
+  "slug": "recherche-panne-electrique",
+  "order": 2,
+  "icon": "search",
+  "navTitle": "Recherche de panne électrique",
+  "h1": "Recherche de panne électrique à Annecy",
+  "metaTitle": "Recherche de panne électrique à Annecy, diagnostic rapide",
+  "metaDescription": "Recherche de panne électrique à Annecy : diagnostic précis, intervention rapide sur tableau et circuits. Devis gratuit, contactez-nous.",
+  "intro": "Coupure de courant, prise qui ne fonctionne plus, disjoncteur qui saute sans raison apparente ? Nous intervenons à Annecy pour diagnostiquer précisément l'origine de la panne électrique et la réparer, sans multiplier les essais au hasard. Nous couvrons Annecy et un rayon de 20 km, disponibles 7j/7.",
+  "bullets": [
+    "Diagnostic précis",
+    "Intervention rapide",
+    "Devis avant travaux"
+  ],
+  "blocks": [
+    {
+      "heading": "Comment nous localisons la panne",
+      "body": "Nous procédons par élimination méthodique plutôt que par tâtonnement. Premier temps : examen visuel du tableau électrique pour repérer un disjoncteur qui a sauté ou un fusible grillé. Deuxième temps : mesures au multimètre et à la pince ampèremétrique pour tester chaque circuit et isoler celui qui pose problème. Si la panne reste invisible à l'œil nu, un traceur de câbles permet de suivre le cheminement d'une ligne dans les murs sans avoir à tout ouvrir. Cette méthode évite de couper plusieurs circuits au hasard et limite les travaux au strict nécessaire.",
+      "image": "/services/recherche-panne-electrique-tableau.jpg",
+      "imageAlt": "Électricien testant un tableau électrique avec un multimètre",
+      "imageCaption": "Chaque circuit est testé méthodiquement pour isoler l'origine de la panne."
+    },
+    {
+      "heading": "Les causes fréquentes d'une panne électrique",
+      "body": "Plusieurs origines reviennent régulièrement : un fil dénudé au contact d'un boîtier métallique, une prise ou un interrupteur défectueux, un disjoncteur usé qui déclenche trop tôt, une surcharge sur un circuit alimentant trop d'appareils, ou encore de l'humidité qui s'infiltre dans un boîtier de dérivation. Dans les logements anciens du bassin annécien, un câblage vieillissant ou une installation modifiée au fil des années sans plan à jour complique parfois le diagnostic. C'est justement pour ces cas que la recherche méthodique fait la différence.",
+      "image": "/services/recherche-panne-electrique-diagnostic.jpg",
+      "imageAlt": "Électricien inspectant un circuit électrique dans un boîtier de dérivation",
+      "imageCaption": "Un boîtier de dérivation mal isolé est une cause fréquente de panne récurrente."
+    },
+    {
+      "heading": "Zones couvertes",
+      "body": "Nous intervenons à Annecy, dans les secteurs d'Annecy-le-Vieux, Cran-Gevrier, Meythet, Seynod et Pringy, et dans les communes de l'agglomération dans un rayon de 20 km : Poisy, Épagny Metz-Tessy, Argonay, Sevrier, Saint-Jorioz, Veyrier-du-Lac et les communes voisines. En cas de doute sur notre zone de couverture, appelez-nous."
+    }
+  ],
+  "relatedServices": [
+    "urgence-depannage-electrique",
+    "remise-aux-normes-tableau-electrique"
+  ],
+  "faq": [
+    {
+      "q": "Combien de temps prend une recherche de panne électrique ?",
+      "a": "La plupart des pannes sont localisées en moins d'une heure grâce à une méthode de test par élimination. Une panne complexe sur un câblage ancien ou modifié plusieurs fois peut demander davantage de temps. Nous vous informons de l'avancée du diagnostic à chaque étape."
+    },
+    {
+      "q": "Faut-il couper l'électricité de tout le logement pour chercher la panne ?",
+      "a": "Non. Nous isolons le circuit concerné grâce au tableau électrique et ne coupons que la partie nécessaire. Les autres circuits (éclairage, autres prises) restent alimentés pendant le diagnostic dans la mesure du possible."
+    },
+    {
+      "q": "Un disjoncteur qui saute plusieurs fois par jour est-il grave ?",
+      "a": "Oui, c'est un signal à ne pas ignorer. Un déclenchement répété indique généralement une surcharge, un court-circuit ou un défaut d'isolement sur le circuit concerné. Continuer à réenclencher sans diagnostic peut endommager l'installation. Appelez-nous pour identifier la cause."
+    },
+    {
+      "q": "Intervenez-vous aussi sur les installations anciennes ?",
+      "a": "Oui. Nous intervenons régulièrement sur des installations vieillissantes, y compris dans les chalets et bâtiments anciens du bassin annécien où le câblage a pu être modifié sans plan à jour."
+    }
+  ],
+  "image": "/services/recherche-panne-electrique.jpg"
+}

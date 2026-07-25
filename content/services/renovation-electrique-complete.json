@@ -1,0 +1,58 @@
+{
+  "slug": "renovation-electrique-complete",
+  "order": 4,
+  "icon": "tools",
+  "navTitle": "Rénovation électrique",
+  "h1": "Rénovation électrique complète à Annecy",
+  "metaTitle": "Rénovation électrique complète à Annecy, artisan électricien",
+  "metaDescription": "Rénovation électrique complète à Annecy : installation vétuste, chalet ancien, appartement. Devis gratuit, artisan local.",
+  "intro": "Installation électrique vieillissante, chalet ancien à rénover, appartement à reprendre entièrement ? Nous intervenons à Annecy pour la rénovation complète de votre installation électrique, du tableau jusqu'aux prises.",
+  "bullets": [
+    "Diagnostic complet",
+    "Reprise du câblage",
+    "Devis détaillé"
+  ],
+  "blocks": [
+    {
+      "heading": "Quand envisager une rénovation complète",
+      "body": "Plusieurs signes indiquent qu'une simple réparation ne suffira plus : une installation datant d'avant les années 1990, des fils en tissu ou en aluminium au lieu du cuivre, un tableau saturé qui ne peut plus accueillir de nouveau circuit, ou un manque chronique de prises dans les pièces à vivre. Ce cas de figure est fréquent dans les chalets anciens et les bâtiments de caractère du bassin annécien, où l'installation d'origine n'a jamais été pensée pour les usages actuels. Une rénovation électrique complète devient alors le choix le plus sûr et le plus durable, en particulier si un projet de rénovation plus large du logement est déjà prévu.",
+      "image": "/services/renovation-electrique-complete-cablage.jpg",
+      "imageAlt": "Câblage électrique ancien apparent dans un mur",
+      "imageCaption": "Fils textiles ou aluminium, tableau à fusibles : autant de signes qu'une rénovation complète s'impose."
+    },
+    {
+      "heading": "Le déroulé d'un chantier de rénovation",
+      "body": "Nous commençons par un diagnostic complet de l'installation existante et un échange sur vos besoins pièce par pièce. Un plan de câblage est ensuite établi, précisant l'emplacement des prises, des points lumineux et des circuits spécialisés. Vient ensuite la phase de travaux : saignées, pose des gaines, installation du nouveau tableau, câblage de chaque circuit, puis pose des appareillages (prises, interrupteurs, luminaires). Chaque circuit est testé individuellement avant la remise en service complète de l'installation.",
+      "image": "/services/renovation-electrique-complete-chantier.jpg",
+      "imageAlt": "Gaines électriques posées avant reprise d'un mur",
+      "imageCaption": "Chaque circuit est reposé selon un plan de câblage adapté à l'usage de chaque pièce."
+    },
+    {
+      "heading": "Zones couvertes",
+      "body": "Nous intervenons à Annecy, dans les secteurs d'Annecy-le-Vieux, Cran-Gevrier, Meythet, Seynod et Pringy, et dans les communes de l'agglomération dans un rayon de 20 km : Poisy, Épagny Metz-Tessy, Argonay, Sevrier, Saint-Jorioz, Veyrier-du-Lac et les communes voisines. En cas de doute sur notre zone de couverture, appelez-nous."
+    }
+  ],
+  "relatedServices": [
+    "remise-aux-normes-tableau-electrique",
+    "mise-en-conformite-diagnostic-electrique"
+  ],
+  "faq": [
+    {
+      "q": "Combien de temps dure une rénovation électrique complète ?",
+      "a": "Pour un appartement ou une maison de taille moyenne, comptez généralement une à deux semaines selon la surface et l'accessibilité des murs. Une estimation précise vous est donnée après le diagnostic sur place."
+    },
+    {
+      "q": "Faut-il refaire les murs après une rénovation électrique ?",
+      "a": "Le passage des gaines nécessite des saignées dans les murs, qui doivent ensuite être rebouchées. Nous rebouchons systématiquement les saignées réalisées ; les finitions (peinture, enduit décoratif) restent généralement à la charge du client ou peuvent être coordonnées avec votre artisan de second œuvre."
+    },
+    {
+      "q": "Peut-on rénover l'installation électrique par étapes ?",
+      "a": "Oui, c'est possible, notamment si le budget doit être étalé. Nous établissons alors un plan global dès le départ pour que chaque étape s'intègre logiquement dans la suite des travaux, sans reprendre ce qui a déjà été fait."
+    },
+    {
+      "q": "Peut-on rester dans le logement pendant les travaux ?",
+      "a": "Cela dépend de l'ampleur du chantier et des pièces concernées. Pour une rénovation complète touchant plusieurs pièces à la fois, il est souvent plus confortable de libérer temporairement le logement ou d'organiser les travaux pièce par pièce. Nous en discutons ensemble avant le début du chantier."
+    }
+  ],
+  "image": "/services/renovation-electrique-complete.jpg"
+}

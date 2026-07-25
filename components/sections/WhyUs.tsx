@@ -35,7 +35,7 @@ export default function WhyUs() {
         <div className="mb-10 text-center md:mb-12 sm:text-left">
           <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-accent">Pourquoi nous choisir</p>
           <h2 id="why-title" className="text-2xl font-bold text-slate-900 md:text-3xl">
-            La détection qui ne laisse pas de traces
+            Le diagnostic qui va droit à la cause
           </h2>
         </div>
 

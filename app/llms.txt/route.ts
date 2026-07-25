@@ -20,12 +20,12 @@ export function GET() {
   const lines: string[] = [
     `# ${businessName}`,
     '',
-    `> ${trade} à ${city} (${region}, ${department}) et dans un rayon de ${radius} km. Détection non destructive, sans casse. Disponible ${availability}.`,
+    `> ${trade} à ${city} (${region}, ${department}) et dans un rayon de ${radius} km. Diagnostic précis, intervention rapide. Disponible ${availability}.`,
     '',
     '## Activité',
-    `${businessName} est un service de ${trade.toLowerCase()} à ${city} et dans son agglomération. Nous localisons précisément les fuites d'eau avant toute intervention, sans casser murs, sols ni revêtements, puis remettons un rapport de localisation utilisable auprès des assurances. Nous ne réalisons pas nous-mêmes la réparation de plomberie : nous localisons la fuite pour que l'artisan intervienne au bon endroit.`,
+    `${businessName} est un service de ${trade.toLowerCase()} à ${city} et dans son agglomération. Nous diagnostiquons précisément l'origine de chaque panne électrique avant toute intervention, du simple dépannage jusqu'au remplacement de tableau, la mise aux normes NFC 15-100 ou l'installation d'une borne de recharge pour véhicule électrique.`,
     '',
-    '## Méthodes de détection',
+    '## Méthodes de diagnostic',
     ...siteConfig.methods.map((m) => `- ${m}`),
     '',
     '## Services',
@@ -44,7 +44,7 @@ export function GET() {
     '## Bon à savoir',
     "- Devis et diagnostic de base gratuits, sans engagement.",
     '- Intervention 7j/7, y compris week-ends et jours fériés pour les urgences.',
-    "- Rapport de localisation reconnu par les assurances (dont convention IRSI en copropriété).",
+    "- Devis détaillé transmis avant toute intervention.",
     '',
   ]
 

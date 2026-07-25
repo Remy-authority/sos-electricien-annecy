@@ -19,74 +19,63 @@ interface Fields {
 
 const TYPES = [
   {
-    id: 'Recherche de fuite',
-    label: 'Recherche de fuite',
+    id: 'Recherche de panne',
+    label: 'Recherche de panne',
     Icon: () => (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7" aria-hidden="true">
         <circle cx="10.5" cy="10.5" r="6.5" />
         <path d="m21 21-4-4" />
-        <path d="M10.5 7.5c0 0-2.5 3-2.5 4.5a2.5 2.5 0 0 0 5 0c0-1.5-2.5-4.5-2.5-4.5z" />
+        <path d="M11.5 7.5 9 11h2.5L10 14.5" />
       </svg>
     ),
   },
   {
-    id: 'Fuite urgente',
-    label: 'Fuite urgente',
+    id: 'Urgence dépannage',
+    label: 'Urgence dépannage',
     Icon: () => (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7" aria-hidden="true">
-        <path d="M12 2.5c0 0-6.5 7-6.5 11.5a6.5 6.5 0 0 0 13 0C18.5 9.5 12 2.5 12 2.5z" />
-        <line x1="12" y1="10" x2="12" y2="14" />
-        <circle cx="12" cy="17" r="0.6" fill="currentColor" stroke="none" />
+        <path d="M13 2.5 4.5 13.5H11l-1.5 8L18 10.5h-6.5l1.5-8Z" />
       </svg>
     ),
   },
   {
-    id: 'Canalisation enterrée',
-    label: 'Canalisation enterrée',
+    id: 'Tableau électrique',
+    label: 'Tableau électrique',
     Icon: () => (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7" aria-hidden="true">
-        <rect x="3" y="8" width="18" height="5" rx="2.5" />
-        <path d="M7 13v3" strokeWidth="1.5" />
-        <path d="M12 13v3" strokeWidth="1.5" />
-        <path d="M17 13v3" strokeWidth="1.5" />
-        <path d="M2 18h20" strokeWidth="1.25" opacity="0.5" />
+        <rect x="4" y="3" width="16" height="18" rx="1.5" />
+        <path d="M8 7.5v4M12 7.5v4M16 7.5v4" strokeWidth="1.5" />
+        <path d="M8 15h8" strokeWidth="1.5" />
       </svg>
     ),
   },
   {
-    id: 'Fuite encastrée (mur/sol)',
-    label: 'Fuite encastrée (mur/sol)',
+    id: 'Diagnostic avant vente',
+    label: 'Diagnostic avant vente',
     Icon: () => (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7" aria-hidden="true">
-        <rect x="3" y="3" width="18" height="18" rx="1" />
-        <path d="M3 9h18" />
-        <path d="M3 15h18" />
-        <path d="M9 3v6" />
-        <path d="M15 9v6" />
-        <path d="M9 15v6" />
-        <path d="M13 6l1.5 3-1.5 1 1.5 3" strokeWidth="1.5" strokeDasharray="1.5 1" />
+        <circle cx="12" cy="12" r="9" />
+        <path d="m8.5 12.5 2.2 2.2L16 9.5" />
       </svg>
     ),
   },
   {
-    id: 'Fuite de piscine',
-    label: 'Fuite de piscine',
+    id: 'Installation neuve',
+    label: 'Installation neuve',
     Icon: () => (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7" aria-hidden="true">
-        <rect x="2" y="6" width="20" height="12" rx="2" />
-        <path d="M2 14c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0" />
-        <path d="M2 10c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0" />
+        <path d="M9 2.5v3.5M15 2.5v3.5" strokeWidth="1.5" />
+        <path d="M6 6h12v4.5A6 6 0 0 1 12 16.5a6 6 0 0 1-6-6.5V6Z" />
+        <path d="M12 16.5v4.5" strokeWidth="1.5" />
       </svg>
     ),
   },
   {
-    id: 'Dégât des eaux / assèchement',
-    label: 'Dégât des eaux',
+    id: 'Rénovation électrique',
+    label: 'Rénovation électrique',
     Icon: () => (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7" aria-hidden="true">
-        <path d="M3 9.5l9-7 9 7V20a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9.5z" />
-        <path d="M9 19c1.5-1 3-1 4.5 0" />
-        <path d="M7.5 15.5c2-1.5 4-1.5 6 0" />
+        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
       </svg>
     ),
   },
@@ -243,7 +232,7 @@ export default function LeadForm() {
                 name="ville"
                 type="text"
                 autoComplete="postal-code"
-                placeholder="Ex : Angers, 49100…"
+                placeholder="Ex : Annecy, 74000…"
                 value={fields.ville}
                 onChange={(e) => set('ville', e.target.value)}
                 className="w-full rounded-xl border border-white/20 bg-white/[0.07] px-4 py-3 text-white placeholder:text-white/30 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition"

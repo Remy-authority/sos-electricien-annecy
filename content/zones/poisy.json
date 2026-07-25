@@ -1,0 +1,47 @@
+{
+  "slug": "poisy",
+  "name": "Poisy",
+  "postalCode": "74330",
+  "context": "Commune résidentielle et dynamique à l'ouest d'Annecy, entre pavillons et petits collectifs récents.",
+  "metaTitle": "Électricien à Poisy (74)",
+  "metaDescription": "Électricien à Poisy, près d'Annecy : dépannage, tableau électrique, mise aux normes. Intervention rapide. Contactez-nous.",
+  "h1": "Électricien à Poisy",
+  "intro": "Nous intervenons à Poisy (74330) pour tout dépannage électrique, remplacement de tableau ou mise aux normes. Commune résidentielle et dynamique à l'ouest d'Annecy, Poisy compte de nombreux pavillons et petits collectifs récents où les installations restent globalement récentes, mais où les extensions et rénovations créent parfois des besoins de mise à niveau. Nous diagnostiquons précisément avant toute intervention.",
+  "blocks": [
+    {
+      "heading": "Nos prestations à Poisy",
+      "body": "Nous intervenons à Poisy pour toutes les situations électriques : recherche de panne sur un circuit, disjoncteur qui saute, remplacement de tableau électrique, mise aux normes avant une vente, ou installation d'une borne de recharge pour véhicule électrique dans un garage ou une place de parking privative. Nous établissons un diagnostic clair et un devis détaillé avant toute intervention."
+    },
+    {
+      "heading": "Panne urgente à Poisy",
+      "body": "En cas de panne urgente à Poisy, appelez-nous directement. En attendant notre arrivée, coupez le disjoncteur du circuit concerné (ou le disjoncteur général en cas de doute ou d'odeur de brûlé) pour limiter les risques. Nous intervenons 7j/7 sur Poisy et les communes voisines."
+    },
+    {
+      "heading": "Communes limitrophes desservies",
+      "body": "En plus de Poisy, nous intervenons dans les communes voisines : Annecy (tous quartiers), Épagny Metz-Tessy, Chavanod et les autres communes de l'ouest de l'agglomération annécienne. Notre zone de couverture s'étend sur un rayon de 20 km autour d'Annecy."
+    }
+  ],
+  "neighbours": [
+    "Annecy",
+    "Épagny Metz-Tessy",
+    "Chavanod"
+  ],
+  "faq": [
+    {
+      "q": "Intervenez-vous à Poisy pour le dépannage électrique ?",
+      "a": "Oui. Nous intervenons à Poisy (74330) pour tout dépannage électrique : recherche de panne, disjoncteur qui saute, remplacement de prise ou d'interrupteur défectueux. Diagnostic précis, devis avant travaux."
+    },
+    {
+      "q": "Quel est le délai d'intervention à Poisy ?",
+      "a": "Poisy est une commune proche d'Annecy, accessible rapidement depuis notre zone d'intervention. Nous vous donnons un délai estimatif lors de votre appel en fonction de notre planning du moment."
+    },
+    {
+      "q": "Faites-vous l'installation de bornes de recharge à Poisy ?",
+      "a": "Oui. Nous étudions votre installation existante et posons une borne de recharge adaptée à votre véhicule et à votre logement, maison individuelle ou copropriété avec parking privatif."
+    },
+    {
+      "q": "Intervenez-vous aussi à Épagny Metz-Tessy et Chavanod ?",
+      "a": "Oui. Nous couvrons Épagny Metz-Tessy, Chavanod et les autres communes de l'ouest de l'agglomération annécienne dans le cadre de notre zone d'intervention de 20 km autour d'Annecy."
+    }
+  ]
+}

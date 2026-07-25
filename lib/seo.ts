@@ -2,7 +2,7 @@
  * lib/seo.ts, Metadata API helpers + JSON-LD builders (Lot 6 SEO infra).
  *
  * Règles NOU-33 :
- *  - Schema LocalBusiness → sous-type **Plumber**, avec `areaServed`.
+ *  - Schema LocalBusiness → sous-type **Electrician**, avec `areaServed`.
  *  - **PAS d'`address`** par défaut (siteConfig.legal.showAddress=false) tant que
  *    Rémy n'a pas tranché l'adresse.
  *  - **Aucun `AggregateRating` / `Review`** (pas d'avis réels).
@@ -71,18 +71,18 @@ export function buildMetadata({
 
 const ORG_ID = `${BASE}/#business`
 
-/** LocalBusiness → Plumber (global, layout). Sans address par défaut. */
-export function plumberJsonLd() {
+/** LocalBusiness → Electrician (global, layout). Sans address par défaut. */
+export function businessJsonLd() {
   const areaServed = [
     siteConfig.serviceArea.base,
     ...siteConfig.serviceArea.districts,
   ]
   const node: Record<string, unknown> = {
     '@context': 'https://schema.org',
-    '@type': 'Plumber',
+    '@type': 'Electrician',
     '@id': ORG_ID,
     name: siteConfig.businessName,
-    description: `${siteConfig.trade} à ${siteConfig.city} et ses environs. Détection non destructive, intervention rapide.`,
+    description: `${siteConfig.trade} à ${siteConfig.city} et ses environs. Diagnostic précis, intervention rapide.`,
     url: BASE,
     telephone: siteConfig.phone,
     email: siteConfig.email,

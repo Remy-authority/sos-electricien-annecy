@@ -18,7 +18,7 @@ export default function Header() {
           aria-label={`${siteConfig.businessName}, accueil`}
         >
           {/* Logo inline SVG, texte sombre sur fond blanc header */}
-          <Logo textColor="#0F172A" iconColor="#0B4F8A" />
+          <Logo textColor="#0F172A" iconColor="#4338CA" />
         </Link>
 
         {/* Nav desktop */}

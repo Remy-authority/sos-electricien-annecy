@@ -1,0 +1,47 @@
+{
+  "slug": "meythet",
+  "name": "Meythet",
+  "postalCode": "74960",
+  "context": "Ancienne commune fusionnée avec Annecy en 2017, aujourd'hui secteur résidentiel au nord-ouest d'Annecy, proche de l'aéroport.",
+  "metaTitle": "Électricien à Meythet (74)",
+  "metaDescription": "Électricien dans le secteur de Meythet : dépannage, tableau électrique, mise aux normes. Intervention rapide. Contactez-nous.",
+  "h1": "Électricien dans le secteur de Meythet",
+  "intro": "Nous intervenons dans le secteur de Meythet (74960) pour tout dépannage électrique, remise aux normes de tableau ou installation électrique neuve. Ancienne commune devenue secteur d'Annecy depuis la fusion de 2017, Meythet est un secteur résidentiel au nord-ouest de l'agglomération, proche de l'aéroport d'Annecy Haute-Savoie Mont-Blanc. Nous diagnostiquons précisément avant toute intervention.",
+  "blocks": [
+    {
+      "heading": "Nos prestations dans le secteur de Meythet",
+      "body": "Nous intervenons dans le secteur de Meythet pour toutes les situations électriques : recherche de panne, remise aux normes de tableau électrique, diagnostic avant vente, et installation électrique neuve pour une extension ou un garage. Nous établissons un diagnostic clair et un devis détaillé avant toute intervention."
+    },
+    {
+      "heading": "Panne urgente à Meythet",
+      "body": "En cas de panne urgente dans le secteur de Meythet, appelez-nous directement. En attendant notre arrivée, coupez le disjoncteur du circuit concerné (ou le disjoncteur général en cas de doute ou d'odeur de brûlé) pour limiter les risques. Nous intervenons 7j/7 sur Meythet et les secteurs voisins."
+    },
+    {
+      "heading": "Secteurs et communes voisines desservis",
+      "body": "En plus de Meythet, nous intervenons dans le secteur de Cran-Gevrier, et les communes de Poisy et Épagny Metz-Tessy au nord-ouest de l'agglomération. Notre zone de couverture s'étend sur un rayon de 20 km autour d'Annecy."
+    }
+  ],
+  "neighbours": [
+    "Cran-Gevrier",
+    "Poisy",
+    "Épagny Metz-Tessy"
+  ],
+  "faq": [
+    {
+      "q": "Meythet est-elle toujours une commune indépendante ?",
+      "a": "Non. Depuis le 1er janvier 2017, Meythet a fusionné avec Annecy et quatre autres anciennes communes pour former la commune nouvelle d'Annecy. C'est aujourd'hui un secteur d'Annecy avec sa propre identité et son code postal (74960), mais plus une commune autonome."
+    },
+    {
+      "q": "Intervenez-vous dans le secteur de Meythet pour le dépannage électrique ?",
+      "a": "Oui. Nous intervenons dans le secteur de Meythet (74960) pour tout dépannage électrique : recherche de panne, disjoncteur qui saute, remise aux normes de tableau. Diagnostic précis, devis avant travaux."
+    },
+    {
+      "q": "Quel est le délai d'intervention à Meythet ?",
+      "a": "Meythet est un secteur proche du centre d'Annecy, accessible rapidement depuis notre zone d'intervention. Nous vous donnons un délai estimatif lors de votre appel en fonction de notre planning du moment."
+    },
+    {
+      "q": "Intervenez-vous aussi à Cran-Gevrier et Poisy ?",
+      "a": "Oui. Nous couvrons le secteur de Cran-Gevrier, la commune de Poisy et les autres secteurs et communes de l'agglomération annécienne dans le cadre de notre zone d'intervention de 20 km."
+    }
+  ]
+}

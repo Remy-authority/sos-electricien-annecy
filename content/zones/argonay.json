@@ -1,0 +1,47 @@
+{
+  "slug": "argonay",
+  "name": "Argonay",
+  "postalCode": "74370",
+  "context": "Commune résidentielle au nord-est de l'agglomération annécienne, entre maisons individuelles et zone d'activité.",
+  "metaTitle": "Électricien à Argonay (74)",
+  "metaDescription": "Électricien à Argonay, près d'Annecy : dépannage, tableau électrique, mise aux normes. Intervention rapide. Contactez-nous.",
+  "h1": "Électricien à Argonay",
+  "intro": "Nous intervenons à Argonay (74370) pour tout dépannage électrique, remplacement de tableau ou mise aux normes. Commune résidentielle au nord-est de l'agglomération annécienne, Argonay compte de nombreuses maisons individuelles avec jardin, où les canalisations électriques enterrées vers les dépendances (garage, abri de jardin) sont fréquentes. Nous diagnostiquons précisément avant toute intervention.",
+  "blocks": [
+    {
+      "heading": "Nos prestations à Argonay",
+      "body": "Nous intervenons à Argonay pour toutes les situations électriques : recherche de panne sur un circuit, remplacement de tableau électrique, mise aux normes NFC 15-100, ou installation d'une borne de recharge pour véhicule électrique dans un garage individuel. Nous établissons un diagnostic clair et un devis détaillé avant toute intervention."
+    },
+    {
+      "heading": "Panne urgente à Argonay",
+      "body": "En cas de panne urgente à Argonay, appelez-nous directement. En attendant notre arrivée, coupez le disjoncteur du circuit concerné (ou le disjoncteur général en cas de doute ou d'odeur de brûlé) pour limiter les risques. Nous intervenons 7j/7 sur Argonay et les communes voisines."
+    },
+    {
+      "heading": "Communes limitrophes desservies",
+      "body": "En plus d'Argonay, nous intervenons dans les communes voisines : Annecy (tous quartiers), Épagny Metz-Tessy et les autres communes du nord-est de l'agglomération annécienne. Notre zone de couverture s'étend sur un rayon de 20 km autour d'Annecy."
+    }
+  ],
+  "neighbours": [
+    "Annecy",
+    "Épagny Metz-Tessy",
+    "Pringy"
+  ],
+  "faq": [
+    {
+      "q": "Intervenez-vous à Argonay pour le dépannage électrique ?",
+      "a": "Oui. Nous intervenons à Argonay (74370) pour tout dépannage électrique : recherche de panne, disjoncteur qui saute, remplacement de tableau. Diagnostic précis, devis avant travaux."
+    },
+    {
+      "q": "Quel est le délai d'intervention à Argonay ?",
+      "a": "Argonay est une commune proche d'Annecy, accessible rapidement depuis notre zone d'intervention. Nous vous donnons un délai estimatif lors de votre appel en fonction de notre planning du moment."
+    },
+    {
+      "q": "Les maisons avec dépendances (garage, abri de jardin) nécessitent-elles une attention particulière ?",
+      "a": "Oui. Les circuits alimentant un garage ou un abri de jardin séparé de la maison doivent respecter des règles de protection spécifiques, notamment si le câblage passe en extérieur ou en sous-sol. Nous vérifions ces points lors du diagnostic."
+    },
+    {
+      "q": "Intervenez-vous aussi à Épagny Metz-Tessy et Pringy ?",
+      "a": "Oui. Nous couvrons Épagny Metz-Tessy, Pringy et les autres communes du nord-est de l'agglomération annécienne dans le cadre de notre zone d'intervention de 20 km autour d'Annecy."
+    }
+  ]
+}

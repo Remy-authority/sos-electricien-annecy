@@ -21,7 +21,7 @@ const REASSURANCE_CARDS = [
       </svg>
     ),
     title: 'Artisan local certifié',
-    desc: "Pas d'intermédiaire. Un artisan indépendant du Maine-et-Loire, joignable directement à tout moment.",
+    desc: `Pas d'intermédiaire. Un artisan indépendant de ${siteConfig.region}, joignable directement à tout moment.`,
   },
 ]
 
@@ -76,7 +76,7 @@ export default function ServiceAreaMap() {
               role="list"
               aria-label="Communes avec page dédiée"
             >
-              {/* Angers en premier, ville principale */}
+              {/* Annecy en premier, ville principale */}
               <li>
                 <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-white">
                   <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" />
@@ -94,7 +94,7 @@ export default function ServiceAreaMap() {
                   </Link>
                 </li>
               ))}
-              {/* Quartiers d'Angers, chips secondaires non liés (mais bien lisibles) */}
+              {/* Quartiers d'Annecy, chips secondaires non liés (mais bien lisibles) */}
               {siteConfig.serviceArea.districts.map((d) => (
                 <li key={d}>
                   <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-slate-200">

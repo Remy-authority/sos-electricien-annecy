@@ -1,0 +1,47 @@
+{
+  "slug": "sevrier",
+  "name": "Sevrier",
+  "postalCode": "74320",
+  "context": "Commune au bord du lac d'Annecy, au sud de la ville, entre habitat résidentiel et secteur touristique.",
+  "metaTitle": "Électricien à Sevrier (74)",
+  "metaDescription": "Électricien à Sevrier, près d'Annecy : dépannage, tableau électrique, mise aux normes. Intervention rapide. Contactez-nous.",
+  "h1": "Électricien à Sevrier",
+  "intro": "Nous intervenons à Sevrier (74320) pour tout dépannage électrique, remplacement de tableau ou mise aux normes. Commune au bord du lac d'Annecy, Sevrier associe résidences permanentes et logements saisonniers, ce qui implique des installations d'âges très variés, des constructions récentes aux logements de vacances plus anciens. Nous diagnostiquons précisément avant toute intervention.",
+  "blocks": [
+    {
+      "heading": "Nos prestations à Sevrier",
+      "body": "Nous intervenons à Sevrier pour toutes les situations électriques : recherche de panne, remplacement de tableau électrique, mise aux normes avant une location saisonnière ou une vente, et rénovation électrique complète pour les logements les plus anciens du secteur lacustre. Nous établissons un diagnostic clair et un devis détaillé avant toute intervention."
+    },
+    {
+      "heading": "Panne urgente à Sevrier",
+      "body": "En cas de panne urgente à Sevrier, appelez-nous directement. En attendant notre arrivée, coupez le disjoncteur du circuit concerné (ou le disjoncteur général en cas de doute ou d'odeur de brûlé) pour limiter les risques. Nous intervenons 7j/7 sur Sevrier et les communes voisines."
+    },
+    {
+      "heading": "Communes limitrophes desservies",
+      "body": "En plus de Sevrier, nous intervenons dans les communes voisines : Annecy (tous quartiers), Saint-Jorioz, Veyrier-du-Lac et les autres communes riveraines du lac d'Annecy. Notre zone de couverture s'étend sur un rayon de 20 km autour d'Annecy."
+    }
+  ],
+  "neighbours": [
+    "Annecy",
+    "Saint-Jorioz",
+    "Veyrier-du-Lac"
+  ],
+  "faq": [
+    {
+      "q": "Intervenez-vous à Sevrier pour le dépannage électrique ?",
+      "a": "Oui. Nous intervenons à Sevrier (74320) pour tout dépannage électrique : recherche de panne, disjoncteur qui saute, remplacement d'appareillage défectueux. Diagnostic précis, devis avant travaux."
+    },
+    {
+      "q": "Quel est le délai d'intervention à Sevrier ?",
+      "a": "Sevrier est une commune proche d'Annecy, accessible rapidement depuis notre zone d'intervention. Nous vous donnons un délai estimatif lors de votre appel en fonction de notre planning du moment."
+    },
+    {
+      "q": "Faites-vous la mise aux normes avant une location saisonnière à Sevrier ?",
+      "a": "Oui. Nous réalisons le diagnostic et les travaux de mise en conformité nécessaires avant la mise en location d'un bien, qu'il s'agisse d'une location saisonnière ou longue durée."
+    },
+    {
+      "q": "Intervenez-vous aussi à Saint-Jorioz et Veyrier-du-Lac ?",
+      "a": "Oui. Nous couvrons Saint-Jorioz, Veyrier-du-Lac et les autres communes riveraines du lac d'Annecy dans le cadre de notre zone d'intervention de 20 km autour d'Annecy."
+    }
+  ]
+}

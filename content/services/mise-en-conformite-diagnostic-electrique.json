@@ -1,0 +1,58 @@
+{
+  "slug": "mise-en-conformite-diagnostic-electrique",
+  "order": 5,
+  "icon": "certificate",
+  "navTitle": "Diagnostic avant vente",
+  "h1": "Mise en conformité et diagnostic électrique avant vente à Annecy",
+  "metaTitle": "Mise en conformité électrique avant vente à Annecy",
+  "metaDescription": "Diagnostic électrique obligatoire avant vente ou location à Annecy : contrôle, travaux de mise en conformité, devis gratuit.",
+  "intro": "Vente ou location d'un bien à Annecy : une installation électrique de plus de 15 ans doit faire l'objet d'un diagnostic électrique obligatoire. Nous intervenons pour contrôler votre installation et réaliser les travaux de mise en conformité identifiés, avec un devis détaillé avant travaux.",
+  "bullets": [
+    "Contrôle de l'installation",
+    "Travaux de mise en conformité",
+    "Devis détaillé"
+  ],
+  "blocks": [
+    {
+      "heading": "Ce que vérifie un diagnostic électrique",
+      "body": "Le diagnostic électrique réglementaire, réalisé par un diagnostiqueur certifié avant une vente, passe en revue les points clés de l'installation : présence et état du disjoncteur différentiel, qualité de la prise de terre, état apparent des matériels électriques vétustes ou inadaptés, et protections spécifiques dans les zones humides comme la salle de bain. Lorsque ce diagnostic révèle des anomalies, nous intervenons pour réaliser les travaux nécessaires à leur correction, en priorisant les points qui présentent un risque réel pour les occupants.",
+      "image": "/services/mise-en-conformite-diagnostic-electrique-diagnostic.jpg",
+      "imageAlt": "Contrôle d'une prise électrique avec un testeur",
+      "imageCaption": "Chaque anomalie relevée par le diagnostic est vérifiée avant de lister les travaux nécessaires."
+    },
+    {
+      "heading": "Les travaux de mise en conformité les plus courants",
+      "body": "Selon les anomalies relevées, les travaux les plus fréquents sont : l'ajout ou la reprise de la prise de terre, l'ajout d'un différentiel 30 mA sur les circuits qui en sont dépourvus, le remplacement d'un matériel électrique vétuste identifié comme dangereux, ou la mise aux normes de la salle de bain lorsque les volumes de sécurité autour de la douche et de la baignoire ne sont pas respectés. Ces travaux ciblés permettent souvent de lever les anomalies sans reprendre l'intégralité du câblage du logement.",
+      "image": "/services/mise-en-conformite-diagnostic-electrique-salle-de-bain.jpg",
+      "imageAlt": "Installation électrique aux normes dans une salle de bain",
+      "imageCaption": "Les volumes de sécurité autour de la douche et de la baignoire imposent des règles précises."
+    },
+    {
+      "heading": "Zones couvertes",
+      "body": "Nous intervenons à Annecy, dans les secteurs d'Annecy-le-Vieux, Cran-Gevrier, Meythet, Seynod et Pringy, et dans les communes de l'agglomération dans un rayon de 20 km : Poisy, Épagny Metz-Tessy, Argonay, Sevrier, Saint-Jorioz, Veyrier-du-Lac et les communes voisines. En cas de doute sur notre zone de couverture, appelez-nous."
+    }
+  ],
+  "relatedServices": [
+    "remise-aux-normes-tableau-electrique",
+    "renovation-electrique-complete"
+  ],
+  "faq": [
+    {
+      "q": "Le diagnostic électrique est-il obligatoire pour vendre un bien ?",
+      "a": "Oui, pour tout logement dont l'installation électrique a plus de 15 ans. Ce diagnostic doit être réalisé par un diagnostiqueur certifié et joint au dossier de diagnostic technique remis à l'acquéreur. Nous n'établissons pas ce diagnostic réglementaire nous-mêmes : nous intervenons pour réaliser les travaux de correction des anomalies qu'il révèle."
+    },
+    {
+      "q": "Qui doit financer la mise en conformité révélée par le diagnostic ?",
+      "a": "Il n'existe pas d'obligation légale de réaliser les travaux avant la vente : le diagnostic informe l'acheteur, qui négocie ensuite avec le vendeur. En pratique, la répartition dépend de l'accord trouvé entre les deux parties. Nous intervenons quel que soit l'arrangement retenu, dès que les travaux sont décidés."
+    },
+    {
+      "q": "Quelle est la durée de validité d'un diagnostic électrique ?",
+      "a": "Un diagnostic électrique est valable 3 ans en cas de vente, et 6 ans en cas de location. Passé ce délai, un nouveau diagnostic doit être réalisé lors d'une nouvelle transaction."
+    },
+    {
+      "q": "Intervenez-vous aussi pour une mise en conformité avant location ?",
+      "a": "Oui. Les mêmes obligations de sécurité s'appliquent aux logements mis en location. Nous intervenons pour corriger les anomalies identifiées, que ce soit dans le cadre d'une location classique ou d'une location meublée."
+    }
+  ],
+  "image": "/services/mise-en-conformite-diagnostic-electrique.jpg"
+}

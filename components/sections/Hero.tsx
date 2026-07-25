@@ -53,15 +53,15 @@ export default function Hero() {
             {siteConfig.availability}
           </div>
 
-          {/* H1, "Angers" avec soulignage dégradé accent */}
+          {/* H1, "Annecy" avec soulignage dégradé accent */}
           <h1
             id="hero-title"
             className="text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl"
           >
-            Recherche de fuite d'eau à{' '}
+            Électricien d'urgence à{' '}
             <span className="relative inline-block text-accent">
               {siteConfig.city}
-              {/* Trait dégradé sous "Angers" */}
+              {/* Trait dégradé sous "Annecy" */}
               <span
                 className="absolute -bottom-1 left-0 h-[3px] w-4/5 rounded-full"
                 style={{
@@ -74,7 +74,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-4 text-base leading-relaxed text-slate-300 sm:text-lg">
-            {siteConfig.responseTime}. Détection non destructive par{' '}
+            {siteConfig.responseTime}. Diagnostic précis par{' '}
             {siteConfig.methods.join(', ')}. Devis gratuit, sans engagement.
           </p>
 
@@ -149,10 +149,10 @@ export default function Hero() {
 
           {/* Titre */}
           <h2 className="mt-4 text-lg font-bold leading-snug text-white">
-            Fuite trouvée ou nous revenons
+            Panne réparée ou nous revenons
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-slate-400">
-            Si la fuite n'est pas localisée lors de notre passage, nous revenons sans frais
+            Si la panne n'est pas résolue lors de notre passage, nous revenons sans frais
             supplémentaire.
           </p>
 

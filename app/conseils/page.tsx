@@ -7,8 +7,8 @@ import { buildMetadata } from '@/lib/seo'
 import { siteConfig } from '@/config/site.config'
 
 export const metadata: Metadata = buildMetadata({
-  title: `Conseils, recherche de fuite d'eau à ${siteConfig.city}`,
-  description: `Guides et conseils sur la recherche de fuite d'eau, la détection, l'assurance et la prévention à ${siteConfig.city} et environs.`,
+  title: `Conseils électricité à ${siteConfig.city}`,
+  description: `Guides et conseils sur le dépannage électrique, le tableau, les normes et la sécurité à ${siteConfig.city} et environs.`,
   path: '/conseils',
 })
 
@@ -20,7 +20,7 @@ export default function ConseilsListing() {
     <section className="container-site section">
       <h1 className="text-3xl md:text-4xl text-center sm:text-left">Conseils</h1>
       <p className="mt-3 mx-auto max-w-2xl text-center text-slate-600 sm:mx-0 sm:text-left">
-        Nos guides pour comprendre, détecter et gérer une fuite d'eau.
+        Nos guides pour comprendre, diagnostiquer et sécuriser votre installation électrique.
       </p>
 
       {articles.length === 0 ? (

@@ -7,36 +7,36 @@ import Image from 'next/image'
 
 const REALISATIONS = [
   {
-    id: 'thermique',
-    category: 'Thermographie',
-    categoryColor: 'bg-blue-600',
-    title: 'Détection par caméra thermique',
-    desc: "Fuite derrière carrelage localisée en 20 min sans casse, appartement Angers centre.",
-    image: '/realisations/thermographie.jpg',
+    id: 'tableau',
+    category: 'Tableau électrique',
+    categoryColor: 'bg-indigo-600',
+    title: 'Remplacement de tableau vétuste',
+    desc: 'Ancien tableau à fusibles remplacé par un modèle aux normes, appartement Annecy centre.',
+    image: '/realisations/tableau.jpg',
   },
   {
-    id: 'acoustique',
-    category: 'Détection acoustique',
+    id: 'panne',
+    category: 'Recherche de panne',
     categoryColor: 'bg-violet-600',
-    title: 'Fuite sous dalle par acoustique',
-    desc: "Localisation à 3 cm près sous chape béton, maison individuelle Saint-Barthélemy.",
-    image: '/realisations/acoustique.jpg',
+    title: 'Court-circuit localisé et réparé',
+    desc: 'Origine identifiée sur un boîtier de dérivation en moins d\'une heure, maison individuelle Poisy.',
+    image: '/realisations/panne.jpg',
   },
   {
-    id: 'gaz-traceur',
-    category: 'Gaz traceur',
+    id: 'installation-neuve',
+    category: 'Installation neuve',
     categoryColor: 'bg-emerald-600',
-    title: 'Injection gaz traceur sur réseau',
-    desc: "Détection fuite chauffage en cave, résidence Avrillé, sans destruction.",
-    image: '/realisations/gaz-traceur.jpg',
+    title: 'Installation de borne de recharge',
+    desc: 'Ligne dédiée et protection différentielle posées dans un garage, résidence Veyrier-du-Lac.',
+    image: '/realisations/borne-recharge.jpg',
   },
   {
-    id: 'rapport',
-    category: 'Bilan hydrique',
+    id: 'diagnostic-vente',
+    category: 'Diagnostic avant vente',
     categoryColor: 'bg-amber-600',
-    title: 'Bilan complet + rapport officiel',
-    desc: "Rapport de localisation remis pour prise en charge assurance, copropriété Les Ponts-de-Cé.",
-    image: '/realisations/rapport.jpg',
+    title: 'Mise en conformité avant vente',
+    desc: 'Diagnostic et travaux de conformité NFC 15-100 réalisés avant la vente, copropriété Seynod.',
+    image: '/realisations/mise-aux-normes.jpg',
   },
 ]
 
@@ -50,7 +50,7 @@ export default function Realisations() {
             Nos réalisations
           </h2>
           <p className="mt-3 text-slate-500 text-sm max-w-xl mx-auto">
-            Quelques interventions récentes sur Angers et le Maine-et-Loire.
+            Quelques interventions récentes sur Annecy et la Haute-Savoie.
           </p>
         </div>
 

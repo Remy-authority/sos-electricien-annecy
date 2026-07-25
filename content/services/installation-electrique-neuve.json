@@ -1,0 +1,58 @@
+{
+  "slug": "installation-electrique-neuve",
+  "order": 6,
+  "icon": "plug",
+  "navTitle": "Installation électrique neuve",
+  "h1": "Installation électrique neuve à Annecy",
+  "metaTitle": "Installation électrique neuve à Annecy, extension, garage",
+  "metaDescription": "Installation électrique neuve à Annecy : extension, garage, dépendance, borne de recharge. Étude, pose, mise en service. Devis gratuit.",
+  "intro": "Extension de maison, garage, dépendance à raccorder, ou borne de recharge à installer à Annecy ? Nous étudions votre installation existante et réalisons le câblage neuf adapté, en toute sécurité et dans le respect des normes en vigueur.",
+  "bullets": [
+    "Étude de faisabilité",
+    "Câblage et raccordement",
+    "Mise en service"
+  ],
+  "blocks": [
+    {
+      "heading": "Étude avant l'installation",
+      "body": "Avant toute installation neuve, nous vérifions plusieurs éléments : la puissance disponible sur votre tableau et votre abonnement, la distance entre le tableau existant et le nouvel espace à raccorder (garage, extension, dépendance), et les protections dédiées nécessaires selon l'usage prévu. Cette étude s'applique aussi bien à une extension de maison qu'à l'installation d'une borne de recharge pour véhicule électrique, et permet de dimensionner correctement les nouveaux circuits sans surcharger l'installation existante.",
+      "image": "/services/installation-electrique-neuve-etude.jpg",
+      "imageAlt": "Étude d'implantation d'une installation électrique dans un garage",
+      "imageCaption": "La puissance disponible et la distance au tableau électrique déterminent le dimensionnement du nouveau circuit."
+    },
+    {
+      "heading": "Pose et mise en service",
+      "body": "Nous tirons une ligne dédiée depuis le tableau électrique jusqu'au nouvel espace, protégée par un disjoncteur adapté à l'usage (éclairage, prises, borne de recharge). Une fois les équipements posés et raccordés, nous testons leur fonctionnement et vérifions l'ensemble du circuit avant la remise. Pour une borne de recharge de véhicule électrique, un temps de prise en main vous est proposé pour l'utiliser dans de bonnes conditions dès le premier jour.",
+      "image": "/services/installation-electrique-neuve-pose.jpg",
+      "imageAlt": "Borne de recharge murale installée dans un garage",
+      "imageCaption": "Une ligne dédiée et une protection adaptée sécurisent chaque nouvelle installation."
+    },
+    {
+      "heading": "Zones couvertes",
+      "body": "Nous intervenons à Annecy, dans les secteurs d'Annecy-le-Vieux, Cran-Gevrier, Meythet, Seynod et Pringy, et dans les communes de l'agglomération dans un rayon de 20 km : Poisy, Épagny Metz-Tessy, Argonay, Sevrier, Saint-Jorioz, Veyrier-du-Lac et les communes voisines. En cas de doute sur notre zone de couverture, appelez-nous."
+    }
+  ],
+  "relatedServices": [
+    "renovation-electrique-complete",
+    "remise-aux-normes-tableau-electrique"
+  ],
+  "faq": [
+    {
+      "q": "Installez-vous des bornes de recharge pour véhicule électrique ?",
+      "a": "Oui, l'installation d'une borne de recharge fait partie de nos installations électriques neuves. Nous étudions la puissance disponible sur votre tableau et posons une ligne dédiée avec une protection adaptée. Si votre prestataire vous demande une qualification IRVE spécifique, vérifiez ce point avec nous au moment du devis."
+    },
+    {
+      "q": "Faut-il un abonnement électrique spécifique pour une nouvelle installation importante ?",
+      "a": "Cela dépend de la puissance totale nécessaire une fois le nouveau circuit ajouté. Nous vérifions ce point lors de l'étude et vous indiquons si une augmentation de puissance souscrite est nécessaire."
+    },
+    {
+      "q": "Raccordez-vous l'électricité d'un abri de jardin ou d'un studio de jardin ?",
+      "a": "Oui. Le raccordement d'une dépendance doit respecter des règles de protection spécifiques, notamment si le câblage passe en extérieur ou enterré. Nous étudions chaque cas selon la distance et l'usage prévu du local."
+    },
+    {
+      "q": "Combien de temps prend une installation électrique neuve ?",
+      "a": "Pour une installation simple avec un tableau proche du nouvel espace, la pose se fait généralement en une demi-journée à une journée. Un raccordement plus long ou une mise à niveau du tableau existant peut demander davantage de temps. Nous vous donnons un délai précis après l'étude."
+    }
+  ],
+  "image": "/services/installation-electrique-neuve.jpg"
+}

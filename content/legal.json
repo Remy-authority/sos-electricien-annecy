@@ -1,5 +1,5 @@
 {
-  "_comment": "Mentions légales, éditeur = société propriétaire du site (DYONISOS LTD, droit UK). Données réelles fournies par Rémy (NOU-29). L'éditeur du site n'est PAS le prestataire des interventions : les infos d'un artisan (assurance RC pro/décennale) seront ajoutées à la location. Ne jamais inventer de valeurs. Hébergeur (Vercel) = fait, pré-rempli.",
+  "_comment": "Mentions légales, éditeur = société propriétaire du site (DYONISOS LTD, droit UK). Raison sociale/immatriculation/adresse = données réelles portefeuille (NOU-29). téléphone/emailContact = DEMO tant que Rémy n'a pas fourni le numéro dédié à ce site. L'éditeur du site n'est PAS le prestataire des interventions : les infos d'un artisan (assurance RC pro/décennale) seront ajoutées à la location. Ne jamais inventer de valeurs. Hébergeur (Vercel) = fait, pré-rempli.",
   "editeur": {
     "raisonSociale": "DYONISOS LTD",
     "formeJuridique": "Private Limited Company (société à responsabilité limitée de droit anglais)",
@@ -7,8 +7,8 @@
     "registre": "Companies House (Royaume-Uni)",
     "adresse": "67 Eastover Road, High Littleton, Bristol, BS39 6HZ, Royaume-Uni",
     "directeurPublication": "Remy Zaoui",
-    "emailContact": "contact@sosfuite-angers.fr",
-    "telephone": "07 56 85 31 25"
+    "emailContact": "contact@sos-electricien-annecy.fr",
+    "telephone": "06 00 00 00 00"
   },
   "assurance": {
     "assureur": "",
@@ -28,7 +28,7 @@
     "donneesCollectees": ["nom", "téléphone", "ville / code postal", "message"],
     "conservation": "Les données sont conservées le temps du traitement de la demande, puis 3 ans à compter du dernier contact à des fins de suivi commercial.",
     "destinataires": "Les données ne sont transmises qu'à l'artisan destinataire de la demande. Aucune revente à des tiers.",
-    "droits": "Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation et d'opposition. Pour l'exercer : contact@sosfuite-angers.fr.",
+    "droits": "Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation et d'opposition. Pour l'exercer : contact@sos-electricien-annecy.fr.",
     "cookies": "Le site n'utilise pas de cookies de suivi publicitaire. Seuls des cookies techniques strictement nécessaires peuvent être déposés."
   }
 }

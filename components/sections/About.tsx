@@ -8,10 +8,10 @@ export default function About() {
         {/* Visuel, photo persona (DEMO – à remplacer par les infos du loueur) */}
         <div className="relative order-2 md:order-1">
           <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-slate-100">
-            {/* DEMO – photo IA placeholder. Vraie photo fournie par Rémy → public/thomas-mercier.jpg */}
+            {/* DEMO – photo IA placeholder. Vraie photo fournie par Rémy → public/julien-perret.jpg */}
             <Image
               src={siteConfig.persona.photo}
-              alt={`${siteConfig.persona.name}, artisan détection fuite d'eau Angers`}
+              alt={`${siteConfig.persona.name}, électricien à Annecy`}
               width={560}
               height={420}
               className="h-full w-full object-cover"
@@ -20,8 +20,8 @@ export default function About() {
           {/* Badge flottant, DEMO – à remplacer par les infos du loueur */}
           <div className="absolute -bottom-4 -right-4 hidden rounded-xl bg-primary px-5 py-3 text-center text-white shadow-lg sm:block">
             {/* DEMO – à remplacer par les infos du loueur */}
-            <p className="text-2xl font-extrabold leading-none">+500</p>
-            <p className="mt-0.5 text-xs font-medium text-white/90">fuites résolues</p>
+            <p className="text-2xl font-extrabold leading-none">+400</p>
+            <p className="mt-0.5 text-xs font-medium text-white/90">pannes résolues</p>
           </div>
         </div>
 
