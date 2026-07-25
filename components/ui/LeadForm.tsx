@@ -350,7 +350,7 @@ export default function LeadForm() {
 
             <div>
               <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-white/80">
-                Email <span className="text-white/40 text-xs font-normal">(optionnel)</span>
+                Email <span className="text-white/60 text-xs font-normal">(optionnel)</span>
               </label>
               <input
                 id="email"
@@ -366,7 +366,7 @@ export default function LeadForm() {
 
             <div>
               <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-white/80">
-                Précisions <span className="text-white/40 text-xs font-normal">(optionnel)</span>
+                Précisions <span className="text-white/60 text-xs font-normal">(optionnel)</span>
               </label>
               <textarea
                 id="message"
@@ -380,7 +380,7 @@ export default function LeadForm() {
             </div>
           </div>
 
-          <p className="mt-3 text-xs text-white/40 leading-relaxed">
+          <p className="mt-3 text-xs text-white/60 leading-relaxed">
             En envoyant ce formulaire, vous acceptez d'être recontacté au sujet de votre demande. Vos données ne sont pas revendues (voir notre{' '}
             <a href="/politique-confidentialite" className="text-white/70 underline transition hover:text-white">
               politique de confidentialité

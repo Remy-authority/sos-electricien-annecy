@@ -1,10 +1,8 @@
 # ETAT.md — Journal de bord SOS Électricien Annecy
 
 > Mémoire du projet. Chaque session lit ce fichier en arrivant et le met à jour avant de finir.
-> Dernière mise à jour : 2026-07-25 (session Builder : itération design, photo hero d'accueil +
-> signature typographique et textures, détail en §3quater). Session Autoblog juste avant :
-> `relatedServices` des 10 drafts recalé sur les 6 slugs définitifs, cannibalisation vs
-> `docs/CALENDRIER-EDITORIAL.md` consignée en §3ter, décision Rémy nécessaire avant publication.
+> Dernière mise à jour : 2026-07-26 (session Builder : 3 finitions du §3quinquies, contraste RGPD,
+> grain rendu visible et écusson de marque gommé sur la photo hero, détail en §3sexies).
 
 ---
 
@@ -81,6 +79,8 @@ Vercel en attendant).
   en §3bis)
 - [x] Builder sur Opus : itération design demandée par le CEO (voir §3bis et §3quater) : photo hero
   accueil + signature typographique/texture, faite le 25/07/2026
+- [x] Builder : 3 finitions du contrôle CEO v2 (contraste RGPD, grain, écusson photo hero),
+  faites le 26/07/2026, détail en §3sexies
 - [ ] Rémy : trancher les valeurs DEMO affichées (stats « +400 pannes résolues », « 8 ans
   d'expérience », promesses « rappel 30 min » et « 100 % panne réparée ou nous revenons »)
   avant toute mise en ligne
@@ -300,6 +300,16 @@ sur les valeurs DEMO affichées, assureur à compléter dans les mentions légal
   zéro erreur console, aucun débordement mobile. Détail complet en §3quater. Rien commité :
   le CEO commite après contrôle.
 
+- **26/07/2026 (Builder, finitions)** : 3 finitions du contrôle CEO v2 traitées (détail §3sexies).
+  Contraste du consentement RGPD porté de 3,81:1 à 6,99:1 (les 2 libellés « (optionnel) » du même
+  formulaire, en échec AA identique, ont été remontés aussi : à signaler au CEO). Grain rendu
+  visible : la cause n'était pas l'opacité mais l'absence de taille intrinsèque sur le SVG, étiré
+  et donc lissé (écart-type mesuré 0,070 avant, 1,56 après sur fond sombre, 3,52 sur le bandeau
+  indigo). Écusson de marque gommé sur `public/hero.jpg` par inpainting harmonique local après
+  deux essais rejetés au contrôle visuel (pli fantôme, puis bloc clair) : 1 947 pixels modifiés,
+  soit 0,046 % de l'image, aucune régénération. Build vert, zéro erreur console, zéro débordement
+  mobile. 3 fichiers modifiés au total, contenu/config/slugs intacts. Rien commité.
+
 ## 3quinquies. CONTRÔLE VISUEL CEO v2 (26/07/2026, après itération design)
 
 Vérifications CEO indépendantes avant commit : périmètre Builder respecté (contenu/config
@@ -326,3 +336,47 @@ validation du niveau actuel + finitions mineures seulement ; (b) valeurs DEMO af
 (c) cannibalisation drafts/calendrier (§3ter, recommandation CEO : garder les drafts en les
 mappant sur les emplacements du calendrier, écrire l'article #6 en priorité, faire valider
 006/010 par l'agent SEO).
+
+
+## 3sexies. FINITIONS BUILDER (26/07/2026, réponse aux 3 points du §3quinquies)
+
+Périmètre strictement limité aux 3 finitions demandées : **3 fichiers modifiés**
+(`app/globals.css`, `components/ui/LeadForm.tsx`, `public/hero.jpg`). Contenu, slugs et config
+non touchés (vérifié par `git status`).
+
+**1. Contraste du consentement RGPD (LeadForm).** Mesure avant : blanc 40 % sur `#0F172A` =
+**3,81:1**, sous le seuil AA. Passé à 60 % = **6,99:1**. Le lien « politique de confidentialité »
+reste inchangé (blanc 70 %) comme demandé. Les deux libellés « (optionnel) » (Email, Précisions)
+étaient au même blanc 40 % dans le même formulaire, donc en échec AA identique : ils ont été
+remontés à 60 % eux aussi. **À signaler au CEO** : c'est une sortie du « rien d'autre », assumée
+parce qu'il s'agit du même défaut, dans le même composant, à corriger d'un seul geste. Trivial à
+annuler si le CEO préfère s'en tenir au seul texte de consentement.
+
+**2. Grain `texture-noise`.** Cause du problème identifiée par la mesure, pas à l'œil : le SVG
+n'avait ni taille intrinsèque ni `background-size`, il était donc **étiré à la taille de la
+section**, ce qui lissait le grain fin jusqu'à le supprimer. Écart-type haute fréquence mesuré sur
+une zone sombre plate du bandeau CTA : **0,070 avant** (soit rien). Corrections : `width`/`height`
+sur le SVG + `background-size: 160px` + `stitchTiles='stitch'` (répétition invisible), et opacité
+portée de 0,035 à **0,65**. `mix-blend-mode: overlay` conservé volontairement : il est fortement
+atténué sur fond sombre (d'où l'opacité élevée) mais il **préserve la luminosité moyenne**, là où
+`screen` ou un mélange normal délaveraient le noir. Résultat mesuré : **1,56** d'écart-type sur le
+bandeau sombre et **3,52** sur le bandeau stats indigo (le grain est naturellement plus lisible en
+demi-teinte, comme sur une vraie pellicule), sans dérive de couleur. Le noir remonte de 28,3 à
+32,6 sur 255, différence non perceptible.
+
+**3. Écusson de marque sur `public/hero.jpg`.** Retouche **locale**, aucune régénération.
+Emprise de l'écusson mesurée par détection colorimétrique (r-b>60 et r>110) : x 1433..1456,
+y 802..861. Méthode retenue après deux essais infructueux, tous deux repérés au contrôle visuel :
+un premier remplissage transplantait le grain d'une zone située plus bas, qui contenait des plis
+de manche, et réimprimait un **pli fantôme** ; un second, par rampe linéaire, propageait la clarté
+d'un pli lumineux tombant pile sur la ligne d'échantillonnage et laissait un **bloc rectangulaire
+clair**. Version retenue : **inpainting harmonique** (équation de Laplace résolue par itérations
+de Jacobi) qui épouse exactement les 4 bords et prolonge les dégradés, plus un grain synthétique
+calibré sur l'écart-type du tissu voisin (aucune structure importée). **1 947 pixels modifiés,
+soit 0,046 % de l'image**, zone y 799..863 / x 1430..1459, reste de l'image bit à bit identique.
+Le zip doré du blouson est conservé : c'est un élément normal du vêtement, pas une marque.
+Sauvegarde de l'original hors dépôt pendant l'opération.
+
+**Contrôles** : build vert (34 pages), zéro erreur console, zéro débordement horizontal en 390 px
+(accueil, page service, page commune) et en 1440 px, parcours du formulaire jusqu'à l'étape 3
+vérifié en capture. Rien commité : le CEO contrôle puis commite.

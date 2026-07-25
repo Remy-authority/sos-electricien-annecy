@@ -93,8 +93,18 @@
     @apply font-display font-normal italic tracking-normal;
   }
 
-  /* Texture de grain, très discrète, pour casser l'aplat des fonds sombres.
-     Bruit fractal SVG inline (aucune requête réseau, aucune image à charger). */
+  /* Texture de grain filmique, pour casser l'aplat des fonds sombres.
+     Bruit fractal SVG inline (aucune requête réseau, aucune image à charger).
+
+     Deux réglages sont critiques et expliquent que la 1re version était invisible
+     (grain mesuré à 0,07 d'écart-type, soit rien) :
+      - le SVG porte une TAILLE INTRINSÈQUE (width/height) et `background-size` fixe :
+        sans cela il est étiré à la taille de la section, ce qui lisse le grain fin
+        jusqu'à le faire disparaître. `stitchTiles` rend la répétition invisible.
+      - `mix-blend-mode: overlay` est fortement atténué sur un fond sombre (le résultat
+        vaut 2 x fond x bruit), il faut donc une opacité élevée. En contrepartie overlay
+        conserve la luminosité moyenne : le noir n'est pas délavé, contrairement à
+        `screen` ou à un mélange normal. */
   .texture-noise {
     @apply relative;
   }
@@ -103,9 +113,11 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    opacity: 0.035;
+    opacity: 0.65;
     mix-blend-mode: overlay;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23g)'/%3E%3C/svg%3E");
+    background-size: 160px 160px;
+    background-repeat: repeat;
   }
 
   /* Motif grille technique (clin d'œil au schéma électrique), masqué en fondu
