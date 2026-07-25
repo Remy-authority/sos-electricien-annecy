@@ -811,3 +811,14 @@ en 1440 et 390 px, héros comparés entre eux sur planche contact (11 visuels di
 11 pages zones + accueil + page service + hub zones + conseils, en desktop et mobile. Audit de
 contraste toujours à **0 échec AA sur 8 pages**. 0 tiret cadratin ajouté, aucun chiffre inventé.
 Rien commité : contrôle CEO d'abord.
+
+## 3quindecies. CONTRÔLE CEO ET MISE EN LIGNE DES CORRECTIONS VISUELLES (26/07/2026)
+
+Livraison Builder (images/logo/watermark) contrôlée avec la nouvelle méthode : 6 des 11
+photos zones inspectées une à une par le CEO (distinctes, cohérence géo, zéro texte/marque),
+logo vérifié (token ambre, éclair recentré, tracé unifié BOLT_PATH), fix icon-192/512
+approuvé (vrais 404 en prod). Commit f3ed483 déployé. Vérifié en ligne : les 11 pages zones
+servent chacune leur photo dédiée, 0 filigrane, icônes 200.
+Email : OVH abandonné (2 échecs d'instructions, offre payante) → solution retenue :
+ImprovMX gratuit (alias contact@ → boîte perso), instructions transmises à Rémy
+(2 MX + modification du SPF existant dans la zone OVH).
