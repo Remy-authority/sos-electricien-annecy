@@ -11,6 +11,7 @@ import {
   readingTimeMinutes,
 } from '@/lib/content'
 import { buildMetadata, articleJsonLd, jsonLdScript } from '@/lib/seo'
+import { formatDateFr } from '@/lib/text'
 import { siteConfig } from '@/config/site.config'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import Faq from '@/components/ui/Faq'
@@ -32,18 +33,6 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     path: `/conseils/${a.slug}`,
     ogImage: a.cover,
   })
-}
-
-const MOIS = [
-  'janvier', 'février', 'mars', 'avril', 'mai', 'juin',
-  'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre',
-]
-
-/** « 2026-07-24 » → « 24 juillet 2026 » (déterministe, sans fuseau horaire). */
-function formatDateFr(iso: string): string {
-  const [y, m, d] = iso.split('-').map(Number)
-  if (!y || !m || !d || m < 1 || m > 12) return iso
-  return `${d} ${MOIS[m - 1]} ${y}`
 }
 
 // Images markdown du corps : lazy + décodage async (le style vient de .article-prose).

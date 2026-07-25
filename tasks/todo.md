@@ -20,8 +20,8 @@
 - [ ] Arbitrage possible : 4e USP « Rappel sous 30 min » ou retour à 3 USP
 - [ ] `content/drafts/011-installation-electrique-garage-dependance.mdx` existe en local mais
   n'est PAS suivi par git : c'est l'article de lancement #6, à contrôler et mettre en file
-- [ ] Détail hub blog : les cartes /conseils affichent la date brute « 2026-07-25 » alors que
-  la page d'article utilise `formatDateFr` (non corrigé, hors périmètre)
+- [x] Détail hub blog : date des cartes /conseils formatée en français, `formatDateFr`
+  mutualisée dans `lib/text.ts`, fait le 26/07/2026 (§3terdecies)
 
 ## Décisions attendues de Rémy
 

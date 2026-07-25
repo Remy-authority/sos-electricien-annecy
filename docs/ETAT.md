@@ -1,8 +1,8 @@
 # ETAT.md — Journal de bord SOS Électricien Annecy
 
 > Mémoire du projet. Chaque session lit ce fichier en arrivant et le met à jour avant de finir.
-> Dernière mise à jour : 2026-07-26 (session Builder : retouches post-validation Rémy, décennale
-> retirée, rayon 30 km, H2 navy, BoltDivider en service, détail en §3undecies).
+> Dernière mise à jour : 2026-07-26 (session Builder, site EN PRODUCTION : fix cosmétique de la
+> date des cartes /conseils, `formatDateFr` mutualisée dans `lib/text.ts`, détail en §3terdecies).
 
 ---
 
@@ -704,7 +704,28 @@ Reste en post-lancement :
 - [ ] Rémy : redirection email contact@sos-electricien-annecy.fr (guide transmis)
 - [ ] Rémy : Google Search Console, propriété Domaine + TXT AFNIC + soumettre le sitemap
   (guide transmis ; le TXT vient du compte Google de Rémy)
-- [ ] Builder : fix cosmétique date brute des cartes /conseils (message transmis)
+- [x] Builder : fix cosmétique date brute des cartes /conseils, fait le 26/07/2026 (§3terdecies)
 - [ ] Vérifier la publication cron de lundi (1re exécution automatique réelle)
 - [ ] Nom commercial : toujours DEMO (« SOS Électricien Annecy » par défaut), email DEMO
   affiché jusqu'à création de la redirection
+
+## 3terdecies. FIX DATE DES CARTES /conseils (26/07/2026, Builder, site en production)
+
+Retouche cosmétique unique demandée par le CEO après la mise en ligne. **3 fichiers, aucun
+changement de contenu, aucune URL ni metadonnée touchée.**
+
+Les cartes du hub `/conseils` affichaient la date ISO brute (« 2026-07-25 ») alors que la page
+d'article affichait déjà « 25 juillet 2026 ». La fonction `formatDateFr` existait mais était
+**privée à `app/conseils/[slug]/page.tsx`** : plutôt que de la recopier dans le hub, elle est
+**remontée dans `lib/text.ts` et exportée**, puis importée par les deux pages. Une seule
+implémentation, réutilisable telle quelle sur les prochains sites du template. Elle reste
+volontairement déterministe (découpage de la chaîne ISO, aucun objet `Date`, aucun fuseau
+horaire), donc pas de risque de décalage entre le build et le client.
+
+L'attribut `dateTime` du `<time>` conserve l'ISO : seul le texte lisible change, les machines
+et les données structurées lisent toujours la date normalisée.
+
+**Contrôles** : build vert (35 pages), dates rendues vérifiées sur le HTML servi des deux
+pages (« 25 juillet 2026 » de part et d'autre, `dateTime="2026-07-25"` intact), capture
+/conseils en 1440 et 390 px, 0 erreur console, 0 débordement horizontal, audit de contraste
+toujours à **0 échec AA sur 8 pages**. Rien commité : contrôle CEO d'abord.

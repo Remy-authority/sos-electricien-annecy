@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { getArticles } from '@/lib/content'
 import { buildMetadata } from '@/lib/seo'
+import { formatDateFr } from '@/lib/text'
 import { siteConfig } from '@/config/site.config'
 
 export const metadata: Metadata = buildMetadata({
@@ -44,7 +45,9 @@ export default function ConseilsListing() {
                   {/* slate-500 et non slate-400 : sur fond blanc, slate-400 tombe à
                       2,56:1 (échec AA), relevé par l'audit de contraste du 26/07/2026
                       dès la publication du 1er article. slate-500 = 4,76:1. */}
-                  <time className="mt-3 block text-xs text-slate-500" dateTime={a.date}>{a.date}</time>
+                  {/* Date lisible (« 26 juillet 2026 ») comme sur la page d'article,
+                      l'attribut `dateTime` garde l'ISO pour les machines. */}
+                  <time className="mt-3 block text-xs text-slate-500" dateTime={a.date}>{formatDateFr(a.date)}</time>
                 </div>
               </Link>
             </li>
