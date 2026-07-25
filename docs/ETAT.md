@@ -1,9 +1,8 @@
 # ETAT.md — Journal de bord SOS Électricien Annecy
 
 > Mémoire du projet. Chaque session lit ce fichier en arrivant et le met à jour avant de finir.
-> Dernière mise à jour : 2026-07-26 (session Builder, site EN PRODUCTION : 11 photos de zones
-> uniques, logo corrigé (ambre de la DA + éclair non coupé), filigrane éclair supprimé,
-> détail en §3quaterdecies).
+> Dernière mise à jour : 2026-07-26 (session Builder, site EN PRODUCTION : 11 images de
+> couverture d'articles générées et câblées via le frontmatter `cover`, détail en §3octodecies).
 
 ---
 
@@ -850,9 +849,76 @@ Cloudflare Email Routing, migration DNS plus lourde).
 - **Process pilote confirmé par Rémy** (correction du CEO) : les 11 articles de lancement se
   publient D'UN COUP au départ (pas au fil du cron), puis les vagues suivantes sont
   préparées À L'AVANCE dans content/drafts/.
-- **Plan validé** : (1) Builder : 11 covers + champ cover ; (2) CEO : contrôle, commit,
+- **Plan validé** : (1) Builder : 11 covers + champ cover **FAIT le 26/07/2026, §3octodecies** ;
+  (2) CEO : contrôle, commit,
   publication en bloc des 10 drafts restants (déclenchements manuels de l'Action) ;
   (3) Autoblog : écrire la file jusqu'à fin janvier 2027 (~68 articles, ordre du
   calendrier, slots §1bis sautés, préfixes 012+, champ cover obligatoire) ;
   (4) Builder : covers de la vague ; contrôle CEO. Ensuite : zéro intervention pendant
   6 mois, le cron publie lun/mer/ven.
+
+## 3octodecies. 11 IMAGES DE COUVERTURE D'ARTICLES (26/07/2026, Builder, site en production)
+
+Périmètre : **11 fichiers ajoutés** (`public/conseils/<slug>.jpg`) et **11 fichiers modifiés**
+d'une seule ligne (le champ `cover` du frontmatter de l'article publié + des 10 drafts).
+Aucun texte d'article, aucun slug, aucune metadonnée, aucun composant touché.
+
+**1. Une image par article, série homogène.** Le gabarit `app/conseils/[slug]/page.tsx`
+affichait déjà le champ `cover` optionnel, mais aucun article ne l'avait : le blog sortait
+100 % texte. Les 11 visuels sont générés dans une direction unique calée sur la DA du site
+(nuit bleutée + ambre) : lumière froide de fenêtre plus une source chaude ambrée qui accroche
+le sujet, palette désaturée, ombres bleu nuit, grain fin, focale courte, cadrage panoramique.
+Chaque sujet colle au titre de son article : couloir dans le noir et lampe torche sur le
+coffret (panne de courant), manette abaissée et doigt qui la désigne (disjoncteur qui saute),
+prise brûlée (prise qui chauffe), tableau neuf trois rangées (NF C 15-100), suie et filet de
+fumée (odeur de brûlé), porte-fusible + disjoncteur + différentiel posés sur un établi
+(comparatif), logement vide en vente (mise aux normes), vieux tableau à fusibles porcelaine
+dans un cellier (tableau vétuste), chantier avec saignées et pierre apparente (rénovation
+maison ancienne), câble à cuivre carbonisé sur un plan de travail (court-circuit), coffret
+divisionnaire et tranchée dans un garage (installation dépendance).
+
+**2. Quatre images ont été refaites après contrôle, avant livraison** (deux candidats générés
+à chaque fois, le meilleur retenu) :
+- **Disjoncteur qui saute** : les manettes portaient un « ON » parfaitement lisible, et le
+  bandeau supérieur du coffret un pseudo-texte. Refaite avec une consigne explicite de
+  matériel « neutre entièrement lisse », zéro caractère au contrôle 1:1.
+- **Comparatif des 3 protections** : « UP » lisible sur la manette du disjoncteur central.
+  Refaite, et la composition y gagne (les 3 dispositifs sont debout et alignés, la première
+  version en couchait un).
+- **Prise qui chauffe** : le premier tirage montrait une **prise allemande de type F**
+  (griffes de terre latérales), incohérente dans un logement français. Refaite en **type E**,
+  broche de terre mâle visible au centre de l'alvéole. Défaut invisible pour un non initié,
+  mais c'est exactement le genre de détail qui trahit une image générée.
+- **Odeur de brûlé** : la porte du coffret portait une **marque de fabricant inventée** lisible
+  en zoom, et le module endommagé une coulée de matière fondue peu crédible. Refaite avec une
+  simple auréole de suie autour d'une borne et un filet de fumée dans le faisceau d'une
+  baladeuse, plus juste par rapport au sujet (on parle d'une odeur, pas d'un incendie).
+
+**3. Contrôle « aucun texte, aucune marque » fait au pixel**, pas à l'œil : inspection de
+chaque image en 1:1 sur les zones à risque (façades des modules, portes de coffret, outils,
+arrière-plans), avec des agrandissements jusqu'à 8x. Résultat : aucun mot, aucun logo, aucun
+visage, aucune plaque. Deux réserves consignées en toute transparence : sur *mise aux normes*
+et sur quelques façades de modules subsistent des **micro-traces de pseudo-sérigraphie** de
+l'ordre de 8 à 20 px dans l'image native, qui **ne dépassent pas 5 à 8 px à l'affichage réel**
+et ne forment aucun caractère identifiable, même en agrandissement fort. Même niveau
+d'exigence que les 11 photos de zones validées en §3quindecies.
+
+**4. Poids et format.** Sortie de génération en 2752 px, rééchantillonnée à **1600 px**
+(l'optimiseur Next sert 1600 px au maximum sur cette page, mesuré) et recompressée en JPEG 82
+progressif : **92 à 237 Ko** par image, contre 5 à 7 Mo brut. Vérifié : `/_next/image` renvoie
+bien 1600 × 893 en 85 Ko sur la page d'article.
+
+**5. Effet de bord positif, signalé** : `generateMetadata` passe déjà `ogImage: a.cover`. Les
+articles avaient donc jusqu'ici l'`og.png` générique en partage social ; ils ont désormais
+**leur propre image OpenGraph** (1600 × 893, au-dessus du minimum recommandé). Aucun code
+modifié pour l'obtenir.
+
+**Contrôles** : build vert (35 pages), **0 erreur console**, **0 débordement horizontal** en
+1440 et 390 px sur la page d'article et sur le hub `/conseils`, couverture chargée et servie
+au bon fichier sur les deux pages (vérifié sur le HTML servi et sur le DOM), **11 empreintes
+de fichier distinctes** (aucun doublon d'image), planche contact des 11 visuels comparés entre
+eux (série cohérente, sujets tous différents), **0 tiret cadratin** ajouté (diff vérifié).
+Rien commité : contrôle CEO d'abord.
+
+**Rappel pour la suite (règle §3sexdecies)** : la vague T2+ d'articles doit inclure
+`cover: "/conseils/<slug>.jpg"` dès la rédaction, et l'image doit exister avant publication.
