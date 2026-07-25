@@ -17,8 +17,8 @@ export default function Header() {
           className="flex shrink-0 items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
           aria-label={`${siteConfig.businessName}, accueil`}
         >
-          {/* Logo inline SVG, texte sombre sur fond blanc header */}
-          <Logo textColor="#0F172A" iconColor="#17304E" />
+          {/* Logo inline SVG, variante fond clair (couleurs pilotées par les tokens) */}
+          <Logo tone="light" />
         </Link>
 
         {/* Nav desktop */}

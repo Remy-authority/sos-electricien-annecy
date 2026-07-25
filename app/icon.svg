@@ -1,4 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Favicon : même tracé d'éclair que le logo et que BoltIcon (les trois divergeaient
+       avant le 26/07/2026). Ambre #F5B32B sur nuit #080E1A, recopiés de siteConfig.colors
+       (un fichier autonome ne peut pas lire les tokens CSS). Éclair posé sur 22 des 32
+       unités, centré, 5 unités de marge : lisible même à 16 px dans un onglet. -->
   <rect width="32" height="32" rx="7" fill="#080E1A"/>
-  <path d="M17 5 8 18h6l-2 9 11-14h-7l3-8Z" fill="#F5B32B"/>
+  <path d="M13 2 4.5 13.5H11l-1.5 8L18 10.5h-6.5l1.5-8Z" transform="translate(3.32 2.74) scale(1.128)" fill="#F5B32B"/>
 </svg>

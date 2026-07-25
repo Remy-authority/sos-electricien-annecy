@@ -44,7 +44,7 @@ export default function Footer() {
         {/* Identité */}
         <div>
           <Link href="/" className="inline-flex items-center" aria-label={`${siteConfig.businessName}, accueil`}>
-            <Logo textColor="white" iconColor="#F5B32B" accentColor="#F5B32B" className="h-8 w-auto" />
+            <Logo tone="dark" className="h-8 w-auto" />
           </Link>
           <p className="mt-3 text-sm">{siteConfig.city} · {siteConfig.region}</p>
           <p className="mt-1 text-sm">

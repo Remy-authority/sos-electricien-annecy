@@ -1,7 +1,10 @@
 <svg viewBox="0 0 260 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SOS Électricien Annecy">
-  <!-- Éclair de marque -->
-  <path d="M23 2 9 27h11l-4 19 21-27H26l4-17Z" fill="#17304E"/>
-  <circle cx="19" cy="14" r="2.5" fill="white" opacity="0.3"/>
+  <!-- Fichier autonome : il ne peut pas lire les tokens CSS du site, les hex sont donc
+       recopiés depuis siteConfig.colors (primary #17304E, accent #F5B32B). À resynchroniser
+       si la palette change. Le composant React components/ui/Logo.tsx, lui, lit les tokens.
+       Même tracé et même cadrage que le composant (éclair posé sur 34 des 48 unités,
+       7 unités de marge haut/bas : il était auparavant à fleur des bords, donc coupé à l'œil). -->
+  <path d="M13 2 4.5 13.5H11l-1.5 8L18 10.5h-6.5l1.5-8Z" transform="translate(0.15 3.51) scale(1.744)" fill="#17304E"/>
   <text x="48" y="22" font-family="system-ui,-apple-system,sans-serif" font-weight="900" font-size="13" fill="#0F172A" letter-spacing="-0.2">SOS ÉLECTRICIEN</text>
-  <text x="48" y="38" font-family="system-ui,-apple-system,sans-serif" font-weight="700" font-size="11" fill="#8A5A00" letter-spacing="2.5">ANNECY</text>
+  <text x="48" y="39" font-family="system-ui,-apple-system,sans-serif" font-weight="800" font-size="14" fill="#F5B32B" letter-spacing="4">ANNECY</text>
 </svg>

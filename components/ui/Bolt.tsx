@@ -50,22 +50,12 @@ export function BoltBadge({
   )
 }
 
-/**
- * Filigrane : très grand éclair en très faible opacité, posé en fond de section
- * sombre. Purement décoratif, jamais lu par les lecteurs d'écran.
+/*
+ * NB : il existait ici un `BoltWatermark` (éclair géant en filigrane de section
+ * sombre). Retiré le 26/07/2026 sur décision de Rémy (rendu jugé peu professionnel),
+ * et supprimé plutôt que laissé en code mort pour ne pas être réutilisé par erreur
+ * sur les prochains sites du template. Récupérable dans l'historique git.
  */
-export function BoltWatermark({ className = '' }: { className?: string }) {
-  return (
-    <svg
-      className={`pointer-events-none absolute select-none text-accent/[0.05] ${className}`}
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      aria-hidden="true"
-    >
-      <path d={BOLT_PATH} />
-    </svg>
-  )
-}
 
 /**
  * Séparateur de marque : un filet dégradé traversé d'un éclair au centre.

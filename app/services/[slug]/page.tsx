@@ -12,7 +12,7 @@ import CtaBanner from '@/components/ui/CtaBanner'
 import ServiceQuickFacts from '@/components/ui/ServiceQuickFacts'
 import ServiceBlock from '@/components/ui/ServiceBlock'
 import AccentWord from '@/components/ui/AccentWord'
-import { BoltBadge, BoltDivider, BoltWatermark } from '@/components/ui/Bolt'
+import { BoltBadge, BoltDivider } from '@/components/ui/Bolt'
 
 // 100% SSG : une page statique par service.
 export const dynamicParams = false
@@ -47,7 +47,6 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       />
       {/* ── En-tête immersif nuit : même langage que l'accueil ── */}
       <header className="section-dark pb-12">
-        <BoltWatermark className="-right-24 -top-28 h-[26rem] w-[26rem] rotate-12" />
         <Breadcrumbs
           tone="dark"
           items={[

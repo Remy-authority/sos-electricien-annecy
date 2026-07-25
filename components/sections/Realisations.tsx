@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { BoltBadge, BoltWatermark } from '@/components/ui/Bolt'
+import { BoltBadge } from '@/components/ui/Bolt'
 
 /**
  * Section « Nos réalisations », grille de 4 cartes d'intervention.
@@ -40,7 +40,6 @@ const REALISATIONS = [
 export default function Realisations() {
   return (
     <section className="section-dark section" aria-labelledby="realisations-title">
-      <BoltWatermark className="-left-20 bottom-0 h-[24rem] w-[24rem] -rotate-12" />
       <div className="container-site">
         <div className="mb-10 text-center">
           <BoltBadge label="Notre travail" />

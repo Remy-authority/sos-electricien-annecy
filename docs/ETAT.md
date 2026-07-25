@@ -1,8 +1,9 @@
 # ETAT.md — Journal de bord SOS Électricien Annecy
 
 > Mémoire du projet. Chaque session lit ce fichier en arrivant et le met à jour avant de finir.
-> Dernière mise à jour : 2026-07-26 (session Builder, site EN PRODUCTION : fix cosmétique de la
-> date des cartes /conseils, `formatDateFr` mutualisée dans `lib/text.ts`, détail en §3terdecies).
+> Dernière mise à jour : 2026-07-26 (session Builder, site EN PRODUCTION : 11 photos de zones
+> uniques, logo corrigé (ambre de la DA + éclair non coupé), filigrane éclair supprimé,
+> détail en §3quaterdecies).
 
 ---
 
@@ -705,6 +706,8 @@ Reste en post-lancement :
 - [ ] Rémy : Google Search Console, propriété Domaine + TXT AFNIC + soumettre le sitemap
   (guide transmis ; le TXT vient du compte Google de Rémy)
 - [x] Builder : fix cosmétique date brute des cartes /conseils, fait le 26/07/2026 (§3terdecies)
+- [x] Builder : 3 corrections visuelles Rémy (11 photos de zones uniques, logo, filigrane
+  supprimé), faites le 26/07/2026 (§3quaterdecies)
 - [ ] Vérifier la publication cron de lundi (1re exécution automatique réelle)
 - [ ] Nom commercial : toujours DEMO (« SOS Électricien Annecy » par défaut), email DEMO
   affiché jusqu'à création de la redirection
@@ -729,3 +732,82 @@ et les données structurées lisent toujours la date normalisée.
 pages (« 25 juillet 2026 » de part et d'autre, `dateTime="2026-07-25"` intact), capture
 /conseils en 1440 et 390 px, 0 erreur console, 0 débordement horizontal, audit de contraste
 toujours à **0 échec AA sur 8 pages**. Rien commité : contrôle CEO d'abord.
+
+## 3quaterdecies. 3 CORRECTIONS VISUELLES RÉMY (26/07/2026, Builder, site en production)
+
+Périmètre : images des pages zones, logo, retrait du filigrane. **11 fichiers modifiés,
+13 fichiers ajoutés.** Aucun texte de contenu, aucun slug, aucune URL, aucune metadonnée
+touchés (`content/` intact).
+
+**1. Les 11 pages zones ont enfin CHACUNE sa photo.** Le défaut de fond : un pool de 3 photos
+tournait sur 11 pages, d'où le même chalet sur Annecy-le-Vieux et Épagny Metz-Tessy et un
+décor de montagne sur des secteurs urbains.
+- **11 photos générées, `public/zones/<slug>.jpg`**, chacune calée sur le caractère réel du
+  lieu : avenue résidentielle des années 1970 pour Meythet, rue de petits collectifs pour
+  Annecy-le-Vieux, rond-point planté pour Seynod, berge de canal et bâti contemporain pour
+  Cran-Gevrier, cœur de village avec clocher pour Pringy, rives du lac pour Veyrier-du-Lac,
+  Sevrier et Saint-Jorioz, lotissements et champs pour Poisy et Argonay, plaine agricole et
+  petite zone d'activité pour Épagny Metz-Tessy.
+- **Série homogène volontairement** : même heure (fin d'après-midi, ombres longues), même
+  optique (24 mm), mêmes couleurs naturelles, pour que les 11 pages se ressemblent en style
+  tout en étant distinctes en sujet.
+- **3 images refaites après contrôle, avant livraison** : Meythet sortait en vieux village de
+  pierre (faux : c'est un secteur urbain du 20e), et Annecy-le-Vieux comme Seynod montraient
+  des voitures **portant un badge de marque visible et des plaques en pseudo-texte**, ce que la
+  règle « aucun texte / logo / marque » interdit. Refaites avec un négatif « aucun véhicule »
+  plutôt que retouchées : 8 patchs d'inpainting auraient été plus risqués qu'une regénération.
+- **Contrôle image par image en 1:1** sur les 8 autres (bandes basses, là où vivent mobilier
+  urbain et véhicules) : aucun texte lisible, aucune marque, aucun visage, aucune plaque.
+- Poids maîtrisé : rééchantillonnées à 1920 px (la page en sert 1152 au maximum) et
+  recompressées en JPEG 82, **370 à 485 Ko chacune**, dans l'ordre de grandeur des visuels
+  existants, au lieu de 1,7 Mo en sortie de génération.
+- **Câblage `app/zones/[slug]/page.tsx`** : la photo dédiée est retenue si le fichier
+  `public/zones/<slug>.jpg` **existe réellement sur le disque** (test au build), sinon l'ancien
+  pool sert de filet. Il n'y a donc **aucune liste de slugs à maintenir** : sur un site N+1, une
+  commune ajoutée sans photo reçoit un visuel au lieu d'une image cassée, et il suffit de
+  déposer un fichier au bon nom pour qu'il soit pris en compte.
+- `alt` du héro rendu exact : la photo montre la commune, pas un artisan au travail. Il devient
+  « Vue de <commune>, secteur d'intervention en dépannage électrique », qui reste porteur du
+  mot-clé.
+- **Les 3 images de corps restent partagées** (elles montrent le métier, pas le lieu) mais
+  l'image ET sa position dans l'article tournent maintenant avec la commune : deux pages
+  voisines n'ont ni le même visuel ni la même structure. Vérifié sur les 11 pages.
+
+**2. Logo : les 2 défauts vus par Rémy sont corrigés, et la cause de fond aussi.**
+- Le mot « ANNECY » sortait en `#8A5A00`, la variante sombre réservée au TEXTE accent sur fond
+  clair, et non en ambre de la DA. Il lit désormais le **token** `--color-accent-rgb`, donc
+  `siteConfig.colors.accent` : mesuré `rgb(245, 179, 43)` au header ET au footer. Plus aucune
+  couleur de marque en dur dans le composant (un logotype est par ailleurs exempté du seuil de
+  contraste WCAG, l'ambre pur est donc légitime ici, contrairement à du texte courant).
+- L'éclair paraissait **coupé** parce qu'il était dessiné sur 44 des 48 unités de hauteur du
+  viewBox, donc à fleur des deux bords. Il est reposé sur 34 unités, centré, **7 unités de
+  marge** en haut et en bas. Vérifié en capture zoomée (×5) au header et au footer.
+- **Cause de fond** : trois dessins d'éclair différents coexistaient (logo, système `Bolt`,
+  favicon) alors que le commentaire du système affirmait qu'ils partageaient le même tracé. Le
+  logo et le favicon utilisent maintenant `BOLT_PATH`, l'unique tracé de référence. Le petit
+  « reflet » blanc de l'ancien éclair a disparu avec lui (il était calé sur l'ancienne
+  géométrie et le système de marque n'en a pas).
+- Les appels sont simplifiés en `<Logo tone="light" />` / `<Logo tone="dark" />` : plus aucun
+  hex au point d'appel. `public/logo.svg` et `app/icon.svg` sont réalignés (fichiers autonomes :
+  ils ne peuvent pas lire les tokens CSS, les hex y sont recopiés avec un commentaire de
+  resynchronisation).
+- **Défaut de production trouvé au passage et corrigé** : `app/manifest.ts` référence
+  `/icon-192.png` et `/icon-512.png` qui **n'existaient pas** (deux 404 en ligne, icône absente
+  à l'ajout sur écran d'accueil). Les deux PNG sont générés depuis le favicon corrigé.
+  **À signaler au CEO** : c'est une sortie du périmètre, assumée, parce qu'elle relève du même
+  sujet (favicon) et corrigeait un 404 réel sur un site déjà en ligne.
+
+**3. `BoltWatermark` supprimé partout** (décision ferme de Rémy) : 5 emplacements retirés
+(accueil, en-tête de page service, en-tête de page commune, FAQ, réalisations) et le composant
+lui-même supprimé de `components/ui/Bolt.tsx` plutôt que laissé en code mort, pour qu'il ne
+soit pas réutilisé par erreur sur un prochain site (récupérable dans l'historique git).
+Vérifié sur le rendu : **0 filigrane** sur les 5 gabarits, et aucun trou visuel dans les
+sections sombres, qui gardent grain, motif grille et `BoltBadge`.
+
+**Contrôles avant livraison** : build vert (35 pages). **Les 11 pages zones ouvertes une à une**
+en 1440 et 390 px, héros comparés entre eux sur planche contact (11 visuels distincts, cadrage
+21/9 sans sujet coupé, lumière homogène) et chaque page servant bien son propre fichier
+(vérifié sur le HTML servi). **0 erreur console** et **0 débordement horizontal** sur les
+11 pages zones + accueil + page service + hub zones + conseils, en desktop et mobile. Audit de
+contraste toujours à **0 échec AA sur 8 pages**. 0 tiret cadratin ajouté, aucun chiffre inventé.
+Rien commité : contrôle CEO d'abord.

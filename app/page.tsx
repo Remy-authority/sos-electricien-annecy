@@ -15,7 +15,7 @@ import WhyUs from '@/components/sections/WhyUs'
 import ServiceAreaMap from '@/components/sections/ServiceAreaMap'
 import Realisations from '@/components/sections/Realisations'
 import { ServiceIcon } from '@/components/ui/ServiceIcon'
-import { BoltBadge, BoltWatermark } from '@/components/ui/Bolt'
+import { BoltBadge } from '@/components/ui/Bolt'
 
 const TITLE = "Électricien d'urgence à Annecy, dépannage rapide"
 const DESC =
@@ -35,9 +35,6 @@ export default function HomePage() {
 
       {/* Services : section immersive nuit, cartes en verre (pièce maîtresse) */}
       <section className="section-dark section" aria-labelledby="services-title">
-        {/* Filigrane éclair : signe de marque en très faible opacité */}
-        <BoltWatermark className="-right-16 -top-20 h-[26rem] w-[26rem] rotate-12" />
-
         <div className="container-site">
           <div className="mb-10 text-center sm:text-left">
             <BoltBadge label="Ce que nous faisons" />

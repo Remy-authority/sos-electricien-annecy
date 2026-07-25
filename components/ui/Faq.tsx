@@ -1,7 +1,7 @@
 import { faqJsonLd, jsonLdScript } from '@/lib/seo'
 import type { FaqItem } from '@/lib/content'
 import AccentWord from './AccentWord'
-import { BoltBadge, BoltWatermark } from './Bolt'
+import { BoltBadge } from './Bolt'
 
 /**
  * Faq, section accordéon accessible (<details>) + JSON-LD FAQPage.
@@ -12,7 +12,6 @@ export default function Faq({ items, title = 'Questions fréquentes' }: { items:
   if (!items?.length) return null
   return (
     <section className="section-dark section" aria-labelledby="faq-title">
-      <BoltWatermark className="-right-24 top-1/4 h-[22rem] w-[22rem] rotate-12" />
       <div className="container-site max-w-3xl">
         <div className="text-center sm:text-left">
           <BoltBadge label="FAQ" />

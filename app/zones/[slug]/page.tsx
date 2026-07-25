@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import fs from 'node:fs'
+import path from 'node:path'
 import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
@@ -9,7 +11,7 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import Faq from '@/components/ui/Faq'
 import CtaBanner from '@/components/ui/CtaBanner'
 import AccentWord from '@/components/ui/AccentWord'
-import { BoltBadge, BoltWatermark } from '@/components/ui/Bolt'
+import { BoltBadge } from '@/components/ui/Bolt'
 
 export const dynamicParams = false
 
@@ -23,14 +25,27 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   return buildMetadata({ title: z.metaTitle, description: z.metaDescription, path: `/zones/${z.slug}` })
 }
 
-// Pool d'images partagé (template N+1) : chaque commune reçoit un hero + une image
-// de corps, assignés de façon déterministe par position dans la liste triée. Un
-// nouveau JSON de commune récupère donc automatiquement des visuels, sans génération.
+// ── Visuels de page commune ───────────────────────────────────────────────────
+// Chaque commune a SA photo héro dédiée, `public/zones/<slug>.jpg` (11 photos
+// générées le 26/07/2026, une par commune, cohérentes avec le caractère réel du
+// lieu : secteurs urbains d'Annecy, bord du lac, périurbain, plaine). Avant cela,
+// 3 photos tournaient sur 11 pages : même chalet de montagne sur Annecy-le-Vieux et
+// sur Épagny Metz-Tessy, et un décor de montagne sur des secteurs urbains.
+//
+// Le pool ci-dessous reste le FILET DE SÉCURITÉ du template : une commune ajoutée
+// sans photo dédiée (site N+1) reçoit tout de même un visuel au lieu d'une image
+// cassée. La présence du fichier est testée sur le disque au build, il n'y a donc
+// aucune liste de slugs à tenir à jour.
 const HERO_POOL = [
   '/zones/zone-pavillon.jpg',
   '/zones/zone-rue.jpg',
   '/zones/zone-interieur.jpg',
 ]
+
+function zoneHero(slug: string, idx: number): string {
+  const onDisk = path.join(process.cwd(), 'public', 'zones', `${slug}.jpg`)
+  return fs.existsSync(onDisk) ? `/zones/${slug}.jpg` : HERO_POOL[idx % HERO_POOL.length]
+}
 const BODY_POOL = [
   { src: '/zones/zone-tableau.jpg', alt: 'Électricien testant un tableau électrique dans une maison individuelle', caption: 'Chaque circuit du tableau électrique est testé avant d’identifier la cause de la panne.' },
   { src: '/zones/zone-diagnostic.jpg', alt: 'Contrôle d’une prise électrique avec un testeur', caption: 'Un diagnostic précis évite de multiplier les interventions au hasard.' },
@@ -43,8 +58,12 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
 
   const zones = getZones()
   const idx = Math.max(0, zones.findIndex((z) => z.slug === zone.slug))
-  const hero = HERO_POOL[idx % HERO_POOL.length]
-  const body = BODY_POOL[(idx + 1) % BODY_POOL.length]
+  const hero = zoneHero(zone.slug, idx)
+  // Les 3 images de corps restent partagées (elles montrent le métier, pas le lieu),
+  // mais l'image ET sa position dans l'article tournent avec la commune : deux pages
+  // voisines n'ont donc ni le même visuel ni la même structure.
+  const body = BODY_POOL[idx % BODY_POOL.length]
+  const bodyAfter = idx % 2
 
   // Maillage : service principal = recherche de panne + urgence.
   const mainServices = getServices().filter((s) =>
@@ -59,7 +78,6 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
       />
       {/* ── En-tête immersif nuit : même langage que l'accueil ── */}
       <header className="section-dark pb-12">
-        <BoltWatermark className="-left-24 -top-24 h-[26rem] w-[26rem] -rotate-12" />
         <Breadcrumbs
           tone="dark"
           items={[
@@ -81,7 +99,7 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
           <div className="relative mt-8 aspect-[16/9] w-full overflow-hidden rounded-card border border-white/10 md:aspect-[21/9]">
             <Image
               src={hero}
-              alt={`Électricien à ${zone.name}`}
+              alt={`Vue de ${zone.name}, secteur d'intervention en dépannage électrique`}
               fill
               sizes="(min-width: 1200px) 1152px, 100vw"
               className="object-cover"
@@ -105,8 +123,8 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
               <h2>{b.heading}</h2>
               <p>{b.body}</p>
 
-              {/* Image de corps insérée après le 1er bloc */}
-              {i === 0 && (
+              {/* Image de corps, insérée après un bloc qui varie selon la commune */}
+              {i === bodyAfter && (
                 <figure className="mt-6">
                   {/* Largeur pleine colonne, alignée sur `.article-prose img` (w-full + cadre léger). */}
                   <div className="relative aspect-[3/2] w-full overflow-hidden rounded-card border border-slate-200 shadow-sm">
