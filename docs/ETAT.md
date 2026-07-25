@@ -1,8 +1,8 @@
 # ETAT.md — Journal de bord SOS Électricien Annecy
 
 > Mémoire du projet. Chaque session lit ce fichier en arrivant et le met à jour avant de finir.
-> Dernière mise à jour : 2026-07-26 (session Builder : passe d'IDENTITÉ VISUELLE, palette nuit +
-> ambre électrique, titraille serif, immersion étendue et éclair de marque, détail en §3septies).
+> Dernière mise à jour : 2026-07-26 (session Agent SEO : validation SEO/GEO des 10 drafts Autoblog
+> et mapping sur `docs/CALENDRIER-EDITORIAL.md`, détail en §3nonies).
 
 ---
 
@@ -69,8 +69,12 @@ Vercel en attendant).
   (149 titres/12 mois)
 - [x] Autoblog : `relatedServices` des 10 drafts `content/drafts/001-010` recalé sur les 6 slugs
   de service définitifs (2 slugs pertinents par article)
-- [ ] Rémy/CEO : trancher le sort des 8 drafts qui recoupent des titres déjà planifiés dans
-  `docs/CALENDRIER-EDITORIAL.md` (détail §3ter) avant toute publication
+- [x] Agent SEO : validation SEO/GEO des 10 drafts et mise à jour de
+  `docs/CALENDRIER-EDITORIAL.md` en conséquence (détail §3nonies), faite le 26/07/2026
+- [ ] CEO/Autoblog : publier les 10 drafts validés (renommage hors `content/drafts/`, retrait du
+  dossier drafts, cf. §3nonies)
+- [ ] Autoblog : rédiger en priorité l'article de lancement #6 (`installation-electrique-neuve`),
+  seul service sans maillage entrant (aucun draft ne le couvre)
 - [x] `robots.ts` reste en noindex automatique en preview ; en ligne le verrou `SEO_NOINDEX=1`
   est déjà posé sur Vercel
 - [x] CEO : contenu commité et poussé (commit a6891da), redéployé sur
@@ -244,7 +248,8 @@ sur les valeurs DEMO affichées, assureur à compléter dans les mentions légal
   pas loués** (07 56 85 31 25, déjà sur Angers). Le numéro dédié viendra avec le locataire.
 - **Chiffres DEMO validés** : +400 pannes, 8 ans, rayon, rappel 30 min, garantie 100 %.
 - **Drafts blog : feu vert conditionné à une validation SEO/GEO** (à faire par l'agent SEO :
-  mapping sur le calendrier, intégration 006/010, contrôle cannibalisation).
+  mapping sur le calendrier, intégration 006/010, contrôle cannibalisation). **Fait le
+  26/07/2026, validation positive, détail §3nonies.**
 - **Pas d'assurance décennale** → retirer l'USP « Assurance décennale » du hero
   (config/site.config.ts:57) et la ligne « couverture » de content/legal.json (Builder).
 - **Rayon d'intervention : extension souhaitée au-delà de 20 km** ; recommandation CEO 30 km
@@ -340,6 +345,19 @@ sur les valeurs DEMO affichées, assureur à compléter dans les mentions légal
   (`components/ui/Bolt.tsx`). Numéro de téléphone réel de Rémy en config. Audit de contraste
   automatisé écrit pour l'occasion : 0 échec AA sur 7 pages. Build vert, 0 erreur console, 0
   débordement mobile. Contenu et slugs intacts. Rien commité.
+
+- **26/07/2026 (Agent SEO)** : validation SEO/GEO des 10 drafts Autoblog demandée par Rémy en
+  réponse à la cannibalisation détectée par le CEO en §3ter (détail complet §3nonies). Qualité
+  GEO conforme sur les 10 drafts (intro citable, FAQ frontmatter, zéro tiret cadratin, zéro
+  chiffre inventé, aucune cannibalisation avec les pages service). Mapping tranché : 001, 002,
+  003, 004, 008, 009 validés tels quels (#1, #2, #7, #13, #3, #4) ; 007 validé comme #5 sans
+  découpage (fusionne l'ex-#46, reprogrammé sur un angle procédural distinct, #14 conservé avec
+  différenciation renforcée) ; 005 validé comme #8 avec titre corrigé (objet réel = tableau, pas
+  prise/interrupteur). 006 et 010 intégrés formellement au calendrier en #150/#151 (hors quota).
+  `docs/CALENDRIER-EDITORIAL.md` mis à jour en conséquence (§1bis ajouté, tableaux T1/T2 et
+  anti-cannibalisation amendés, mix thématique et résumé recalculés sur 151 titres). Signalé :
+  `installation-electrique-neuve` (#6) reste sans article de lancement, priorité n°1 Autoblog.
+  Aucun fichier hors `docs/` touché.
 
 ## 3quinquies. CONTRÔLE VISUEL CEO v2 (26/07/2026, après itération design)
 
@@ -490,3 +508,55 @@ cette session (interdit).
 
 **État : le site est prêt pour la validation visuelle finale de Rémy** (sous réserve de
 l'arbitrage téléphone, des valeurs DEMO, de l'email/nom commercial et de l'assurance).
+
+## 3nonies. VALIDATION SEO/GEO DES DRAFTS AUTOBLOG (26/07/2026, agent SEO)
+
+Mission : trancher le sort des 10 drafts `content/drafts/001-010` conditionné par Rémy (§4bis),
+en repartant de la cannibalisation détectée par le CEO en §3ter. Détail complet et tableaux dans
+`docs/CALENDRIER-EDITORIAL.md` §1bis et §3 (mis à jour). Périmètre respecté : uniquement
+`docs/`, aucun fichier `content/` touché.
+
+**Qualité GEO : conforme sur les 10 drafts, aucune réécriture nécessaire.** Vérification
+individuelle : réponse courte citable (2 phrases factuelles) après chaque H1, FAQ de 4 questions
+en frontmatter sur chacun, zéro tiret cadratin (`grep` sur les 10 fichiers), zéro chiffre
+inventé, `relatedServices` correct. Aucune cannibalisation avec les pages service existantes :
+les 6 `content/services/*.json` ont des H1 transactionnels (« X à Annecy ») structurellement
+distincts des titres informationnels longue traîne des drafts.
+
+**Mapping tranché** :
+- **001→#1, 002→#2, 008→#3, 009→#4, 003→#7, 004→#13 : validés tels quels**, titres identiques
+  ou quasi identiques aux emplacements du calendrier.
+- **007→#5 : validé comme #5, PAS découpé.** Le draft fusionne l'angle #5 (diagnostic avant
+  vente) et l'ancien angle #46 (ce que vérifie le diagnostic, pourquoi il est obligatoire) en un
+  article complet et cohérent : le découper après coup aurait gâché un travail déjà correct.
+  **#46 reprogrammé** sur un angle procédural distinct (délai de remise du diagnostic à
+  l'acheteur dans le processus de vente) pour ne pas dupliquer 007. **#14** (obligations
+  *continues* du bailleur pendant la location, au-delà du diagnostic ponctuel) reste au
+  calendrier sans changement, avec une note de différenciation renforcée pour la rédaction
+  future : 007 ne fait qu'effleurer la location, #14 doit se concentrer sur ce que 007 ne couvre
+  pas.
+- **005→#8 : validé avec titre amendé.** Le calendrier prévoyait l'objet « prise/interrupteur »
+  pour #8, le draft traite en réalité l'objet « tableau électrique » (protocole de sécurité
+  différent : couper le disjoncteur général). Titre et requête cible de #8 corrigés dans le
+  calendrier pour refléter fidèlement le contenu réel. Pas de doublon avec #7/003 (prise qui
+  chauffe, qui cite déjà l'odeur de brûlé comme un signe parmi d'autres) : objets différents,
+  couverture complémentaire.
+- **006 et 010 intégrés formellement au calendrier**, numérotés #150 et #151 (hors quota des 149
+  initiaux, pour ne pas décaler la numérotation déjà référencée en anti-cannibalisation). Sujets
+  propres confirmés sans équivalent parmi les 149 titres.
+
+**Résultat : les 10 drafts sont validés pour publication, aucune réécriture requise.** Seuls 2
+titres du calendrier ont été ajustés (#8, #46) pour rester cohérents avec le contenu réel ;
+`content/drafts/*.mdx` n'a pas été modifié (hors périmètre de cet agent).
+
+**⚠️ Signalé pour la suite** : sur les 6 services, **`installation-electrique-neuve` (#6) reste
+sans aucun article de lancement**, aucun des 10 drafts ne le couvre. C'est désormais le seul
+service sans maillage entrant depuis le blog. **Priorité n°1 pour la prochaine session Autoblog**,
+avant tout autre sujet du calendrier : rédiger #6 (« Installation électrique d'un garage ou d'une
+dépendance : ce qu'il faut prévoir »).
+
+**15 zones de cannibalisation au total** dans `docs/CALENDRIER-EDITORIAL.md` §3 (13 initiales + 2
+ajoutées : #8 vs #7, #150 vs #16/#37).
+
+**Non fait par cet agent** (hors périmètre `docs/`) : publication effective des drafts (renommage,
+sortie de `content/drafts/`), rédaction de l'article #6. À faire par le CEO/Autoblog.

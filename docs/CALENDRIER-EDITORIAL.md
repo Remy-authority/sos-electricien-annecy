@@ -53,7 +53,51 @@ sans maillage entrant pendant les premières semaines de mise en ligne.
 
 ---
 
-## 2. CALENDRIER ÉDITORIAL (149 TITRES, T1 À T4)
+## 1bis. VALIDATION SEO/GEO DES 10 DRAFTS AUTOBLOG (26/07/2026)
+
+L'Autoblog a rédigé 10 drafts (`content/drafts/001-010`) avant que ce calendrier n'existe, à
+partir du brief générique de la mission. Comparaison systématique des 10 titres avec les 149
+titres planifiés (déjà faite par le CEO en `docs/ETAT.md` §3ter), puis validation qualité GEO et
+décision de mapping par l'agent SEO (ce document).
+
+**Qualité GEO des 10 drafts : conforme, aucune réécriture nécessaire.** Vérification individuelle
+des 10 fichiers : réponse courte citable de 2 phrases factuelles juste après le H1 sur chacun,
+FAQ de 4 questions en frontmatter sur chacun (`faq: [{q, a}]`, jamais dans le corps Markdown),
+zéro tiret cadratin (`grep` sur les 10 fichiers, aucune occurrence), zéro chiffre inventé (aucune
+durée, tarif ni statistique affirmée sans source), `relatedServices` renseigné avec 2 slugs
+pertinents sur les 6 définitifs. Aucune cannibalisation avec les pages service/zone existantes
+vérifiée : les 6 pages `content/services/*.json` ont des H1/metaTitles transactionnels (« X à
+Annecy », intention d'achat) structurellement distincts des titres informationnels des drafts
+(longue traîne, intention de recherche), à l'image du pilote Angers où articles de blog et pages
+service cohabitent sans concurrence de mots-clés.
+
+**Mapping validé (5 des 6 articles de lancement déjà rédigés)** :
+
+| Draft | # calendrier | Décision | Note |
+|---|---|---|---|
+| 001 | **#1** | Validé tel quel | Titre réel légèrement différent (« Panne de courant à la maison : ... »), même requête cible, aucun changement requis |
+| 002 | **#2** | Validé tel quel | Titre strictement identique au calendrier |
+| 008 | **#3** | Validé tel quel | Titre réel « Tableau électrique vétuste : les signes qu'il est temps de le remplacer », même requête cible |
+| 009 | **#4** | Validé tel quel | Titre réel localisé « ... à Annecy », couverture éditoriale meilleure que prévu (bâti ancien centre historique + pavillons 1970-1980 nommément) |
+| 007 | **#5** | Validé comme #5, **#46 reprogrammé** (voir T2) | Le draft fusionne l'angle #5 (diagnostic avant vente, ce qu'il faut savoir) et l'angle #46 (pourquoi le diagnostic est obligatoire et ce qu'il vérifie) en un seul article complet et cohérent. Découper après coup gâcherait un travail déjà correct : je le compte comme #5 et je retire #46 du calendrier (remplacé par un titre à angle réellement différent, voir T2). L'angle #14 (obligations *continues* du bailleur, au-delà du diagnostic ponctuel) reste distinct et n'est pas couvert par 007, donc **conservé sans changement**, avec une note de différenciation renforcée en §3. |
+| 003 | **#7** | Validé, **titre calendrier inchangé** | Correspond exactement à #7 (« Prise électrique qui chauffe ») |
+| 004 | **#13** | Validé tel quel | Correspond exactement à #13 (norme NF C 15-100) |
+| 005 | **#8, avec amendement du titre calendrier** | Validé comme #8, titre corrigé | Le calendrier prévoyait #8 sur l'objet « prise ou interrupteur », le draft traite en réalité l'objet « tableau électrique ». Ce n'est pas un doublon de #7/003 (qui couvre déjà l'odeur de brûlé comme un signe parmi d'autres pour l'objet prise) : c'est un objet différent avec un protocole de sécurité différent (couper le disjoncteur général, ne pas s'approcher du tableau). Le titre #8 est corrigé ci-dessous en T1 pour refléter fidèlement le contenu réel, ce qui évite en plus tout besoin futur d'un article dédié « odeur de brûlé + prise », déjà couvert par 003. |
+| 006 | **Nouveau #150** | Intégré hors quota | Sujet propre (comparatif disjoncteur/fusible/différentiel), aucun équivalent dans les 149 titres. Ajouté formellement en fin de T1, voir §2. |
+| 010 | **Nouveau #151** | Intégré hors quota | Sujet propre (court-circuit), aucun équivalent dans les 149 titres. Ajouté formellement en fin de T1, voir §2. |
+
+**Service resté sans article de lancement : `installation-electrique-neuve` (#6).** Aucun des 10
+drafts ne le couvre. C'est désormais le seul des 6 services sans aucun maillage entrant depuis le
+blog. **Priorité n°1 pour la prochaine session Autoblog** : rédiger #6 (« Installation électrique
+d'un garage ou d'une dépendance : ce qu'il faut prévoir ») avant tout autre sujet du calendrier.
+
+**Publication** : ce sont le CEO et l'Autoblog qui publient (renommage de fichiers, retrait de
+`content/drafts/`), pas cet agent (périmètre `docs/` uniquement). Les 5 titres #1 à #5 ci-dessous
+et en T1 reflètent désormais l'état validé pour publication.
+
+---
+
+## 2. CALENDRIER ÉDITORIAL (151 TITRES : 149 PLANIFIÉS + 2 AJOUTÉS HORS QUOTA, T1 À T4)
 
 Découpage retenu (12 mois à partir de la date de rédaction) :
 
@@ -68,29 +112,29 @@ Découpage retenu (12 mois à partir de la date de rédaction) :
 
 Numérotation continue #1 à #149 (référencée en section 3, anti-cannibalisation).
 
-### T1, août à octobre 2026 (37 titres)
+### T1, août à octobre 2026 (37 titres planifiés + 2 ajoutés hors quota le 26/07/2026 = 39)
 
 #### Articles de lancement (un par service, semaines 1-2)
 
-| # | Titre | Requête cible | Intention | `relatedServices` |
-|---|---|---|---|---|
-| 1 | Coupure de courant chez soi : que vérifier avant d'appeler un électricien | panne de courant que faire | Transac | urgence-depannage-electrique |
-| 2 | Disjoncteur qui saute sans arrêt : les causes les plus fréquentes | disjoncteur qui saute sans arrêt | Info | recherche-panne-electrique |
-| 3 | Tableau électrique ancien : les signes qu'il faut le remettre aux normes | tableau électrique vétuste signes | Info | remise-aux-normes-tableau-electrique |
-| 4 | Rénover l'électricité d'une maison ancienne : par où commencer | rénovation électrique maison ancienne | Info | renovation-electrique-complete |
-| 5 | Diagnostic électrique avant une vente : ce qu'il faut savoir | diagnostic électrique obligatoire vente | Info | mise-en-conformite-diagnostic-electrique |
-| 6 | Installation électrique d'un garage ou d'une dépendance : ce qu'il faut prévoir | installation électrique garage dépendance | Transac | installation-electrique-neuve |
+| # | Titre | Requête cible | Intention | `relatedServices` | Statut (validé agent SEO 26/07/2026) |
+|---|---|---|---|---|---|
+| 1 | Coupure de courant chez soi : que vérifier avant d'appeler un électricien | panne de courant que faire | Transac | urgence-depannage-electrique | ✅ Publié via draft 001 |
+| 2 | Disjoncteur qui saute sans arrêt : les causes les plus fréquentes | disjoncteur qui saute sans arrêt | Info | recherche-panne-electrique | ✅ Publié via draft 002 |
+| 3 | Tableau électrique ancien : les signes qu'il faut le remettre aux normes | tableau électrique vétuste signes | Info | remise-aux-normes-tableau-electrique | ✅ Publié via draft 008 |
+| 4 | Rénover l'électricité d'une maison ancienne : par où commencer | rénovation électrique maison ancienne | Info | renovation-electrique-complete | ✅ Publié via draft 009 |
+| 5 | Diagnostic électrique avant une vente : ce qu'il faut savoir | diagnostic électrique obligatoire vente | Info | mise-en-conformite-diagnostic-electrique | ✅ Publié via draft 007 (fusionne aussi l'ex-#46, voir T2) |
+| 6 | Installation électrique d'un garage ou d'une dépendance : ce qu'il faut prévoir | installation électrique garage dépendance | Transac | installation-electrique-neuve | 🔴 **Aucun draft ne le couvre. Seul service sans article de lancement. Priorité n°1 Autoblog.** |
 
 #### Symptômes / diagnostic
 
-| # | Titre | Requête cible | Intention | `relatedServices` |
-|---|---|---|---|---|
-| 7 | Prise électrique qui chauffe : un signe à ne jamais ignorer | prise électrique qui chauffe danger | Info | recherche-panne-electrique |
-| 8 | Odeur de brûlé près d'une prise ou d'un interrupteur : la conduite à tenir | odeur de brûlé prise électrique | Transac | urgence-depannage-electrique |
-| 9 | Lumière qui clignote ou vacille dans toute la maison : les causes possibles | lumière qui clignote maison cause | Info | recherche-panne-electrique |
-| 10 | Étincelles en branchant un appareil : faut-il s'inquiéter ? | étincelles prise électrique branchement | Info | recherche-panne-electrique |
-| 11 | Une seule pièce sans électricité alors que le reste de la maison fonctionne : comment le diagnostiquer | une pièce sans électricité cause | Info | recherche-panne-electrique |
-| 12 | Fils électriques apparents ou dénudés : le risque et la marche à suivre | fils électriques dénudés danger | Info | remise-aux-normes-tableau-electrique |
+| # | Titre | Requête cible | Intention | `relatedServices` | Statut |
+|---|---|---|---|---|---|
+| 7 | Prise électrique qui chauffe : un signe à ne jamais ignorer | prise électrique qui chauffe danger | Info | recherche-panne-electrique | ✅ Publié via draft 003 |
+| 8 | Odeur de brûlé près du tableau électrique : que faire immédiatement *(titre amendé le 26/07/2026, objet initialement prévu « prise/interrupteur » remplacé par « tableau », voir §1bis)* | odeur de brûlé tableau électrique que faire | Transac | urgence-depannage-electrique | ✅ Publié via draft 005 |
+| 9 | Lumière qui clignote ou vacille dans toute la maison : les causes possibles | lumière qui clignote maison cause | Info | recherche-panne-electrique | À rédiger |
+| 10 | Étincelles en branchant un appareil : faut-il s'inquiéter ? | étincelles prise électrique branchement | Info | recherche-panne-electrique | À rédiger |
+| 11 | Une seule pièce sans électricité alors que le reste de la maison fonctionne : comment le diagnostiquer | une pièce sans électricité cause | Info | recherche-panne-electrique | À rédiger |
+| 12 | Fils électriques apparents ou dénudés : le risque et la marche à suivre | fils électriques dénudés danger | Info | remise-aux-normes-tableau-electrique | À rédiger |
 
 #### Normes / réglementation
 
@@ -157,6 +201,19 @@ Numérotation continue #1 à #149 (référencée en section 3, anti-cannibalisat
 |---|---|---|---|---|
 | 37 | Lexique de l'électricité domestique : les termes expliqués simplement | lexique électricité domestique | Info | recherche-panne-electrique |
 
+#### Articles complémentaires validés hors quota (drafts 006 et 010, ajoutés le 26/07/2026)
+
+Ces 2 titres n'appartenaient pas aux 149 titres planifiés initialement : les drafts correspondants
+ont été rédigés par l'Autoblog sur des sujets propres (aucun équivalent trouvé dans le calendrier,
+détail en §1bis), l'agent SEO les intègre donc formellement ici plutôt que de les laisser hors
+calendrier. Numérotés à la suite (150, 151) pour ne pas décaler la numérotation #1 à #149 déjà
+référencée en section 3 (anti-cannibalisation).
+
+| # | Titre | Requête cible | Intention | `relatedServices` | Statut |
+|---|---|---|---|---|---|
+| 150 | Disjoncteur, fusible, interrupteur différentiel : quelles différences ? | disjoncteur fusible différentiel différence | Info | recherche-panne-electrique, remise-aux-normes-tableau-electrique | ✅ Publié via draft 006 |
+| 151 | Court-circuit à la maison : comprendre ce qui se passe et sécuriser sans risque | court-circuit maison comprendre sécuriser | Info | urgence-depannage-electrique, recherche-panne-electrique | ✅ Publié via draft 010 |
+
 ### T2, novembre 2026 à janvier 2027 (40 titres)
 
 #### Symptômes / diagnostic
@@ -176,7 +233,7 @@ Numérotation continue #1 à #149 (référencée en section 3, anti-cannibalisat
 
 | # | Titre | Requête cible | Intention | `relatedServices` |
 |---|---|---|---|---|
-| 46 | Vendre un bien immobilier : pourquoi le diagnostic électrique est obligatoire et ce qu'il vérifie | diagnostic électrique vente obligation contenu | Info | mise-en-conformite-diagnostic-electrique |
+| 46 | À quel moment de la vente le diagnostic électrique doit-il être remis à l'acheteur : le bon moment dans le processus *(reprogrammé le 26/07/2026, titre initial déjà couvert par le draft 007 publié en #5, voir §1bis)* | délai remise diagnostic électrique vente | Info | mise-en-conformite-diagnostic-electrique |
 | 47 | Location saisonnière ou meublé de tourisme : les obligations électriques spécifiques | obligations électriques location meublée | Locale | mise-en-conformite-diagnostic-electrique |
 | 48 | Attestation Consuel : dans quels cas elle est obligatoire pour une installation électrique | attestation Consuel obligatoire | Info | remise-aux-normes-tableau-electrique |
 | 49 | Assurance habitation et sinistre électrique : ce qui est couvert et ce qui ne l'est pas | assurance habitation sinistre électrique couverture | Info | urgence-depannage-electrique |
@@ -437,7 +494,7 @@ individuelle/collective) et on le mentionne dans l'intro de l'article le plus ta
 
 | Titres concernés | Nature du risque | Différenciation retenue |
 |---|---|---|
-| #5, #46, #86, #87, #89, #90 | Cinq articles touchent tous au diagnostic électrique avant vente | #5 = vue d'ensemble pour un premier lecteur (« ce qu'il faut savoir »). #46 = le contenu réglementaire du diagnostic (ce qu'il vérifie). #86 = spécificité copropriété. #87 = que faire après une anomalie détectée. #89 = durée de validité, angle calendaire. #90 = qui paie la mise en conformité, angle financier. Six angles distincts à respecter strictement à la rédaction, sinon fusionner. |
+| #5 (publié, draft 007), #46 (reprogrammé), #86, #87, #89, #90 | Diagnostic électrique avant vente, plusieurs angles | **Mise à jour 26/07/2026** : #5 est publié (draft 007) et couvre déjà entièrement l'ancien angle #46 (« pourquoi le diagnostic est obligatoire et ce qu'il vérifie ») ; #46 a donc été reprogrammé sur un angle procédural distinct (délai de remise à l'acheteur), voir T2. Angles restants à respecter à la rédaction : #86 = spécificité copropriété. #87 = que faire après une anomalie détectée. #89 = durée de validité, angle calendaire. #90 = qui paie la mise en conformité, angle financier. Toujours comparer tout nouvel article de ce cluster à 007/#5 avant rédaction, pas seulement aux titres du calendrier. |
 | #13, #48, #113 | Trio réglementaire général | #13 = la norme NF C 15-100 elle-même (contenu technique). #48 = l'attestation Consuel (document, pas la norme). #113 = panorama global de toutes les obligations (page pilier qui renvoie vers les deux autres plutôt que de les redévelopper). |
 | #35 vs #71 | Même thème « panne EDF/Enedis ou panne interne » | #35 = angle diagnostic individuel (comment savoir chez soi). #71 = angle collectif (coupure affectant tout un quartier). Si le recoupement est trop fort à la rédaction, fusionner en un seul article. |
 | #27, #55, #57, #129 | Quatuor « sécuriser l'électricité en cas d'absence » | #27 = résidence secondaire au bord du lac, toute saison. #55 = absence hivernale courte à moyenne, tout logement. #57 = résidence secondaire montagne fermée spécifiquement l'hiver (risque gel). #129 = absence estivale, checklist générale avant vacances. Différenciés par durée, saison et type de bien ; à rédiger dans cet ordre pour maillage croisé sans répétition. |
@@ -446,10 +503,12 @@ individuelle/collective) et on le mentionne dans l'intro de l'article le plus ta
 | #38, #54, #56 | Trio chauffage électrique / surcharge | #38 = diagnostic quand le chauffage fait disjoncter (symptôme précis). #54 = précautions avec un chauffage d'appoint (préventif, matériel mobile). #56 = angle saisonnier global (pic de consommation hiver sur installation ancienne). Rédiger dans cet ordre pour permettre le maillage croisé sans répétition. |
 | #41, #66, #119 | Trio « puissance insuffisante / tableau saturé » | #41 = symptôme (le compteur disjoncte avec plusieurs appareils). #66 = angle rénovation (pourquoi on ne peut pas juste ajouter un disjoncteur). #119 = angle saisonnier été (climatisation). Chacun garde un contexte déclencheur différent. |
 | #33, #92, #107 | Trio rénovation électrique, angle technique | #33 = logique du nombre de circuits (dimensionnement). #92 = le schéma électrique en tant que document (utilité, conservation). #107 = déroulé chronologique du chantier (étapes). Trois objets distincts (dimensionnement, document, planning), pas une redite. |
-| #14, #123, #144 | Trio bailleur / location et électricité | #14 = obligations légales générales du propriétaire bailleur. #123 = cas spécifique de la location meublée. #144 = angle rénovation avant mise en location (argument commercial pour le bailleur, pas les obligations). À garder distincts, avec renvoi croisé plutôt que fusion. |
+| #14, #123, #144, (et 007/#5 publié) | Trio bailleur / location et électricité | #14 = obligations légales *continues* du propriétaire bailleur pendant toute la durée de la location (entretien, décence du logement), pas seulement l'obligation ponctuelle de diagnostic déjà couverte par le draft 007/#5 publié, qui ne fait qu'effleurer la location en comparaison de la vente. #123 = cas spécifique de la location meublée. #144 = angle rénovation avant mise en location (argument commercial pour le bailleur, pas les obligations). **Point de vigilance ajouté le 26/07/2026** : à la rédaction de #14, bien vérifier le contenu déjà publié de 007 pour ne pas répéter sa partie sur le diagnostic et se concentrer sur les obligations qui vont au-delà. À garder distincts, avec renvoi croisé plutôt que fusion. |
 | #111, #112, #146 | Trio « organisation de la recherche de panne » | #111 = spécificités appartement (vs maison). #112 = ancien vs récent (âge du bâti). #146 = organisation logistique d'une intervention sur une maison entière (déroulé du jour J, pas le type de bien). Si la rédaction fait ressortir trop de contenu commun entre #111 et #146, fusionner. |
 | #91 vs #18 | Même outil (caméra thermique) mentionné deux fois | #18 = présentation générale des outils de diagnostic (caméra thermique parmi d'autres). #91 doit se concentrer strictement sur le cas d'usage « point chaud électrique » et ne pas redévelopper la présentation générale de l'outil déjà faite dans #18. |
 | #138 (borne de recharge) | Sujet en tendance, risque de sur-promettre une compétence non confirmée | À rédiger uniquement sur l'angle générique « ce qu'implique une installation sur le tableau existant » (dimensionnement, protection dédiée), sans jamais affirmer une certification IRVE si Rémy ne l'a pas confirmée pour le locataire du site. Mentionner la qualification IRVE comme un critère à vérifier auprès du prestataire (cf. #148), pas comme un acquis du site. |
+| #8 (publié, draft 005) vs #7 (publié, draft 003) | Même déclencheur « odeur de brûlé » évoqué dans les deux, objets différents | **Ajouté le 26/07/2026** : #7/003 traite l'objet « prise qui chauffe » et cite l'odeur de brûlé comme un signe parmi d'autres. #8/005 traite spécifiquement l'objet « tableau électrique » avec un protocole de sécurité dédié (couper le disjoncteur général, ne pas s'approcher). Les deux sont publiés et suffisent à couvrir le sujet « odeur de brûlé » : ne pas commander un troisième article sur ce déclencheur pour un autre objet (ex. « odeur de brûlé + interrupteur ») sans un angle vraiment nouveau. |
+| #150 (draft 006) vs #16, #37 | Le comparatif disjoncteur/fusible/différentiel recoupe deux titres du calendrier | **Ajouté le 26/07/2026** : #16 traite uniquement le différentiel 30 mA (un seul des 3 dispositifs, angle obligation réglementaire). #37 est un lexique généraliste de tous les termes de l'électricité domestique (pas un comparatif approfondi des 3 dispositifs de protection). #150/006 reste distinct : c'est le seul article qui compare les 3 dispositifs entre eux en détail. Si #37 est rédigé plus tard, son entrée « différentiel » doit renvoyer vers #150 plutôt que de le réexpliquer. |
 
 ### Règle de vigilance continue
 
@@ -462,15 +521,16 @@ collective).
 
 ## 4. MIX THÉMATIQUE (VÉRIFICATION DE L'ÉQUILIBRE)
 
-Répartition des 149 titres planifiés par grande famille, tous trimestres confondus :
+Répartition des 151 titres (149 planifiés + 150/006 et 151/010 ajoutés le 26/07/2026) par grande
+famille, tous trimestres confondus :
 
 | Famille | Nombre de titres | Part |
 |---|---|---|
-| Symptômes / diagnostic | 30 | 20 % |
+| Symptômes / diagnostic | 31 | 21 % |
 | Saisonnier | 19 | 13 % |
 | Normes / réglementation | 18 | 12 % |
 | Local Annecy / communes | 16 | 11 % |
-| Comparatif / pilier / mythes | 13 | 9 % |
+| Comparatif / pilier / mythes | 14 | 9 % |
 | Méthodes techniques | 12 | 8 % |
 | Sécurité électrique | 12 | 8 % |
 | Rénovation / tableau électrique | 12 | 8 % |
@@ -489,18 +549,25 @@ bornes de recharge, dépendances) pour accompagner la haute saison des travaux e
 ## 5. RÉSUMÉ
 
 - **Fichier livré** : `docs/CALENDRIER-EDITORIAL.md` (ce fichier). Aucun autre fichier modifié.
-- **Base anti-duplication** : aucun article publié à ce jour, site neuf. Les 6 premiers articles
-  couvrent chacun des 6 services (voir §2, tableau « Articles de lancement »).
-- **Nombre de titres planifiés par trimestre** :
-  - T1 (août à octobre 2026) : **37 titres**
+- **Base anti-duplication** : mise à jour le 26/07/2026 suite à la validation des 10 drafts
+  Autoblog (`content/drafts/001-010`, détail en §1bis). 7 titres sont désormais publiés (#1, #2,
+  #3, #4, #5, #150, #151), 2 titres ont été amendés pour rester exacts ou distincts (#8 : objet
+  corrigé prise→tableau ; #46 : reprogrammé sur un angle procédural après fusion dans #5).
+- **Nombre de titres par trimestre** (149 planifiés + 2 ajoutés hors quota) :
+  - T1 (août à octobre 2026) : **37 titres planifiés + 2 ajoutés (#150, #151) = 39**
   - T2 (novembre 2026 à janvier 2027) : **40 titres**
   - T3 (février à avril 2027) : **37 titres**
   - T4 (mai à juillet 2027) : **35 titres**
-  - **Total : 149 titres planifiés**, cadence 3/semaine tenue sur 12 mois.
-- **13 zones de risque de cannibalisation** signalées explicitement en section 3, avec la
-  différenciation d'angle à respecter pour chacune (ou la fusion recommandée si le recoupement
-  s'avère trop fort à la rédaction).
+  - **Total : 151 titres**, cadence 3/semaine tenue sur 12 mois.
+- **15 zones de risque de cannibalisation** signalées explicitement en section 3 (13 initiales +
+  2 ajoutées le 26/07/2026 sur #8/#7 et #150/#16-#37), avec la différenciation d'angle à respecter
+  pour chacune (ou la fusion recommandée si le recoupement s'avère trop fort à la rédaction).
+- **Service sans article de lancement** : `installation-electrique-neuve` (#6). Aucun draft ne le
+  couvre, c'est la priorité n°1 de la prochaine session Autoblog.
 
-Rémy, le calendrier est prêt à être remis à l'Autoblog dès que les 6 pages service et les 11
-pages commune de `docs/SEO-GEO-PLAN.md` auront été écrites par le Builder. Aucune écriture hors
-`docs/CALENDRIER-EDITORIAL.md`.
+Rémy, les 10 drafts (001 à 010) sont validés SEO/GEO et peuvent être publiés tels quels par le
+CEO/Autoblog : aucun ne nécessite de réécriture. Seuls deux titres du calendrier (#8 et #46) ont
+été ajustés pour rester cohérents avec le contenu réel publié, le contenu des fichiers `.mdx`
+lui-même n'a pas été touché (hors périmètre `docs/` de cet agent). Prochaine tâche Autoblog :
+rédiger l'article de lancement #6 (`installation-electrique-neuve`), seul service encore sans
+maillage entrant. Aucune écriture hors `docs/CALENDRIER-EDITORIAL.md`.
