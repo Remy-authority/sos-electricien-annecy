@@ -922,3 +922,13 @@ Rien commité : contrôle CEO d'abord.
 
 **Rappel pour la suite (règle §3sexdecies)** : la vague T2+ d'articles doit inclure
 `cover: "/conseils/<slug>.jpg"` dès la rédaction, et l'image doit exister avant publication.
+
+## 3octodecies-bis. LOT DE LANCEMENT PUBLIÉ (26/07/2026 soir)
+
+Contrôle CEO des 11 covers OK (2 inspectées visuellement, champ cover sur les 11, build
+vert) → commit c7fef9a → **publication en bloc des 10 drafts restants : 10/10 succès**
+(déclenchements séquentiels de l'Action). Vérifié en ligne : **11 articles publiés sur
+/conseils avec leurs couvertures**, sitemap passé de 23 à 33 URLs, article et cover en 200.
+content/drafts/ est VIDE : prochaine étape = vague Autoblog ~68 articles (message n°2
+transmis à Rémy, feu vert CEO donné). ⚠️ Tant que la file est vide, le cron lun/mer/ven
+tourne à vide sans erreur (aucun draft à publier), pas grave mais à combler vite.
