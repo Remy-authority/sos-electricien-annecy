@@ -227,6 +227,13 @@ sur les valeurs DEMO affichées, assureur à compléter dans les mentions légal
 ## 4. DÉCISIONS RÉMY
 
 - 25/07/2026 : top 5 vague 2 validé ; Annecy (électricien) lancé en n°1, Metz (débouchage) suivra en n°2.
+- 26/07/2026 : téléphone dédié fourni : +33 7 56 85 31 25 (config : phone '+33756853125',
+  phoneDisplay '07 56 85 31 25'). Email et nom commercial toujours en attente.
+- 26/07/2026 : constat Rémy validé par vérification CEO : le design actuel est une copie
+  re-teintée d'Angers (seul le primary change, indigo vs bleu ; accent, dark, light et
+  composants identiques). Passe d'identité visuelle Builder lancée (palette propre métier,
+  accroches serif italique à la Sniper, immersion sombre étendue, badge de marque éclair,
+  + finitions RGPD/grain/écusson hero + numéro réel).
 
 ## 5. HISTORIQUE DES SESSIONS
 
