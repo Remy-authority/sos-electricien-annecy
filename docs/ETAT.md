@@ -448,3 +448,28 @@ Rien commité : contrôle CEO d'abord.
 disponible pour aérer une section future. Les réserves ouvertes du §3quinquies (valeurs DEMO
 affichées, assureur des mentions légales, cannibalisation des drafts) ne sont pas concernées par
 cette passe et restent en attente d'arbitrage.
+
+## 3octies. CONTRÔLE VISUEL CEO v3 (26/07/2026, après passe d'identité) : NIVEAU SNIPER ATTEINT
+
+Vérifications CEO : périmètre 33 fichiers côté peau respecté (0 fichier content/), numéro réel
+en config, 0 tiret ajouté, build vert. Commit 58a8ca1 déployé, numéro réel vérifié en ligne,
+noindex conservé.
+
+QA v3 (Annecy + comparaisons Angers et Sniper, desktop/mobile, mesures DOM) + contrôle visuel
+CEO sur captures :
+- **Les 3 écarts Sniper de la v2 sont comblés** (accroches serif italique entières, immersion
+  sombre 4 sections + en-têtes, 16 occurrences du système éclair). **Verdict : niveau Sniper
+  atteint.** Zéro régression, contrastes tous AA+ (bouton ambre 10,4:1, FAQ nuit 13-19:1).
+- **Différenciation vs Angers : nette sur la peau** (typo, palette, sombre, iconographie,
+  photo), squelette de mise en page encore commun (assumé : c'est le template). 2 finitions
+  possibles non bloquantes : couleur des H2 sur fonds clairs (gris-bleu générique), squelette.
+
+⚠️ **ALERTE TÉLÉPHONE (vérifiée par le CEO, 49 occurrences)** : le numéro fourni pour Annecy
+(07 56 85 31 25) est DÉJÀ le numéro affiché en production par le pilote sos-fuite-angers.fr.
+Deux sites du portefeuille partageraient la même ligne (doctrine : téléphone dédié par site).
+Décision Rémy requise : fournir un numéro dédié Annecy OU assumer la ligne partagée. Site
+Annecy toujours noindex, donc aucun impact immédiat. Aucune modification côté Angers depuis
+cette session (interdit).
+
+**État : le site est prêt pour la validation visuelle finale de Rémy** (sous réserve de
+l'arbitrage téléphone, des valeurs DEMO, de l'email/nom commercial et de l'assurance).
