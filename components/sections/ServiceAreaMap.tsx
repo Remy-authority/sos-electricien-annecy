@@ -36,11 +36,11 @@ export default function ServiceAreaMap() {
       <div className="container-site">
         {/* En-tête centré */}
         <div className="mb-10 text-center">
-          <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-accent">
+          <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-accent-deep">
             Zone d'intervention
           </p>
           <h2 id="area-title" className="text-2xl font-bold text-slate-900 md:text-3xl">
-            Basés à <span className="accent-serif text-primary">{siteConfig.city}</span>, nous
+            Basés à <span className="accent-serif text-accent-deep">{siteConfig.city}</span>, nous
             couvrons un rayon de {siteConfig.serviceArea.radiusKm} km
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-slate-600">

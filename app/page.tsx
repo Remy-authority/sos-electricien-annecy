@@ -15,6 +15,7 @@ import WhyUs from '@/components/sections/WhyUs'
 import ServiceAreaMap from '@/components/sections/ServiceAreaMap'
 import Realisations from '@/components/sections/Realisations'
 import { ServiceIcon } from '@/components/ui/ServiceIcon'
+import { BoltBadge, BoltWatermark } from '@/components/ui/Bolt'
 
 const TITLE = "Électricien d'urgence à Annecy, dépannage rapide"
 const DESC =
@@ -32,27 +33,36 @@ export default function HomePage() {
       <Hero />
       <TrustBadges />
 
-      {/* Services */}
-      <section className="section" aria-labelledby="services-title">
+      {/* Services : section immersive nuit, cartes en verre (pièce maîtresse) */}
+      <section className="section-dark section" aria-labelledby="services-title">
+        {/* Filigrane éclair : signe de marque en très faible opacité */}
+        <BoltWatermark className="-right-16 -top-20 h-[26rem] w-[26rem] rotate-12" />
+
         <div className="container-site">
-          <div className="mb-8 text-center sm:text-left">
-            <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-accent">Ce que nous faisons</p>
-            <h2 id="services-title" className="text-2xl font-bold text-slate-900 md:text-3xl">
-              Nos <span className="accent-serif text-primary">prestations</span>
+          <div className="mb-10 text-center sm:text-left">
+            <BoltBadge label="Ce que nous faisons" />
+            <h2
+              id="services-title"
+              className="mt-4 text-3xl text-white md:text-4xl"
+            >
+              Nos <span className="accent-serif text-accent">prestations</span>
             </h2>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => (
               <Link
                 key={s.slug}
                 href={`/services/${s.slug}`}
-                className="group card card-interactive block text-center sm:text-left"
+                className="group card-glass card-glass-interactive block text-center sm:text-left"
               >
-                <div className="mb-3 mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary sm:mx-0">
+                <div className="chip-accent mx-auto mb-4 h-11 w-11 sm:mx-0">
                   <ServiceIcon icon={s.icon} className="h-5 w-5" />
                 </div>
-                <h3 className="font-bold text-slate-900 group-hover:text-primary">{s.navTitle}</h3>
-                <ul className="mt-3 mx-auto w-fit space-y-1 text-sm text-slate-600 sm:mx-0">
+                <h3 className="text-lg text-white transition-colors group-hover:text-accent">
+                  {s.navTitle}
+                </h3>
+                <ul className="mt-3 mx-auto w-fit space-y-1.5 text-sm text-slate-300 sm:mx-0">
                   {s.bullets.map((b) => (
                     <li key={b} className="flex items-center gap-2">
                       <span className="h-1 w-1 shrink-0 rounded-full bg-accent" aria-hidden="true" />
@@ -60,7 +70,7 @@ export default function HomePage() {
                     </li>
                   ))}
                 </ul>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">
+                <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-accent">
                   En savoir plus
                   <svg className="h-4 w-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
                     <path d="m9 18 6-6-6-6" />
@@ -82,9 +92,10 @@ export default function HomePage() {
         <div className="container-site">
           <div className="mx-auto max-w-2xl">
             <div className="mb-6 text-center">
-              <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-accent">Devis gratuit</p>
-              <h2 id="devis-title" className="text-2xl font-bold text-slate-900 md:text-3xl">
-                Décrivez votre problème en <span className="accent-serif text-primary">3 étapes</span>
+              <BoltBadge label="Devis gratuit" tone="light" />
+              <h2 id="devis-title" className="mt-4 text-2xl text-slate-900 md:text-3xl">
+                Décrivez votre problème en{' '}
+                <span className="accent-serif text-accent-deep">3 étapes</span>
               </h2>
               <p className="mt-2 text-sm text-slate-600">
                 Nous vous rappelons sous 30 minutes, sans engagement.

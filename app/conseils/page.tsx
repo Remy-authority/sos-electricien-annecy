@@ -19,7 +19,7 @@ export default function ConseilsListing() {
   return (
     <section className="container-site section">
       <h1 className="text-3xl md:text-4xl text-center sm:text-left">
-        <span className="accent-serif text-primary">Conseils</span>
+        <span className="accent-serif text-accent-deep">Conseils</span>
       </h1>
       <p className="mt-3 mx-auto max-w-2xl text-center text-slate-600 sm:mx-0 sm:text-left">
         Nos guides pour comprendre, diagnostiquer et sécuriser votre installation électrique.

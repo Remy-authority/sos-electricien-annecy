@@ -27,10 +27,12 @@ const ICONS: Record<string, React.ReactNode> = {
 
 /**
  * Bandeau d'engagements.
- * Le 2e badge disait encore « Intervention non destructive », vocabulaire hérité du
- * site pilote (recherche de fuite d'eau) et hors sujet pour un électricien. Il reprend
- * désormais l'engagement métier déjà défini dans la config (`usps`), ce qui évite au
- * passage de recoder ce libellé sur les prochains sites du template.
+ * Le 2e badge reprend l'engagement métier défini dans la config (`usps`), ce qui
+ * évite de recoder ce libellé sur les prochains sites du template.
+ *
+ * Passe d'identité (26/07/2026) : le bandeau est passé en nuit pour PROLONGER le
+ * hero au lieu de le couper par une bande blanche. Le liseré ambre supérieur fait
+ * la jonction.
  */
 const BADGES = [
   { icon: 'clock', label: siteConfig.availability },
@@ -41,19 +43,17 @@ const BADGES = [
 
 export default function TrustBadges() {
   return (
-    <div className="bg-white shadow-sm">
+    <div className="section-dark border-t border-accent/20">
       <div className="container-site">
         <ul
-          className="grid grid-cols-2 divide-x divide-slate-100 md:grid-cols-4"
+          className="grid grid-cols-2 divide-x divide-white/5 md:grid-cols-4"
           role="list"
           aria-label="Nos engagements"
         >
           {BADGES.map((b) => (
-            <li key={b.label} className="flex flex-col items-center gap-2 px-4 py-5 text-center sm:flex-row sm:text-left">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                {ICONS[b.icon]}
-              </span>
-              <span className="text-xs font-semibold text-slate-700 sm:text-sm">{b.label}</span>
+            <li key={b.label} className="flex flex-col items-center gap-2 px-4 py-6 text-center sm:flex-row sm:text-left">
+              <span className="chip-accent h-10 w-10 shrink-0">{ICONS[b.icon]}</span>
+              <span className="text-xs font-semibold text-slate-200 sm:text-sm">{b.label}</span>
             </li>
           ))}
         </ul>

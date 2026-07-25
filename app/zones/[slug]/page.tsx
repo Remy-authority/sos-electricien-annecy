@@ -9,6 +9,7 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import Faq from '@/components/ui/Faq'
 import CtaBanner from '@/components/ui/CtaBanner'
 import AccentWord from '@/components/ui/AccentWord'
+import { BoltBadge, BoltWatermark } from '@/components/ui/Bolt'
 
 export const dynamicParams = false
 
@@ -56,36 +57,49 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLdScript(zoneJsonLd(zone)) }}
       />
-      <Breadcrumbs
-        items={[
-          { name: 'Accueil', path: '/' },
-          { name: 'Zones', path: '/zones' },
-          { name: zone.name, path: `/zones/${zone.slug}` },
-        ]}
-      />
+      {/* ── En-tête immersif nuit : même langage que l'accueil ── */}
+      <header className="section-dark pb-12">
+        <BoltWatermark className="-left-24 -top-24 h-[26rem] w-[26rem] -rotate-12" />
+        <Breadcrumbs
+          tone="dark"
+          items={[
+            { name: 'Accueil', path: '/' },
+            { name: 'Zones', path: '/zones' },
+            { name: zone.name, path: `/zones/${zone.slug}` },
+          ]}
+        />
+        <div className="container-site pt-8">
+          <BoltBadge label="Zone d'intervention" />
+          <h1 className="accroche mt-4 max-w-4xl text-[2.1rem] text-white sm:text-5xl">
+            <AccentWord text={zone.h1} word={zone.name} className="not-italic text-accent" />
+          </h1>
+          <p className="mt-3 text-sm text-slate-400">
+            {zone.name} ({zone.postalCode}) · {siteConfig.region}
+          </p>
+
+          {/* Image d'en-tête */}
+          <div className="relative mt-8 aspect-[16/9] w-full overflow-hidden rounded-card border border-white/10 md:aspect-[21/9]">
+            <Image
+              src={hero}
+              alt={`Électricien à ${zone.name}`}
+              fill
+              sizes="(min-width: 1200px) 1152px, 100vw"
+              className="object-cover"
+              priority
+            />
+            <div
+              className="pointer-events-none absolute inset-0 bg-gradient-to-t from-dark/70 via-transparent to-transparent"
+              aria-hidden="true"
+            />
+          </div>
+
+          {/* Réponse courte factuelle « citable » (GEO) */}
+          <p className="card-glass mt-6 leading-relaxed text-slate-200">{zone.intro}</p>
+        </div>
+      </header>
 
       <article className="container-site section">
-        <h1 className="text-3xl md:text-4xl">
-          <AccentWord text={zone.h1} word={zone.name} />
-        </h1>
-        <p className="mt-2 text-sm text-slate-500">{zone.name} ({zone.postalCode}) · {siteConfig.region}</p>
-
-        {/* Image d'en-tête */}
-        <div className="relative mt-6 aspect-[16/9] w-full overflow-hidden rounded-card shadow-sm md:aspect-[21/9]">
-          <Image
-            src={hero}
-            alt={`Électricien à ${zone.name}`}
-            fill
-            sizes="(min-width: 1200px) 1152px, 100vw"
-            className="object-cover"
-            priority
-          />
-        </div>
-
-        {/* Réponse courte factuelle « citable » (GEO) */}
-        <p className="mt-6 rounded-card bg-light p-4 text-slate-700">{zone.intro}</p>
-
-        <div className="prose-content mt-8 mx-auto max-w-3xl">
+        <div className="prose-content mx-auto max-w-3xl">
           {zone.blocks.map((b, i) => (
             <section key={b.heading}>
               <h2>{b.heading}</h2>

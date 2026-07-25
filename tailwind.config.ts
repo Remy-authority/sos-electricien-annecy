@@ -26,7 +26,11 @@ const config: Config = {
           DEFAULT: withOpacity('--color-primary-rgb'),
           dark: withOpacity('--color-primary-dark-rgb'),
         },
-        accent: withOpacity('--color-accent-rgb'),
+        accent: {
+          DEFAULT: withOpacity('--color-accent-rgb'),
+          // `text-accent-deep` : accent lisible sur fond clair (l'ambre pur y échoue AA).
+          deep: withOpacity('--color-accent-deep-rgb'),
+        },
         dark: withOpacity('--color-dark-rgb'),
         light: withOpacity('--color-light-rgb'),
       },

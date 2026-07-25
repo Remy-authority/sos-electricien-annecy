@@ -7,11 +7,18 @@ import { breadcrumbJsonLd, jsonLdScript } from '@/lib/seo'
  */
 export default function Breadcrumbs({
   items,
+  tone = 'light',
 }: {
   items: { name: string; path: string }[]
+  /** `dark` quand le fil est posé sur un en-tête nuit (pages service et commune). */
+  tone?: 'light' | 'dark'
 }) {
+  const dark = tone === 'dark'
   return (
-    <nav aria-label="Fil d'Ariane" className="container-site pt-4 text-sm text-slate-500">
+    <nav
+      aria-label="Fil d'Ariane"
+      className={`container-site pt-4 text-sm ${dark ? 'text-slate-400' : 'text-slate-500'}`}
+    >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLdScript(breadcrumbJsonLd(items)) }}
@@ -22,10 +29,17 @@ export default function Breadcrumbs({
           return (
             <li key={i} className="flex items-center gap-1.5">
               {last ? (
-                <span aria-current="page" className="text-slate-700">{item.name}</span>
+                <span aria-current="page" className={dark ? 'text-slate-200' : 'text-slate-700'}>
+                  {item.name}
+                </span>
               ) : (
                 <>
-                  <Link href={item.path} className="hover:underline">{item.name}</Link>
+                  <Link
+                    href={item.path}
+                    className={dark ? 'text-slate-400 hover:text-accent' : 'hover:underline'}
+                  >
+                    {item.name}
+                  </Link>
                   <span aria-hidden="true">›</span>
                 </>
               )}

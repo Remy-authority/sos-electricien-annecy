@@ -13,18 +13,21 @@ import FloatingCallButton from '@/components/ui/FloatingCallButton'
 const sora = Sora({ subsets: ['latin'], variable: '--font-sora', display: 'swap' })
 
 /**
- * Fraunces = police de caractère « signature » (serif à contraste élevé), utilisée
- * UNIQUEMENT en italique sur un mot-clé des titres (classe `.accent-serif`) et sur
- * les grands chiffres. Elle apporte la personnalité de marque qui manquait au duo
- * indigo/orange, sans alourdir le corps de texte qui reste en Sora.
- * `italic` est chargé car c'est le seul style réellement utilisé.
+ * Fraunces = police de caractère « signature » (serif à fort contraste).
+ *
+ * Depuis la passe d'identité (26/07/2026) elle porte TOUS les titres (h1/h2/h3) et
+ * les accroches entières en italique, sur le modèle de la référence Sniper, au lieu
+ * d'un simple mot accentué. Le corps de texte reste en Sora : c'est ce contraste
+ * serif/sans qui fait la personnalité de marque.
+ *
+ * Police variable : on omet `weight` pour disposer de tout l'axe de graisse
+ * (400 à 700 utilisés selon les titres) sans multiplier les fichiers.
  */
 const fraunces = Fraunces({
   subsets: ['latin'],
   variable: '--font-fraunces',
   display: 'swap',
-  style: ['italic', 'normal'],
-  weight: ['400', '600'],
+  style: ['normal', 'italic'],
 })
 
 const homeTitle = `${siteConfig.trade} à ${siteConfig.city}, ${siteConfig.businessName}`

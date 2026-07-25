@@ -80,7 +80,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       <article className="container-site section">
         {/* En-tête d'article */}
         <header className="mx-auto max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-wider text-accent">{article.category}</p>
+          <p className="text-xs font-semibold uppercase tracking-wider text-accent-deep">{article.category}</p>
           <h1 className="mt-2 text-3xl leading-tight md:text-4xl">{article.title}</h1>
           <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-slate-500">
             <time dateTime={article.date}>{formatDateFr(article.date)}</time>

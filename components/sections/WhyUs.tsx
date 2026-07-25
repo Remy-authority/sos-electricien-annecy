@@ -33,9 +33,9 @@ export default function WhyUs() {
     <section className="section" aria-labelledby="why-title">
       <div className="container-site">
         <div className="mb-10 text-center md:mb-12 sm:text-left">
-          <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-accent">Pourquoi nous choisir</p>
+          <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-accent-deep">Pourquoi nous choisir</p>
           <h2 id="why-title" className="text-2xl font-bold text-slate-900 md:text-3xl">
-            Le diagnostic qui va droit à la <span className="accent-serif text-primary">cause</span>
+            Le diagnostic qui va droit à la <span className="accent-serif text-accent-deep">cause</span>
           </h2>
         </div>
 

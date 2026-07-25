@@ -6,8 +6,8 @@
  */
 export default function Logo({
   textColor = '#0F172A',
-  accentColor = '#F97316',
-  iconColor = '#4338CA',
+  accentColor = '#8A5A00',
+  iconColor = '#17304E',
   className = 'h-9 w-auto',
 }: {
   textColor?: string

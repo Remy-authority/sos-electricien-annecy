@@ -10,11 +10,12 @@
  * Format « r g b » (canaux) pour les modificateurs d'opacité Tailwind.
  */
 :root {
-  --color-primary-rgb: 11 79 138; /* #0B4F8A */
-  --color-primary-dark-rgb: 10 62 110; /* #0A3E6E */
-  --color-accent-rgb: 249 115 22; /* #F97316 */
-  --color-dark-rgb: 15 23 42; /* #0F172A */
-  --color-light-rgb: 246 249 252; /* #F6F9FC */
+  --color-primary-rgb: 23 48 78; /* #17304E */
+  --color-primary-dark-rgb: 14 32 56; /* #0E2038 */
+  --color-accent-rgb: 245 179 43; /* #F5B32B */
+  --color-accent-deep-rgb: 138 90 0; /* #8A5A00 */
+  --color-dark-rgb: 8 14 26; /* #080E1A */
+  --color-light-rgb: 244 246 249; /* #F4F6F9 */
 }
 
 @layer base {
@@ -26,8 +27,10 @@
   body {
     @apply bg-white text-slate-700 font-sans antialiased;
   }
+  /* Tous les titres en serif signature (Fraunces) : c'est le marqueur d'identité
+     n°1 du site, sur le modèle de la référence. Le corps reste en Sora. */
   h1, h2, h3 {
-    @apply text-slate-900 font-bold tracking-tight;
+    @apply text-slate-900 font-display font-semibold tracking-tight;
   }
   a {
     @apply text-primary;
@@ -45,9 +48,11 @@
   .section {
     @apply py-12 md:py-16;
   }
-  /* CTA principal = accent orange (urgence), toujours ≥ 48px de haut */
+  /* CTA principal = ambre électrique, toujours ≥ 48px de haut.
+     ⚠️ Texte NUIT et non blanc : le blanc sur ambre tombe à 1,85:1 (échec AA),
+     le nuit sur ambre monte à 10,45:1. Vaut pour tous les boutons ambre du site. */
   .btn-accent {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3.5 min-h-[48px] font-semibold text-white transition-colors hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3.5 min-h-[48px] font-bold text-dark transition-colors hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
   }
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 min-h-[48px] font-semibold text-white transition-colors hover:bg-primary-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
@@ -86,11 +91,52 @@
      sur le modèle de la référence sniperpestcontrol3dservices.fr.
      ───────────────────────────────────────────────────────────────────── */
 
-  /* Accent typographique : mot-clé d'un titre en serif italique (Fraunces).
-     Usage : <span className="accent-serif">Annecy</span> dans un h1/h2.
-     C'est LE marqueur de marque du site, à garder rare pour rester fort. */
+  /* Accent typographique : mot-clé d'un titre en serif italique.
+     Depuis la passe d'identité, les titres sont DÉJÀ en serif : cette classe ne
+     sert plus qu'à passer un mot en italique (l'accent devient une inflexion, pas
+     un changement de police). */
   .accent-serif {
-    @apply font-display font-normal italic tracking-normal;
+    @apply font-normal italic tracking-normal;
+  }
+
+  /* Accroche : l'accroche ENTIÈRE en serif italique, façon référence Sniper.
+     Réservée au hero et aux bandeaux CTA, là où le titre EST le visuel. */
+  .accroche {
+    @apply font-display font-normal italic leading-[1.08] tracking-tight;
+  }
+
+  /* ── Immersion : sections sombres ────────────────────────────────────────
+     `section-dark` empile fond nuit + grain + motif grille en une seule classe,
+     pour étendre le traitement premium au-delà des seuls bandeaux sans dupliquer
+     les calques décoratifs dans chaque composant. */
+  .section-dark {
+    @apply texture-noise relative isolate overflow-hidden bg-dark text-slate-300;
+  }
+  .section-dark::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgb(var(--color-accent-rgb) / 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(var(--color-accent-rgb) / 0.06) 1px, transparent 1px);
+    background-size: 64px 64px;
+    -webkit-mask-image: radial-gradient(ellipse at center, black 20%, transparent 70%);
+    mask-image: radial-gradient(ellipse at center, black 20%, transparent 70%);
+  }
+
+  /* Carte en verre sur fond sombre (services, FAQ, réalisations). */
+  .card-glass {
+    @apply rounded-card border border-white/10 bg-white/[0.06] p-6 backdrop-blur-md;
+  }
+  .card-glass-interactive {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-white/[0.09];
+  }
+
+  /* Pastille d'icône ambre sur fond sombre (équivalent des chips clairs). */
+  .chip-accent {
+    @apply flex items-center justify-center rounded-xl bg-accent/15 text-accent ring-1 ring-accent/25;
   }
 
   /* Texture de grain filmique, pour casser l'aplat des fonds sombres.

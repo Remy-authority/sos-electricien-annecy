@@ -1,8 +1,8 @@
 # ETAT.md — Journal de bord SOS Électricien Annecy
 
 > Mémoire du projet. Chaque session lit ce fichier en arrivant et le met à jour avant de finir.
-> Dernière mise à jour : 2026-07-26 (session Builder : 3 finitions du §3quinquies, contraste RGPD,
-> grain rendu visible et écusson de marque gommé sur la photo hero, détail en §3sexies).
+> Dernière mise à jour : 2026-07-26 (session Builder : passe d'IDENTITÉ VISUELLE, palette nuit +
+> ambre électrique, titraille serif, immersion étendue et éclair de marque, détail en §3septies).
 
 ---
 
@@ -81,6 +81,8 @@ Vercel en attendant).
   accueil + signature typographique/texture, faite le 25/07/2026
 - [x] Builder : 3 finitions du contrôle CEO v2 (contraste RGPD, grain, écusson photo hero),
   faites le 26/07/2026, détail en §3sexies
+- [x] Builder : passe d'identité visuelle (palette propre au métier, typographie, immersion,
+  marque éclair) + numéro réel en config, faite le 26/07/2026, détail en §3septies
 - [ ] Rémy : trancher les valeurs DEMO affichées (stats « +400 pannes résolues », « 8 ans
   d'expérience », promesses « rappel 30 min » et « 100 % panne réparée ou nous revenons »)
   avant toute mise en ligne
@@ -310,6 +312,18 @@ sur les valeurs DEMO affichées, assureur à compléter dans les mentions légal
   soit 0,046 % de l'image, aucune régénération. Build vert, zéro erreur console, zéro débordement
   mobile. 3 fichiers modifiés au total, contenu/config/slugs intacts. Rien commité.
 
+- **26/07/2026 (Builder, identité visuelle)** : passe d'identité validée par Rémy (détail
+  §3septies). Palette « nuit + ambre électrique » propre au métier en remplacement de
+  l'indigo/orange hérité d'Angers, avec ajout d'un token `accentDeep` parce que l'ambre pur est
+  illisible en texte sur fond clair, et bascule de TOUS les boutons ambre en texte nuit (le blanc
+  sur ambre tombait à 1,85:1). Titraille entièrement en serif Fraunces, accroches du hero et des
+  bandeaux CTA en serif italique complet. Traitement immersif étendu au-delà des bandeaux
+  (services, réalisations, FAQ, barre de confiance, en-têtes des pages service et commune) via une
+  classe `.section-dark` et des cartes de verre. Éclair du logo décliné en système de marque
+  (`components/ui/Bolt.tsx`). Numéro de téléphone réel de Rémy en config. Audit de contraste
+  automatisé écrit pour l'occasion : 0 échec AA sur 7 pages. Build vert, 0 erreur console, 0
+  débordement mobile. Contenu et slugs intacts. Rien commité.
+
 ## 3quinquies. CONTRÔLE VISUEL CEO v2 (26/07/2026, après itération design)
 
 Vérifications CEO indépendantes avant commit : périmètre Builder respecté (contenu/config
@@ -380,3 +394,57 @@ Sauvegarde de l'original hors dépôt pendant l'opération.
 **Contrôles** : build vert (34 pages), zéro erreur console, zéro débordement horizontal en 390 px
 (accueil, page service, page commune) et en 1440 px, parcours du formulaire jusqu'à l'étape 3
 vérifié en capture. Rien commité : le CEO contrôle puis commite.
+
+## 3septies. PASSE D'IDENTITÉ VISUELLE (26/07/2026, mission validée par Rémy)
+
+Objectif : sortir de la « copie re-teintée du pilote d'Angers » et donner une identité propre au
+métier, au niveau de la référence Sniper. Structure des pages et contenu (textes, slugs, metas)
+strictement inchangés : `git status` ne montre aucune modification de `content/services`,
+`content/zones` ni des textes SEO. Seule la peau change.
+
+**1. Palette « nuit + ambre électrique ».** L'indigo `#4338CA` + orange `#F97316` (partagés avec
+Angers) sont remplacés par une identité à deux couleurs : nuit navy `#17304E` (structure, liens,
+pastilles), nuit profonde `#080E1A` (fonds immersifs) et ambre électrique `#F5B32B` (CTA, accents,
+chiffres). Métaphore : l'arc électrique dans la nuit.
+- **Découverte importante** : le blanc sur ambre tombe à **1,85:1**, très loin du seuil AA. Tous
+  les boutons ambre du site sont donc passés en **texte nuit** (10,45:1) : `.btn-accent`, sticky
+  mobile, bouton flottant, bandeau footer, boutons du formulaire, puces de méthode, numéros
+  d'étape des pages service.
+- Un **6e token `accentDeep` (`#8A5A00`)** a été ajouté à la config : l'ambre pur est illisible en
+  texte sur fond clair, cette variante monte à 5,93:1 sur blanc. Elle sert aux sur-titres et aux
+  mots accentués des sections claires. Le token est générique, réutilisable en N+1.
+- **Audit de contraste automatisé** écrit pour l'occasion (parcours du DOM rendu, composition des
+  couleurs semi-transparentes, seuils 4,5:1 et 3:1 selon la taille) : **0 échec sur 7 pages**.
+  Il a fait remonter 3 vrais défauts, corrigés : codes postaux du hub zones (2,56:1), numéros
+  d'étape décoratifs, et 2 faux positifs identifiés (texte SVG du logo qui se colore via `fill`,
+  bandeau stats posé sur un dégradé). Les contrôles désactivés et les éléments `aria-hidden` sont
+  exemptés, conformément à WCAG 1.4.3.
+
+**2. Typographie.** Fraunces passe de « un mot accentué » à **toute la titraille** : `h1/h2/h3`
+sont en serif, et les accroches du hero et des bandeaux CTA sont **entièrement en serif italique**
+(classe `.accroche`), avec le nom de lieu en ambre. La police est chargée en variable (tout l'axe
+de graisse) au lieu de deux graisses figées.
+
+**3. Immersion.** Le traitement premium ne se limite plus aux bandeaux : nouvelle classe
+`.section-dark` (nuit + grain + motif grille en une classe) et cartes `.card-glass`. Sont passées
+en nuit : barre de confiance (elle prolonge le hero au lieu de le couper), **section services**
+(pièce maîtresse, cartes de verre à pastilles ambre), réalisations, FAQ, et les **en-têtes des
+pages service et commune** (fil d'Ariane, badge, accroche, photo, intro en carte de verre). Le
+rythme sombre/clair alterne ensuite avec À propos, Méthode, Devis, Pourquoi nous, Zone.
+
+**4. Marque.** L'éclair du logo devient un système : `components/ui/Bolt.tsx` expose `BoltIcon`,
+`BoltBadge` (sur-titre de section, remplace le texte majuscule nu), `BoltWatermark` (filigrane
+géant en fond de section sombre) et `BoltDivider`. Même tracé que le logo, aucune couleur codée en
+dur. Logo, favicon et `public/logo.svg` réalignés sur la nouvelle palette.
+
+**5. Numéro réel.** `phone` / `phoneDisplay` passent au numéro dédié fourni par Rémy
+(07 56 85 31 25). Email et nom commercial restent DEMO.
+
+**Contrôles** : build vert (34 pages), 0 erreur console, 0 débordement horizontal en 390 px et
+1440 px (accueil, page service, page commune), 0 tiret cadratin, aucun chiffre inventé.
+Rien commité : contrôle CEO d'abord.
+
+**Point d'attention pour le CEO** : le `BoltDivider` est livré mais pas encore utilisé, il est
+disponible pour aérer une section future. Les réserves ouvertes du §3quinquies (valeurs DEMO
+affichées, assureur des mentions légales, cannibalisation des drafts) ne sont pas concernées par
+cette passe et restent en attente d'arbitrage.

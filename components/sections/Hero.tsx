@@ -75,19 +75,20 @@ export default function Hero() {
         {/* ── Colonne texte ── */}
         <div>
           {/* Badge urgence avec pulse */}
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-accent/15 px-4 py-1.5 text-sm font-semibold text-accent ring-1 ring-accent/25 backdrop-blur-sm">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-accent/15 px-4 py-1.5 text-sm font-semibold text-accent ring-1 ring-accent/25 backdrop-blur-sm">
             <span className="h-2 w-2 animate-pulse rounded-full bg-accent" aria-hidden="true" />
             {siteConfig.availability}
           </div>
 
-          {/* H1 : « Annecy » en serif italique (signature de marque) + soulignage dégradé */}
+          {/* H1 : l'accroche ENTIÈRE en grand serif italique, la ville en ambre.
+              Le titre est ici le visuel principal, pas seulement un libellé. */}
           <h1
             id="hero-title"
-            className="text-3xl font-extrabold leading-tight tracking-tight text-white drop-shadow-sm sm:text-4xl lg:text-5xl"
+            className="accroche text-[2.6rem] text-white drop-shadow-sm sm:text-6xl lg:text-[4.2rem]"
           >
             Électricien d'urgence à{' '}
             <span className="relative inline-block text-accent">
-              <span className="accent-serif">{siteConfig.city}</span>
+              {siteConfig.city}
               {/* Trait dégradé sous « Annecy » */}
               <span
                 className="absolute -bottom-1 left-0 h-[3px] w-4/5 rounded-full"
@@ -144,14 +145,14 @@ export default function Hero() {
           <div className="mt-8 hidden md:flex md:items-center md:gap-4">
             <a
               href={`tel:${siteConfig.phone}`}
-              className="flex items-center gap-3 rounded-2xl bg-accent px-6 py-4 text-white shadow-glow transition hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className="flex items-center gap-3 rounded-2xl bg-accent px-6 py-4 text-dark shadow-glow transition hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               aria-label={`Appeler le ${siteConfig.phoneDisplay}`}
             >
               <svg className="h-6 w-6 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
               </svg>
               <div>
-                <p className="text-xs font-medium text-white/80">Appelez maintenant</p>
+                <p className="text-xs font-semibold text-dark/70">Appelez maintenant</p>
                 <p className="text-xl font-bold tracking-wide">{siteConfig.phoneDisplay}</p>
               </div>
             </a>

@@ -15,7 +15,7 @@
 export default function AccentWord({
   text,
   word,
-  className = 'accent-serif text-primary',
+  className = 'accent-serif text-accent-deep',
 }: {
   text: string
   word?: string

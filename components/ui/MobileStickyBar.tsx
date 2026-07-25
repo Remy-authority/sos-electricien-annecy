@@ -17,7 +17,7 @@ export default function MobileStickyBar() {
     >
       <a
         href={`tel:${siteConfig.phone}`}
-        className="flex flex-1 items-center justify-center gap-2 bg-accent py-4 text-sm font-bold text-white active:bg-accent/90"
+        className="flex flex-1 items-center justify-center gap-2 bg-accent py-4 text-sm font-bold text-dark active:bg-accent/90"
         aria-label={`Appeler le ${siteConfig.phoneDisplay}`}
         data-cta="phone-sticky"
       >

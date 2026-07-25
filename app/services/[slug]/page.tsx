@@ -11,6 +11,7 @@ import CtaBanner from '@/components/ui/CtaBanner'
 import ServiceQuickFacts from '@/components/ui/ServiceQuickFacts'
 import ServiceBlock from '@/components/ui/ServiceBlock'
 import AccentWord from '@/components/ui/AccentWord'
+import { BoltBadge, BoltWatermark } from '@/components/ui/Bolt'
 
 // 100% SSG : une page statique par service.
 export const dynamicParams = false
@@ -43,36 +44,48 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLdScript(serviceJsonLd(service)) }}
       />
-      <Breadcrumbs
-        items={[
-          { name: 'Accueil', path: '/' },
-          { name: 'Services', path: '/' },
-          { name: service.navTitle, path: `/services/${service.slug}` },
-        ]}
-      />
+      {/* ── En-tête immersif nuit : même langage que l'accueil ── */}
+      <header className="section-dark pb-12">
+        <BoltWatermark className="-right-24 -top-28 h-[26rem] w-[26rem] rotate-12" />
+        <Breadcrumbs
+          tone="dark"
+          items={[
+            { name: 'Accueil', path: '/' },
+            { name: 'Services', path: '/' },
+            { name: service.navTitle, path: `/services/${service.slug}` },
+          ]}
+        />
+        <div className="container-site pt-8">
+          <BoltBadge label="Prestation" />
+          {/* Accroche entière en serif italique, la ville en ambre */}
+          <h1 className="accroche mt-4 max-w-4xl text-[2.1rem] text-white sm:text-5xl">
+            <AccentWord text={service.h1} word={siteConfig.city} className="not-italic text-accent" />
+          </h1>
+
+          {/* Image hero du service */}
+          {service.image && (
+            <div className="relative mt-8 aspect-[16/9] w-full overflow-hidden rounded-card border border-white/10 md:aspect-[21/9]">
+              <Image
+                src={service.image}
+                alt={service.h1}
+                fill
+                sizes="(min-width: 1200px) 1152px, 100vw"
+                className="object-cover"
+                priority
+              />
+              <div
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-dark/70 via-transparent to-transparent"
+                aria-hidden="true"
+              />
+            </div>
+          )}
+
+          {/* En bref (réponse courte GEO), en carte de verre */}
+          <p className="card-glass mt-6 leading-relaxed text-slate-200">{service.intro}</p>
+        </div>
+      </header>
 
       <article className="container-site section">
-        <h1 className="text-3xl md:text-4xl">
-          <AccentWord text={service.h1} word={siteConfig.city} />
-        </h1>
-
-        {/* Image hero du service */}
-        {service.image && (
-          <div className="relative mt-6 aspect-[16/9] w-full overflow-hidden rounded-card md:aspect-[21/9]">
-            <Image
-              src={service.image}
-              alt={service.h1}
-              fill
-              sizes="(min-width: 1200px) 1152px, 100vw"
-              className="object-cover"
-              priority
-            />
-          </div>
-        )}
-
-        {/* En bref (réponse courte GEO) */}
-        <p className="mt-6 rounded-card bg-light p-4 text-slate-700">{service.intro}</p>
-
         <ServiceQuickFacts bullets={service.bullets} />
 
         <div className="mx-auto max-w-3xl">

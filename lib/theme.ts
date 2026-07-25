@@ -22,6 +22,8 @@ export function themeCssVars(): CSSProperties {
     '--color-primary-rgb': hexToRgbChannels(c.primary),
     '--color-primary-dark-rgb': hexToRgbChannels(c.primaryDark),
     '--color-accent-rgb': hexToRgbChannels(c.accent),
+    // Variante foncée de l'accent, pour le texte accent sur fond clair (AA).
+    '--color-accent-deep-rgb': hexToRgbChannels(c.accentDeep),
     '--color-dark-rgb': hexToRgbChannels(c.dark),
     '--color-light-rgb': hexToRgbChannels(c.light),
   } as CSSProperties

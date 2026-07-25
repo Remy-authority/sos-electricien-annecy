@@ -42,10 +42,10 @@ export default function ZonesHub() {
     <>
       <section className="container-site section">
         <div className="text-center sm:text-left">
-          <p className="text-sm font-semibold uppercase tracking-wider text-accent">Zone d'intervention</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-accent-deep">Zone d'intervention</p>
           <h1 className="mt-2 text-3xl md:text-4xl">
             Nos zones d'intervention autour d'
-            <span className="accent-serif text-primary">{siteConfig.city}</span>
+            <span className="accent-serif text-accent-deep">{siteConfig.city}</span>
           </h1>
         </div>
 
@@ -62,7 +62,7 @@ export default function ZonesHub() {
               >
                 <div className="flex items-baseline justify-between gap-2">
                   <span className="text-lg font-bold text-slate-900 group-hover:text-primary">{z.name}</span>
-                  <span className="shrink-0 text-sm text-slate-400">{z.postalCode}</span>
+                  <span className="shrink-0 text-sm text-slate-500">{z.postalCode}</span>
                 </div>
                 {z.context && <p className="mt-2 text-sm leading-relaxed text-slate-600">{z.context}</p>}
                 <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">

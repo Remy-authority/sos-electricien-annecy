@@ -209,7 +209,7 @@ export default function LeadForm() {
               disabled={!fields.probleme}
               className={`inline-flex items-center gap-2 rounded-full px-7 py-3 font-semibold text-sm transition-all ${
                 fields.probleme
-                  ? 'bg-accent text-white hover:bg-accent/90'
+                  ? 'bg-accent text-dark hover:bg-accent/90'
                   : 'bg-white/10 text-white/30 cursor-not-allowed'
               }`}
             >
@@ -260,7 +260,7 @@ export default function LeadForm() {
                     onClick={() => set('urgence', value)}
                     className={`rounded-full border px-5 py-2.5 text-sm font-semibold transition-all ${
                       fields.urgence === value
-                        ? 'border-accent bg-accent text-white'
+                        ? 'border-accent bg-accent text-dark'
                         : 'border-white/20 text-white/70 hover:border-white/40 hover:text-white'
                     }`}
                   >
@@ -288,7 +288,7 @@ export default function LeadForm() {
               disabled={!fields.ville || !fields.urgence}
               className={`inline-flex items-center gap-2 rounded-full px-7 py-3 font-semibold text-sm transition-all ${
                 fields.ville && fields.urgence
-                  ? 'bg-accent text-white hover:bg-accent/90'
+                  ? 'bg-accent text-dark hover:bg-accent/90'
                   : 'bg-white/10 text-white/30 cursor-not-allowed'
               }`}
             >

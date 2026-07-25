@@ -28,7 +28,7 @@ export default function Footer() {
           </p>
           <a
             href={`tel:${siteConfig.phone}`}
-            className="flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-bold text-white shadow-md shadow-accent/20 transition hover:bg-accent/90"
+            className="flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-bold text-dark shadow-md shadow-accent/20 transition hover:bg-accent/90"
             aria-label={`Appeler le ${siteConfig.phoneDisplay}`}
           >
             <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -44,7 +44,7 @@ export default function Footer() {
         {/* Identité */}
         <div>
           <Link href="/" className="inline-flex items-center" aria-label={`${siteConfig.businessName}, accueil`}>
-            <Logo textColor="white" iconColor="white" accentColor="#F97316" className="h-8 w-auto" />
+            <Logo textColor="white" iconColor="#F5B32B" accentColor="#F5B32B" className="h-8 w-auto" />
           </Link>
           <p className="mt-3 text-sm">{siteConfig.city} · {siteConfig.region}</p>
           <p className="mt-1 text-sm">

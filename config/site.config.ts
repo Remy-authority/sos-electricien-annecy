@@ -27,24 +27,28 @@ export const siteConfig = {
   region: 'Haute-Savoie',
   department: '74',
 
-  /* ── Contact (DEMO tant que Rémy n'a pas fourni le numéro/email dédiés du loueur) ── */
-  // DEMO – à remplacer par les infos du loueur (téléphone dédié à fournir par Rémy)
-  phone: '+33600000000',
-  // DEMO – à remplacer par les infos du loueur
-  phoneDisplay: '06 00 00 00 00',
+  /* ── Contact ── */
+  // Numéro réel dédié au site, fourni par Rémy le 26/07/2026. E.164 pour tel:.
+  phone: '+33756853125',
+  phoneDisplay: '07 56 85 31 25',
   // DEMO – à remplacer par les infos du loueur
   email: 'contact@sos-electricien-annecy.fr',
 
-  /* ── Branding : ces 3 hex re-thèment tout le site via CSS vars ── */
+  /* ── Branding : ces hex re-thèment tout le site via CSS vars ── */
   logo: '/logo.svg',
   colors: {
-    // Palette « électricien » : indigo électrique (pro, technique) + accent
-    // urgence orange (repère de conversion validé sur le pilote, universel).
-    primary: '#4338CA', // indigo électrique (CTA secondaires, liens, titres)
-    primaryDark: '#3730A3',
-    accent: '#F97316', // orange urgence (CTA principal, téléphone/devis)
-    dark: '#0F172A', // fond sombre (hero / footer)
-    light: '#F6F9FC',
+    // Palette « nuit + ambre électrique », propre à ce site (26/07/2026).
+    // Remplace l'indigo/orange hérité du pilote d'Angers : identité de métier
+    // (l'arc électrique dans la nuit) plutôt qu'une teinte générique.
+    // Contrastes vérifiés AA sur tous les usages réels (cf. docs/ETAT.md §3septies).
+    primary: '#17304E', // nuit navy : structure, liens, pastilles d'icônes
+    primaryDark: '#0E2038',
+    accent: '#F5B32B', // ambre électrique : CTA, accents, chiffres
+    // ⚠️ L'ambre sur blanc ne passe pas AA (1,85:1). `accentDeep` est la variante
+    // à utiliser pour du TEXTE accent sur fond clair (sur-titres, liens).
+    accentDeep: '#8A5A00',
+    dark: '#080E1A', // nuit profonde : fonds immersifs
+    light: '#F4F6F9',
   },
 
   /* ── Réassurance / preuve (hero, badges, footer) ── */

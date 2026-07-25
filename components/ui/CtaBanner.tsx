@@ -2,6 +2,7 @@ import Link from 'next/link'
 import PhoneButton from './PhoneButton'
 import { siteConfig } from '@/config/site.config'
 import AccentWord from './AccentWord'
+import { BoltIcon } from './Bolt'
 
 export default function CtaBanner({
   title = `Une panne électrique à ${siteConfig.city} ? On intervient vite.`,
@@ -30,13 +31,15 @@ export default function CtaBanner({
             aria-hidden="true"
           />
           <div className="relative">
-            <p className="mb-3 inline-block rounded-full bg-accent/20 px-4 py-1 text-sm font-semibold text-accent">
+            <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-accent/25 bg-accent/10 px-4 py-1.5 text-sm font-semibold text-accent">
+              <BoltIcon className="h-3.5 w-3.5" />
               {siteConfig.availability}
             </p>
-            <h2 className="text-2xl font-bold text-white md:text-3xl">
-              <AccentWord text={title} word={accentWord} className="accent-serif text-accent" />
+            {/* Accroche entière en serif italique : le titre est le visuel */}
+            <h2 className="accroche mx-auto max-w-3xl text-3xl text-white md:text-[2.75rem]">
+              <AccentWord text={title} word={accentWord} className="not-italic text-accent" />
             </h2>
-            <p className="mt-2 text-slate-300">{subtitle}</p>
+            <p className="mt-4 text-slate-300">{subtitle}</p>
             <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <PhoneButton label={`Appeler le ${siteConfig.phoneDisplay}`} className="btn-accent shadow-lg shadow-accent/30" />
               <Link

@@ -1,6 +1,7 @@
 import { faqJsonLd, jsonLdScript } from '@/lib/seo'
 import type { FaqItem } from '@/lib/content'
 import AccentWord from './AccentWord'
+import { BoltBadge, BoltWatermark } from './Bolt'
 
 /**
  * Faq, section accordéon accessible (<details>) + JSON-LD FAQPage.
@@ -10,12 +11,13 @@ import AccentWord from './AccentWord'
 export default function Faq({ items, title = 'Questions fréquentes' }: { items: FaqItem[]; title?: string }) {
   if (!items?.length) return null
   return (
-    <section className="section bg-light" aria-labelledby="faq-title">
+    <section className="section-dark section" aria-labelledby="faq-title">
+      <BoltWatermark className="-right-24 top-1/4 h-[22rem] w-[22rem] rotate-12" />
       <div className="container-site max-w-3xl">
         <div className="text-center sm:text-left">
-          <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-accent">FAQ</p>
-          <h2 id="faq-title" className="text-2xl font-bold text-slate-900 md:text-3xl">
-            <AccentWord text={title} word="fréquentes" />
+          <BoltBadge label="FAQ" />
+          <h2 id="faq-title" className="mt-4 text-3xl text-white md:text-4xl">
+            <AccentWord text={title} word="fréquentes" className="accent-serif text-accent" />
           </h2>
         </div>
         <script
@@ -26,12 +28,12 @@ export default function Faq({ items, title = 'Questions fréquentes' }: { items:
           {items.map((item, i) => (
             <details
               key={i}
-              className="group rounded-xl border border-slate-200/80 bg-white shadow-card transition-shadow open:shadow-card-hover"
+              className="group rounded-xl border border-white/10 bg-white/[0.06] backdrop-blur-md transition-colors open:border-accent/30 hover:border-white/20"
             >
-              <summary className="flex cursor-pointer list-none items-center justify-between px-5 py-4 font-semibold text-slate-900 marker:hidden [&::-webkit-details-marker]:hidden">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-semibold text-white marker:hidden [&::-webkit-details-marker]:hidden">
                 {item.q}
                 <svg
-                  className="ml-4 h-5 w-5 shrink-0 text-slate-400 transition-transform group-open:rotate-180"
+                  className="h-5 w-5 shrink-0 text-accent transition-transform group-open:rotate-180"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -41,8 +43,8 @@ export default function Faq({ items, title = 'Questions fréquentes' }: { items:
                   <path d="m6 9 6 6 6-6" />
                 </svg>
               </summary>
-              <div className="border-t border-slate-100 px-5 pb-4 pt-3">
-                <p className="leading-relaxed text-slate-600">{item.a}</p>
+              <div className="border-t border-white/10 px-5 pb-4 pt-3">
+                <p className="leading-relaxed text-slate-300">{item.a}</p>
               </div>
             </details>
           ))}

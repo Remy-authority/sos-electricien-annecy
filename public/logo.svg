@@ -1,10 +1,7 @@
 <svg viewBox="0 0 260 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SOS Électricien Annecy">
-  <!-- Éclair -->
-  <path d="M23 2 9 27h11l-4 19 21-27H26l4-17Z" fill="#4338CA"/>
-  <!-- Reflet premium -->
+  <!-- Éclair de marque -->
+  <path d="M23 2 9 27h11l-4 19 21-27H26l4-17Z" fill="#17304E"/>
   <circle cx="19" cy="14" r="2.5" fill="white" opacity="0.3"/>
-  <!-- SOS ÉLECTRICIEN — majuscules, texte sombre (fond clair) -->
   <text x="48" y="22" font-family="system-ui,-apple-system,sans-serif" font-weight="900" font-size="13" fill="#0F172A" letter-spacing="-0.2">SOS ÉLECTRICIEN</text>
-  <!-- ANNECY — accent orange -->
-  <text x="48" y="38" font-family="system-ui,-apple-system,sans-serif" font-weight="700" font-size="11" fill="#F97316" letter-spacing="2.5">ANNECY</text>
+  <text x="48" y="38" font-family="system-ui,-apple-system,sans-serif" font-weight="700" font-size="11" fill="#8A5A00" letter-spacing="2.5">ANNECY</text>
 </svg>

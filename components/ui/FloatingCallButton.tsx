@@ -10,7 +10,7 @@ export default function FloatingCallButton() {
   return (
     <a
       href={`tel:${siteConfig.phone}`}
-      className="group fixed bottom-6 right-6 z-40 hidden h-14 w-14 items-center justify-center rounded-full bg-accent text-white shadow-lg shadow-accent/30 transition hover:scale-105 hover:bg-accent/90 md:flex"
+      className="group fixed bottom-6 right-6 z-40 hidden h-14 w-14 items-center justify-center rounded-full bg-accent text-dark shadow-lg shadow-accent/30 transition hover:scale-105 hover:bg-accent/90 md:flex"
       aria-label={`Appeler le ${siteConfig.phoneDisplay}`}
       data-cta="phone-floating"
     >
