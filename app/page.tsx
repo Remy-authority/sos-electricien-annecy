@@ -93,7 +93,7 @@ export default function HomePage() {
           <div className="mx-auto max-w-2xl">
             <div className="mb-6 text-center">
               <BoltBadge label="Devis gratuit" tone="light" />
-              <h2 id="devis-title" className="mt-4 text-2xl text-slate-900 md:text-3xl">
+              <h2 id="devis-title" className="mt-4 text-2xl md:text-3xl">
                 Décrivez votre problème en{' '}
                 <span className="accent-serif text-accent-deep">3 étapes</span>
               </h2>

@@ -2,25 +2,34 @@
 
 > État opérationnel courant. La checklist de référence complète vit dans `docs/ETAT.md`.
 
-## Session du 26/07/2026 (CEO)
+## Session du 26/07/2026 (Builder, retouches post-validation Rémy)
 
-- [x] Contrôle + commit + déploiement des 3 finitions Builder (contraste RGPD/optionnel,
-  grain, écusson hero gommé), commit 18166fa, vérifié en ligne, noindex conservé
-- [ ] Passe d'identité visuelle Builder (palette propre métier, accroches serif italique,
-  immersion sombre, badge éclair) + numéro réel en config : message transmis à Rémy,
-  PAS ENCORE EXÉCUTÉE par le Builder
-- [ ] Contrôle visuel CEO complet après la passe d'identité
+- [x] USP « Assurance décennale » supprimée, remplacée par « Rappel sous 30 min » ;
+  `usps[1]` inchangé, badge TrustBadges vérifié sur le rendu
+- [x] `content/legal.json` : ligne « couverture » retirée, bloc assurance de
+  /mentions-legales masqué tant qu'aucune police n'est renseignée
+- [x] Rayon 20 → 30 km : 34 remplacements, 18 fichiers, re-grep à 0
+- [x] H2 des sections claires en navy via la règle de base CSS ; audit de contraste refait
+  et étendu à la page d'article : 0 échec AA sur 8 pages
+- [x] `BoltDivider` mis en service entre les blocs des 6 pages service
+- [x] Build vert 35 pages, 0 erreur console, 0 débordement 320→1440 px, consigné en §3undecies
+- [x] Rien commité (contrôle CEO d'abord)
+
+## À traiter par le CEO après contrôle
+
+- [ ] Arbitrage possible : 4e USP « Rappel sous 30 min » ou retour à 3 USP
+- [ ] `content/drafts/011-installation-electrique-garage-dependance.mdx` existe en local mais
+  n'est PAS suivi par git : c'est l'article de lancement #6, à contrôler et mettre en file
+- [ ] Détail hub blog : les cartes /conseils affichent la date brute « 2026-07-25 » alors que
+  la page d'article utilise `formatDateFr` (non corrigé, hors périmètre)
 
 ## Décisions attendues de Rémy
 
-- [ ] Valeurs DEMO affichées : stats (+400 pannes, 8 ans, 20 km) et promesses (30 min, 100 %)
-- [ ] Cannibalisation drafts/calendrier (ETAT.md §3ter) : recommandation CEO = garder les
-  drafts mappés sur le calendrier, écrire l'article #6, faire valider 006/010 par le SEO
-- [ ] Email + nom commercial (téléphone déjà fourni : +33 7 56 85 31 25, à intégrer par le
-  Builder lors de la passe d'identité)
-- [ ] Achat domaine + références assurance décennale
+- [ ] Email + nom commercial (téléphone déjà intégré : 07 56 85 31 25, ligne partagée assumée)
+- [ ] Achat domaine : payé sur OVH le 26/07, commande à confirmer (AFNIC encore NOT FOUND)
+- [ ] Références d'assurance de l'artisan locataire (à la location, pas maintenant)
 
 ## Points ouverts
 
-- [ ] Autoblog : article de lancement #6 (installation-electrique-neuve) après arbitrage
-- [ ] Agent SEO : intégrer/valider drafts 006 et 010 dans le calendrier éditorial
+- [ ] Autoblog : article de lancement #6 (installation-electrique-neuve), priorité n°1
+- [ ] Mise en ligne (Étape 6) : retrait de `SEO_NOINDEX=1` + DNS, sur validation Rémy

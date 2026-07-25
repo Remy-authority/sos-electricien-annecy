@@ -39,7 +39,7 @@ export default function ServiceAreaMap() {
           <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-accent-deep">
             Zone d'intervention
           </p>
-          <h2 id="area-title" className="text-2xl font-bold text-slate-900 md:text-3xl">
+          <h2 id="area-title" className="text-2xl font-bold md:text-3xl">
             Basés à <span className="accent-serif text-accent-deep">{siteConfig.city}</span>, nous
             couvrons un rayon de {siteConfig.serviceArea.radiusKm} km
           </h2>

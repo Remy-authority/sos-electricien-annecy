@@ -23,6 +23,13 @@ function V({ children }: { children?: string }) {
 
 export default function MentionsLegales() {
   const e = legal.editeur
+  // Assurance : bloc affiché UNIQUEMENT si une police est réellement détenue.
+  // Rémy a confirmé le 26/07/2026 qu'il n'y a pas de décennale, et l'éditeur du site
+  // n'est pas le prestataire des interventions : on n'annonce donc aucune couverture.
+  // Les références de l'artisan locataire seront renseignées dans content/legal.json
+  // à la location, ce qui fera réapparaître le bloc sans toucher au code.
+  const a = legal.assurance
+  const hasAssurance = Boolean(a.assureur.trim() || a.police.trim())
   return (
     <section className="container-site section max-w-3xl">
       <h1 className="text-3xl md:text-4xl">Mentions légales</h1>
@@ -40,11 +47,14 @@ export default function MentionsLegales() {
           </ul>
         </section>
 
-        <section>
-          <h2 className="text-xl">Assurance professionnelle</h2>
-          <p className="mt-2">{legal.assurance.couverture}</p>
-          <p><strong>Assureur :</strong> <V>{legal.assurance.assureur}</V> · <strong>Police n° :</strong> <V>{legal.assurance.police}</V></p>
-        </section>
+        {hasAssurance && (
+          <section>
+            <h2 className="text-xl">Assurance professionnelle</h2>
+            <p className="mt-2">
+              <strong>Assureur :</strong> <V>{a.assureur}</V> · <strong>Police n° :</strong> <V>{a.police}</V>
+            </p>
+          </section>
+        )}
 
         <section>
           <h2 className="text-xl">Hébergeur</h2>

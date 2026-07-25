@@ -1,8 +1,8 @@
 # ETAT.md — Journal de bord SOS Électricien Annecy
 
 > Mémoire du projet. Chaque session lit ce fichier en arrivant et le met à jour avant de finir.
-> Dernière mise à jour : 2026-07-26 (session Agent SEO : validation SEO/GEO des 10 drafts Autoblog
-> et mapping sur `docs/CALENDRIER-EDITORIAL.md`, détail en §3nonies).
+> Dernière mise à jour : 2026-07-26 (session Builder : retouches post-validation Rémy, décennale
+> retirée, rayon 30 km, H2 navy, BoltDivider en service, détail en §3undecies).
 
 ---
 
@@ -87,9 +87,11 @@ Vercel en attendant).
   faites le 26/07/2026, détail en §3sexies
 - [x] Builder : passe d'identité visuelle (palette propre au métier, typographie, immersion,
   marque éclair) + numéro réel en config, faite le 26/07/2026, détail en §3septies
-- [ ] Rémy : trancher les valeurs DEMO affichées (stats « +400 pannes résolues », « 8 ans
-  d'expérience », promesses « rappel 30 min » et « 100 % panne réparée ou nous revenons »)
-  avant toute mise en ligne
+- [x] Rémy : valeurs DEMO affichées tranchées le 26/07/2026 (stats, rappel 30 min, garantie
+  100 % validés ; rayon porté à 30 km ; pas de décennale donc USP retirée, cf. §4bis)
+- [x] Builder : retouches post-validation (USP décennale retirée, assurance retirée des
+  mentions légales, rayon 30 km, H2 navy, BoltDivider en service), faites le 26/07/2026,
+  détail en §3undecies
 - [ ] Validation Rémy → mise en ligne (Étape 6 du playbook)
 
 ## 3. RÉALIGNEMENT BUILDER ↔ PLAN SEO (25/07/2026, résolu dans la même session Builder)
@@ -359,6 +361,19 @@ sur les valeurs DEMO affichées, assureur à compléter dans les mentions légal
   `installation-electrique-neuve` (#6) reste sans article de lancement, priorité n°1 Autoblog.
   Aucun fichier hors `docs/` touché.
 
+- **26/07/2026 (Builder, retouches post-validation)** : les 4 retouches fermes du CEO + l'option
+  BoltDivider, détail §3undecies. USP « Assurance décennale » supprimée (remplacée par « Rappel
+  sous 30 min », promesse déjà validée) ; bloc assurance des mentions légales retiré et
+  désormais conditionné à une police réellement détenue, donc réactivable à la location sans
+  toucher au code ; rayon 20 → 30 km sur 34 occurrences dans 18 fichiers, re-grep à 0 ; H2 des
+  sections claires en navy de marque via la règle de base CSS plutôt qu'écran par écran ;
+  `BoltDivider` mis en service entre les blocs des 6 pages service. Audit de contraste refait et
+  étendu à la page d'article : 0 échec AA sur 8 pages, après correction d'un défaut préexistant
+  révélé par la publication du blog (date des cartes /conseils à 2,56:1). Build vert 35 pages,
+  0 erreur console, 0 débordement de 320 à 1440 px, 0 tiret cadratin, 0 chiffre non validé.
+  Signalé au CEO : l'article de lancement #6 existe en local mais n'est pas suivi par git
+  (`content/drafts/011-…`). Rien commité.
+
 ## 3quinquies. CONTRÔLE VISUEL CEO v2 (26/07/2026, après itération design)
 
 Vérifications CEO indépendantes avant commit : périmètre Builder respecté (contenu/config
@@ -572,7 +587,88 @@ sortie de `content/drafts/`), rédaction de l'article #6. À faire par le CEO/Au
   dashboard et domaine **NOT FOUND à l'AFNIC** (vérifié) : commande en cours de traitement,
   à re-vérifier. Si rien sous quelques heures : vérifier l'état de la commande/paiement OVH.
 - **Rayon 30 km confirmé par Rémy** (au lieu de 20). Exécution Builder (34 occurrences,
-  18 fichiers, périmètre audité en §3septies-notes).
-- Retouches Builder EN ATTENTE (décennale, legal, rayon, H2 navy, BoltDivider optionnel) :
-  message enrichi par la session Builder précédente, à recoller dans une session fraîche.
+  18 fichiers, périmètre audité en §3septies-notes). **FAIT le 26/07/2026, cf. §3undecies.**
+- Retouches Builder (décennale, legal, rayon, H2 navy, BoltDivider optionnel) :
+  **TOUTES FAITES le 26/07/2026, détail §3undecies.**
 - Priorité Autoblog suivante : article de lancement #6 (installation-electrique-neuve).
+
+## 3undecies. RETOUCHES BUILDER (26/07/2026, périmètre §4bis + §3decies)
+
+Périmètre demandé par le CEO après la validation visuelle de Rémy : 4 retouches fermes
+(décennale, mentions légales, rayon, H2 navy) + 1 option (BoltDivider). Tout est fait.
+**30 fichiers modifiés, rien commité** (contrôle CEO d'abord).
+
+**1. USP « Assurance décennale » supprimée.** Rémy confirme qu'il n'y a pas de décennale :
+plus aucune mention de couverture nulle part (vérifié sur le HTML servi des 6 gabarits de
+page, 0 occurrence). Remplacée par un **4e USP honnête, « Rappel sous 30 min »**, qui reprend
+mot pour mot une promesse déjà validée par Rémy (§4bis) et déjà affichée au-dessus du
+formulaire (« Nous vous rappelons sous 30 minutes »). Choix du libellé : « Réponse en 30 min »
+avait été essayé d'abord, mais il **doublait littéralement** la tuile « 30 min / Réponse
+garantie » de la carte Garantie, visible dans le même écran de hero ; « Rappel » désigne le
+bon engagement (un rappel, pas un délai d'intervention) et se lit comme complémentaire.
+Le 4e item est conservé plutôt que de passer à 3 USP : la liste du hero est une grille à
+2 colonnes, 3 items y laissent un orphelin. **`usps[1]` n'a pas bougé** : le badge
+TrustBadges affiche toujours « Sans coupure inutile » (vérifié sur le rendu). Un
+commentaire d'avertissement sur l'ordre du tableau a été ajouté dans la config pour que la
+prochaine session ne réordonne pas `usps` sans voir la dépendance.
+
+**2. Mentions légales : plus aucune annonce d'assurance.** La ligne `couverture` est retirée
+de `content/legal.json`. Comme la page **affichait ce champ en dur**, le bloc « Assurance
+professionnelle » aurait cassé (ou affiché une section vide avec deux « À compléter » en
+prod) : la section est donc désormais **conditionnée à une police réellement détenue**
+(`assureur` ou `police` non vide). Résultat : bloc masqué aujourd'hui, et il réapparaîtra
+tout seul à la location en remplissant les deux champs, sans retoucher le code. Rendu
+/mentions-legales vérifié en capture : enchaînement Éditeur → Hébergeur → Propriété
+intellectuelle → Données personnelles, aucun trou. Le commentaire du JSON documente la règle.
+
+**3. Rayon 20 → 30 km : 34 remplacements, 18 fichiers.** `radiusKm` (source de vérité pour
+`app/` et `components/`) + les 33 occurrences rédigées en dur dans les textes : config
+(about, stats, 2 réponses de FAQ), les 11 `content/zones/*.json` (2 chacun), les 6
+`content/services/*.json` (8 au total). **Re-grep de contrôle : 0 occurrence de « 20 km »**
+dans `config/`, `content/`, `app/`, `components/`, `lib/`, et 0 dans le HTML servi.
+Aucune nouvelle promesse chiffrée introduite : seul le nombre 20 devient 30, aucune commune
+n'a été ajoutée aux listes (Rumilly / Faverges / Thônes que le rayon couvre désormais ne sont
+PAS annoncées, ce serait du contenu neuf et non demandé, à trancher séparément).
+
+**4. H2 navy.** Traité en **une seule source de vérité** plutôt qu'écran par écran : la règle
+de base `h1, h2, h3` de `globals.css` passe de `text-slate-900` à `text-primary` (#17304E),
+et les 8 surcharges locales `text-slate-900` des titres de section ont été retirées pour
+qu'elles héritent (About, Méthode, Pourquoi nous, Zone, Devis, 2 titres de l'article de
+blog, H2 du corps d'article). Les titres posés sur fond sombre surchargent tous
+explicitement `text-white`, donc aucun risque d'invisible : **vérifié en mesurant la couleur
+calculée de tous les titres** sur accueil et page service (navy sur clair, blanc sur nuit).
+Les titres de CARTE (h3/h4 : étapes de méthode, cartes réassurance, cartes d'articles)
+restent en encre neutre : la hiérarchie « titre de section en couleur de marque, titre de
+carte en encre » reste lisible, un navy partout aurait aplati la lecture.
+
+**Audit de contraste refait** (script de §3septies, étendu à la page d'article maintenant
+que le blog est publié) : **0 échec AA sur 8 pages**. Il a fait remonter **1 vrai défaut
+préexistant, corrigé** : la date des cartes de `/conseils` était en `text-slate-400` sur
+blanc, soit **2,56:1**, très en dessous du seuil. Passée en `slate-500` (4,76:1). Ce défaut
+n'était pas visible lors de la passe d'identité parce que `/conseils` était encore vide.
+**À signaler au CEO** : c'est une sortie du périmètre « rien d'autre », assumée (1 classe,
+échec AA franc, révélé par l'audit qui m'était justement demandé).
+
+**5. OPTION prise : `BoltDivider` mis en service.** Il sépare désormais les blocs H2 des
+**6 pages service** (filet dégradé + éclair ambre centré). C'est la variation de squelette la
+plus utile pour un coût nul : elle porte sur les pages qui pèsent le plus en SEO, donne un
+rythme éditorial que le pilote d'Angers n'a pas (blocs empilés sans respiration), et reste
+purement décorative (`aria-hidden`, aucun texte, aucune incidence SEO). 3 blocs = 2
+séparateurs, largeur mesurée 358 px dans un viewport de 390.
+
+**Contrôles** : build vert (35 pages, l'article publié compris), **0 erreur console**,
+**0 débordement horizontal** en 1440 / 390 / 360 / 320 px sur accueil, page service, page
+commune, mentions légales et conseils, **0 tiret cadratin** ajouté (diff vérifié),
+**0 chiffre non validé**. Contrôle visuel en captures : hero (USP en 2 × 2 équilibré),
+sections claires (H2 navy), mentions légales, page service (séparateurs), mobile.
+
+**Points pour le CEO** :
+- L'arbitrage possible sur le 4e USP : si Rémy préfère ne rien promettre de plus, passer à
+  3 USP est un retrait d'un mot dans la config (la grille sera juste un peu moins équilibrée).
+- **Trouvé non commité et non suivi par git : `content/drafts/011-installation-electrique-garage-dependance.mdx`**
+  (daté du 26/07 04:04, non touché par moi). C'est **l'article de lancement #6**
+  (`installation-electrique-neuve`) signalé comme priorité n°1 en §3nonies : il semble avoir
+  été rédigé puis laissé de côté. À contrôler et à mettre en file de publication.
+- La date des cartes de `/conseils` s'affiche au format brut « 2026-07-25 » alors que la page
+  d'article utilise `formatDateFr`. Non corrigé (hors périmètre, ça change du texte rendu),
+  mais c'est un détail visible sur le hub blog.

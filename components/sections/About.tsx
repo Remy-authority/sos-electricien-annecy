@@ -32,7 +32,7 @@ export default function About() {
           <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-accent-deep">
             {siteConfig.persona.name}
           </p>
-          <h2 id="about-title" className="text-2xl font-bold text-slate-900 md:text-3xl">
+          <h2 id="about-title" className="text-2xl font-bold md:text-3xl">
             <AccentWord text={siteConfig.about.title} word={siteConfig.city} />
           </h2>
           <p className="mt-4 leading-relaxed text-slate-600">{siteConfig.about.body}</p>

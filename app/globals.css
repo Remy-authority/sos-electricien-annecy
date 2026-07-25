@@ -28,9 +28,13 @@
     @apply bg-white text-slate-700 font-sans antialiased;
   }
   /* Tous les titres en serif signature (Fraunces) : c'est le marqueur d'identité
-     n°1 du site, sur le modèle de la référence. Le corps reste en Sora. */
+     n°1 du site, sur le modèle de la référence. Le corps reste en Sora.
+     Couleur = navy de marque (`primary`) et non un gris-bleu neutre : sur fond clair,
+     les titres portent ainsi la charte (finition validée le 26/07/2026). 11,6:1 sur
+     blanc, largement au-dessus du seuil AA. Les titres posés sur fond sombre
+     surchargent tous explicitement `text-white`. */
   h1, h2, h3 {
-    @apply text-slate-900 font-display font-semibold tracking-tight;
+    @apply text-primary font-display font-semibold tracking-tight;
   }
   a {
     @apply text-primary;
@@ -181,9 +185,11 @@
   .article-prose {
     @apply text-[1.0625rem] text-slate-700;
   }
-  /* H2 bien détachés : filet fin + respiration au-dessus. */
+  /* H2 bien détachés : filet fin + respiration au-dessus.
+     Couleur héritée de la règle de base (navy de marque) ; les h3 restent en encre
+     neutre, ce qui garde une hiérarchie lisible dans le corps d'article. */
   .article-prose h2 {
-    @apply mt-12 border-t border-slate-100 pt-8 text-2xl font-bold text-slate-900 md:text-[1.75rem];
+    @apply mt-12 border-t border-slate-100 pt-8 text-2xl font-bold md:text-[1.75rem];
   }
   .article-prose h3 {
     @apply mt-8 text-xl font-bold text-slate-900;

@@ -1,5 +1,5 @@
 {
-  "_comment": "Mentions légales, éditeur = société propriétaire du site (DYONISOS LTD, droit UK). Raison sociale/immatriculation/adresse = données réelles portefeuille (NOU-29). téléphone/emailContact = DEMO tant que Rémy n'a pas fourni le numéro dédié à ce site. L'éditeur du site n'est PAS le prestataire des interventions : les infos d'un artisan (assurance RC pro/décennale) seront ajoutées à la location. Ne jamais inventer de valeurs. Hébergeur (Vercel) = fait, pré-rempli.",
+  "_comment": "Mentions légales, éditeur = société propriétaire du site (DYONISOS LTD, droit UK). Raison sociale/immatriculation/adresse = données réelles portefeuille (NOU-29). téléphone/emailContact = DEMO tant que Rémy n'a pas fourni le numéro dédié à ce site. L'éditeur du site n'est PAS le prestataire des interventions : les infos d'assurance d'un artisan seront ajoutées à la location, en remplissant assureur + police (la section « Assurance professionnelle » de /mentions-legales reste MASQUÉE tant que ces deux champs sont vides, pour n'annoncer aucune couverture non détenue). Ne jamais inventer de valeurs. Hébergeur (Vercel) = fait, pré-rempli.",
   "editeur": {
     "raisonSociale": "DYONISOS LTD",
     "formeJuridique": "Private Limited Company (société à responsabilité limitée de droit anglais)",
@@ -12,8 +12,7 @@
   },
   "assurance": {
     "assureur": "",
-    "police": "",
-    "couverture": "Responsabilité civile professionnelle et décennale : références à compléter"
+    "police": ""
   },
   "hebergeur": {
     "nom": "Vercel Inc.",

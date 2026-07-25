@@ -54,13 +54,22 @@ export const siteConfig = {
   /* ── Réassurance / preuve (hero, badges, footer) ── */
   availability: '24h/24 · 7j/7',
   responseTime: 'Intervention rapide sur Annecy',
-  usps: ['Devis gratuit', 'Sans coupure inutile', 'Artisan local', 'Assurance décennale'],
+  // ⚠️ ORDRE SIGNIFIANT : `usps[1]` alimente le 2e badge de TrustBadges (engagement
+  // métier). Ne pas réordonner sans vérifier components/sections/TrustBadges.tsx.
+  // 26/07/2026 : « Assurance décennale » retirée (Rémy confirme qu'il n'y en a pas,
+  // on n'affiche aucune couverture non détenue). Remplacée par la promesse de rappel
+  // validée par Rémy le même jour, déjà énoncée telle quelle au-dessus du formulaire
+  // (« Nous vous rappelons sous 30 minutes »). Le 4e item garde la grille du hero
+  // équilibrée en 2 × 2.
+  usps: ['Devis gratuit', 'Sans coupure inutile', 'Artisan local', 'Rappel sous 30 min'],
   methods: ['Diagnostic électrique complet', 'Caméra thermique', 'Traceur de câbles'],
 
   /* ── Zone d'intervention (schema areaServed + bloc zones) ── */
   serviceArea: {
     base: 'Annecy',
-    radiusKm: 20,
+    // 30 km validé par Rémy le 26/07/2026 (était 20) : couvre le tour du lac complet
+    // et les bourgs voisins sans promettre de délai vers les stations plus lointaines.
+    radiusKm: 30,
     // Quartiers du centre historique d'Annecy cités pour la couverture géo fine
     // (maillage, pas de page dédiée). Annecy-le-Vieux, Cran-Gevrier, Meythet, Seynod
     // et Pringy sont d'anciennes communes fusionnées dans la commune nouvelle d'Annecy
@@ -104,7 +113,7 @@ export const siteConfig = {
   about: {
     title: 'Votre spécialiste électricien à Annecy',
     // DEMO – à remplacer par les infos du loueur
-    body: "Julien Perret dirige notre équipe spécialisée. Nous intervenons à Annecy et dans un rayon de 20 km pour diagnostiquer et réparer toute panne électrique, du simple disjoncteur qui saute jusqu'à la rénovation complète d'un tableau. Nous maîtrisons les méthodes de diagnostic non invasives et vous remettons un compte-rendu clair après chaque intervention.",
+    body: "Julien Perret dirige notre équipe spécialisée. Nous intervenons à Annecy et dans un rayon de 30 km pour diagnostiquer et réparer toute panne électrique, du simple disjoncteur qui saute jusqu'à la rénovation complète d'un tableau. Nous maîtrisons les méthodes de diagnostic non invasives et vous remettons un compte-rendu clair après chaque intervention.",
     // DEMO – à remplacer par les infos du loueur
     highlight: 'Électricien certifié, habilitation électrique à jour',
   },
@@ -120,7 +129,7 @@ export const siteConfig = {
   stats: [
     { value: '+400', label: 'Pannes résolues' }, // DEMO – à remplacer par les infos du loueur
     { value: '8 ans', label: "d'expérience" }, // DEMO – à remplacer par les infos du loueur
-    { value: '20 km', label: "Rayon d'intervention" },
+    { value: '30 km', label: "Rayon d'intervention" },
   ],
 
   whyUs: [
@@ -141,7 +150,7 @@ export const siteConfig = {
     },
     {
       q: 'Intervenez-vous en urgence les week-ends et jours fériés ?',
-      a: 'Oui, nous intervenons 24h/24 et 7j/7, week-ends et jours fériés inclus, sur Annecy et dans un rayon de 20 km.',
+      a: 'Oui, nous intervenons 24h/24 et 7j/7, week-ends et jours fériés inclus, sur Annecy et dans un rayon de 30 km.',
     },
     {
       q: 'Que faire en cas de coupure de courant générale ?',
@@ -155,7 +164,7 @@ export const siteConfig = {
     },
     {
       q: 'Intervenez-vous dans toute la Haute-Savoie ?',
-      a: "Nous couvrons Annecy (dont les secteurs d'Annecy-le-Vieux, Seynod, Cran-Gevrier, Meythet et Pringy) et son agglomération dans un rayon de 20 km : Poisy, Épagny Metz-Tessy, Argonay, Sevrier, Saint-Jorioz, Veyrier-du-Lac et les communes alentour.",
+      a: "Nous couvrons Annecy (dont les secteurs d'Annecy-le-Vieux, Seynod, Cran-Gevrier, Meythet et Pringy) et son agglomération dans un rayon de 30 km : Poisy, Épagny Metz-Tessy, Argonay, Sevrier, Saint-Jorioz, Veyrier-du-Lac et les communes alentour.",
     },
   ],
 

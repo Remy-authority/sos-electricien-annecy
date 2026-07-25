@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Fragment } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
@@ -11,7 +12,7 @@ import CtaBanner from '@/components/ui/CtaBanner'
 import ServiceQuickFacts from '@/components/ui/ServiceQuickFacts'
 import ServiceBlock from '@/components/ui/ServiceBlock'
 import AccentWord from '@/components/ui/AccentWord'
-import { BoltBadge, BoltWatermark } from '@/components/ui/Bolt'
+import { BoltBadge, BoltDivider, BoltWatermark } from '@/components/ui/Bolt'
 
 // 100% SSG : une page statique par service.
 export const dynamicParams = false
@@ -89,9 +90,16 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
         <ServiceQuickFacts bullets={service.bullets} />
 
         <div className="mx-auto max-w-3xl">
+          {/* Séparateur de marque entre deux blocs H2 : donne un rythme éditorial
+              propre à ce site (le pilote d'Angers empile les blocs sans respiration)
+              et met en service l'éclair `BoltDivider`. Purement décoratif
+              (`aria-hidden` dans le composant), aucune incidence sur le contenu. */}
           <div className="prose-content mt-10 space-y-8">
             {service.blocks.map((b, i) => (
-              <ServiceBlock key={b.heading} block={b} eager={i === firstBlockImageIndex} />
+              <Fragment key={b.heading}>
+                {i > 0 && <BoltDivider />}
+                <ServiceBlock block={b} eager={i === firstBlockImageIndex} />
+              </Fragment>
             ))}
           </div>
 

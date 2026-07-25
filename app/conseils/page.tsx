@@ -41,7 +41,10 @@ export default function ConseilsListing() {
                   <span className="text-xs font-semibold uppercase tracking-wide text-primary">{a.category}</span>
                   <h2 className="mt-1 text-lg">{a.title}</h2>
                   <p className="mt-2 text-sm text-slate-600">{a.description}</p>
-                  <time className="mt-3 block text-xs text-slate-400" dateTime={a.date}>{a.date}</time>
+                  {/* slate-500 et non slate-400 : sur fond blanc, slate-400 tombe à
+                      2,56:1 (échec AA), relevé par l'audit de contraste du 26/07/2026
+                      dès la publication du 1er article. slate-500 = 4,76:1. */}
+                  <time className="mt-3 block text-xs text-slate-500" dateTime={a.date}>{a.date}</time>
                 </div>
               </Link>
             </li>

@@ -33,7 +33,7 @@ export default function Process() {
       <div className="container-site">
         <div className="mb-10 text-center">
           <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-accent-deep">Notre méthode</p>
-          <h2 id="process-title" className="text-2xl font-bold text-slate-900 md:text-3xl">
+          <h2 id="process-title" className="text-2xl font-bold md:text-3xl">
             Comment <span className="accent-serif text-accent-deep">ça se passe</span> ?
           </h2>
         </div>

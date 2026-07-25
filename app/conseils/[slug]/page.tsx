@@ -115,7 +115,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
         {/* Maillage interne : services liés */}
         {linked.length > 0 && (
           <nav aria-label="Nos services liés" className="mx-auto mt-12 max-w-3xl rounded-card bg-light p-6">
-            <h2 className="text-lg font-bold text-slate-900">Nos services liés</h2>
+            <h2 className="text-lg font-bold">Nos services liés</h2>
             <ul className="mt-3 flex flex-wrap gap-2">
               {linked.map((s) => (
                 <li key={s.slug}>
@@ -140,7 +140,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
         <section className="border-t border-slate-100" aria-labelledby="a-lire-aussi">
           <div className="container-site section">
             <div className="mx-auto max-w-5xl">
-              <h2 id="a-lire-aussi" className="text-2xl font-bold text-slate-900">À lire aussi</h2>
+              <h2 id="a-lire-aussi" className="text-2xl font-bold">À lire aussi</h2>
               <ul className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                 {related.map((a) => (
                   <li key={a.slug}>

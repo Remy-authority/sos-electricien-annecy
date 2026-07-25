@@ -18,7 +18,7 @@
     },
     {
       "heading": "Secteurs et communes voisines desservis",
-      "body": "En plus de Cran-Gevrier, nous intervenons dans le centre-ville d'Annecy, le secteur de Meythet, et la commune de Poisy à l'ouest de l'agglomération. Notre zone de couverture s'étend sur un rayon de 20 km autour d'Annecy."
+      "body": "En plus de Cran-Gevrier, nous intervenons dans le centre-ville d'Annecy, le secteur de Meythet, et la commune de Poisy à l'ouest de l'agglomération. Notre zone de couverture s'étend sur un rayon de 30 km autour d'Annecy."
     }
   ],
   "neighbours": [
@@ -41,7 +41,7 @@
     },
     {
       "q": "Intervenez-vous aussi à Meythet et Poisy ?",
-      "a": "Oui. Nous couvrons le secteur de Meythet, la commune de Poisy et les autres secteurs et communes de l'agglomération annécienne dans le cadre de notre zone d'intervention de 20 km."
+      "a": "Oui. Nous couvrons le secteur de Meythet, la commune de Poisy et les autres secteurs et communes de l'agglomération annécienne dans le cadre de notre zone d'intervention de 30 km."
     }
   ]
 }

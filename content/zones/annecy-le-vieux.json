@@ -18,7 +18,7 @@
     },
     {
       "heading": "Secteurs et communes voisines desservis",
-      "body": "En plus d'Annecy-le-Vieux, nous intervenons dans le centre-ville d'Annecy, le secteur de Seynod, et les communes de Veyrier-du-Lac et Menthon-Saint-Bernard au bord du lac. Notre zone de couverture s'étend sur un rayon de 20 km autour d'Annecy."
+      "body": "En plus d'Annecy-le-Vieux, nous intervenons dans le centre-ville d'Annecy, le secteur de Seynod, et les communes de Veyrier-du-Lac et Menthon-Saint-Bernard au bord du lac. Notre zone de couverture s'étend sur un rayon de 30 km autour d'Annecy."
     }
   ],
   "neighbours": [
@@ -41,7 +41,7 @@
     },
     {
       "q": "Intervenez-vous aussi à Seynod et Veyrier-du-Lac ?",
-      "a": "Oui. Nous couvrons le secteur de Seynod, la commune de Veyrier-du-Lac et les autres secteurs et communes autour du lac d'Annecy dans le cadre de notre zone d'intervention de 20 km."
+      "a": "Oui. Nous couvrons le secteur de Seynod, la commune de Veyrier-du-Lac et les autres secteurs et communes autour du lac d'Annecy dans le cadre de notre zone d'intervention de 30 km."
     }
   ]
 }
