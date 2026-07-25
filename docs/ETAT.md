@@ -16,8 +16,14 @@ verdict 🟢 Boulevard, aucun concurrent local avec site moderne ni avis (le mei
 Électricien, a un design daté et zéro avis), CPC estimé 6-10 €, zone à fort pouvoir d'achat,
 aucune saisonnalité.
 
-**Domaine pressenti : `sos-electricien-annecy.fr`** (vérifié DISPONIBLE à l'AFNIC le 25/07/2026,
-PAS ENCORE ACHETÉ, en attente de validation Rémy).
+**Domaine CHOISI par Rémy le 25/07/2026 : `sos-electricien-annecy.fr`** (vérifié disponible à
+l'AFNIC le même jour, ACHAT À FAIRE par Rémy, ne bloque pas le dev : on travaille sur l'URL
+Vercel en attendant).
+
+**Référence design (les 2 accès pour le Builder) :**
+- Site en ligne : https://sniperpestcontrol3dservices.fr
+- Code source local : `/Users/zaouiremy/Desktop/Claude code/Template siteweb/Prospects/Deratisation/Sniper-pest-3d-control/`
+  (lecture seule : s'en inspirer, ne JAMAIS modifier ce dossier)
 
 ---
 
@@ -32,7 +38,8 @@ PAS ENCORE ACHETÉ, en attente de validation Rémy).
 
 ## 2. RESTE À FAIRE (checklist playbook)
 
-- [ ] Rémy : valider le nom de domaine et l'acheter (registrar), fournir téléphone dédié + email + nom commercial
+- [x] Rémy : nom de domaine validé (sos-electricien-annecy.fr)
+- [ ] Rémy : acheter le domaine (registrar), fournir téléphone dédié + email + nom commercial
 - [ ] CEO : créer le repo GitHub + le projet Vercel (Étape 1.3-1.4)
 - [ ] Builder : réécrire `content/services/*.json` (services électricien) et `content/zones/*.json` (communes agglo Annecy)
 - [ ] Builder : `config/site.config.ts` (identité, couleurs, persona DEMO) + `content/legal.json`
