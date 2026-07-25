@@ -2,27 +2,27 @@
 
 > État opérationnel courant. La checklist de référence complète vit dans `docs/ETAT.md`.
 
-## Session du 25/07/2026 (CEO)
+## Session du 26/07/2026 (CEO)
 
-- [x] Créer le repo GitHub `Remy-authority/sos-electricien-annecy` + push de `main`
-- [x] Créer le projet Vercel `sos-electricien-annecy` + connexion git (auto-deploy sur `main`)
-- [x] Poser `SEO_NOINDEX=1` sur Vercel (production + development ; preview déjà noindex par le code)
-- [x] Vérifier que le premier déploiement Vercel build correctement (fix framework `nextjs` nécessaire, voir lessons.md)
-- [x] Vérifier le verrou noindex en ligne (robots.txt `Disallow: /` + meta `noindex, follow` sur https://sos-electricien-annecy.vercel.app)
-- [x] Vérifier que la GitHub Action `publish-article.yml` est active dans le nouveau repo
-- [ ] Mettre à jour `docs/ETAT.md` en fin de session
+- [x] Vérifier les livrables Builder (itération design) : périmètre respecté (contenu/config
+  intacts), 0 tiret cadratin ajouté, build vert 34 pages
+- [x] Vérifier les livrables Autoblog : relatedServices valides sur les 10 drafts
+- [x] Commit + push + déploiement (commit 499ef7a), noindex conservé, hero.jpg servi
+- [ ] Contrôle visuel CEO v2 (QA navigateur en cours sur le design itéré)
+- [ ] Mettre à jour docs/ETAT.md en fin de session
 
-## En attente (hors CEO)
+## Décisions attendues de Rémy
 
-- [ ] Rémy : acheter le domaine `sos-electricien-annecy.fr`, fournir téléphone dédié + email + nom commercial
-- [x] Agent SEO : carte mots-clés + `docs/SEO-GEO-PLAN.md` + `docs/CALENDRIER-EDITORIAL.md` (fait, consigné dans ETAT.md)
-- [ ] Builder : ALIGNER services/zones sur le plan SEO (divergence détectée, voir ETAT.md), puis logo, persona, images
-- [ ] Builder sur Opus : passe design (référence sniperpestcontrol3dservices.fr)
-- [ ] Autoblog : drafts T1 (10 drafts présents sur disque, à valider contre le calendrier éditorial)
-- [x] Vérifier l'activation de la GitHub Action `publish-article.yml` dans le nouveau repo (active)
+- [ ] Valeurs DEMO affichées : stats (+400 pannes, 8 ans, 20 km) et promesses (30 min, 100 %)
+- [ ] Cannibalisation drafts/calendrier (ETAT.md §3ter) : recommandation CEO = garder les
+  drafts et les mapper sur les emplacements du calendrier, faire écrire l'article #6
+  (installation neuve), faire valider 006/010 par l'agent SEO
+- [ ] Achat domaine + téléphone dédié + email + nom commercial + assureur décennale
 
-## Règle de commit en cours
+## Points ouverts
 
-Le contenu produit (`content/`, `config/`, `lib/`) reste NON commité tant que : compte-rendu
-Builder reçu + alignement plan SEO + contrôle visuel CEO. Un push sur `main` déclenche un
-déploiement auto (noindex, URL Vercel de travail).
+- [ ] Écusson type marque sur la veste de la photo hero (règle : aucun logo/marque) : à gommer
+  par le Builder (retouche image, pas de régénération complète)
+- [ ] Autoblog : écrire l'article de lancement #6 (installation-electrique-neuve) une fois
+  l'arbitrage cannibalisation rendu
+- [ ] Agent SEO : intégrer/valider 006 et 010 dans le calendrier éditorial

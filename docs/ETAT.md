@@ -292,3 +292,30 @@ sur les valeurs DEMO affichées, assureur à compléter dans les mentions légal
   fond sombre). Contenu, slugs et valeurs DEMO strictement inchangés. Build vert (34 pages),
   zéro erreur console, aucun débordement mobile. Détail complet en §3quater. Rien commité :
   le CEO commite après contrôle.
+
+## 3quinquies. CONTRÔLE VISUEL CEO v2 (26/07/2026, après itération design)
+
+Vérifications CEO indépendantes avant commit : périmètre Builder respecté (contenu/config
+intacts), 0 tiret cadratin ajouté, relatedServices des 10 drafts valides, build vert 34 pages.
+Commit 499ef7a poussé et déployé, noindex conservé.
+
+QA navigateur v2 (accueil + service + zone, desktop/mobile, mesures DOM) : **OK pour
+validation, zéro bloquant.**
+- Réserve « hero sans photo » : **LEVÉE** (photo lac d'Annecy heure bleue, srcset propre,
+  glassmorphism réel sur la carte garantie).
+- Réserve « direction artistique » : **partiellement levée** (accents Fraunces, grain, ombres,
+  bandeau texturé confirmés). Écart restant vs Sniper : accent italique limité à un mot vs
+  accroche entière serif chez Sniper ; traitement premium cantonné aux bandeaux sombres ;
+  pas d'iconographie de marque forte au-delà de l'éclair.
+- 2 finitions mineures relevées : contraste du texte de consentement RGPD (blanc 40 %
+  d'opacité ≈3,8:1, sous le seuil AA 4,5:1, à remonter vers 0.55-0.6) et grain quasi
+  imperceptible (grille visible mais pas d'effet filmique).
+- Point CEO supplémentaire : petit écusson type marque de vêtement sur la veste de la photo
+  hero (`public/hero.jpg`), contraire à la règle « aucun texte/logo/marque » : à gommer par
+  retouche (pas de régénération complète).
+
+Arbitrages en attente de Rémy : (a) itération design supplémentaire vers le niveau Sniper ou
+validation du niveau actuel + finitions mineures seulement ; (b) valeurs DEMO affichées ;
+(c) cannibalisation drafts/calendrier (§3ter, recommandation CEO : garder les drafts en les
+mappant sur les emplacements du calendrier, écrire l'article #6 en priorité, faire valider
+006/010 par l'agent SEO).
