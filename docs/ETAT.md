@@ -560,3 +560,19 @@ ajoutées : #8 vs #7, #150 vs #16/#37).
 
 **Non fait par cet agent** (hors périmètre `docs/`) : publication effective des drafts (renommage,
 sortie de `content/drafts/`), rédaction de l'article #6. À faire par le CEO/Autoblog.
+
+## 3decies. SESSION CEO DU 26/07/2026 (suite) : BLOG LANCÉ, DOMAINE EN ATTENTE
+
+- **Publication du blog LANCÉE** (feu vert Rémy + validation SEO §3nonies réunis). Incident
+  résolu au passage : l'Action échouait (`fatal: pathspec 'public/conseils'`), car le dossier
+  vidé au nettoyage Angers avait disparu du repo ; restauré via `.gitkeep` (e092a59). Test
+  manuel OK : article 001 publié, vérifié en ligne sur /conseils, 9 drafts en file, le cron
+  lun/mer/ven 05:00 UTC prend le relais.
+- **Domaine payé par Rémy sur OVH le 26/07** mais commande pas encore visible dans son
+  dashboard et domaine **NOT FOUND à l'AFNIC** (vérifié) : commande en cours de traitement,
+  à re-vérifier. Si rien sous quelques heures : vérifier l'état de la commande/paiement OVH.
+- **Rayon 30 km confirmé par Rémy** (au lieu de 20). Exécution Builder (34 occurrences,
+  18 fichiers, périmètre audité en §3septies-notes).
+- Retouches Builder EN ATTENTE (décennale, legal, rayon, H2 navy, BoltDivider optionnel) :
+  message enrichi par la session Builder précédente, à recoller dans une session fraîche.
+- Priorité Autoblog suivante : article de lancement #6 (installation-electrique-neuve).
