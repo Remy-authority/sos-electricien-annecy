@@ -1,8 +1,10 @@
 # ETAT.md — Journal de bord SOS Électricien Annecy
 
 > Mémoire du projet. Chaque session lit ce fichier en arrivant et le met à jour avant de finir.
-> Dernière mise à jour : 2026-07-26 (session Builder, site EN PRODUCTION : 11 images de
-> couverture d'articles générées et câblées via le frontmatter `cover`, détail en §3octodecies).
+> Dernière mise à jour : 2026-07-26 (session Builder, les 68 covers de la vague Autoblog sont
+> générées et livrées dans public/conseils/, détail en §3vicies. Les 79 articles du site,
+> publiés et en file, ont désormais tous leur image. Reste : contrôle CEO puis commit groupé
+> drafts + covers).
 
 ---
 
@@ -932,3 +934,162 @@ vert) → commit c7fef9a → **publication en bloc des 10 drafts restants : 10/1
 content/drafts/ est VIDE : prochaine étape = vague Autoblog ~68 articles (message n°2
 transmis à Rémy, feu vert CEO donné). ⚠️ Tant que la file est vide, le cron lun/mer/ven
 tourne à vide sans erreur (aucun draft à publier), pas grave mais à combler vite.
+
+## 3novodecies. VAGUE AUTOBLOG : 68 DRAFTS RÉDIGÉS, FILE COMBLÉE JUSQU'À FIN DÉCEMBRE 2026 (26/07/2026)
+
+Mission (point 3 du plan §3septdecies) : remplir `content/drafts/` en suivant
+`docs/CALENDRIER-EDITORIAL.md` dans l'ordre, en sautant les slots déjà publiés (§1bis :
+#1-8, #13, #150, #151), jusqu'à fin janvier 2027. **68 articles rédigés en une session**
+(pas d'arrêt à un multiple de 10, la cible a été tenue en entier), couvrant le calendrier
+**#9 à #77** (reste du T1 + tout le T2), préfixes `012-` à `079-`. Périmètre respecté :
+uniquement `content/drafts/` + ce journal, aucun autre fichier touché, aucune commande git,
+aucune publication effectuée.
+
+**Méthode** : le volume (68 articles × ~800-1000 mots, soit environ 60 000 mots) dépassant
+ce qu'une rédaction strictement séquentielle peut produire dans une session en gardant une
+qualité constante, le travail a été **paralléllisé sur 7 agents généralistes**, chacun
+assigné à une tranche contiguë de 8 à 10 articles (dans l'ordre du calendrier, jamais deux
+agents sur la même tranche). Chaque agent recevait : un brief unique partagé (les 10 règles
+de contenu, le format frontmatter exact, l'article déjà publié comme référence de ton et de
+structure à lire avant de rédiger, le contexte du site) et sa tranche assignée sous forme de
+données structurées (titre calendrier, requête cible, `relatedServices`, slug, catégorie,
+date, et une note de différenciation explicite pour les articles identifiés à risque de
+cannibalisation par `docs/CALENDRIER-EDITORIAL.md` §3, avec consigne de lire l'article déjà
+publié concerné avant de rédiger). Chaque agent avait pour consigne de s'auto-relire avant de
+rendre la main (tiret cadratin, chiffres inventés, longueur, FAQ en frontmatter uniquement).
+
+**Vérification indépendante faite par le CEO/Autoblog après coup** (script de contrôle sur
+les 68 fichiers, pas seulement les rapports des agents) : **0 problème détecté** sur les
+68 fichiers, aucune exception. Contrôlé automatiquement pour chacun : nom de fichier conforme
+à la convention `NNN-slug.mdx`, slug frontmatter cohérent avec le nom de fichier et avec
+l'assignation, **aucune collision de slug** (ni entre les 68 nouveaux drafts entre eux, ni
+avec les 11 articles déjà publiés dans `content/conseils/`), frontmatter complet
+(title/description/date/category/cover/relatedServices), `relatedServices` limité aux 6
+slugs de service valides et conforme à l'assignation, FAQ de 3 à 4 questions présente
+uniquement en frontmatter (aucune section FAQ dupliquée dans le corps Markdown), **zéro
+tiret cadratin et zéro tiret demi-cadratin** sur les 68 fichiers, longueur du corps dans la
+fourchette 700-1150 mots (cible 800-1000, tolérance technique du script), aucune formulation
+interdite du type « commune de Seynod/Cran-Gevrier/Annecy-le-Vieux/Meythet/Pringy » (secteurs
+fusionnés 2017, toujours désignés comme tels), aucun motif de chiffre suspect (`+NN`, `NN ans
+d'expérience`) détecté. Complété par une relecture manuelle de plusieurs fichiers répartis
+sur différentes tranches (introduction citable en tête d'article, qualité de la
+différenciation appliquée, absence de répétition entre articles).
+
+**Anti-cannibalisation appliquée** (conformément à `docs/CALENDRIER-EDITORIAL.md` §3), les
+agents ont lu les articles déjà publiés concernés avant de rédiger, notamment :
+- **#14** (obligations continues du bailleur) vs l'article publié `mise-aux-normes-electriques-vente-location.mdx`
+  (#5, diagnostic ponctuel avant vente) : angle strictement recentré sur les obligations
+  légales pendant toute la durée de la location, sans reprendre le contenu du diagnostic.
+- **#46** (délai de remise du diagnostic à l'acheteur) vs le même article publié #5 : angle
+  strictement procédural (le moment dans la transaction), sans redévelopper le contenu du
+  diagnostic.
+- **#35** (panne EDF/Enedis individuelle) et **#71** (coupure collective de quartier) : les
+  deux articles ont été écrits dans cette même vague (tranches 3 et 7, agents différents), la
+  différenciation angle individuel/collectif a été respectée par les deux agents (vérifiée
+  par lecture croisée, chacun ayant lu l'autre draft avant de conclure).
+- Quatuor absence prolongée (**#27, #55, #57, #58**) : différenciés par lieu/saison/durée
+  (lac toute saison / hiver générique / montagne fermée l'hiver / logement occupé en continu
+  pendant les fêtes), vérifié par lecture croisée des 4 fichiers au sein de la tranche 5.
+- **#37** (lexique électricité) vs l'article déjà publié `disjoncteur-fusible-differentiel-differences.mdx`
+  (#150) : l'entrée « différentiel » du lexique renvoie vers l'article déjà publié plutôt que
+  de le réexpliquer, conformément à la note du calendrier.
+- **#48** (attestation Consuel) vs l'article publié sur la norme NF C 15-100 (#13) : reste
+  strictement sur l'attestation en tant que document administratif.
+- Trios/paires **#38/#54/#56** (chauffage électrique), **#41/#66** (tableau saturé),
+  **#33** (dimensionnement des circuits), **#18** (présentation générale des outils, pas
+  seulement la caméra thermique) : différenciations du calendrier respectées telles quelles.
+
+**Non fait par cette session** (hors mission) : génération des 68 images de couverture
+(`public/conseils/<slug>.jpg`, requises par la règle §3sexdecies avant toute publication,
+c'est le travail du Builder), publication effective des drafts (le cron lun/mer/ven s'en
+charge tout seul dès que les covers existent, sans autre intervention), rédaction du reste du
+calendrier (**#78 à #149, T3 et T4, non couverts**, hors du périmètre « jusqu'à fin janvier
+2027 » demandé : à traiter par une future session Autoblog quand la file redescendra).
+
+**Note sur les dates de frontmatter** : chaque draft porte une date `lun/mer/ven` placeholder
+calculée en séquence à partir du 27/07/2026 (`012` → 2026-07-27 … `079` → 2026-12-30), par
+cohérence avec le calendrier. Ces dates n'ont aucune incidence réelle : `scripts/publish-next-draft.mjs`
+écrase systématiquement le champ `date` par la date effective de publication (fuseau
+Europe/Paris) au moment où chaque draft sort de la file, donc la date affichée en ligne sera
+toujours la vraie date de mise en ligne, pas ce placeholder.
+
+**État de la file** : `content/drafts/` contient maintenant 68 fichiers (`012-` à `079-`),
+tri alphabétique = ordre de publication du calendrier. Au rythme lun/mer/ven, cette file
+couvre largement au-delà de fin janvier 2027 en termes de nombre de publications (68
+articles ÷ 3/semaine ≈ 22-23 semaines ≈ jusqu'à fin décembre 2026/début janvier 2027 en
+temps réel à partir du 27/07/2026), ce qui remplit l'objectif « 6 mois sans intervention »
+du plan Rémy (§3septdecies), sous réserve que les covers soient prêtes avant que le cron
+n'atteigne le premier draft sans image.
+
+**Priorité immédiate pour la suite (point 4 du plan §3septdecies)** : Builder génère les 68
+covers `public/conseils/<slug>.jpg` (même direction artistique que les 11 premières, détail
+en §3octodecies) et ajoute le contrôle qualité habituel (aucun texte/marque lisible), puis
+contrôle CEO avant de laisser le cron tourner seul pendant 6 mois.
+
+## 3vicies. LES 68 COVERS DE LA VAGUE AUTOBLOG (26/07/2026, Builder, site en production)
+
+Périmètre demandé (point 4 du plan §3septdecies) : une image par draft `012-` à `079-`, dans
+l'ordre de publication. **68 fichiers ajoutés dans `public/conseils/`, zéro fichier modifié
+ailleurs** : aucun `.mdx` touché (les champs `cover` écrits par l'Autoblog étaient déjà tous
+corrects, vérifié un par un), aucun composant, aucune config. Avec les 11 premières covers,
+**les 79 articles du site ont maintenant leur image**.
+
+**1. Même série que les 11 premières.** Les blocs de style et d'interdits de §3octodecies ont
+été repris **mot pour mot** (nuit bleutée + ambre chaud, 35 mm f/2.8, palette désaturée, grain
+argentique), avec un ajout : la mention explicite des normes françaises dans le bloc de style
+(prises de type E à broche de terre mâle, disjoncteurs sur rail DIN, fils bleu/marron/vert-jaune),
+pour éviter le matériel allemand que le modèle produit par défaut.
+
+**2. 68 scènes distinctes, écrites une par une** à partir du titre réel de chaque article, avec
+une contrainte de non-répétition : cadrage (plan large de pièce, plan moyen, très gros plan),
+lieu (couloir, cuisine, salle de bain, chambre, cave, buanderie, garage, chalet, palier
+d'immeuble, jardin, rue, extérieur sous la neige), sujet (tableau, prise, interrupteur,
+radiateur, ampoule, volet roulant, multiprise, guirlande, détecteur de fumée, piquet de terre,
+outils, chantier) et moment de la journée sont variés délibérément. Les sujets abstraits
+(lexique, assurance, devis, artisan vs enseigne, mythe du fusible) sont traités par une nature
+morte ou une scène de constat, jamais par un document écrit, qui aurait été du texte.
+
+**3. Six images refusées au contrôle et refaites** (deux candidats générés pour les deux plus
+risquées) :
+- **018** (différentiel 30 mA) : « ON » parfaitement lisible sur les manettes. Refaite ; le
+  second tirage en gardait, le retenu n'a plus qu'un « T » de 30 px sur le bouton de test,
+  **gommé par inpainting harmonique local** (masque construit sur le fond local médian, 4 337
+  pixels modifiés, **0,103 % de l'image**, reste bit à bit identique), méthode déjà utilisée
+  pour l'écusson du hero en §3sexies.
+- **019** (comment l'électricien cherche une panne) : profil du visage visible. Refaite de dos
+  strict, aucun trait identifiable.
+- **023** (surtension après orage), **039** (lexique), **044** (ampoules qui grillent) :
+  **prises de courant allemandes de type F** (griffes latérales) au lieu de prises françaises
+  de type E, sur des objets au premier plan. Refaites ; 039 y gagne, la prise type E avec sa
+  broche de terre en laiton est désormais l'objet principal du comparatif.
+- **076** (urgence ou intervention programmée) : le paillasson portait le mot « PAILLASSON »
+  en toutes lettres. Refait sur un paillasson uni.
+
+**4. Protocole de contrôle** (renforcé par rapport aux 11 premières, vu le volume) :
+- **6 planches contact** des 68 (12 par planche) pour la cohérence de série et l'unicité des
+  sujets ;
+- **17 planches de revue plein cadre à 800 px** (4 images par planche), soit **les 68 images
+  revues une par une** à la moitié de la résolution livrée, c'est là qu'ont été repérés les
+  6 défauts ci-dessus ;
+- **zooms 1:1 ciblés** sur les points ambigus (arrière du véhicule de 074 : aucune plaque ni
+  marquage ; multiprises de 067 ; prise de 013, type E confirmée avec sa broche) ;
+- vérification automatique : **79 empreintes de fichier distinctes** (aucune image en double),
+  79 fichiers en 1600 × 893, et **79/79 articles dont le `cover` pointe vers un fichier
+  existant**.
+- Une tentative de recadrage automatique sur « la zone la plus détaillée » a été abandonnée :
+  l'énergie de bord désigne le grain du bois ou du mur, pas le sujet. La revue plein cadre est
+  plus fiable et c'est elle qui a servi.
+
+**5. Poids** : 1600 px de large, JPEG progressif qualité 82 (76 à 70 pour les 4 images les plus
+détaillées), **80 à 247 Ko, moyenne 156 Ko**, dans la fourchette demandée.
+
+**Réserve consignée, identique à celle des 11 premières** : sur quelques façades de modules et
+portes de coffret subsistent des micro-traces de pseudo-sérigraphie de l'ordre de 8 à 20 px dans
+l'image native, soit 5 à 11 px à l'affichage réel, ne formant aucun caractère identifiable même
+en agrandissement fort. Un contrôle « zéro pixel de texte » imposerait de retoucher des dizaines
+d'images pour un gain nul à l'écran.
+
+**Contrôles** : build vert (35 pages, inchangé, les drafts ne sont pas rendus tant qu'ils ne sont
+pas publiés), aucun `.mdx` modifié (`git status` : 68 fichiers ajoutés dans `public/conseils/`
+uniquement), aucun tiret cadratin ajouté. Rien commité : contrôle CEO puis commit groupé
+drafts + covers.
