@@ -1093,3 +1093,19 @@ d'images pour un gain nul à l'écran.
 pas publiés), aucun `.mdx` modifié (`git status` : 68 fichiers ajoutés dans `public/conseils/`
 uniquement), aucun tiret cadratin ajouté. Rien commité : contrôle CEO puis commit groupé
 drafts + covers.
+
+## ✅ AUTOMATISATION 6 MOIS EN PLACE (27/07/2026)
+
+Contrôle CEO final : 68 drafts vérifiés indépendamment (script + relecture), 79/79 covers
+présentes et uniques (0 doublon d'empreinte), échantillon inspecté visuellement, build vert
+45 pages. **Commit groupé ff5fa85 poussé : la file de publication est pleine jusqu'à fin
+janvier 2027.** Le cron publie seul lun/mer/ven 05:00 UTC, la date est réécrite au jour J,
+chaque article a sa couverture. AUCUNE intervention nécessaire sur le blog avant :
+- **~15 janvier 2027** : session Autoblog vague T3/T4 (articles #78 à #149 du calendrier)
+  + Builder pour les covers, pour enchaîner février-juillet 2027 sans coupure.
+- Prochaine session, vérifications de routine : la publication auto du lundi 27/07 s'est
+  bien déclenchée seule ; l'indexation démarre dans la Search Console.
+
+Chantiers restants du site (hors blog) : nom commercial définitif (DEMO « SOS Électricien
+Annecy » assumé pour l'instant), infos assurance à l'arrivée d'un locataire, prospection
+des électriciens d'Annecy quand les premiers appels arrivent.
