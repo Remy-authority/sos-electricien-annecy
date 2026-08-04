@@ -1,0 +1,6 @@
+{
+  "_role": "Ancrage visuel du site, lu par scripts/generate-article-images.mjs. Il fixe l'identite des images generees a la publication des articles. Deux sites du portefeuille ne doivent JAMAIS partager le meme ancrage (regle anti-footprint, docs/RECETTE-VISUELS-ARTICLES.md).",
+  "contexte": "Annecy et la Haute-Savoie, France : chalets et immeubles savoyards, bois et pierre de montagne, lumiere alpine vive",
+  "metier": "electricite generale et depannage electrique",
+  "ambiance": "photographie soignee, palette navy nuit et ambre, tableaux et appareillages nets, jamais de geste dangereux ni de conducteur nu manipule"
+}
