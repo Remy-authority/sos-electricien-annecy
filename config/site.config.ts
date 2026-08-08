@@ -29,8 +29,8 @@ export const siteConfig = {
 
   /* ── Contact ── */
   // Numéro réel dédié au site, fourni par Rémy le 26/07/2026. E.164 pour tel:.
-  phone: '+33756853125',
-  phoneDisplay: '07 56 85 31 25',
+  phone: '+33465710074',
+  phoneDisplay: '04 65 71 00 74',
   // DEMO – à remplacer par les infos du loueur
   email: 'contact@sos-electricien-annecy.fr',
 
