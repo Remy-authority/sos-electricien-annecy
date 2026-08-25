@@ -87,7 +87,6 @@ export function businessJsonLd() {
     telephone: siteConfig.phone,
     email: siteConfig.email,
     image: absUrl(siteConfig.seo.defaultOgImage),
-    priceRange: '€€',
     areaServed: areaServed.map((name) => ({ '@type': 'City', name })),
     openingHoursSpecification: [
       {
