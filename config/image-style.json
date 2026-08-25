@@ -2,7 +2,8 @@
   "_role": "Ancrage visuel du site, lu par scripts/generate-article-images.mjs. Il fixe l'identite des images generees a la publication des articles. Deux sites du portefeuille ne doivent JAMAIS partager le meme ancrage (regle anti-footprint, docs/RECETTE-VISUELS-ARTICLES.md).",
   "contexte": "Annecy et la Haute-Savoie, France : chalets et immeubles savoyards, bois et pierre de montagne, lumiere alpine vive",
   "metier": "electricite generale et depannage electrique",
-  "ambiance": "photographie soignee, palette navy nuit et ambre, tableaux et appareillages nets, jamais de geste dangereux ni de conducteur nu manipule",
+  "ambiance": "photographie soignée, palette navy nuit et ambre : 70% de résultats finis en scène entière montrant le confort retrouvé — un tableau électrique net et rangé, câblage propre et étiqueté, ou une pièce correctement éclairée après intervention — jamais un tableau électrique en désordre ni un défaut électrique visible seul ; 30% de métier en action, l'artisan vu de dos ou par ses mains et ses outils seulement, jamais de visage, une seule main visible au plus, jamais de geste dangereux ni de conducteur nu manipulé. Jamais un défaut seul en gros plan (tableau grillé, câblage dénudé), jamais de ton dramatique ni de gyrophare, lumière naturelle douce, cadrage de photographe d'intérieur.",
   "convention": "plat",
-  "_convention_role": "Ou poser les images quand le brouillon ne declare aucun cover. dossier = public/conseils/<slug>/cover.jpg ; plat = public/conseils/<slug>.jpg. Doit refleter ce que le site sert deja en production."
+  "_convention_role": "Ou poser les images quand le brouillon ne declare aucun cover. dossier = public/conseils/<slug>/cover.jpg ; plat = public/conseils/<slug>.jpg. Doit refleter ce que le site sert deja en production.",
+  "_direction": "26/08/2026, decision Remy : pour un site d'urgence, le resultat fini est le confort retrouve a l'interieur du logement (pas un chantier exterieur) ; resultats finis en scene entiere (70%) et metier en action (30%, artisan vu de dos ou par ses mains/outils seulement), jamais un defaut seul en gros plan."
 }
