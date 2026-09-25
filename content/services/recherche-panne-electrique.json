@@ -4,7 +4,7 @@
   "icon": "search",
   "navTitle": "Recherche de panne électrique",
   "h1": "Recherche de panne électrique à Annecy",
-  "metaTitle": "Recherche de panne électrique à Annecy par un électricien",
+  "metaTitle": "Trouver une panne électrique à Annecy, circuit par circuit",
   "metaDescription": "Prise morte, circuit muet, courant qui saute : à Annecy, nous testons chaque ligne au multimètre pour trouver la panne sans ouvrir vos murs. Devis gratuit.",
   "intro": "Coupure de courant, prise qui ne fonctionne plus, disjoncteur qui saute sans raison apparente ? Nous intervenons à Annecy pour diagnostiquer précisément l'origine de la panne électrique et la réparer, sans multiplier les essais au hasard. Toute l'agglomération annécienne est couverte, jusqu'à Rumilly.",
   "bullets": [
@@ -14,7 +14,7 @@
   ],
   "blocks": [
     {
-      "heading": "Comment nous localisons la panne",
+      "heading": "Du tableau au mur : notre ordre de recherche",
       "body": "Nous procédons par élimination méthodique plutôt que par tâtonnement. Premier temps : examen visuel du tableau électrique pour repérer un disjoncteur qui a sauté ou un fusible grillé. Deuxième temps : mesures au multimètre et à la pince ampèremétrique pour tester chaque circuit et isoler celui qui pose problème. Si la panne reste invisible à l'œil nu, un traceur de câbles permet de suivre le cheminement d'une ligne dans les murs sans avoir à tout ouvrir. Cette méthode évite de couper plusieurs circuits au hasard et limite les travaux au strict nécessaire.",
       "image": "/services/remise-aux-normes-tableau-electrique-neuf.jpg",
       "imageAlt": "Tableau électrique blanc à deux rangées derrière sa porte transparente",
@@ -28,7 +28,7 @@
       "imageCaption": "Un boîtier de dérivation mal isolé est une cause fréquente de panne récurrente."
     },
     {
-      "heading": "Zones couvertes",
+      "heading": "Secteur de nos recherches de panne",
       "body": "Nous cherchons les pannes dans tous les secteurs d'Annecy (Annecy-le-Vieux, Cran-Gevrier, Meythet, Seynod, Pringy) et dans les communes proches : Poisy, Épagny Metz-Tessy, Argonay, Sevrier, Saint-Jorioz, Veyrier-du-Lac, ainsi que Rumilly. Pour une adresse plus éloignée, demandez-nous par téléphone ou par le formulaire."
     }
   ],
@@ -38,7 +38,7 @@
   ],
   "faq": [
     {
-      "q": "Combien de temps prend une recherche de panne électrique ?",
+      "q": "Le diagnostic d'une panne peut-il s'étirer sur des heures ?",
       "a": "Tout dépend du défaut. Une panne franche sur un circuit se repère souvent vite grâce aux tests par élimination, alors qu'un câblage ancien ou modifié plusieurs fois demande davantage de mesures. Nous vous tenons informé de l'avancée du diagnostic à chaque étape."
     },
     {
@@ -50,7 +50,7 @@
       "a": "Oui, c'est un signal à ne pas ignorer. Un déclenchement répété indique généralement une surcharge, un court-circuit ou un défaut d'isolement sur le circuit concerné. Continuer à réenclencher sans diagnostic peut endommager l'installation. Appelez-nous pour identifier la cause."
     },
     {
-      "q": "Intervenez-vous aussi sur les installations anciennes ?",
+      "q": "Un câblage ancien sans plan, vous savez vous y retrouver ?",
       "a": "Oui. Nous intervenons régulièrement sur des installations vieillissantes, y compris dans les chalets et bâtiments anciens du bassin annécien où le câblage a pu être modifié sans plan à jour."
     }
   ],

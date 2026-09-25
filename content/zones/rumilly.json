@@ -2,13 +2,13 @@
   "slug": "rumilly",
   "name": "Rumilly",
   "postalCode": "74150",
-  "context": "Ville de 16 442 habitants au cœur de l'Albanais, à mi-chemin entre les lacs d'Annecy et du Bourget, dont le vieux bourg classé Site patrimonial remarquable est niché entre le Chéran et la Néphaz.",
-  "metaTitle": "Électricien à Rumilly : dépannage, tableau, rénovation",
+  "context": "Ville de 16 442 habitants au cœur de l'Albanais, à mi-chemin entre les lacs d'Annecy et du Bourget, dont le vieux bourg est niché entre le Chéran et la Néphaz.",
+  "metaTitle": "Électricien Rumilly : vieux bourg et maisons de l'Albanais",
   "metaDescription": "Coupure, tableau d'origine, maison de ville à rénover à Rumilly : nous trouvons la panne et remettons l'installation en sécurité. Demandez un devis.",
   "h1": "Électricien à Rumilly",
   "image": "/zones/rumilly.jpg",
   "imageAlt": "Vieilles maisons aux toits de tuiles au bord de l'eau, clocher et pont de pierre, au pied des montagnes",
-  "intro": "Nous dépannons, remettons aux normes et rénovons les installations électriques de Rumilly (74150), du vieux bourg aux quartiers résidentiels. Avec 16 442 habitants selon geo.api.gouv.fr, la ville se présente comme le centre urbain de l'Albanais, à mi-chemin entre les lacs d'Annecy et du Bourget. Son centre historique, niché entre les cours encaissés du Chéran et de la Néphaz, est classé Site patrimonial remarquable, avec des maisons à arcades du XVIe siècle. Maisons de ville anciennes, pavillons et logements récents : chaque quartier appelle une approche différente.",
+  "intro": "Nous dépannons, remettons aux normes et rénovons les installations électriques de Rumilly (74150), du vieux bourg aux quartiers résidentiels. Avec 16 442 habitants selon geo.api.gouv.fr, la ville se présente comme le centre urbain de l'Albanais, à mi-chemin entre les lacs d'Annecy et du Bourget. Son vieux bourg, niché entre les cours encaissés du Chéran et de la Néphaz, garde la halle au blé et des maisons à arcades du XVIe siècle. Maisons de ville anciennes, pavillons et logements récents : chaque quartier appelle une approche différente.",
   "blocks": [
     {
       "heading": "Électricien à Rumilly, au cœur de l'Albanais",
@@ -20,7 +20,7 @@
     },
     {
       "heading": "Maison de ville ancienne : moderniser sans abîmer",
-      "body": "Dans les murs épais du centre historique, faire des saignées pour encastrer de nouveaux câbles peut fragiliser un enduit ancien ou un décor que l'on souhaite garder. Selon les pièces, nous passons par les planchers, les doublages existants, les plinthes techniques ou des moulures électriques discrètes. Nous remplaçons les conducteurs sans terre, les anciens fusibles et l'appareillage d'un autre âge, en gardant le caractère des lieux. Dans le périmètre du Site patrimonial remarquable, tout ce qui se voit depuis la rue relève de règles d'urbanisme propres : nous en tenons compte avant de poser quoi que ce soit en façade."
+      "body": "Dans les murs épais du centre historique, faire des saignées pour encastrer de nouveaux câbles peut fragiliser un enduit ancien ou un décor que l'on souhaite garder. Selon les pièces, nous passons par les planchers, les doublages existants, les plinthes techniques ou des moulures électriques discrètes. Nous remplaçons les conducteurs sans terre, les anciens fusibles et l'appareillage d'un autre âge, en gardant le caractère des lieux. Dans le vieux bourg, tout ce qui se voit depuis la rue peut relever de règles d'urbanisme particulières : nous vérifions auprès du service urbanisme de la mairie avant de poser quoi que ce soit en façade."
     },
     {
       "heading": "Remplacer un tableau électrique trop ancien",
@@ -51,7 +51,7 @@
       "url": "https://geo.api.gouv.fr/communes/74225?fields=nom,code,population,codesPostaux"
     },
     {
-      "label": "Ville de Rumilly, Bienvenue à Rumilly (Albanais, vieux bourg, Site patrimonial remarquable)",
+      "label": "Ville de Rumilly, Bienvenue à Rumilly (Albanais, vieux bourg entre le Chéran et la Néphaz, halle au blé, maisons à arcades du XVIe siècle)",
       "url": "https://www.mairie-rumilly74.fr/bienvenue-a-rumilly/"
     },
     {
@@ -73,7 +73,7 @@
       "a": "Les fusibles protègent les câbles contre les surcharges, mais pas les personnes contre un défaut à la terre. Sans interrupteur différentiel 30 mA, un appareil défectueux peut rester sous tension au toucher. Remplacer le tableau est la priorité dans ce cas."
     },
     {
-      "q": "Peut-on refaire l'électricité d'une maison ancienne sans tout casser ?",
+      "q": "Recâbler une maison du vieux bourg sans ouvrir tous les murs, est-ce faisable ?",
       "a": "Souvent, oui. Nous passons par les planchers, les doublages et les plinthes techniques, et nous réservons les saignées aux endroits où elles ne posent pas de problème. Nous définissons le passage des câbles pièce par pièce avant de commencer."
     },
     {

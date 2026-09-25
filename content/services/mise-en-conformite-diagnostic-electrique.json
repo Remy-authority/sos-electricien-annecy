@@ -2,9 +2,9 @@
   "slug": "mise-en-conformite-diagnostic-electrique",
   "order": 5,
   "icon": "certificate",
-  "navTitle": "Diagnostic avant vente",
+  "navTitle": "Conformité après diagnostic",
   "h1": "Mise en conformité électrique à Annecy",
-  "metaTitle": "Électricien à Annecy : mise en conformité après diagnostic",
+  "metaTitle": "Mise en conformité électrique à Annecy après diagnostic",
   "metaDescription": "Votre diagnostic électrique de vente ou de location relève des anomalies ? À Annecy, nous corrigeons terre, différentiels et salle de bain. Devis détaillé.",
   "intro": "Vente ou location d'un bien à Annecy : une installation électrique de plus de 15 ans doit faire l'objet d'un diagnostic électrique obligatoire, établi par un diagnostiqueur certifié. Nous intervenons ensuite pour vérifier les anomalies relevées et réaliser les travaux de mise en conformité, avec un devis détaillé avant travaux.",
   "bullets": [
@@ -14,7 +14,7 @@
   ],
   "blocks": [
     {
-      "heading": "Ce que vérifie un diagnostic électrique",
+      "heading": "Les points passés en revue par le diagnostiqueur",
       "body": "Le diagnostic électrique réglementaire, réalisé par un diagnostiqueur certifié avant une vente, passe en revue les points clés de l'installation : présence et état du disjoncteur différentiel, qualité de la prise de terre, état apparent des matériels électriques vétustes ou inadaptés, et protections spécifiques dans les zones humides comme la salle de bain. Lorsque ce diagnostic révèle des anomalies, nous intervenons pour réaliser les travaux nécessaires à leur correction, en priorisant les points qui présentent un risque réel pour les occupants.",
       "image": "/services/mise-en-conformite-diagnostic-electrique-diagnostic-v2.jpg",
       "imageAlt": "Gros plan d'interrupteurs différentiels 30 mA et de disjoncteurs blancs sur rail, peigne de raccordement en cuivre",
@@ -28,7 +28,7 @@
       "imageCaption": "Les volumes de sécurité autour de la douche et de la baignoire imposent des règles précises."
     },
     {
-      "heading": "Zones couvertes",
+      "heading": "Lever les anomalies, d'Annecy à Rumilly",
       "body": "Pour lever les anomalies d'un diagnostic, nous nous rendons dans toute la commune d'Annecy (Annecy-le-Vieux, Cran-Gevrier, Meythet, Seynod, Pringy) et dans l'agglomération : Poisy, Épagny Metz-Tessy, Argonay, Sevrier, Saint-Jorioz, Veyrier-du-Lac. Rumilly fait aussi partie de notre secteur. Pour un autre lieu, posez-nous la question."
     }
   ],
@@ -46,7 +46,7 @@
       "a": "Il n'existe pas d'obligation légale de réaliser les travaux avant la vente : le diagnostic informe l'acheteur, qui négocie ensuite avec le vendeur. En pratique, la répartition dépend de l'accord trouvé entre les deux parties. Nous intervenons quel que soit l'arrangement retenu, dès que les travaux sont décidés."
     },
     {
-      "q": "Quelle est la durée de validité d'un diagnostic électrique ?",
+      "q": "Vente ou location : jusqu'à quand le diagnostic fait-il foi ?",
       "a": "Un diagnostic électrique est valable 3 ans en cas de vente, et 6 ans en cas de location. Passé ce délai, un nouveau diagnostic doit être réalisé lors d'une nouvelle transaction."
     },
     {

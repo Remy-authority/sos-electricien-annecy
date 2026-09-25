@@ -33,10 +33,10 @@ const INTERVENTIONS = [
   },
   {
     id: 'diagnostic-vente',
-    category: 'Diagnostic avant vente',
+    category: 'Conformité après diagnostic',
     title: 'Reprise des anomalies du diagnostic',
     desc: 'Terre, liaisons équipotentielles de la salle de bain, protections adaptées à la section des câbles : nous corrigeons les points relevés.',
-    image: '/realisations/mise-aux-normes-v2.jpg',
+    image: '/zones/meythet-corps.jpg',
   },
 ]
 

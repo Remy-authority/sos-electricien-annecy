@@ -21,11 +21,10 @@ export default function Hero() {
       aria-labelledby="hero-title"
     >
       {/* ── Couche 1 : photo d'intervention plein cadre ──
-          alt vide : la photo est décorative, le H1 et le paragraphe portent déjà
-          l'information. `priority` car c'est le plus grand visuel above-the-fold (LCP). */}
+          alt descriptif (relecture du 25/09/2026) : la photo montre le métier. `priority` car c'est le plus grand visuel above-the-fold (LCP). */}
       <Image
         src="/hero.jpg"
-        alt=""
+        alt="Électricien contrôlant un tableau électrique ouvert, le lac d'Annecy et les montagnes derrière la baie vitrée"
         fill
         sizes="100vw"
         priority

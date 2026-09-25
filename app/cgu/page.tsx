@@ -28,7 +28,7 @@ export default function CGU() {
         </section>
         <section>
           <h2 className="text-xl">3. Responsabilité</h2>
-          <p className="mt-2">L'éditeur ne peut être tenu responsable des dommages indirects résultant de l'utilisation du site.</p>
+          <p className="mt-2">Les conséquences indirectes d'une visite sur ce site, ou d'une décision prise à partir de ses contenus, n'engagent pas l'éditeur.</p>
         </section>
         <section>
           <h2 className="text-xl">4. Droit applicable</h2>

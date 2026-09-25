@@ -11,6 +11,7 @@
 import type { Metadata } from 'next'
 import { siteConfig } from '@/config/site.config'
 import type { Article, Service, Zone } from '@/lib/content'
+import { getZones } from '@/lib/content'
 
 const BASE = siteConfig.seo.canonicalBase.replace(/\/$/, '')
 
@@ -73,10 +74,9 @@ const ORG_ID = `${BASE}/#business`
 
 /** LocalBusiness → Electrician (global, layout). Sans address par défaut. */
 export function businessJsonLd() {
-  const areaServed = [
-    siteConfig.serviceArea.base,
-    ...siteConfig.serviceArea.districts,
-  ]
+  // Annecy + les communes qui ont une page (content/zones), dont Rumilly depuis le 25/09/2026.
+  // Les quartiers du centre (districts) ne sont pas des villes : ils restent hors de areaServed.
+  const areaServed = [siteConfig.serviceArea.base, ...getZones().map((z) => z.name)]
   const node: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'Electrician',

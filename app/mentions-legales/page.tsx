@@ -69,8 +69,9 @@ export default function MentionsLegales() {
         <section>
           <h2 className="text-xl">Propriété intellectuelle</h2>
           <p className="mt-2">
-            L'ensemble des contenus de ce site est protégé par le droit de la propriété
-            intellectuelle. Toute reproduction est interdite sans autorisation préalable.
+            Les textes et images de ce site sont des œuvres couvertes par le droit d'auteur :
+            sauf mention contraire, leur reproduction, même partielle, exige l'accord écrit de
+            l'éditeur.
           </p>
         </section>
 

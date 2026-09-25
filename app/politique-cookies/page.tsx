@@ -17,7 +17,7 @@ export default function PolitiqueCookies() {
       <div className="mt-8 space-y-6 text-slate-700">
         <section>
           <h2 className="text-xl">Qu'est-ce qu'un cookie ?</h2>
-          <p className="mt-2">Un petit fichier texte déposé sur votre appareil lors de la visite d'un site web.</p>
+          <p className="mt-2">Il s'agit d'un court fichier que votre navigateur enregistre sur votre ordinateur, votre tablette ou votre téléphone quand vous consultez un site.</p>
         </section>
         <section>
           <h2 className="text-xl">Cookies utilisés</h2>

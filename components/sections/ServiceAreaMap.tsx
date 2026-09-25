@@ -117,7 +117,7 @@ export default function ServiceAreaMap() {
 
             {/* Appel à l'action secondaire */}
             <p className="mt-6 text-sm text-slate-400">
-              Un doute sur votre secteur ? Appelez-nous, nous étudions chaque demande au cas par cas.
+              Votre commune manque à la liste ? Donnez-nous l'adresse au téléphone et nous regardons la route ensemble.
             </p>
             <Link
               href="/zones"

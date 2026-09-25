@@ -18,7 +18,7 @@ export default function ZonesHub() {
   const zones = getZones()
   const names = zones.map((z) => z.name)
   // Réponse courte factuelle « citable » (activité + zone + liste des communes).
-  const citable = `${siteConfig.businessName} couvre ${siteConfig.city} et ${zones.length} communes de l'agglomération annécienne dans un rayon de ${siteConfig.serviceArea.radiusKm} km : ${names.join(', ')}. Dépannage électrique et diagnostic précis, 7j/7.`
+  const citable = `${siteConfig.businessName} couvre ${siteConfig.city} et ${zones.length} communes autour d'Annecy, dans un rayon de ${siteConfig.serviceArea.radiusKm} km : ${names.join(', ')}. Dépannage électrique et diagnostic précis, 7j/7.`
 
   const hubFaq = [
     {
@@ -26,15 +26,15 @@ export default function ZonesHub() {
       a: `Nous intervenons à ${siteConfig.city} (tous quartiers) et dans les communes de l'agglomération dans un rayon d'environ ${siteConfig.serviceArea.radiusKm} km : ${names.join(', ')}.`,
     },
     {
-      q: 'Ma commune ne figure pas dans la liste, intervenez-vous quand même ?',
-      a: `La liste ci-dessus regroupe les communes disposant d'une page dédiée, mais notre zone est plus large. Nous couvrons ${siteConfig.city} et ses environs dans un rayon d'environ ${siteConfig.serviceArea.radiusKm} km. En cas de doute sur votre secteur, appelez-nous : nous étudions chaque demande au cas par cas.`,
+      q: 'Pas de page pour ma commune : est-elle pour autant hors de votre secteur ?',
+      a: `La liste ci-dessus regroupe les communes disposant d'une page dédiée, mais notre zone est plus large. Nous couvrons ${siteConfig.city} et ses environs dans un rayon d'environ ${siteConfig.serviceArea.radiusKm} km. Si votre adresse se trouve un peu au-delà, citez-la lors de l'appel : nous vous dirons si le trajet reste raisonnable.`,
     },
     {
-      q: 'Quel est le délai pour une intervention en dehors d’Annecy ?',
-      a: "Le délai dépend de la commune et de notre planning du moment. Les communes limitrophes sont accessibles rapidement. Nous vous donnons une estimation lors de votre appel et intervenons 7j/7, y compris les week-ends et jours fériés pour les urgences.",
+      q: 'Rumilly ou Saint-Jorioz : quand pouvez-vous être là ?',
+      a: "Cela tient à la distance depuis Annecy et aux chantiers déjà prévus ce jour-là. Au téléphone, nous vous annonçons une heure d'arrivée réaliste, sans l'embellir, et les urgences sont prises en compte tous les jours, dimanches et fériés compris.",
     },
     {
-      q: 'Le déplacement dans les communes voisines est-il facturé en plus ?',
+      q: 'Faut-il payer le trajet jusqu’à une commune voisine ?',
       a: `Les frais de déplacement figurent sur [notre page tarifs](/tarifs) et vous sont annoncés au téléphone, avant que nous prenions la route. Pour la réparation elle-même, le devis écrit vient après le diagnostic sur place, et rien ne commence sans votre accord.`,
     },
   ]

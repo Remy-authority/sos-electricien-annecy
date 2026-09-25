@@ -74,7 +74,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           tone="dark"
           items={[
             { name: 'Accueil', path: '/' },
-            { name: 'Services', path: '/' },
+            { name: 'Services', path: '/#services' },
             { name: service.navTitle, path: `/services/${service.slug}` },
           ]}
         />
@@ -162,7 +162,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
 
       <Faq items={service.faq} />
       <CtaBanner
-        title={`${service.navTitle} à ${siteConfig.city} : on vous rappelle vite`}
+        title={`${service.navTitle} à ${siteConfig.city} : parlons-en`}
         subtitle="Devis gratuit, sans engagement. Appelez ou laissez vos coordonnées."
       />
     </>

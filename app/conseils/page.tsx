@@ -8,8 +8,9 @@ import { formatDateFr } from '@/lib/text'
 import { siteConfig } from '@/config/site.config'
 
 export const metadata: Metadata = buildMetadata({
-  title: `Conseils électricité à ${siteConfig.city}`,
-  description: `Guides et conseils sur le dépannage électrique, le tableau, les normes et la sécurité à ${siteConfig.city} et environs.`,
+  title: "Conseils d'électricien à Annecy : pannes, tableau, normes",
+  description:
+    "Disjoncteur qui saute, lumière qui clignote, tableau à refaire : nos guides pour comprendre une panne électrique à Annecy et savoir quand nous appeler.",
   path: '/conseils',
 })
 

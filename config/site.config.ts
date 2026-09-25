@@ -118,7 +118,7 @@ export const siteConfig = {
 
   whyUs: [
     { icon: 'shield', title: 'Intervention sécurisée', desc: "Nous coupons et sécurisons l'installation avant toute intervention. Votre sécurité d'abord." },
-    { icon: 'clock', title: 'Disponible 24h/24', desc: "Panne urgente ou programmée, nous répondons 7j/7 avec un délai d'intervention rapide." },
+    { icon: 'clock', title: 'Disponible 24h/24', desc: 'Coupure subite ou travaux prévus de longue date, la ligne reste ouverte tous les jours de la semaine.' },
     { icon: 'star', title: 'Artisan indépendant', desc: "Pas d'intermédiaire, pas de franchise. Un artisan local que vous pouvez rappeler directement." },
     { icon: 'doc', title: 'Devis clair avant travaux', desc: 'Diagnostic transparent et devis détaillé avant toute intervention, sans mauvaise surprise.' },
   ],
@@ -132,8 +132,8 @@ export const siteConfig = {
       a: "Tout dépend de ce que nous trouvons : un disjoncteur à remplacer ne demande pas le même travail qu'un circuit à reprendre sur plusieurs mètres. Nous établissons le diagnostic sur place, puis un devis écrit avant de commencer. Les prix de référence sont sur [nos tarifs détaillés](/tarifs).",
     },
     {
-      q: 'Intervenez-vous en urgence les week-ends et jours fériés ?',
-      a: 'Oui, nous intervenons 24h/24 et 7j/7, week-ends et jours fériés inclus, sur Annecy et dans un rayon de 30 km.',
+      q: 'Et si la panne tombe un 15 août ou un dimanche ?',
+      a: 'Oui, la ligne répond aussi les dimanches et jours fériés, pour Annecy comme pour les communes à 30 km autour, de Rumilly à Veyrier-du-Lac.',
     },
     {
       q: 'Que faire en cas de coupure de courant générale ?',

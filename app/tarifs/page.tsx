@@ -137,6 +137,21 @@ export default function TarifsPage() {
 
           {/* 9-11. Cas concrets, devis, TVA (le schéma TVA est dans son bloc) */}
           <CasConcrets />
+          <figure className="my-10">
+            <div className="relative aspect-[3/2] w-full overflow-hidden rounded-card border border-slate-200 shadow-sm">
+              <Image
+                src="/zones/cran-gevrier-corps.jpg"
+                alt="Tableau électrique d'appartement capot retiré, quatre rangées de disjoncteurs blancs sur rail"
+                fill
+                sizes="(min-width: 896px) 896px, 100vw"
+                className="object-cover"
+                loading="lazy"
+              />
+            </div>
+            <figcaption className="mt-2 text-center text-sm text-slate-500 lg:text-left">
+              Pour comparer deux devis de tableau, comptez les rangées et les interrupteurs différentiels prévus.
+            </figcaption>
+          </figure>
           <BlocTexte id="devis" bloc={b.devis} />
           <BlocTexte id="tva" bloc={b.tva}>
             <SchemaTva />
