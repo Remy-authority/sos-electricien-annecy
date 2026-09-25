@@ -1,4 +1,4 @@
-<svg viewBox="0 0 260 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SOS Électricien Annecy">
+<svg viewBox="0 0 176 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SOS Électricien Annecy">
   <!-- Fichier autonome : il ne peut pas lire les tokens CSS du site, les hex sont donc
        recopiés depuis siteConfig.colors (primary #17304E, accent #F5B32B). À resynchroniser
        si la palette change. Le composant React components/ui/Logo.tsx, lui, lit les tokens.

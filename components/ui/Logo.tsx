@@ -57,7 +57,9 @@ export default function Logo({
 
   return (
     <svg
-      viewBox="0 0 260 48"
+      /* Largeur ramenée de 260 à 176 le 26/09/2026 : le dessin s'arrête à x = 166 ; la
+         marge vide à droite décalait le logo vers la gauche quand il est centré (pied de page mobile). */
+      viewBox="0 0 176 48"
       className={className}
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
