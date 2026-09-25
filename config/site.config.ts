@@ -28,9 +28,9 @@ export const siteConfig = {
   department: '74',
 
   /* ── Contact ── */
-  // Numéro réel dédié au site, fourni par Rémy le 26/07/2026. E.164 pour tel:.
-  phone: '+33465710074',
-  phoneDisplay: '04 65 71 00 74',
+  // 09 Twilio repris de toiture-beauvais.fr le 25/09/2026 (décision Rémy, stock de 09 vide), renvoi vers Rémy. E.164 pour tel:.
+  phone: '+33939200338',
+  phoneDisplay: '09 39 20 03 38',
   // DEMO – à remplacer par les infos du loueur
   email: 'contact@sos-electricien-annecy.fr',
 
@@ -56,12 +56,10 @@ export const siteConfig = {
   responseTime: 'Intervention rapide sur Annecy',
   // ⚠️ ORDRE SIGNIFIANT : `usps[1]` alimente le 2e badge de TrustBadges (engagement
   // métier). Ne pas réordonner sans vérifier components/sections/TrustBadges.tsx.
-  // 26/07/2026 : « Assurance décennale » retirée (Rémy confirme qu'il n'y en a pas,
-  // on n'affiche aucune couverture non détenue). Remplacée par la promesse de rappel
-  // validée par Rémy le même jour, déjà énoncée telle quelle au-dessus du formulaire
-  // (« Nous vous rappelons sous 30 minutes »). Le 4e item garde la grille du hero
-  // équilibrée en 2 × 2.
-  usps: ['Devis gratuit', 'Sans coupure inutile', 'Artisan local', 'Rappel sous 30 min'],
+  // 25/09/2026 : « Rappel sous 30 min » retiré (délai promis, interdit) ; remplacé par
+  // un fait vérifiable du déroulé (diagnostic fait chez le client). 4 items : la grille
+  // du hero reste en 2 × 2.
+  usps: ['Devis gratuit', 'Sans coupure inutile', 'Artisan local', 'Diagnostic sur place'],
   methods: ['Diagnostic électrique complet', 'Caméra thermique', 'Traceur de câbles'],
 
   /* ── Zone d'intervention (schema areaServed + bloc zones) ── */
@@ -100,53 +98,38 @@ export const siteConfig = {
     blog: true, // section /conseils (autoblog)
   },
 
-  /* ── Persona artisan (DEMO, à remplacer par les infos du loueur) ── */
-  // DEMO – à remplacer par les infos du loueur
-  persona: {
-    name: 'Julien Perret',
-    // DEMO – photo IA générée, remplacement par photo réelle possible → public/julien-perret.jpg
-    photo: '/julien-perret.jpg',
-    title: 'Électricien certifié, spécialiste dépannage',
-  },
-
-  /* ── Sections visuelles, textes placeholder en attente de validation Rémy ── */
+  /* ── Bloc « À propos » (25/09/2026 : aucune personne nommée, aucune certification) ── */
   about: {
-    title: 'Votre spécialiste électricien à Annecy',
-    // DEMO – à remplacer par les infos du loueur
-    body: "Julien Perret dirige notre équipe spécialisée. Nous intervenons à Annecy et dans un rayon de 30 km pour diagnostiquer et réparer toute panne électrique, du simple disjoncteur qui saute jusqu'à la rénovation complète d'un tableau. Nous maîtrisons les méthodes de diagnostic non invasives et vous remettons un compte-rendu clair après chaque intervention.",
-    // DEMO – à remplacer par les infos du loueur
-    highlight: 'Électricien certifié, habilitation électrique à jour',
+    title: 'Votre électricien à Annecy, du tableau au dernier circuit',
+    body: "Notre équipe intervient à Annecy et jusqu'à 30 km autour, du disjoncteur qui refuse de se réarmer jusqu'au tableau à reprendre entièrement. Avant de réparer, nous cherchons l'origine du défaut, puis nous vous expliquons ce que nous avons trouvé et ce qu'il faut faire, devis écrit à l'appui.",
+    highlight: 'Travaux réalisés selon la norme NF C 15-100',
   },
 
   process: [
-    { icon: 'phone', title: 'Vous nous appelez', desc: 'Prise en charge immédiate, diagnostic téléphonique rapide. Disponible 24h/24, 7j/7.' },
+    { icon: 'phone', title: 'Vous nous appelez', desc: 'Nous prenons votre demande et posons les premières questions pour cerner la panne. Ligne ouverte 24h/24, 7j/7.' },
     { icon: 'search', title: 'Diagnostic sur place', desc: "Inspection du tableau électrique et des circuits pour identifier précisément l'origine de la panne." },
     { icon: 'tool', title: 'Intervention ciblée', desc: 'Réparation ou remplacement des éléments défectueux, dans le respect des normes en vigueur.' },
     { icon: 'check', title: 'Mise en sécurité & conseils', desc: "Vérification finale de l'installation et conseils pour éviter que l'incident se reproduise." },
   ],
 
-  // DEMO – à remplacer par les infos du loueur (chiffres persona Julien Perret)
-  stats: [
-    { value: '+400', label: 'Pannes résolues' }, // DEMO – à remplacer par les infos du loueur
-    { value: '8 ans', label: "d'expérience" }, // DEMO – à remplacer par les infos du loueur
-    { value: '30 km', label: "Rayon d'intervention" },
-  ],
+  // 25/09/2026 : les chiffres du bandeau (rayon, communes, prestations) sont calculés
+  // dans components/sections/Stats.tsx à partir du contenu réel : plus aucun chiffre saisi
+  // à la main (« +400 pannes » et « 8 ans » étaient inventés, retirés).
 
   whyUs: [
     { icon: 'shield', title: 'Intervention sécurisée', desc: "Nous coupons et sécurisons l'installation avant toute intervention. Votre sécurité d'abord." },
     { icon: 'clock', title: 'Disponible 24h/24', desc: "Panne urgente ou programmée, nous répondons 7j/7 avec un délai d'intervention rapide." },
-    // DEMO – à remplacer par les infos du loueur
-    { icon: 'star', title: 'Artisan certifié indépendant', desc: "Pas d'intermédiaire, pas de franchise. Un artisan local que vous pouvez rappeler directement." },
+    { icon: 'star', title: 'Artisan indépendant', desc: "Pas d'intermédiaire, pas de franchise. Un artisan local que vous pouvez rappeler directement." },
     { icon: 'doc', title: 'Devis clair avant travaux', desc: 'Diagnostic transparent et devis détaillé avant toute intervention, sans mauvaise surprise.' },
   ],
 
-  /* ── FAQ accueil (DEMO, contenu imaginé persona) ── */
-  // DEMO – à remplacer par les infos du loueur
+  /* ── FAQ accueil ──
+     Un lien interne s'écrit [libellé](/chemin) : components/ui/Faq.tsx le rend en lien
+     et le retire du JSON-LD (texte seul). */
   homeFaq: [
     {
       q: 'Combien coûte une intervention électricien à Annecy ?',
-      // DEMO – à remplacer par les infos du loueur
-      a: "Le déplacement et le diagnostic de base sont gratuits et sans engagement. Le tarif de l'intervention dépend de la nature de la panne et des pièces à remplacer. Contactez-nous pour un devis personnalisé.",
+      a: "Tout dépend de ce que nous trouvons : un disjoncteur à remplacer ne demande pas le même travail qu'un circuit à reprendre sur plusieurs mètres. Nous établissons le diagnostic sur place, puis un devis écrit avant de commencer. Les prix de référence sont sur [nos tarifs détaillés](/tarifs).",
     },
     {
       q: 'Intervenez-vous en urgence les week-ends et jours fériés ?',
@@ -154,17 +137,15 @@ export const siteConfig = {
     },
     {
       q: 'Que faire en cas de coupure de courant générale ?',
-      // DEMO – à remplacer par les infos du loueur
       a: "Vérifiez d'abord le disjoncteur général de votre tableau électrique : s'il a sauté, tentez de le réenclencher une fois. S'il resaute immédiatement, ne réessayez pas et appelez-nous : un court-circuit est probablement en cause.",
     },
     {
       q: 'Faites-vous la mise aux normes des installations électriques anciennes ?',
-      // DEMO – à remplacer par les infos du loueur
-      a: 'Oui. Nous intervenons sur les installations anciennes pour les mettre en conformité avec la norme NFC 15-100, notamment avant une vente ou une location.',
+      a: "Oui. Nous reprenons les installations anciennes selon la norme NF C 15-100, par exemple pour corriger les anomalies relevées par un diagnostic électrique avant une vente ou une location.",
     },
     {
-      q: 'Intervenez-vous dans toute la Haute-Savoie ?',
-      a: "Nous couvrons Annecy (dont les secteurs d'Annecy-le-Vieux, Seynod, Cran-Gevrier, Meythet et Pringy) et son agglomération dans un rayon de 30 km : Poisy, Épagny Metz-Tessy, Argonay, Sevrier, Saint-Jorioz, Veyrier-du-Lac et les communes alentour.",
+      q: "Jusqu'où intervenez-vous autour d'Annecy ?",
+      a: "Nous couvrons Annecy (dont les secteurs d'Annecy-le-Vieux, Seynod, Cran-Gevrier, Meythet et Pringy) et un rayon de 30 km : Poisy, Épagny Metz-Tessy, Argonay, Sevrier, Saint-Jorioz, Veyrier-du-Lac et Rumilly.",
     },
   ],
 

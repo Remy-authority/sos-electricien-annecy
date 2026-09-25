@@ -53,6 +53,14 @@ export interface Service {
   order: number
   /** Image hero de la page service (chemin public). */
   image?: string
+  /** Phrase du bloc prix (renvoi vers /tarifs). Optionnel. */
+  prixPhrase?: string
+}
+
+/** Source citée en bas de page (lien externe nofollow). */
+export interface SourceLink {
+  label: string
+  url: string
 }
 
 export interface Zone {
@@ -64,16 +72,32 @@ export interface Zone {
   metaTitle: string
   metaDescription: string
   h1: string
+  /** Image d'en-tête dédiée (chemin public). Sinon public/zones/<slug>.jpg, sinon le pool. */
+  image?: string
+  imageAlt?: string
   intro: string
+  /** 4 blocs (6 sur les pages piliers). */
   blocks: ContentBlock[]
-  /** Communes limitrophes (maillage / contenu unique). */
+  /** Visuel de corps (placé après le bloc 2) + sa légende. */
+  bodyImage?: string
+  bodyImageAlt?: string
+  bodyImageCaption?: string
+  /** Communes voisines : slugs de content/zones (un nom seul est toléré, lien si trouvé). */
   neighbours: string[]
+  /** Prestations liées : slugs de content/services. */
+  relatedServices?: string[]
+  /** Phrase du bloc prix (renvoi vers /tarifs). */
+  prixPhrase?: string
+  /** Sources citées sur la page. */
+  sources?: SourceLink[]
   faq: FaqItem[]
 }
 
 export interface Article {
   slug: string
   title: string
+  /** Title SEO servi dans <title> (frontmatter `seoTitle`), sinon `title`. Le H1 reste `title`. */
+  seoTitle?: string
   description: string
   date: string
   category: string
@@ -150,6 +174,7 @@ export function getArticles(): Article[] {
       return {
         slug: (data.slug as string) || f.replace(/\.mdx$/, ''),
         title: (data.title as string) || '',
+        seoTitle: (data.seoTitle as string) || undefined,
         description: (data.description as string) || '',
         date: (data.date as string) || '1970-01-01',
         category: (data.category as string) || 'Conseils',

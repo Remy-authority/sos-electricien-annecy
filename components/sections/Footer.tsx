@@ -23,7 +23,7 @@ export default function Footer() {
       {/* Bande téléphone */}
       <div className="border-b border-white/10 bg-primary/10">
         <div className="container-site flex flex-col items-center justify-between gap-3 py-5 sm:flex-row">
-          <p className="text-sm font-medium text-slate-300">
+          <p className="text-center text-sm font-medium text-slate-300 sm:text-left">
             {siteConfig.trade} à {siteConfig.city} · {siteConfig.availability}
           </p>
           <a
@@ -39,10 +39,15 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Grille nav */}
-      <div className="container-site grid gap-8 py-12 sm:grid-cols-2 lg:grid-cols-4">
+      {/* Grille nav.
+          Ordinateur (lg:) : quatre colonnes, rendu inchangé.
+          Mobile et tablette (Rémy 23/09/2026, « trop haut ») : identité centrée courte,
+          puis Services, Zones et Informations en volets dépliants <details>. Les liens
+          restent dans le HTML (volet fermé = liens présents, seulement repliés). En lg,
+          `.foot-groupe` force l'affichage du contenu (app/globals.css). */}
+      <div className="container-site grid py-8 lg:grid-cols-4 lg:gap-8 lg:py-12">
         {/* Identité */}
-        <div>
+        <div className="pb-6 text-center lg:pb-0 lg:text-left">
           <Link href="/" className="inline-flex items-center" aria-label={`${siteConfig.businessName}, accueil`}>
             <Logo tone="dark" className="h-8 w-auto" />
           </Link>
@@ -52,7 +57,7 @@ export default function Footer() {
               {siteConfig.email}
             </a>
           </p>
-          <ul className="mt-4 flex flex-wrap gap-1" role="list" aria-label="Engagements">
+          <ul className="mt-4 hidden flex-wrap gap-1 lg:flex" role="list" aria-label="Engagements">
             {siteConfig.usps.map((u) => (
               <li key={u} className="rounded-full bg-white/5 px-2 py-0.5 text-xs">{u}</li>
             ))}
@@ -61,51 +66,77 @@ export default function Footer() {
 
         {/* Services */}
         <nav aria-label="Services">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-slate-300">Nos services</p>
-          <ul className="space-y-2 text-sm">
-            {services.map((s) => (
-              <li key={s.slug}>
-                <Link href={`/services/${s.slug}`} className="text-slate-300 transition-colors hover:text-white">{s.navTitle}</Link>
-              </li>
-            ))}
-          </ul>
+          <details className="foot-groupe border-t border-white/10 lg:border-0">
+            <FootSummary>Nos services</FootSummary>
+            <ul className="space-y-2 pb-4 text-sm lg:pb-0">
+              {services.map((s) => (
+                <li key={s.slug}>
+                  <Link href={`/services/${s.slug}`} className="text-slate-300 transition-colors hover:text-white">{s.navTitle}</Link>
+                </li>
+              ))}
+            </ul>
+          </details>
         </nav>
 
         {/* Zones */}
         <nav aria-label="Zones d'intervention">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-slate-300">Zones</p>
-          <ul className="space-y-2 text-sm">
-            {zones.map((z) => (
-              <li key={z.slug}>
-                <Link href={`/zones/${z.slug}`} className="text-slate-300 transition-colors hover:text-white">{z.name}</Link>
+          <details className="foot-groupe border-t border-white/10 lg:border-0">
+            <FootSummary>Zones</FootSummary>
+            <ul className="space-y-2 pb-4 text-sm lg:pb-0">
+              {zones.map((z) => (
+                <li key={z.slug}>
+                  <Link href={`/zones/${z.slug}`} className="text-slate-300 transition-colors hover:text-white">{z.name}</Link>
+                </li>
+              ))}
+              <li>
+                <Link href="/zones" className="font-medium text-accent hover:text-white transition-colors">Toutes les zones →</Link>
               </li>
-            ))}
-            <li>
-              <Link href="/zones" className="font-medium text-accent hover:text-white transition-colors">Toutes les zones →</Link>
-            </li>
-          </ul>
+            </ul>
+          </details>
         </nav>
 
         {/* Info */}
         <nav aria-label="Informations légales">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-slate-300">Informations</p>
-          <ul className="space-y-2 text-sm">
-            <li><Link href="/contact" className="text-slate-300 transition-colors hover:text-white">Contact & devis</Link></li>
-            {siteConfig.features.blog && (
-              <li><Link href="/conseils" className="text-slate-300 transition-colors hover:text-white">Conseils</Link></li>
-            )}
-            <li><Link href="/mentions-legales" className="text-slate-300 transition-colors hover:text-white">Mentions légales</Link></li>
-            <li><Link href="/politique-confidentialite" className="text-slate-300 transition-colors hover:text-white">Confidentialité</Link></li>
-            <li><Link href="/cgu" className="text-slate-300 transition-colors hover:text-white">CGU</Link></li>
-          </ul>
+          <details className="foot-groupe border-y border-white/10 lg:border-0">
+            <FootSummary>Informations</FootSummary>
+            <ul className="space-y-2 pb-4 text-sm lg:pb-0">
+              <li><Link href="/contact" className="text-slate-300 transition-colors hover:text-white">Contact & devis</Link></li>
+              <li><Link href="/tarifs" className="text-slate-300 transition-colors hover:text-white">Tarifs</Link></li>
+              {siteConfig.features.blog && (
+                <li><Link href="/conseils" className="text-slate-300 transition-colors hover:text-white">Conseils</Link></li>
+              )}
+              <li><Link href="/mentions-legales" className="text-slate-300 transition-colors hover:text-white">Mentions légales</Link></li>
+              <li><Link href="/politique-confidentialite" className="text-slate-300 transition-colors hover:text-white">Confidentialité</Link></li>
+              <li><Link href="/cgu" className="text-slate-300 transition-colors hover:text-white">CGU</Link></li>
+            </ul>
+          </details>
         </nav>
       </div>
 
       <div className="border-t border-white/10">
-        <div className="container-site py-4 text-xs text-slate-400">
+        <div className="container-site py-4 text-center text-xs text-slate-400 lg:text-left">
           © {year} {siteConfig.businessName}. Tous droits réservés.
         </div>
       </div>
     </footer>
+  )
+}
+
+/** Titre de volet : bouton dépliant en mobile, simple intitulé de colonne en lg. */
+function FootSummary({ children }: { children: React.ReactNode }) {
+  return (
+    <summary className="flex cursor-pointer list-none items-center justify-between py-3.5 text-xs font-semibold uppercase tracking-wider text-slate-300 lg:mb-3 lg:py-0 [&::-webkit-details-marker]:hidden">
+      {children}
+      <svg
+        className="foot-chevron h-4 w-4 shrink-0 text-accent transition-transform lg:hidden"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        aria-hidden="true"
+      >
+        <path d="m6 9 6 6 6-6" />
+      </svg>
+    </summary>
   )
 }

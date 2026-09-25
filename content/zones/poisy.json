@@ -2,46 +2,73 @@
   "slug": "poisy",
   "name": "Poisy",
   "postalCode": "74330",
-  "context": "Commune résidentielle et dynamique à l'ouest d'Annecy, entre pavillons et petits collectifs récents.",
-  "metaTitle": "Électricien à Poisy (74)",
-  "metaDescription": "Électricien à Poisy, près d'Annecy : dépannage, tableau électrique, mise aux normes. Intervention rapide. Contactez-nous.",
+  "context": "Commune de 9 291 habitants à l'ouest d'Annecy, faite d'un chef-lieu et de plusieurs hameaux entre les bords du Fier et la montagne d'Age, passée en quelques décennies du village rural à la banlieue résidentielle.",
+  "metaTitle": "Électricien Poisy, cuisine, panne et rénovation",
+  "metaDescription": "Nouvelle cuisine, plaques qui font disjoncter, maison à rénover à Poisy : nous créons les bons circuits et réglons ce qui coupe. Téléphonez-nous.",
   "h1": "Électricien à Poisy",
-  "intro": "Nous intervenons à Poisy (74330) pour tout dépannage électrique, remplacement de tableau ou mise aux normes. Commune résidentielle et dynamique à l'ouest d'Annecy, Poisy compte de nombreux pavillons et petits collectifs récents où les installations restent globalement récentes, mais où les extensions et rénovations créent parfois des besoins de mise à niveau. Nous diagnostiquons précisément avant toute intervention.",
+  "intro": "Nous rénovons, dépannons et adaptons l'électricité des maisons et appartements de Poisy (74330), du chef-lieu aux hameaux. La commune compte aujourd'hui 9 291 habitants (source geo.api.gouv.fr), contre 838 en 1954 : ce changement d'échelle a fait naître des quartiers de maisons et de petits immeubles autour d'un village ancien. Entre 385 m au bord du Fier et 670 m à la montagne d'Age, les logements de Poisy ont des âges et des besoins électriques très différents.",
   "blocks": [
     {
-      "heading": "Nos prestations à Poisy",
-      "body": "Nous intervenons à Poisy pour toutes les situations électriques : recherche de panne sur un circuit, disjoncteur qui saute, remplacement de tableau électrique, mise aux normes avant une vente, ou installation d'une borne de recharge pour véhicule électrique dans un garage ou une place de parking privative. Nous établissons un diagnostic clair et un devis détaillé avant toute intervention."
+      "heading": "Électricien à Poisy, du chef-lieu aux hameaux",
+      "body": "Au chef-lieu et dans les hameaux, on trouve encore des maisons anciennes où l'installation a été reprise par étapes. Dans les quartiers récents, les installations sont plus homogènes et bien protégées. Cette différence guide notre visite : dans une maison ancienne, nous vérifions en priorité la terre, les protections et l'état des conducteurs ; dans une construction récente, nous cherchons plutôt ce qui manque pour vos nouveaux usages."
     },
     {
-      "heading": "Panne urgente à Poisy",
-      "body": "En cas de panne urgente à Poisy, appelez-nous directement. En attendant notre arrivée, coupez le disjoncteur du circuit concerné (ou le disjoncteur général en cas de doute ou d'odeur de brûlé) pour limiter les risques. Nous intervenons 7j/7 sur Poisy et les communes voisines."
+      "heading": "Cuisine rénovée : prises et circuits du plan de travail",
+      "body": "Refaire une cuisine est le projet qui sollicite le plus l'installation. La plaque de cuisson, le four, le lave-vaisselle et le réfrigérateur ne se branchent pas tous sur la même ligne : la NF C 15-100 impose des circuits spécialisés pour les gros appareils et un nombre minimal de prises au-dessus du plan de travail. Ces prises ne se placent ni au-dessus de l'évier ni au-dessus des plaques. Nous posons les boîtiers avant la crédence, à la bonne hauteur, et nous vérifions que le tableau peut accueillir les nouveaux départs."
     },
     {
-      "heading": "Communes limitrophes desservies",
-      "body": "En plus de Poisy, nous intervenons dans les communes voisines : Annecy (tous quartiers), Épagny Metz-Tessy, Chavanod et les autres communes de l'ouest de l'agglomération annécienne. Notre zone de couverture s'étend sur un rayon de 30 km autour d'Annecy."
+      "heading": "Dépannage électrique à Poisy : quand la cuisine fait tout couper",
+      "body": "Une plaque à induction installée sur un circuit prévu pour une ancienne cuisinière, un four branché sur une prise ordinaire, une bouilloire et un grille-pain sur la même multiprise : le déclenchement arrive toujours à l'heure du repas. Nous commençons par repérer quel appareil partage quelle ligne, puis nous remettons chaque équipement sur le circuit qui lui correspond. Si le disjoncteur ou le câble a chauffé, nous le remplaçons avant de remettre sous tension."
+    },
+    {
+      "heading": "Acheter à Poisy : ce que le tableau vous apprend",
+      "body": "Acheter à Poisy, c'est souvent reprendre une maison ou un appartement déjà habité. Avant de signer, jetez un œil au tableau : présence d'étiquettes, différentiels 30 mA en tête des rangées, place libre, absence de fils qui dépassent. Au-delà de 15 ans d'installation, le vendeur doit vous remettre un diagnostic électricité. Nous pouvons ensuite chiffrer les corrections qu'il signale, ce qui vous donne un élément concret pour la négociation."
     }
   ],
+  "bodyImage": "/zones/poisy-corps.jpg",
+  "bodyImageAlt": "Cuisine rénovée sous poutres apparentes, meubles en chêne clair, îlot central et éclairage LED sous les meubles hauts",
+  "bodyImageCaption": "Cuisine rénovée : éclairage sous les meubles hauts et prises du plan de travail sur des circuits séparés.",
   "neighbours": [
-    "Annecy",
-    "Épagny Metz-Tessy",
-    "Chavanod"
+    "meythet",
+    "epagny-metz-tessy",
+    "cran-gevrier"
+  ],
+  "relatedServices": [
+    "renovation-electrique-complete",
+    "urgence-depannage-electrique",
+    "installation-electrique-neuve"
+  ],
+  "prixPhrase": "À Poisy, une cuisine à équiper ou une maison à reprendre n'appellent pas le même budget : ces repères vous aident à situer votre projet.",
+  "sources": [
+    {
+      "label": "geo.api.gouv.fr, Poisy (74213), population et code postal",
+      "url": "https://geo.api.gouv.fr/communes/74213?fields=nom,code,population,codesPostaux"
+    },
+    {
+      "label": "Wikipédia, Poisy (altitudes, hameaux, évolution de la population)",
+      "url": "https://fr.wikipedia.org/wiki/Poisy"
+    },
+    {
+      "label": "Service-Public.fr, diagnostic de l'installation intérieure d'électricité",
+      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F18692"
+    }
   ],
   "faq": [
     {
-      "q": "Intervenez-vous à Poisy pour le dépannage électrique ?",
-      "a": "Oui. Nous intervenons à Poisy (74330) pour tout dépannage électrique : recherche de panne, disjoncteur qui saute, remplacement de prise ou d'interrupteur défectueux. Diagnostic précis, devis avant travaux."
+      "q": "Ma nouvelle plaque à induction fait sauter le disjoncteur, pourquoi ?",
+      "a": "Le circuit existant n'est probablement pas dimensionné pour elle. Une plaque demande un circuit dédié, avec une section de câble et un disjoncteur adaptés à sa puissance. Nous vérifions la ligne et la reprenons si nécessaire."
     },
     {
-      "q": "Quel est le délai d'intervention à Poisy ?",
-      "a": "Poisy est une commune proche d'Annecy, accessible rapidement depuis notre zone d'intervention. Nous vous donnons un délai estimatif lors de votre appel en fonction de notre planning du moment."
+      "q": "À quel moment faire intervenir l'électricien dans un projet de cuisine ?",
+      "a": "Avant la pose des meubles et de la crédence. Une fois le plan d'implantation arrêté, nous plaçons les boîtiers et les circuits. Après la pose, déplacer une prise devient bien plus compliqué."
     },
     {
-      "q": "Faites-vous l'installation de bornes de recharge à Poisy ?",
-      "a": "Oui. Nous étudions votre installation existante et posons une borne de recharge adaptée à votre véhicule et à votre logement, maison individuelle ou copropriété avec parking privatif."
+      "q": "Peut-on garder l'ancienne ligne de la cuisinière pour une plaque neuve ?",
+      "a": "Parfois, si sa section et sa protection conviennent à la nouvelle plaque. Nous le vérifions sur place : un câble trop fin sur une plaque puissante chauffe, même si le disjoncteur ne coupe pas tout de suite."
     },
     {
-      "q": "Intervenez-vous aussi à Épagny Metz-Tessy et Chavanod ?",
-      "a": "Oui. Nous couvrons Épagny Metz-Tessy, Chavanod et les autres communes de l'ouest de l'agglomération annécienne dans le cadre de notre zone d'intervention de 30 km autour d'Annecy."
+      "q": "Vous déplacez-vous dans les hameaux de Poisy ?",
+      "a": "Oui, dans le chef-lieu comme dans les hameaux, jusqu'aux bords du Fier. Nous intervenons aussi à Meythet, Épagny Metz-Tessy et Cran-Gevrier, tout proches."
     }
   ]
 }

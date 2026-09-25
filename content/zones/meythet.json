@@ -2,46 +2,81 @@
   "slug": "meythet",
   "name": "Meythet",
   "postalCode": "74960",
-  "context": "Ancienne commune fusionnée avec Annecy en 2017, aujourd'hui secteur résidentiel au nord-ouest d'Annecy, proche de l'aéroport.",
-  "metaTitle": "Électricien à Meythet (74)",
-  "metaDescription": "Électricien dans le secteur de Meythet : dépannage, tableau électrique, mise aux normes. Intervention rapide. Contactez-nous.",
-  "h1": "Électricien dans le secteur de Meythet",
-  "intro": "Nous intervenons dans le secteur de Meythet (74960) pour tout dépannage électrique, remise aux normes de tableau ou installation électrique neuve. Ancienne commune devenue secteur d'Annecy depuis la fusion de 2017, Meythet est un secteur résidentiel au nord-ouest de l'agglomération, proche de l'aéroport d'Annecy Haute-Savoie Mont-Blanc. Nous diagnostiquons précisément avant toute intervention.",
+  "context": "Ancienne commune du nord-ouest, rattachée à Annecy en 2017, bordée par le Fier, partagée entre maisons du Vieux Meythet, immeubles du centre restructuré et quartier mixte de Cotfa.",
+  "metaTitle": "Électricien Meythet (74960) : panne, remise aux normes",
+  "metaDescription": "Maison du Vieux Meythet ou appartement du centre : panne réparée, tableau remis aux normes, prises et interrupteurs neufs. Demandez votre devis.",
+  "h1": "Électricien à Meythet",
+  "intro": "Nous intervenons à Meythet (74960) pour le dépannage électrique, la remise aux normes du tableau et la reprise des prises et interrupteurs. Meythet a rejoint Annecy le 1er janvier 2017, date de la fusion, et comptait 8 325 habitants au recensement de 2014. Le secteur se lit en trois parties : le Vieux Meythet et ses maisons individuelles, un centre largement reconstruit en petits immeubles depuis le début des années 2000, et Cotfa, où collectifs denses et pavillons se mélangent. Trois âges de bâti, donc trois façons d'aborder l'électricité.",
   "blocks": [
     {
-      "heading": "Nos prestations dans le secteur de Meythet",
-      "body": "Nous intervenons dans le secteur de Meythet pour toutes les situations électriques : recherche de panne, remise aux normes de tableau électrique, diagnostic avant vente, et installation électrique neuve pour une extension ou un garage. Nous établissons un diagnostic clair et un devis détaillé avant toute intervention."
+      "heading": "Dépannage électrique à Meythet : ce que vous pouvez vérifier seul",
+      "body": "Avant même que nous arrivions, trois constats nous font gagner du temps. Quelle manette du tableau est baissée : le disjoncteur général, un interrupteur différentiel qui coupe une rangée entière, ou un seul disjoncteur divisionnaire ? Qu'étiez-vous en train d'utiliser au moment de la coupure ? Sentez-vous une odeur de chaud ou voyez-vous une trace noire sur une prise ? Si une odeur de brûlé est présente, laissez le circuit coupé et ne rebranchez rien. Avec ces réponses, nous arrivons en sachant déjà quelle partie de l'installation examiner."
     },
     {
-      "heading": "Panne urgente à Meythet",
-      "body": "En cas de panne urgente dans le secteur de Meythet, appelez-nous directement. En attendant notre arrivée, coupez le disjoncteur du circuit concerné (ou le disjoncteur général en cas de doute ou d'odeur de brûlé) pour limiter les risques. Nous intervenons 7j/7 sur Meythet et les secteurs voisins."
+      "heading": "Remise aux normes électrique à Meythet, dans une maison du Vieux Meythet",
+      "body": "Les maisons individuelles du Vieux Meythet ont souvent connu plusieurs propriétaires, et chacun a ajouté sa part : une pièce aménagée sous le toit, un garage transformé, une prise supplémentaire tirée depuis la plus proche. Le tableau porte les traces de ces étapes. La remise aux normes consiste à remettre de l'ordre : un différentiel 30 mA qui protège chaque circuit, des disjoncteurs dont le calibre correspond aux câbles réellement posés, une terre mesurée et raccordée partout, des circuits séparés pour les gros appareils. Nous gardons ce qui est sain et ne reprenons que ce qui pose problème."
     },
     {
-      "heading": "Secteurs et communes voisines desservis",
-      "body": "En plus de Meythet, nous intervenons dans le secteur de Cran-Gevrier, et les communes de Poisy et Épagny Metz-Tessy au nord-ouest de l'agglomération. Notre zone de couverture s'étend sur un rayon de 30 km autour d'Annecy."
+      "heading": "Appartement du centre : prises et interrupteurs à changer",
+      "body": "Dans les immeubles du centre de Meythet, les installations sont plus récentes et les demandes plus ciblées : une prise qui ne tient plus la fiche, un interrupteur qui grésille, un va-et-vient qui ne commande plus rien. Nous remplaçons l'appareillage par des prises de type E à broche de terre et des interrupteurs neufs, en vérifiant au passage le serrage des bornes. Un contact mal serré chauffe, noircit la prise et finit par la détruire : c'est une cause fréquente de coupure qui se règle simplement une fois repérée."
+    },
+    {
+      "heading": "Rafraîchir un séjour : le bon moment pour revoir l'électricité",
+      "body": "Repeindre ou retapisser une pièce est l'occasion idéale de déplacer une prise mal placée, d'en ajouter une près du canapé ou de remplacer un appareillage jauni. Une fois les murs refaits, chaque saignée ou chaque boîtier supplémentaire abîme la peinture neuve. Prévenez-nous avant vos travaux de décoration : nous intervenons sur l'électricité d'abord, vous peignez ensuite, et le résultat reste propre."
+    },
+    {
+      "heading": "Électricien à Meythet, entre le Fier et les quartiers voisins",
+      "body": "Le Fier dessine une grande partie des limites du secteur, au sud et à l'est. De l'autre côté commencent Cran-Gevrier et le reste d'Annecy, et au nord s'étend Épagny Metz-Tessy. Nous travaillons dans l'ensemble de ces secteurs avec la même méthode. À Meythet même, la majorité des logements sont des résidences principales, dont plus de la moitié sont occupées par leurs propriétaires : ce sont eux qui nous appellent le plus souvent pour des travaux planifiés, en plus des dépannages."
     }
   ],
+  "bodyImage": "/zones/meythet-corps.jpg",
+  "bodyImageAlt": "Prise de courant de type E et interrupteur neufs posés sur le mur fraîchement peint d'un séjour d'appartement",
+  "bodyImageCaption": "Une prise de type E et un interrupteur neufs, posés sur le mur clair d'un séjour.",
   "neighbours": [
-    "Cran-Gevrier",
-    "Poisy",
-    "Épagny Metz-Tessy"
+    "cran-gevrier",
+    "epagny-metz-tessy",
+    "poisy"
+  ],
+  "relatedServices": [
+    "remise-aux-normes-tableau-electrique",
+    "urgence-depannage-electrique",
+    "recherche-panne-electrique"
+  ],
+  "prixPhrase": "À Meythet, entre une prise à remplacer et un tableau à reprendre, l'écart de budget est large : les tarifs ci-dessous vous situent avant notre visite.",
+  "sources": [
+    {
+      "label": "Légifrance, arrêté du 14 juillet 2016 portant création de la commune nouvelle d'Annecy",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000033313064"
+    },
+    {
+      "label": "geo.api.gouv.fr, Meythet commune déléguée (74182)",
+      "url": "https://geo.api.gouv.fr/communes_associees_deleguees/74182"
+    },
+    {
+      "label": "Wikipédia, Meythet (population 2014, quartiers, logement)",
+      "url": "https://fr.wikipedia.org/wiki/Meythet"
+    }
   ],
   "faq": [
     {
-      "q": "Meythet est-elle toujours une commune indépendante ?",
-      "a": "Non. Depuis le 1er janvier 2017, Meythet a fusionné avec Annecy et quatre autres anciennes communes pour former la commune nouvelle d'Annecy. C'est aujourd'hui un secteur d'Annecy avec sa propre identité et son code postal (74960), mais plus une commune autonome."
+      "q": "Une prise a noirci dans mon salon, est-ce grave ?",
+      "a": "Oui, c'est le signe qu'un contact a chauffé. Coupez le circuit concerné au tableau, n'utilisez plus la prise et faites-la contrôler. Il faut remplacer l'appareillage et vérifier l'état du câble derrière, qui a pu souffrir de la chaleur."
     },
     {
-      "q": "Intervenez-vous dans le secteur de Meythet pour le dépannage électrique ?",
-      "a": "Oui. Nous intervenons dans le secteur de Meythet (74960) pour tout dépannage électrique : recherche de panne, disjoncteur qui saute, remise aux normes de tableau. Diagnostic précis, devis avant travaux."
+      "q": "Peut-on remplacer une prise sans terre par une prise à terre ?",
+      "a": "Seulement si un conducteur de terre arrive jusqu'au boîtier. Poser une prise de type E sans la raccorder à la terre donne une fausse impression de sécurité. Quand le fil manque, nous le tirons depuis le tableau ou nous proposons une autre solution conforme."
     },
     {
-      "q": "Quel est le délai d'intervention à Meythet ?",
-      "a": "Meythet est un secteur proche du centre d'Annecy, accessible rapidement depuis notre zone d'intervention. Nous vous donnons un délai estimatif lors de votre appel en fonction de notre planning du moment."
+      "q": "Mon interrupteur grésille quand j'allume la lumière, que faire ?",
+      "a": "Un grésillement traduit souvent un contact usé ou une borne desserrée. Évitez de l'actionner et prévenez-nous : le remplacement est rapide, et nous contrôlons au passage la boîte d'encastrement."
     },
     {
-      "q": "Intervenez-vous aussi à Cran-Gevrier et Poisy ?",
-      "a": "Oui. Nous couvrons le secteur de Cran-Gevrier, la commune de Poisy et les autres secteurs et communes de l'agglomération annécienne dans le cadre de notre zone d'intervention de 30 km."
+      "q": "Dépannage électrique à Meythet : que prévoir avant votre venue ?",
+      "a": "Notez quelle manette est baissée au tableau et ce qui fonctionnait au moment de la coupure. Dégagez l'accès au tableau et, si possible, retrouvez l'ancien schéma ou les étiquettes des circuits."
+    },
+    {
+      "q": "Pourquoi Meythet et Cran-Gevrier ont-ils le même code postal ?",
+      "a": "Les deux secteurs, voisins de part et d'autre du Fier, partagent le 74960 et sont tous deux des communes déléguées d'Annecy. Pour nous, c'est un même secteur d'intervention, traité avec la même méthode."
     }
   ]
 }

@@ -2,46 +2,55 @@
   "slug": "saint-jorioz",
   "name": "Saint-Jorioz",
   "postalCode": "74410",
-  "context": "Commune au bord du lac d'Annecy, au sud de Sevrier, entre habitat résidentiel et secteur touristique.",
-  "metaTitle": "Électricien à Saint-Jorioz (74)",
-  "metaDescription": "Électricien à Saint-Jorioz, près d'Annecy : dépannage, tableau électrique, mise aux normes. Intervention rapide. Contactez-nous.",
+  "context": "Commune de 6 390 habitants sur la rive ouest du lac d'Annecy, adossée au Semnoz, formée d'un bourg et d'une douzaine de hameaux, avec une forte activité touristique et de nombreux meublés.",
+  "metaTitle": "Électricien Saint-Jorioz, chalets et maisons du lac",
+  "metaDescription": "Chalet à rénover, meublé de tourisme à sécuriser, panne dans un hameau de Saint-Jorioz : une électricité refaite avec soin, lambris compris. Contactez-nous.",
   "h1": "Électricien à Saint-Jorioz",
-  "intro": "Nous intervenons à Saint-Jorioz (74410) pour tout dépannage électrique, remise aux normes de tableau ou installation électrique neuve. Commune au bord du lac d'Annecy, Saint-Jorioz associe résidences permanentes et logements saisonniers, ce qui implique des installations d'âges très variés. Nous diagnostiquons précisément avant toute intervention.",
+  "intro": "Nous rénovons, sécurisons et dépannons les installations électriques de Saint-Jorioz (74410), du bourg aux hameaux du Villard, de Berlet ou de Machevaz. Peuplée de 6 390 habitants d'après geo.api.gouv.fr, la commune s'étire sur la rive ouest du lac d'Annecy, adossée au Semnoz. Les maisons y dominent, et le tourisme y pèse lourd : plus de 5 000 lits touristiques recensés en 2014, dont de nombreuses locations meublées. Chalets rénovés et logements loués à la saison forment l'essentiel de ce que nous y rencontrons.",
   "blocks": [
     {
-      "heading": "Nos prestations à Saint-Jorioz",
-      "body": "Nous intervenons à Saint-Jorioz pour toutes les situations électriques : recherche de panne, remise aux normes de tableau électrique, diagnostic avant une location saisonnière ou une vente, et installation électrique neuve pour une extension ou une dépendance. Nous établissons un diagnostic clair et un devis détaillé avant toute intervention."
+      "heading": "Électricien à Saint-Jorioz, sur la rive ouest du lac",
+      "body": "Entre le lac et la montagne, les maisons de Saint-Jorioz vivent avec l'humidité du bord de l'eau et les orages qui descendent du Semnoz. Deux conséquences pour l'électricité : des circuits extérieurs et des sous-sols qui réclament un appareillage résistant à l'humidité, et des appareils électroniques sensibles aux surtensions. Nous regardons ces deux points à chaque visite, en plus de l'état général du tableau."
     },
     {
-      "heading": "Panne urgente à Saint-Jorioz",
-      "body": "En cas de panne urgente à Saint-Jorioz, appelez-nous directement. En attendant notre arrivée, coupez le disjoncteur du circuit concerné (ou le disjoncteur général en cas de doute ou d'odeur de brûlé) pour limiter les risques. Nous intervenons 7j/7 sur Saint-Jorioz et les communes voisines."
+      "heading": "Chalet rénové : appliques, lambris et câbles cachés",
+      "body": "Dans un chalet, le bois est partout, et c'est lui qui dicte la façon de poser l'électricité. Les câbles passent sous conduit derrière le lambris, les boîtiers d'encastrement sont prévus pour les parois creuses, et les appliques se fixent sur un support solide plutôt que dans une lame de bois mince. Quand le lambris est déposé pour une rénovation, c'est le moment de remplacer les anciennes lignes, d'ajouter des points lumineux et de supprimer les rallonges visibles. Le résultat reste discret : on voit les appliques, pas le câblage."
     },
     {
-      "heading": "Communes limitrophes desservies",
-      "body": "En plus de Saint-Jorioz, nous intervenons à Sevrier et dans les autres communes riveraines du lac d'Annecy. Notre zone de couverture s'étend sur un rayon de 30 km autour d'Annecy."
+      "heading": "Meublé de tourisme : une installation à l'épreuve des locataires",
+      "body": "Un logement loué à la semaine voit passer des occupants qui ne connaissent pas l'installation. Ils branchent des appareils puissants, multiplient les chargeurs et ne savent pas où se trouve le tableau. Pour un propriétaire, la priorité est un tableau clair, avec chaque circuit étiqueté, des différentiels 30 mA sur l'ensemble des lignes et assez de prises pour éviter les multiprises en cascade. Nous préparons le logement entre deux saisons, pour que la location reprenne sans mauvaise surprise."
+    },
+    {
+      "heading": "Une panne au Villard ou à Berlet",
+      "body": "Dans les hameaux éloignés du bourg, une coupure après un orage peut venir du réseau comme de votre installation. Regardez si vos voisins ont du courant : si oui, c'est chez vous que le problème se trouve. Nous vérifions alors le disjoncteur de branchement, les différentiels puis chaque circuit, et nous contrôlons que la surtension n'a pas endommagé un appareil. Pensez à noter l'heure de la coupure et ce qui s'est passé juste avant : cela oriente la recherche."
     }
   ],
-  "neighbours": [
-    "Sevrier",
-    "Annecy",
-    "Veyrier-du-Lac"
+  "bodyImage": "/zones/saint-jorioz-corps.jpg",
+  "bodyImageAlt": "Intérieur d'un chalet rénové près du lac, appliques murales fixées sur un lambris clair",
+  "bodyImageCaption": "Chalet rénové : les appliques sur le lambris, le câblage invisible derrière le bois.",
+  "neighbours": ["sevrier", "seynod", "veyrier-du-lac"],
+  "relatedServices": ["renovation-electrique-complete", "recherche-panne-electrique", "mise-en-conformite-diagnostic-electrique"],
+  "prixPhrase": "À Saint-Jorioz, rénover un chalet ou sécuriser un meublé n'engage pas les mêmes travaux : voici de quoi vous faire un premier ordre d'idée.",
+  "sources": [
+    { "label": "geo.api.gouv.fr, Saint-Jorioz (74242), population et code postal", "url": "https://geo.api.gouv.fr/communes/74242?fields=nom,code,population,codesPostaux" },
+    { "label": "Wikipédia, Saint-Jorioz (rive ouest, hameaux, lits touristiques 2014)", "url": "https://fr.wikipedia.org/wiki/Saint-Jorioz" }
   ],
   "faq": [
     {
-      "q": "Intervenez-vous à Saint-Jorioz pour le dépannage électrique ?",
-      "a": "Oui. Nous intervenons à Saint-Jorioz (74410) pour tout dépannage électrique : recherche de panne, disjoncteur qui saute, remise aux normes de tableau. Diagnostic précis, devis avant travaux."
+      "q": "Peut-on encastrer des prises dans un lambris ?",
+      "a": "Oui, avec des boîtiers adaptés aux parois creuses et un câble passé sous conduit. L'appareillage doit être solidement fixé et ne jamais reposer sur une lame fine. Nous choisissons la méthode selon l'épaisseur du lambris et ce qu'il y a derrière."
     },
     {
-      "q": "Quel est le délai d'intervention à Saint-Jorioz ?",
-      "a": "Saint-Jorioz est une commune du bord du lac, accessible depuis notre zone d'intervention. Nous vous donnons un délai estimatif lors de votre appel en fonction de notre planning du moment."
+      "q": "Que faire avant de louer mon chalet à la saison ?",
+      "a": "Faites vérifier le tableau et les protections, étiquetez chaque circuit et prévoyez assez de prises dans les chambres et la cuisine. Laissez aussi aux locataires une consigne simple indiquant où se trouve le tableau et comment réarmer un disjoncteur."
     },
     {
-      "q": "Faites-vous le diagnostic avant une location saisonnière à Saint-Jorioz ?",
-      "a": "Oui. Nous réalisons les travaux de mise en conformité nécessaires avant la mise en location d'un bien, qu'il s'agisse d'une location saisonnière ou longue durée."
+      "q": "Un orage a coupé le courant dans le hameau, qui appeler ?",
+      "a": "Si tout le hameau est touché, le distributeur. Si le courant revient chez vos voisins mais pas chez vous, ou si un disjoncteur refuse de se réarmer, appelez-nous pour contrôler votre installation."
     },
     {
-      "q": "Intervenez-vous aussi à Sevrier et Veyrier-du-Lac ?",
-      "a": "Oui. Nous couvrons Sevrier, Veyrier-du-Lac et les autres communes riveraines du lac d'Annecy dans le cadre de notre zone d'intervention de 30 km autour d'Annecy."
+      "q": "Intervenez-vous sur toute la rive ouest du lac ?",
+      "a": "Oui, à Saint-Jorioz et dans ses hameaux, à Sevrier, ainsi qu'à Seynod et partout autour d'Annecy."
     }
   ]
 }

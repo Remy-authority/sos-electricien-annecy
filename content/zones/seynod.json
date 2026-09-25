@@ -2,46 +2,64 @@
   "slug": "seynod",
   "name": "Seynod",
   "postalCode": "74600",
-  "context": "Ancienne commune fusionnée avec Annecy en 2017, aujourd'hui secteur résidentiel et commerçant au sud d'Annecy.",
-  "metaTitle": "Électricien à Seynod (74)",
-  "metaDescription": "Électricien dans le secteur de Seynod : dépannage, tableau électrique, mise aux normes. Intervention rapide. Contactez-nous.",
-  "h1": "Électricien dans le secteur de Seynod",
-  "intro": "Nous intervenons dans le secteur de Seynod (74600) pour tout dépannage électrique, remise aux normes de tableau ou rénovation électrique. Ancienne commune devenue secteur d'Annecy depuis la fusion de 2017, Seynod compte de nombreux pavillons des années 1970-1980 ainsi que des zones commerçantes et pavillonnaires plus récentes. Nous diagnostiquons précisément avant toute intervention.",
+  "context": "Secteur sud d'Annecy au pied du Semnoz, intégré à la commune nouvelle en 2017, urbanisée à grande vitesse à partir des années 1960, entre pavillons, zones d'activité et quartiers neufs.",
+  "metaTitle": "Électricien à Seynod, dépannage et tableau aux normes",
+  "metaDescription": "Remise aux normes de tableau, panne en pavillon ou en appartement neuf à Seynod : terre et protections vérifiées, devis clair. Parlons de votre maison.",
+  "h1": "Électricien à Seynod, remise aux normes",
+  "intro": "Nous remettons aux normes, dépannons et modernisons les installations électriques de Seynod (74600), du centre à Vieugy, de Balmont à la Périaz. Seynod comptait 20 955 habitants en 2014, dernier recensement avant la fusion avec Annecy, entrée en vigueur le 1er janvier 2017. Son développement a pris de l'ampleur dans les années 1960 avec la zone industrielle de Vovray, puis les secteurs commerciaux à partir de 1975 : beaucoup de maisons ont donc l'âge où le tableau d'origine mérite d'être revu.",
   "blocks": [
     {
-      "heading": "Nos prestations dans le secteur de Seynod",
-      "body": "Nous intervenons dans le secteur de Seynod pour toutes les situations électriques : recherche de panne, remise aux normes de tableau électrique, rénovation électrique complète pour les pavillons les plus anciens, ou installation électrique neuve. Nous établissons un diagnostic clair et un devis détaillé avant toute intervention."
+      "heading": "Remise aux normes électrique à Seynod : l'ordre des priorités",
+      "body": "Une remise aux normes n'est pas une rénovation totale. Elle commence par un état des lieux : valeur de la prise de terre, présence d'interrupteurs différentiels 30 mA en tête de tous les circuits, calibre des disjoncteurs comparé à la section des câbles, liaison équipotentielle de la salle de bains. Ces quatre points concernent directement la sécurité des occupants et passent en premier. Viennent ensuite le nombre de prises par pièce, les lignes dédiées aux gros appareils de cuisine et l'éclairage. Nous rédigeons le devis dans cet ordre, pour que vous puissiez engager la partie sécurité tout de suite et étaler le reste si vous le souhaitez."
     },
     {
-      "heading": "Panne urgente à Seynod",
-      "body": "En cas de panne urgente dans le secteur de Seynod, appelez-nous directement. En attendant notre arrivée, coupez le disjoncteur du circuit concerné (ou le disjoncteur général en cas de doute ou d'odeur de brûlé) pour limiter les risques. Nous intervenons 7j/7 sur Seynod et les secteurs voisins."
+      "heading": "Pavillons des années 1960 et 1970 : les faiblesses du sous-sol",
+      "body": "Dans une maison de cette génération, le tableau se trouve souvent au sous-sol ou dans le garage, à côté du chauffe-eau et de la buanderie. C'est là que se cumulent les ajouts successifs : une prise pour le congélateur tirée en apparent, un circuit d'atelier branché en dérivation, un éclairage de cave jamais repris. La prise de terre d'origine, un piquet enfoncé dans le terrain, a pu se dégrader avec le temps. Nous la mesurons systématiquement, car une terre trop résistante empêche le différentiel de jouer son rôle. Donner au sous-sol ses propres protections, distinctes de celles des chambres et du séjour, évite aussi qu'un défaut dans la buanderie plonge toute la maison dans le noir."
     },
     {
-      "heading": "Secteurs et communes voisines desservis",
-      "body": "En plus de Seynod, nous intervenons dans le centre-ville d'Annecy, le secteur de Cran-Gevrier, et les communes de Poisy et Montagny-les-Lanches au sud-ouest de l'agglomération. Notre zone de couverture s'étend sur un rayon de 30 km autour d'Annecy."
+      "heading": "Un tableau électrique neuf, posé là où il était",
+      "body": "Changer le tableau d'un pavillon ne demande pas de le déplacer. Nous installons le nouveau coffret à l'emplacement de l'ancien, nous reprenons chaque départ, nous le repérons, et nous prévoyons des modules libres pour les besoins à venir : pompe à chaleur, borne de recharge ou atelier. La coupure nécessaire au raccordement s'organise avec vous, pour garder le congélateur et le chauffage à l'œil. Vous récupérez un tableau lisible, avec un schéma de ce qui alimente quoi."
+    },
+    {
+      "heading": "Dépannage électrique à Seynod, du centre aux hameaux",
+      "body": "Les appels les plus fréquents viennent d'un disjoncteur qui refuse de se réarmer, d'une partie de la maison sans courant ou d'une odeur de chaud près d'une prise. Dans les secteurs plus ruraux comme Sacconges, au sud, les orages venus du Semnoz s'ajoutent à la liste : après une surtension, un appareil peut être grillé alors que le tableau semble intact. Notre méthode reste la même partout : couper, isoler, mesurer, puis réparer seulement ce qui est en cause. Nous vous disons aussi si un parafoudre au tableau aurait du sens chez vous."
+    },
+    {
+      "heading": "Électricien à Seynod pour les logements récents de la Périaz",
+      "body": "Le quartier de la Périaz rassemble des logements construits récemment, dont les installations suivent la norme en vigueur au moment du chantier. Les demandes y sont d'une autre nature : ajouter une prise extérieure sur un balcon, créer un circuit pour une plaque plus puissante, installer un point lumineux supplémentaire, préparer une recharge de véhicule. Sur ces installations saines, l'enjeu est de ne pas surcharger un circuit existant. Nous contrôlons les emplacements encore disponibles au tableau et l'abonnement en place avant de proposer la solution la plus simple."
     }
   ],
-  "neighbours": [
-    "Annecy centre-ville",
-    "Cran-Gevrier",
-    "Poisy"
+  "bodyImage": "/zones/seynod-corps.jpg",
+  "bodyImageAlt": "Tableau électrique neuf fixé au mur du sous-sol propre d'un pavillon des années 1970",
+  "bodyImageCaption": "Sous-sol d'un pavillon des années 1970 : le tableau neuf reprend la place de l'ancien, avec des modules libres pour la suite.",
+  "neighbours": ["cran-gevrier", "sevrier", "saint-jorioz"],
+  "relatedServices": ["remise-aux-normes-tableau-electrique", "urgence-depannage-electrique", "renovation-electrique-complete"],
+  "prixPhrase": "Pour un pavillon de Seynod, le prix dépend surtout de l'état de la terre et du nombre de circuits à reprendre : les fourchettes ci-dessous donnent l'ordre de grandeur.",
+  "sources": [
+    { "label": "Légifrance, arrêté du 14 juillet 2016 portant création de la commune nouvelle d'Annecy", "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000033313064" },
+    { "label": "geo.api.gouv.fr, Seynod commune déléguée (74268)", "url": "https://geo.api.gouv.fr/communes_associees_deleguees/74268" },
+    { "label": "Wikipédia, Seynod (population 2014, urbanisation, quartiers)", "url": "https://fr.wikipedia.org/wiki/Seynod" }
   ],
   "faq": [
     {
-      "q": "Seynod est-elle toujours une commune indépendante ?",
-      "a": "Non. Depuis le 1er janvier 2017, Seynod a fusionné avec Annecy et quatre autres anciennes communes pour former la commune nouvelle d'Annecy. C'est aujourd'hui un secteur d'Annecy avec sa propre identité et son code postal (74600), mais plus une commune autonome."
+      "q": "Ma maison de Seynod a un tableau d'origine, suis-je obligé de le changer ?",
+      "a": "Aucune loi ne vous oblige à refaire une installation que vous occupez. En revanche, un tableau sans différentiel 30 mA sur tous les circuits ne protège pas les personnes contre l'électrocution. Nous vous montrons ce qui manque et vous décidez en connaissance de cause."
     },
     {
-      "q": "Intervenez-vous dans le secteur de Seynod pour le dépannage électrique ?",
-      "a": "Oui. Nous intervenons dans le secteur de Seynod (74600) pour tout dépannage électrique : recherche de panne, disjoncteur qui saute, remise aux normes de tableau. Diagnostic précis, devis avant travaux."
+      "q": "Comment savoir si ma prise de terre est encore bonne ?",
+      "a": "Seule une mesure le dit, avec un appareil prévu pour cela. Une terre dégradée ne se voit pas : les prises fonctionnent normalement, mais le différentiel ne coupe plus comme il le devrait en cas de défaut. Nous faisons cette mesure au début de chaque remise aux normes."
     },
     {
-      "q": "Les pavillons des années 1970-1980 de Seynod ont-ils souvent un tableau à remettre aux normes ?",
-      "a": "C'est fréquent. Ces pavillons ont souvent conservé leur tableau d'origine, parfois sans disjoncteur différentiel. Un diagnostic sur place permet de confirmer si une remise aux normes est nécessaire."
+      "q": "Combien de temps reste-t-on sans courant pendant le changement de tableau ?",
+      "a": "La coupure couvre le temps du raccordement des circuits sur le nouveau coffret. Nous en convenons avec vous avant le chantier et nous rétablissons en priorité le froid et le chauffage."
     },
     {
-      "q": "Intervenez-vous aussi à Cran-Gevrier et Poisy ?",
-      "a": "Oui. Nous couvrons le secteur de Cran-Gevrier, la commune de Poisy et les autres secteurs et communes de l'agglomération annécienne dans le cadre de notre zone d'intervention de 30 km."
+      "q": "Après un orage, un seul appareil ne marche plus, que faire ?",
+      "a": "Débranchez-le et vérifiez les autres prises de la pièce. Si elles fonctionnent, c'est l'appareil qui a souffert de la surtension. Si plusieurs circuits sont touchés ou si un disjoncteur ne tient plus, appelez-nous pour contrôler le tableau."
+    },
+    {
+      "q": "Remise aux normes et rénovation complète, quelle différence à Seynod ?",
+      "a": "La remise aux normes garde les câbles sains et met à niveau les protections, la terre et les pièces d'eau. La rénovation complète refait aussi les lignes et les boîtiers, souvent pendant de gros travaux de la maison. L'état des lieux dit laquelle des deux vous concerne."
     }
   ]
 }

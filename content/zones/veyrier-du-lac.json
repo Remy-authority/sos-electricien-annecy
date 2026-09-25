@@ -2,46 +2,69 @@
   "slug": "veyrier-du-lac",
   "name": "Veyrier-du-Lac",
   "postalCode": "74290",
-  "context": "Commune résidentielle sur la rive est du lac d'Annecy, entre villas et chalets contemporains.",
-  "metaTitle": "Électricien à Veyrier-du-Lac (74)",
-  "metaDescription": "Électricien à Veyrier-du-Lac, près d'Annecy : dépannage, tableau électrique, mise aux normes. Intervention rapide. Contactez-nous.",
+  "context": "Commune de 2 320 habitants sur la rive est du lac d'Annecy, au pied du mont Veyrier, bâtie en pente sur un mince ruban de terrain entre la montagne et l'eau, où dominent maisons individuelles et résidences de vacances.",
+  "metaTitle": "Électricien Veyrier-du-Lac, rive est du lac d'Annecy",
+  "metaDescription": "Terrasse face au lac à éclairer, maison secondaire à remettre en route, jardin en pente à alimenter à Veyrier-du-Lac : nous nous en chargeons. Écrivez-nous.",
   "h1": "Électricien à Veyrier-du-Lac",
-  "intro": "Nous intervenons à Veyrier-du-Lac (74290) pour tout dépannage électrique, remplacement de tableau ou mise aux normes. Commune résidentielle sur la rive est du lac d'Annecy, Veyrier-du-Lac compte de nombreuses villas et chalets contemporains, souvent équipés d'installations électriques importantes (chauffage, domotique, extérieurs) qui demandent un tableau bien dimensionné. Nous diagnostiquons précisément avant toute intervention.",
+  "intro": "Nous installons, rénovons et dépannons l'électricité des maisons de Veyrier-du-Lac (74290). Ses 2 320 habitants, recensés par geo.api.gouv.fr, vivent sur la rive est du lac d'Annecy, au pied du mont Veyrier. Le bâti s'y est installé sur une bande de terre de quelques centaines de mètres entre la montagne et l'eau, en pente, avec surtout des maisons particulières et des résidences de vacances. Terrasses, jardins étagés et maisons occupées une partie de l'année font l'essentiel des demandes ici.",
   "blocks": [
     {
-      "heading": "Nos prestations à Veyrier-du-Lac",
-      "body": "Nous intervenons à Veyrier-du-Lac pour toutes les situations électriques : recherche de panne, remplacement ou renforcement de tableau électrique, mise aux normes, et installation de borne de recharge pour véhicule électrique dans un garage ou sur un emplacement extérieur. Nous établissons un diagnostic clair et un devis détaillé avant toute intervention."
+      "heading": "Électricien à Veyrier-du-Lac, au pied du mont Veyrier",
+      "body": "Sur une parcelle en pente, l'électricité doit suivre le terrain : un tableau souvent placé au niveau de l'entrée, des pièces à des niveaux différents, une terrasse en contrebas et parfois un abri ou un garage au bord de la route. Chaque niveau a ses usages et gagne à avoir ses propres circuits. Nous commençons par relever où passent les lignes existantes, car sur ces maisons étagées, le parcours des câbles n'est pas toujours celui que l'on imagine."
     },
     {
-      "heading": "Panne urgente à Veyrier-du-Lac",
-      "body": "En cas de panne urgente à Veyrier-du-Lac, appelez-nous directement. En attendant notre arrivée, coupez le disjoncteur du circuit concerné (ou le disjoncteur général en cas de doute ou d'odeur de brûlé) pour limiter les risques. Nous intervenons 7j/7 sur Veyrier-du-Lac et les communes voisines."
+      "heading": "Éclairer une terrasse face au lac",
+      "body": "Un bon éclairage de terrasse met en valeur la vue sans éblouir : appliques orientées vers le sol, spots encastrés dans les marches, lumière douce le long des garde-corps. Le matériel doit résister à la pluie, au gel et aux écarts de température, avec des boîtiers et des luminaires étanches. Un circuit extérieur dédié, protégé par son propre différentiel, et une commande depuis l'intérieur, par interrupteur ou minuterie, complètent l'ensemble. Nous vous proposons une implantation qui éclaire le passage autant que l'ambiance."
     },
     {
-      "heading": "Communes limitrophes desservies",
-      "body": "En plus de Veyrier-du-Lac, nous intervenons dans les communes voisines : Annecy (tous quartiers, dont Annecy-le-Vieux), Menthon-Saint-Bernard et les autres communes riveraines du lac d'Annecy. Notre zone de couverture s'étend sur un rayon de 30 km autour d'Annecy."
+      "heading": "Maison secondaire : retrouver une installation saine à l'arrivée",
+      "body": "Une maison fermée plusieurs mois vit sans surveillance. Au retour, un différentiel tombé pendant l'absence peut avoir coupé le congélateur ou le chauffage hors gel. Pour l'éviter, on sépare les circuits qui doivent rester alimentés de ceux que l'on coupe en partant, on protège le réfrigérateur ou le congélateur sur une ligne indépendante et, si vous le souhaitez, on installe un contrôle à distance de la présence du courant. Nous organisons le tableau pour qu'un seul geste suffise à fermer la maison."
+    },
+    {
+      "heading": "Jardin en pente : alimenter un abri ou un portail",
+      "body": "Amener le courant jusqu'au bas d'un terrain en pente demande un tracé réfléchi : le câble descend sous gaine dans une tranchée qui suit les escaliers ou les murets, loin des zones qu'on bêche. Sur une grande longueur, la section du câble doit être calculée pour limiter la chute de tension, sinon l'éclairage faiblit et les moteurs peinent. Nous calculons cette section, posons le câble et installons au bout un petit coffret protégé pour les prises et l'éclairage de l'abri."
     }
   ],
+  "bodyImage": "/zones/veyrier-du-lac-corps.jpg",
+  "bodyImageAlt": "Terrasse en bois au crépuscule face au lac, éclairage intégré au sol et aux marches",
+  "bodyImageCaption": "Terrasse au crépuscule face au lac : un éclairage bas et étanche qui guide le pas sans masquer la vue.",
   "neighbours": [
-    "Annecy",
-    "Menthon-Saint-Bernard",
-    "Annecy-le-Vieux"
+    "annecy-le-vieux",
+    "sevrier",
+    "saint-jorioz"
+  ],
+  "relatedServices": [
+    "installation-electrique-neuve",
+    "recherche-panne-electrique",
+    "renovation-electrique-complete"
+  ],
+  "prixPhrase": "À Veyrier-du-Lac, un éclairage de terrasse ou une ligne vers le bas du jardin se chiffrent au mètre et au matériel : voici les repères de départ.",
+  "sources": [
+    {
+      "label": "geo.api.gouv.fr, Veyrier-du-Lac (74299), population et code postal",
+      "url": "https://geo.api.gouv.fr/communes/74299?fields=nom,code,population,codesPostaux"
+    },
+    {
+      "label": "Wikipédia, Veyrier-du-Lac (rive est, mont Veyrier, bande de terre en pente)",
+      "url": "https://fr.wikipedia.org/wiki/Veyrier-du-Lac"
+    }
   ],
   "faq": [
     {
-      "q": "Intervenez-vous à Veyrier-du-Lac pour le dépannage électrique ?",
-      "a": "Oui. Nous intervenons à Veyrier-du-Lac (74290) pour tout dépannage électrique : recherche de panne, disjoncteur qui saute, remplacement de tableau. Diagnostic précis, devis avant travaux."
+      "q": "Quel éclairage choisir pour une terrasse exposée au lac ?",
+      "a": "Des luminaires étanches, résistants aux intempéries, orientés vers le sol pour ne pas éblouir ni gêner la vue. Nous les raccordons sur un circuit extérieur dédié, sous la garde d'un différentiel 30 mA."
     },
     {
-      "q": "Quel est le délai d'intervention à Veyrier-du-Lac ?",
-      "a": "Veyrier-du-Lac est une commune proche d'Annecy, accessible rapidement depuis notre zone d'intervention. Nous vous donnons un délai estimatif lors de votre appel en fonction de notre planning du moment."
+      "q": "Comment couper ma maison secondaire sans arrêter le congélateur ?",
+      "a": "En plaçant le congélateur et, si besoin, le chauffage hors gel sur des circuits séparés, que l'on laisse enclenchés. Le reste de la maison se coupe par un seul interrupteur au tableau."
     },
     {
-      "q": "Un tableau électrique doit-il être renforcé pour une grande villa avec domotique ?",
-      "a": "Souvent, oui. Une installation avec chauffage électrique, domotique et équipements extérieurs nécessite plus de circuits qu'un logement standard. Nous évaluons la capacité du tableau existant et proposons un renforcement si nécessaire."
+      "q": "Pourquoi la lumière de mon abri de jardin est-elle faible ?",
+      "a": "Sur une longue ligne, une section de câble trop petite provoque une chute de tension. La lumière faiblit et les appareils démarrent mal. Nous mesurons la tension au bout de la ligne et remplaçons le câble si nécessaire."
     },
     {
-      "q": "Intervenez-vous aussi à Menthon-Saint-Bernard et Annecy-le-Vieux ?",
-      "a": "Oui. Nous couvrons Menthon-Saint-Bernard, Annecy-le-Vieux et les autres communes riveraines du lac d'Annecy dans le cadre de notre zone d'intervention de 30 km autour d'Annecy."
+      "q": "Intervenez-vous des deux côtés du lac ?",
+      "a": "Oui. Depuis Veyrier-du-Lac et Annecy-le-Vieux sur la rive est jusqu'à Sevrier et Saint-Jorioz, sur la rive d'en face, nous couvrons les communes riveraines et le reste de l'agglomération."
     }
   ]
 }

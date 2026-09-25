@@ -11,10 +11,8 @@ const REASSURANCE_CARDS = [
       </svg>
     ),
     title: 'Intervention rapide',
-    /* Phrase reconstruite : la version héritée du pilote injectait `responseTime` en
-       minuscules derrière « Déplacement sous », ce qui donnait « Déplacement sous
-       intervention rapide sur annecy » (phrase cassée + nom propre décapitalisé). */
-    desc: `${siteConfig.responseTime}. Réponse garantie en 30 min, week-ends et jours fériés inclus.`,
+    /* 25/09/2026 : « Réponse garantie en 30 min » retiré (délai promis, interdit). */
+    desc: `${siteConfig.responseTime}, week-ends et jours fériés inclus.`,
   },
   {
     icon: (
@@ -23,7 +21,7 @@ const REASSURANCE_CARDS = [
         <path d="m9 12 2 2 4-4" />
       </svg>
     ),
-    title: 'Artisan local certifié',
+    title: 'Artisan local',
     desc: `Pas d'intermédiaire. Un artisan indépendant de ${siteConfig.region}, joignable directement à tout moment.`,
   },
 ]
@@ -44,8 +42,8 @@ export default function ServiceAreaMap() {
             couvrons un rayon de {siteConfig.serviceArea.radiusKm} km
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-slate-600">
-            Artisan local en {siteConfig.region}, nous intervenons rapidement dans toute
-            l'agglomération d'{siteConfig.city} et ses communes voisines.
+            Artisan local en {siteConfig.region}, nous intervenons à {siteConfig.city} et dans
+            les communes voisines listées ci-dessous.
           </p>
         </div>
 

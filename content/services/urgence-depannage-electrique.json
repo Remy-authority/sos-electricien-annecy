@@ -4,20 +4,20 @@
   "icon": "alert",
   "navTitle": "Urgence dépannage électrique",
   "h1": "Urgence dépannage électrique à Annecy",
-  "metaTitle": "Urgence dépannage électrique à Annecy : intervention rapide",
-  "metaDescription": "Panne électrique urgente à Annecy ? Intervention rapide pour sécuriser votre installation. Contactez-nous, on vous rappelle vite.",
-  "intro": "Vous avez une panne électrique urgente à Annecy ou dans les environs : disjoncteur qui saute en continu, odeur de brûlé, étincelles, coupure totale ? Appelez-nous : nous intervenons rapidement pour sécuriser votre installation. Nous couvrons Annecy et un rayon de 30 km, disponibles 7j/7.",
+  "metaTitle": "Électricien d'urgence à Annecy : dépannage électrique",
+  "metaDescription": "Courant coupé, disjoncteur qui refuse de remonter, prise qui sent le chaud à Annecy ? Nous mettons l'installation en sécurité, puis réparons. Un appel suffit.",
+  "intro": "Vous avez une panne électrique urgente à Annecy ou dans les environs : disjoncteur qui saute en continu, odeur de brûlé, étincelles, coupure totale ? Appelez-nous : nous venons sécuriser votre installation avant de chercher la cause, en ville comme dans les communes voisines.",
   "bullets": [
-    "Intervention rapide",
-    "Mise en sécurité immédiate",
-    "Diagnostic sur place"
+    "Mise en sécurité d'abord",
+    "Recherche de la cause sur place",
+    "Réparation puis contrôle du circuit"
   ],
   "blocks": [
     {
       "heading": "Que faire en attendant (les bons réflexes)",
       "body": "En attendant notre arrivée, voici les gestes essentiels. 1. Coupez le disjoncteur général si vous sentez une odeur de brûlé ou si vous voyez des étincelles. 2. Ne touchez pas à un fil dénudé ni à un appareil qui semble en cause. 3. Éloignez les enfants et les animaux de la zone concernée. 4. Si un disjoncteur saute en permanence, ne le réenclenchez pas plusieurs fois : cela peut aggraver le problème et endommager davantage l'installation. Appelez-nous, nous vous guidons par téléphone en attendant notre arrivée.",
-      "image": "/services/urgence-depannage-electrique-disjoncteur.jpg",
-      "imageAlt": "Réenclenchement d'un disjoncteur sur un tableau électrique",
+      "image": "/services/urgence-depannage-electrique-disjoncteur-v2.jpg",
+      "imageAlt": "Rangée de disjoncteurs modulaires blancs sur rail, un levier baissé",
       "imageCaption": "Le disjoncteur général se trouve sur le tableau électrique, généralement dans l'entrée, le garage ou un local technique."
     },
     {
@@ -29,7 +29,7 @@
     },
     {
       "heading": "Zones couvertes",
-      "body": "Nous intervenons à Annecy, dans les secteurs d'Annecy-le-Vieux, Cran-Gevrier, Meythet, Seynod et Pringy, et dans les communes de l'agglomération dans un rayon de 30 km : Poisy, Épagny Metz-Tessy, Argonay, Sevrier, Saint-Jorioz, Veyrier-du-Lac et les communes voisines. En cas de doute sur notre zone de couverture, appelez-nous."
+      "body": "Chaque secteur de la commune nouvelle d'Annecy fait partie de nos déplacements : Annecy-le-Vieux, Cran-Gevrier, Meythet, Seynod et Pringy. Autour, nous allons aussi à Poisy, Épagny Metz-Tessy, Argonay, Sevrier, Saint-Jorioz, Veyrier-du-Lac et Rumilly. Votre commune n'est pas citée ? Un appel suffit pour savoir si nous pouvons venir."
     }
   ],
   "relatedServices": [
@@ -54,5 +54,6 @@
       "a": "Si vos voisins ont également coupé le courant, l'origine est probablement une panne de réseau (Enedis). Si vous êtes seul concerné, vérifiez d'abord votre disjoncteur général et votre compteur : la panne est alors interne à votre installation. En cas de doute, appelez-nous."
     }
   ],
-  "image": "/services/urgence-depannage-electrique.jpg"
+  "image": "/services/urgence-depannage-electrique.jpg",
+  "prixPhrase": "Le prix du déplacement et les repères d'un dépannage sont affichés sur notre page tarifs, pour savoir à quoi vous attendre avant d'appeler."
 }

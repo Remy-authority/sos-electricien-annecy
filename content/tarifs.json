@@ -1,0 +1,308 @@
+{
+  "metaTitle": "Tarifs et prix d'un électricien à Annecy",
+  "metaDescription": "Prix tableau électrique, tarif électricien, taux horaire, déplacement : fourchettes sourcées, trois cas chiffrés et TVA. Devis gratuit à Annecy.",
+  "h1": "Tarifs d'un électricien à Annecy",
+  "badge": "Prix et tarifs",
+  "image": "/tarifs/tarifs-couverture.jpg",
+  "imageAlt": "Électricien au travail devant un tableau électrique modulaire, disjoncteurs sur rail",
+  "releve": "25/09/2026",
+  "intro": "Ce que coûte un électricien en France, poste par poste : heure de main-d'œuvre, déplacement, majorations d'urgence, tableau, mise aux normes, rénovation, installation neuve. Ce sont des fourchettes observées sur des pages publiques de prix de travaux, relevées le 25/09/2026, chacune avec sa source. Nous n'affichons aucun « prix Annecy » inventé : pour votre logement, à Annecy ou dans une commune voisine, c'est notre devis écrit qui fixe le montant.",
+
+  "sources": {
+    "prixpose-reno": {
+      "nom": "Prix-pose",
+      "titre": "Prix d'une rénovation électrique au m²",
+      "url": "https://www.prix-pose.com/renovation-electrique"
+    },
+    "prixpose-tableau": {
+      "nom": "Prix-pose",
+      "titre": "Prix d'un tableau électrique",
+      "url": "https://www.prix-pose.com/tableau-electrique"
+    },
+    "prixpose-neuf": {
+      "nom": "Prix-pose",
+      "titre": "Prix d'une installation électrique de maison",
+      "url": "https://www.prix-pose.com/installation-electrique-maison"
+    },
+    "habitatpresto": {
+      "nom": "Habitatpresto",
+      "titre": "Tarif d'un électricien",
+      "url": "https://www.habitatpresto.com/mag/electricite/tarif-electricien"
+    },
+    "izi": {
+      "nom": "IZI by EDF",
+      "titre": "Quel est le tarif horaire d'un électricien ?",
+      "url": "https://izi-by-edf.fr/blog/tarif-horaire-electricien"
+    },
+    "monclubelec": {
+      "nom": "Mon Club Elec",
+      "titre": "Tarif horaire électricien en 2026",
+      "url": "https://www.mon-club-elec.fr/tarif-electricien-2025/"
+    },
+    "ptm2-tableau": {
+      "nom": "Prix-travaux-m2",
+      "titre": "Prix d'un changement de tableau électrique",
+      "url": "https://www.prix-travaux-m2.com/prix-changement-tableau-electrique.php"
+    },
+    "ptm2-install": {
+      "nom": "Prix-travaux-m2",
+      "titre": "Prix d'une installation électrique au m2",
+      "url": "https://www.prix-travaux-m2.com/prix-installation-electrique.php"
+    },
+    "empruntis": {
+      "nom": "Empruntis",
+      "titre": "Prix d'un diagnostic électrique",
+      "url": "https://www.empruntis.com/financement/guide/diagnostics-immobiliers-obligatoires/prix-diagnostic-electrique.php"
+    },
+    "dimo": {
+      "nom": "Dimo Diagnostic",
+      "titre": "Diagnostic électrique : prix",
+      "url": "https://www.dimo-diagnostic.net/actualite-diagnostic-immobilier/diagnostic-electrique-prix"
+    },
+    "impots": {
+      "nom": "impots.gouv.fr",
+      "titre": "Plusieurs taux de TVA",
+      "url": "https://www.impots.gouv.fr/particulier/plusieurs-taux-de-tva"
+    },
+    "sp-diag": {
+      "nom": "service-public.gouv.fr",
+      "titre": "Diagnostic immobilier : état de l'installation intérieure d'électricité",
+      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F18692"
+    }
+  },
+
+  "tableau": {
+    "titre": "Les prix d'un électricien, poste par poste",
+    "chapo": "Plusieurs sources par poste quand elles existent. Les bornes sont recopiées telles quelles ; « HT » ou « TTC » n'est indiqué que lorsque la source le précise.",
+    "lignes": [
+      {
+        "poste": "Taux horaire en journée",
+        "lien": "/services/urgence-depannage-electrique",
+        "releves": [
+          { "fourchette": "30 à 75 €", "unite": "de l'heure", "source": "prixpose-reno" },
+          { "fourchette": "35 à 55 € HT", "unite": "de l'heure", "source": "habitatpresto" },
+          { "fourchette": "75 € HT", "unite": "de l'heure, moyenne nationale", "source": "izi" }
+        ]
+      },
+      {
+        "poste": "Frais de déplacement",
+        "releves": [
+          { "fourchette": "20 à 50 €", "unite": "par intervention", "source": "habitatpresto" },
+          { "fourchette": "20 à 60 €", "unite": "par déplacement", "source": "monclubelec" },
+          { "fourchette": "50 à 100 €", "unite": "selon les régions", "source": "prixpose-tableau" }
+        ]
+      },
+      {
+        "poste": "Majoration soir, week-end, jour férié",
+        "releves": [
+          { "fourchette": "+50 à +100 %", "unite": "sur le tarif horaire", "source": "habitatpresto" }
+        ]
+      },
+      {
+        "poste": "Heure de dépannage d'urgence",
+        "lien": "/services/urgence-depannage-electrique",
+        "releves": [
+          { "fourchette": "90 à 120 € TTC", "unite": "de l'heure, soir ou week-end", "source": "habitatpresto" },
+          { "fourchette": "70 à 120 € HT", "unite": "de l'heure", "source": "monclubelec" }
+        ]
+      },
+      {
+        "poste": "Recherche et réparation d'un court-circuit",
+        "lien": "/services/recherche-panne-electrique",
+        "releves": [
+          { "fourchette": "100 à 200 € TTC", "unite": "déplacement inclus", "source": "habitatpresto" }
+        ]
+      },
+      {
+        "poste": "Remplacement complet du tableau électrique",
+        "lien": "/services/remise-aux-normes-tableau-electrique",
+        "releves": [
+          { "fourchette": "450 à 1 400 €", "unite": "installation incluse", "source": "prixpose-tableau" },
+          { "fourchette": "250 à 1 600 € HT", "unite": "main-d'œuvre comprise", "source": "ptm2-tableau" },
+          { "fourchette": "600 à 2 500 € TTC", "unite": "pose ou remplacement", "source": "habitatpresto" }
+        ]
+      },
+      {
+        "poste": "Mise en sécurité du tableau",
+        "releves": [
+          { "fourchette": "200 à 550 €", "unite": "installation incluse", "source": "prixpose-tableau" }
+        ]
+      },
+      {
+        "poste": "Remise aux normes du tableau",
+        "lien": "/services/remise-aux-normes-tableau-electrique",
+        "releves": [
+          { "fourchette": "250 à 800 €", "unite": "fournitures et pose comprises", "source": "ptm2-tableau" }
+        ]
+      },
+      {
+        "poste": "Mise aux normes d'une installation ancienne",
+        "lien": "/services/mise-en-conformite-diagnostic-electrique",
+        "releves": [
+          { "fourchette": "800 à 3 000 € TTC", "unite": "le chantier", "source": "habitatpresto" },
+          { "fourchette": "50 à 80 € TTC", "unite": "par m², mise en sécurité", "source": "prixpose-reno" },
+          { "fourchette": "50 à 80 €", "unite": "par m², mise en sécurité", "source": "monclubelec" }
+        ]
+      },
+      {
+        "poste": "Diagnostic électricité (vente ou location)",
+        "releves": [
+          { "fourchette": "80 à 180 € TTC", "unite": "par logement", "source": "empruntis" },
+          { "fourchette": "65 à 190 €", "unite": "par logement", "source": "dimo" }
+        ]
+      },
+      {
+        "poste": "Rénovation électrique complète",
+        "lien": "/services/renovation-electrique-complete",
+        "releves": [
+          { "fourchette": "125 à 200 € TTC", "unite": "par m², pose comprise", "source": "prixpose-reno" },
+          { "fourchette": "130 à 220 €", "unite": "par m²", "source": "habitatpresto" },
+          { "fourchette": "110 à 180 € HT", "unite": "par m², dans l'ancien", "source": "ptm2-install" }
+        ]
+      },
+      {
+        "poste": "Installation électrique neuve",
+        "lien": "/services/installation-electrique-neuve",
+        "releves": [
+          { "fourchette": "100 à 150 € TTC", "unite": "par m², maison neuve sans chauffage", "source": "prixpose-neuf" },
+          { "fourchette": "70 à 125 € HT", "unite": "par m², en construction", "source": "ptm2-install" }
+        ]
+      }
+    ]
+  },
+
+  "blocs": {
+    "horaire": {
+      "titre": "Taux horaire d'un électricien et prix du déplacement",
+      "corps": [
+        "L'heure de main-d'œuvre se situe entre 30 et 75 € selon Prix-pose. Habitatpresto la place entre 35 et 55 € HT, et IZI by EDF retient une moyenne nationale de 75 € HT. Ces chiffres ne se contredisent pas autant qu'il y paraît : l'un compte une heure de rénovation, l'autre une moyenne toutes interventions, et tous n'affichent pas le même régime de taxes.",
+        "Le déplacement figure sur une ligne à part. Habitatpresto relève 20 à 50 €, Mon Club Elec 20 à 60 € par déplacement, Prix-pose 50 à 100 € selon les régions. Nous vous indiquons ce montant avant de venir, puis il apparaît tel quel sur la facture."
+      ]
+    },
+    "urgence": {
+      "titre": "Dépannage d'urgence : nuit, week-end et jour férié",
+      "corps": [
+        "Une coupure ne prévient pas. Pour une intervention en soirée, le week-end ou un jour férié, Habitatpresto observe une majoration de 50 à 100 % sur le tarif horaire, soit 90 à 120 € TTC l'heure d'urgence. Mon Club Elec situe l'heure de dépannage urgent entre 70 et 120 € HT.",
+        "Avant d'appeler un dimanche, regardez le disjoncteur de branchement puis l'interrupteur différentiel qui a pu déclencher. Si un seul circuit est tombé et que le reste du logement fonctionne, attendre un jour ouvré évite la majoration. Odeur de brûlé, prise noircie, tableau chaud au toucher : là, on n'attend pas. Voir notre [dépannage électrique d'urgence](/services/urgence-depannage-electrique)."
+      ]
+    },
+    "tableau": {
+      "titre": "Prix d'un tableau électrique : changement complet ou partiel",
+      "corps": [
+        "C'est la question de prix la plus fréquente. Pour un remplacement total, installation incluse, Prix-pose relève 450 à 1 400 €. Prix-travaux-m2 donne 250 à 1 600 € HT, main-d'œuvre comprise, selon la taille du logement. Habitatpresto affiche 600 à 2 500 € TTC pour la pose ou le remplacement d'un tableau.",
+        "L'écart suit le nombre de rangées, donc le nombre de circuits à protéger, et l'état des conducteurs qui arrivent au coffret. Un tableau à fusibles se remplace en entier ; un tableau modulaire récent auquel il manque un interrupteur différentiel se complète. Le détail de la prestation : [remise aux normes du tableau électrique](/services/remise-aux-normes-tableau-electrique)."
+      ]
+    },
+    "normes": {
+      "titre": "Mise aux normes électrique : du coffret à toute l'installation",
+      "corps": [
+        "Remettre aux normes le seul tableau coûte 250 à 800 €, fournitures et pose comprises, selon Prix-travaux-m2 ; une simple mise en sécurité du tableau revient à 200 à 550 € chez Prix-pose. Quand c'est l'installation ancienne entière qu'il faut reprendre, Habitatpresto relève 800 à 3 000 € TTC.",
+        "Rapportée à la surface, une mise en sécurité (corriger les points dangereux, poser les protections manquantes, raccorder la terre) se situe entre 50 et 80 € le m², chez Prix-pose comme chez Mon Club Elec. La référence technique reste la norme NF C 15-100. Notre prestation : [mise en conformité électrique](/services/mise-en-conformite-diagnostic-electrique)."
+      ]
+    },
+    "diagnostic": {
+      "titre": "Prix d'un diagnostic électrique : deux prestations différentes",
+      "corps": [
+        "Le diagnostic demandé pour vendre ou louer un logement dont l'installation a plus de 15 ans s'appelle l'état de l'installation intérieure d'électricité. Service-public.gouv.fr le précise : un diagnostiqueur certifié le réalise, et il doit dater de moins de 3 ans pour une vente, de moins de 6 ans pour un bail. Son prix : 80 à 180 € TTC selon Empruntis, 65 à 190 € selon Dimo Diagnostic. Ce document ne relève pas d'un électricien, donc pas de nous.",
+        "L'autre « diagnostic » est une recherche de panne : trouver pourquoi un différentiel saute ou pourquoi une pièce reste privée de courant, puis réparer. Habitatpresto chiffre l'identification et la réparation d'un court-circuit à 100 à 200 € TTC, déplacement inclus. Ça, c'est notre travail : [recherche de panne électrique](/services/recherche-panne-electrique). Et si le rapport du diagnostiqueur liste des anomalies, nous les corrigeons."
+      ]
+    },
+    "renovation": {
+      "titre": "Rénovation électrique complète : le prix au m²",
+      "corps": [
+        "Refaire toute l'électricité d'un logement (câbles, prises, interrupteurs, points lumineux, tableau) se chiffre au mètre carré : 125 à 200 € TTC chez Prix-pose, 130 à 220 € chez Habitatpresto, 110 à 180 € HT dans l'ancien chez Prix-travaux-m2.",
+        "Entre la mise en sécurité et la réfection totale, Prix-pose place la rénovation partielle à 80 à 120 € TTC le m². Ce qui fait basculer vers la réfection totale : des circuits sans conducteur de terre, des fils posés sans gaine, un isolant qui s'effrite. Notre prestation : [rénovation électrique complète](/services/renovation-electrique-complete)."
+      ]
+    },
+    "neuf": {
+      "titre": "Installation électrique neuve : le prix du premier câblage",
+      "corps": [
+        "En construction, Prix-travaux-m2 relève 70 à 125 € HT le m². Prix-pose donne 100 à 150 € TTC le m² pour une maison neuve sans chauffage électrique. Le montant dépend d'abord du plan : nombre de prises, de points lumineux et de circuits spécialisés (plaque, four, lave-linge, borne de recharge).",
+        "Dans le neuf, pas de taux réduit : la TVA à 10 % ne concerne que les logements achevés depuis plus de deux ans (voir plus bas). Notre prestation : [installation électrique neuve](/services/installation-electrique-neuve)."
+      ]
+    },
+    "devis": {
+      "titre": "Devis d'électricien : les lignes à vérifier",
+      "corps": [
+        "Un devis lisible sépare le déplacement, la main-d'œuvre (à l'heure ou au forfait), chaque fourniture avec sa marque et sa quantité, la majoration s'il y en a une, et le taux de TVA appliqué. Le nôtre est gratuit et écrit : il fixe le prix avant le premier coup de tournevis.",
+        "Pour comparer deux devis de tableau ou de rénovation, vérifiez qu'ils décrivent la même chose : même nombre de rangées, mêmes interrupteurs différentiels, même nombre de circuits. Un devis moins cher qui oublie un parafoudre ou une rangée n'est pas moins cher."
+      ]
+    },
+    "tva": {
+      "titre": "TVA à 10 % ou à 20 % sur des travaux d'électricité",
+      "corps": [
+        "Selon impots.gouv.fr, les travaux d'amélioration, de transformation, d'aménagement et d'entretien dans un logement achevé depuis plus de deux ans relèvent de la TVA à 10 %. Le taux normal de 20 % s'applique aux logements de moins de deux ans, aux travaux qui augmentent la surface de plancher de plus de 10 %, et au matériel que vous achetez vous-même pour le faire poser. Les travaux d'amélioration de la qualité énergétique relèvent, eux, d'un taux de 5,5 %.",
+        "Les prix de cette page ne précisent pas tous leur taux : sur votre facture, la TVA est indiquée ligne par ligne, avec le taux retenu."
+      ]
+    }
+  },
+
+  "cas": {
+    "titre": "Trois budgets calculés à partir des fourchettes",
+    "chapo": "Trois scénarios types, pas des chantiers réalisés. Chaque total additionne uniquement des fourchettes sourcées du tableau, sans rien ajouter.",
+    "items": [
+      {
+        "libelle": "Cas 1",
+        "titre": "Coupure un samedi soir, une heure de recherche",
+        "lignes": [
+          { "libelle": "Déplacement", "valeur": "20 à 50 €", "source": "habitatpresto" },
+          { "libelle": "1 heure d'intervention d'urgence", "valeur": "90 à 120 € TTC", "source": "habitatpresto" }
+        ],
+        "calcul": "20 + 90 = 110 € ; 50 + 120 = 170 €",
+        "total": "110 à 170 €",
+        "note": "Hors pièce à remplacer (disjoncteur, prise)."
+      },
+      {
+        "libelle": "Cas 2",
+        "titre": "Vente d'un appartement : diagnostic, puis tableau remplacé",
+        "lignes": [
+          { "libelle": "Diagnostic électricité par un diagnostiqueur certifié", "valeur": "80 à 180 € TTC", "source": "empruntis" },
+          { "libelle": "Remplacement complet du tableau", "valeur": "450 à 1 400 €", "source": "prixpose-tableau" }
+        ],
+        "calcul": "80 + 450 = 530 € ; 180 + 1 400 = 1 580 €",
+        "total": "530 à 1 580 €",
+        "note": "Deux professionnels différents : le diagnostiqueur, puis l'électricien."
+      },
+      {
+        "libelle": "Cas 3",
+        "titre": "Maison de 100 m² entièrement recâblée",
+        "lignes": [
+          { "libelle": "Rénovation complète, 100 m²", "valeur": "125 à 200 € TTC le m²", "source": "prixpose-reno" }
+        ],
+        "calcul": "100 × 125 = 12 500 € ; 100 × 200 = 20 000 €",
+        "total": "12 500 à 20 000 €",
+        "note": "Habitatpresto, avec sa propre fourchette au m², annonce 13 000 à 22 000 € TTC pour une maison de 100 m².",
+        "noteSource": "habitatpresto"
+      }
+    ]
+  },
+
+  "formulaire": {
+    "surtitre": "Devis gratuit",
+    "titre": "Votre prix, écrit avant les travaux",
+    "texte": "Les fourchettes ci-dessus servent à repérer un montant anormal. Pour votre tableau, votre panne ou votre chantier, décrivez-nous la situation : nous chiffrons ligne par ligne."
+  },
+
+  "faq": [
+    {
+      "q": "Pourquoi une facture peut-elle sortir des fourchettes de cette page ?",
+      "a": "Parce qu'une fourchette nationale ignore l'accès à votre tableau, l'état des câbles et l'heure de l'appel. Les sites relevés n'ont pas non plus la même méthode : certains affichent des montants hors taxes, d'autres toutes taxes. Ces repères aident à détecter un devis anormal, ils ne remplacent pas le chiffrage de votre logement."
+    },
+    {
+      "q": "Le déplacement est-il dû si la panne se règle très vite ?",
+      "a": "En général oui : c'est une ligne distincte de la main-d'œuvre, même quand réarmer un différentiel suffit. Nous vous annonçons son montant avant de venir. Au téléphone, nous vérifions d'abord avec vous le disjoncteur de branchement et les différentiels : parfois, cela rend le déplacement inutile."
+    },
+    {
+      "q": "Un électricien peut-il établir le diagnostic électricité exigé pour vendre ?",
+      "a": "Non. L'état de l'installation intérieure d'électricité est réalisé par un diagnostiqueur certifié, comme le rappelle service-public.gouv.fr. L'électricien intervient avant, pour trouver une panne, ou après, pour corriger les anomalies notées dans le rapport."
+    },
+    {
+      "q": "Qui a droit à la TVA à 10 % sur des travaux d'électricité ?",
+      "a": "Le particulier qui confie à une entreprise des travaux d'amélioration ou d'entretien dans un logement achevé depuis plus de deux ans, sans l'agrandir de plus de 10 % ni le rendre neuf au sens fiscal. Le matériel que vous achetez vous-même reste à 20 %, tout comme les travaux dans un logement neuf."
+    },
+    {
+      "q": "Mise en sécurité ou tableau neuf : comment savoir ce qu'il faut ?",
+      "a": "Tout dépend de ce qu'on trouve en ouvrant le coffret : fusibles à broches, absence d'interrupteur différentiel, rangées saturées, conducteurs sans repérage. Une mise en sécurité complète un tableau sain ; un remplacement s'impose quand le coffret lui-même est dépassé. Sur notre devis, chaque ligne dit pourquoi elle est là."
+    }
+  ]
+}

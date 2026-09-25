@@ -2,46 +2,56 @@
   "slug": "pringy",
   "name": "Pringy",
   "postalCode": "74370",
-  "context": "Ancienne commune fusionnée avec Annecy en 2017, aujourd'hui secteur résidentiel au nord de l'agglomération.",
-  "metaTitle": "Électricien à Pringy (74)",
-  "metaDescription": "Électricien dans le secteur de Pringy : dépannage, tableau électrique, mise aux normes. Intervention rapide. Contactez-nous.",
-  "h1": "Électricien dans le secteur de Pringy",
-  "intro": "Nous intervenons dans le secteur de Pringy (74370) pour tout dépannage électrique, remise aux normes de tableau ou installation électrique neuve. Ancienne commune devenue secteur d'Annecy depuis la fusion de 2017, Pringy est un secteur résidentiel au nord de l'agglomération, entre pavillons et zones pavillonnaires calmes. Nous diagnostiquons précisément avant toute intervention.",
+  "context": "Secteur nord d'Annecy depuis la fusion de 2017, formé de plusieurs hameaux dont le Pont de Brogny, en forte croissance avant la fusion.",
+  "metaTitle": "Électricien à Pringy, installation neuve et dépannage",
+  "metaDescription": "Maison neuve à équiper, fibre à distribuer, panne à régler à Pringy : tableau, gaine technique et prises RJ45 posés dans les règles. Parlons-en.",
+  "h1": "Électricien à Pringy",
+  "intro": "Nous réalisons l'installation électrique des maisons neuves et dépannons les logements de Pringy (74370), du chef-lieu au Pont de Brogny. Devenu commune déléguée quand la commune nouvelle d'Annecy a vu le jour, le 1er janvier 2017, Pringy comptait 4 085 habitants en 2014, en hausse de près de 19 % par rapport à 2008. Dans un secteur qui a grandi aussi vite, l'installation neuve et l'équipement en réseau reviennent souvent dans les demandes.",
   "blocks": [
     {
-      "heading": "Nos prestations dans le secteur de Pringy",
-      "body": "Nous intervenons dans le secteur de Pringy pour toutes les situations électriques : recherche de panne, remise aux normes de tableau électrique, diagnostic avant vente, et installation électrique neuve pour une extension ou une dépendance. Nous établissons un diagnostic clair et un devis détaillé avant toute intervention."
+      "heading": "Électricien à Pringy pour une maison neuve",
+      "body": "Dans une construction neuve, l'installation électrique se prépare dès les plans. Nous définissons avec vous l'emplacement du tableau, le nombre de prises et de points lumineux par pièce selon la NF C 15-100, les circuits spécialisés de la cuisine et de la buanderie, et les attentes pour les projets futurs comme une recharge de véhicule ou une pompe à chaleur. Les gaines se posent pendant le gros œuvre ou avant la fermeture des cloisons, l'appareillage après les peintures."
     },
     {
-      "heading": "Panne urgente à Pringy",
-      "body": "En cas de panne urgente dans le secteur de Pringy, appelez-nous directement. En attendant notre arrivée, coupez le disjoncteur du circuit concerné (ou le disjoncteur général en cas de doute ou d'odeur de brûlé) pour limiter les risques. Nous intervenons 7j/7 sur Pringy et les secteurs et communes voisines."
+      "heading": "Gaine technique et tableau de communication",
+      "body": "Dans un logement neuf, la norme prévoit une gaine technique logement, un emplacement qui regroupe le tableau électrique et le tableau de communication. Ce dernier reçoit l'arrivée de la fibre ou du téléphone et redistribue le réseau vers les prises RJ45 des pièces. Placer la box à cet endroit, plutôt que dans un coin du salon, permet de brancher en câble la télévision, l'ordinateur du bureau ou un point d'accès wifi à l'étage. Nous câblons et repérons chaque prise pour que vous sachiez laquelle correspond à quelle pièce."
     },
     {
-      "heading": "Secteurs et communes voisines desservis",
-      "body": "En plus de Pringy, nous intervenons dans le secteur d'Argonay, et la commune d'Épagny Metz-Tessy au nord de l'agglomération. Notre zone de couverture s'étend sur un rayon de 30 km autour d'Annecy."
+      "heading": "Des prises RJ45 plutôt que des répéteurs wifi",
+      "body": "Le wifi traverse mal les dalles et les murs épais. Une prise réseau câblée dans chaque pièce de vie donne une connexion stable pour le télétravail, les écrans et les objets connectés. Quand les gaines sont posées en même temps que celles de l'électricité, le surcoût reste modeste. Après coup, il faut passer des câbles dans des gaines déjà occupées ou en apparent : il vaut mieux y penser au moment des plans."
+    },
+    {
+      "heading": "Une panne dans une maison récente de Pringy",
+      "body": "Même une installation neuve peut disjoncter. On trouve le plus souvent un appareil défectueux, une prise extérieure qui a pris l'eau ou un circuit chargé au-delà de ce qui avait été prévu. Sur un tableau récent et bien repéré, la recherche est rapide : nous identifions le différentiel qui tombe, nous déconnectons les appareils un par un, puis nous testons les lignes. La plupart du temps, l'installation est saine et c'est l'équipement branché qui est en cause."
     }
   ],
-  "neighbours": [
-    "Argonay",
-    "Épagny Metz-Tessy",
-    "Annecy centre-ville"
+  "bodyImage": "/zones/pringy-corps.jpg",
+  "bodyImageAlt": "Tableau de communication avec la box et les connexions réseau, installé à côté du tableau électrique d'une maison neuve",
+  "bodyImageCaption": "Maison neuve : le tableau de communication, qui distribue la fibre vers les prises RJ45, voisine avec le tableau électrique.",
+  "neighbours": ["argonay", "epagny-metz-tessy", "annecy-le-vieux"],
+  "relatedServices": ["installation-electrique-neuve", "urgence-depannage-electrique", "recherche-panne-electrique"],
+  "prixPhrase": "À Pringy, le prix d'une installation neuve suit la surface et le niveau d'équipement : voici les repères pour préparer votre budget.",
+  "sources": [
+    { "label": "Légifrance, arrêté du 14 juillet 2016 portant création de la commune nouvelle d'Annecy", "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000033313064" },
+    { "label": "geo.api.gouv.fr, Pringy commune déléguée (74217)", "url": "https://geo.api.gouv.fr/communes_associees_deleguees/74217" },
+    { "label": "Wikipédia, Pringy (population 2014, hameaux)", "url": "https://fr.wikipedia.org/wiki/Pringy_(Haute-Savoie)" }
   ],
   "faq": [
     {
-      "q": "Pringy est-elle toujours une commune indépendante ?",
-      "a": "Non. Depuis le 1er janvier 2017, Pringy a fusionné avec Annecy et quatre autres anciennes communes pour former la commune nouvelle d'Annecy. C'est aujourd'hui un secteur d'Annecy avec sa propre identité et son code postal (74370), mais plus une commune autonome."
+      "q": "Le tableau de communication est-il obligatoire dans une maison neuve ?",
+      "a": "Dans un logement neuf, la NF C 15-100 prévoit une gaine technique qui réunit le tableau électrique et le tableau de communication. C'est lui qui distribue le réseau vers les prises RJ45 des pièces."
     },
     {
-      "q": "Intervenez-vous dans le secteur de Pringy pour le dépannage électrique ?",
-      "a": "Oui. Nous intervenons dans le secteur de Pringy (74370) pour tout dépannage électrique : recherche de panne, disjoncteur qui saute, remise aux normes de tableau. Diagnostic précis, devis avant travaux."
+      "q": "Combien de prises RJ45 prévoir dans une maison ?",
+      "a": "La norme fixe un minimum selon la taille du logement, mais le bon nombre dépend de vos usages : au moins une dans le séjour, le bureau et chaque chambre où un écran ou un ordinateur sera utilisé. Nous en discutons pièce par pièce sur les plans."
     },
     {
-      "q": "Quel est le délai d'intervention à Pringy ?",
-      "a": "Pringy est un secteur proche du centre d'Annecy, accessible rapidement depuis notre zone d'intervention. Nous vous donnons un délai estimatif lors de votre appel en fonction de notre planning du moment."
+      "q": "Peut-on ajouter des prises réseau dans une maison déjà construite ?",
+      "a": "Oui, en réutilisant les gaines existantes quand elles ont de la place, ou en passant des goulottes discrètes. C'est plus contraignant qu'en construction neuve, mais souvent faisable sans casser les murs."
     },
     {
-      "q": "Intervenez-vous aussi à Argonay et Épagny Metz-Tessy ?",
-      "a": "Oui. Nous couvrons Argonay, Épagny Metz-Tessy et les autres secteurs et communes du nord de l'agglomération annécienne dans le cadre de notre zone d'intervention de 30 km."
+      "q": "Pringy dépend-elle d'Annecy pour les démarches ?",
+      "a": "Oui. Pringy fait partie de la commune nouvelle d'Annecy, créée le 1er janvier 2017, dont il est l'une des communes déléguées. Le secteur conserve son code postal 74370, partagé avec Argonay."
     }
   ]
 }

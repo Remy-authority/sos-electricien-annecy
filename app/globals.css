@@ -215,3 +215,21 @@
     @apply mt-2 text-center text-sm not-italic text-slate-500;
   }
 }
+
+/* Pied de page : volets <details> repliables en mobile et tablette, colonnes toujours
+   ouvertes en lg (rendu ordinateur inchangé). Sans prise en charge de ::details-content
+   (navigateurs anciens), les volets restent simplement cliquables. */
+.foot-groupe[open] .foot-chevron {
+  transform: rotate(180deg);
+}
+@supports selector(::details-content) {
+  @media (min-width: 1024px) {
+    .foot-groupe::details-content {
+      content-visibility: visible;
+    }
+    .foot-groupe > summary {
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+}

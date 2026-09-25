@@ -4,13 +4,21 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { siteConfig } from '@/config/site.config'
 
-interface NavItem {
-  slug: string
-  navTitle: string
+interface NavLien {
+  href: string
+  label: string
 }
 
-export default function HeaderNavMobile({ services, blogEnabled }: { services: NavItem[]; blogEnabled: boolean }) {
+/** Un sous-menu dépliable : 3 liens + « voir tout » (miroir des menus ordinateur). */
+interface Groupe {
+  label: string
+  liens: NavLien[]
+  tout: NavLien
+}
+
+export default function HeaderNavMobile({ groupes, blogEnabled }: { groupes: Groupe[]; blogEnabled: boolean }) {
   const [open, setOpen] = useState(false)
+  const [deplie, setDeplie] = useState<string | null>(null)
 
   return (
     <>
@@ -30,7 +38,7 @@ export default function HeaderNavMobile({ services, blogEnabled }: { services: N
       {open && (
         <div
           id="mobile-nav"
-          className="absolute inset-x-0 top-full z-50 border-b border-slate-200 bg-white shadow-lg lg:hidden"
+          className="absolute inset-x-0 top-full z-50 max-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-slate-200 bg-white shadow-lg lg:hidden"
         >
           <nav aria-label="Navigation mobile" className="container-site py-4">
             <ul className="space-y-1">
@@ -39,27 +47,55 @@ export default function HeaderNavMobile({ services, blogEnabled }: { services: N
                   Accueil
                 </Link>
               </li>
-              <li>
-                <p className="px-3 pb-1 pt-2 text-xs font-semibold uppercase tracking-wider text-slate-400">Services</p>
-                <ul>
-                  {services.map((s) => (
-                    <li key={s.slug}>
-                      <Link
-                        href={`/services/${s.slug}`}
-                        onClick={() => setOpen(false)}
-                        className="block rounded-lg px-3 py-2 text-sm text-slate-600 hover:bg-primary/5 hover:text-primary"
+              {groupes.map((g) => {
+                const ouvert = deplie === g.label
+                const idListe = `mobile-nav-${g.label.toLowerCase().replace(/[^a-z]/g, '')}`
+                return (
+                  <li key={g.label}>
+                    <button
+                      type="button"
+                      aria-expanded={ouvert}
+                      aria-controls={idListe}
+                      onClick={() => setDeplie(ouvert ? null : g.label)}
+                      className="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-left font-medium text-slate-700 hover:bg-primary/5 hover:text-primary"
+                    >
+                      {g.label}
+                      <svg
+                        className={`h-4 w-4 shrink-0 transition-transform ${ouvert ? 'rotate-180' : ''}`}
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        aria-hidden="true"
                       >
-                        {s.navTitle}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </li>
-              <li>
-                <Link href="/zones" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2.5 font-medium text-slate-700 hover:bg-primary/5 hover:text-primary">
-                  Zones d'intervention
-                </Link>
-              </li>
+                        <path d="m6 9 6 6 6-6" />
+                      </svg>
+                    </button>
+                    <ul id={idListe} hidden={!ouvert} className="mb-1 ml-3 border-l border-slate-200 pl-2">
+                      {g.liens.map((l) => (
+                        <li key={l.href}>
+                          <Link
+                            href={l.href}
+                            onClick={() => setOpen(false)}
+                            className="block rounded-lg px-3 py-2 text-sm text-slate-600 hover:bg-primary/5 hover:text-primary"
+                          >
+                            {l.label}
+                          </Link>
+                        </li>
+                      ))}
+                      <li>
+                        <Link
+                          href={g.tout.href}
+                          onClick={() => setOpen(false)}
+                          className="block rounded-lg px-3 py-2 text-sm font-semibold text-accent-deep hover:bg-accent/10"
+                        >
+                          {g.tout.label} →
+                        </Link>
+                      </li>
+                    </ul>
+                  </li>
+                )
+              })}
               {blogEnabled && (
                 <li>
                   <Link href="/conseils" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2.5 font-medium text-slate-700 hover:bg-primary/5 hover:text-primary">

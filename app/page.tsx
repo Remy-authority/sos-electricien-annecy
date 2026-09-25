@@ -17,15 +17,16 @@ import Realisations from '@/components/sections/Realisations'
 import { ServiceIcon } from '@/components/ui/ServiceIcon'
 import { BoltBadge } from '@/components/ui/Bolt'
 
-const TITLE = "Électricien d'urgence à Annecy, dépannage rapide"
+// 25/09/2026 : requête d'argent « électricien annecy » (590 recherches/mois, DataForSEO)
+// en tête du title ; le H1 reste « Électricien d'urgence à Annecy ».
+const TITLE = "Électricien à Annecy, dépannage d'urgence 24h/24"
 const DESC =
-  "Électricien à Annecy et environs : dépannage, tableau électrique, mise aux normes. Intervention rapide. Devis et prise de contact en ligne."
+  "Panne de courant, disjoncteur qui saute, tableau à refaire à Annecy : diagnostic sur place, devis écrit avant travaux. Décrivez votre panne en 30 secondes."
 
 export const metadata: Metadata = buildMetadata({ title: TITLE, description: DESC, path: '/' })
 
 export default function HomePage() {
   const services = getServices()
-  // DEMO – contenu imaginé persona Thomas Mercier, à affiner par ST-5
   const homeFaq = siteConfig.homeFaq as unknown as { q: string; a: string }[]
 
   return (
@@ -34,7 +35,7 @@ export default function HomePage() {
       <TrustBadges />
 
       {/* Services : section immersive nuit, cartes en verre (pièce maîtresse) */}
-      <section className="section-dark section" aria-labelledby="services-title">
+      <section id="services" className="section-dark section scroll-mt-20" aria-labelledby="services-title">
         <div className="container-site">
           <div className="mb-10 text-center sm:text-left">
             <BoltBadge label="Ce que nous faisons" />
@@ -95,7 +96,7 @@ export default function HomePage() {
                 <span className="accent-serif text-accent-deep">3 étapes</span>
               </h2>
               <p className="mt-2 text-sm text-slate-600">
-                Nous vous rappelons sous 30 minutes, sans engagement.
+                Nous revenons vers vous pour fixer le diagnostic, sans engagement.
               </p>
             </div>
             <LeadForm />

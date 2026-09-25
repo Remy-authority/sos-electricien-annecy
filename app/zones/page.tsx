@@ -8,8 +8,9 @@ import Faq from '@/components/ui/Faq'
 import CtaBanner from '@/components/ui/CtaBanner'
 
 export const metadata: Metadata = buildMetadata({
-  title: `Zones d'intervention, électricien près d'${siteConfig.city}`,
-  description: `Communes desservies autour d'${siteConfig.city} pour le dépannage électrique : rayon d'environ ${siteConfig.serviceArea.radiusKm} km.`,
+  title: "Électricien autour d'Annecy : les 12 communes couvertes",
+  description:
+    "Seynod, Cran-Gevrier, Meythet, Rumilly ou les rives du lac : trouvez votre commune et ce que nous faisons pour un dépannage électrique près de chez vous.",
   path: '/zones',
 })
 
@@ -34,7 +35,7 @@ export default function ZonesHub() {
     },
     {
       q: 'Le déplacement dans les communes voisines est-il facturé en plus ?',
-      a: `Le déplacement et le diagnostic de base sont gratuits et sans engagement dans notre zone d'intervention autour d'${siteConfig.city}. Le tarif de l'intervention dépend ensuite de la nature de la panne et des pièces à remplacer. Contactez-nous pour un devis.`,
+      a: `Les frais de déplacement figurent sur [notre page tarifs](/tarifs) et vous sont annoncés au téléphone, avant que nous prenions la route. Pour la réparation elle-même, le devis écrit vient après le diagnostic sur place, et rien ne commence sans votre accord.`,
     },
   ]
 
@@ -50,7 +51,7 @@ export default function ZonesHub() {
         </div>
 
         {/* Réponse courte factuelle « citable » (GEO) */}
-        <p className="mt-5 max-w-3xl rounded-card bg-light p-5 text-slate-700">{citable}</p>
+        <p className="mt-5 max-w-3xl rounded-card bg-light p-5 text-center text-slate-700 sm:text-left">{citable}</p>
 
         {/* Cartes enrichies : contexte par commune */}
         <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

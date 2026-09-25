@@ -10,7 +10,8 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import Faq from '@/components/ui/Faq'
 import CtaBanner from '@/components/ui/CtaBanner'
 import ServiceQuickFacts from '@/components/ui/ServiceQuickFacts'
-import ServiceBlock from '@/components/ui/ServiceBlock'
+import ServiceBlock, { PrixBloc } from '@/components/ui/ServiceBlock'
+import ServiceSchema, { serviceSchemaKeys, type SchemaKey } from '@/components/schemas/ServiceSchema'
 import AccentWord from '@/components/ui/AccentWord'
 import { BoltBadge, BoltDivider } from '@/components/ui/Bolt'
 
@@ -39,6 +40,28 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
   const articles = getRelatedArticles(service.slug)
   const firstBlockImageIndex = service.blocks.findIndex((b) => b.image)
 
+  // ── Rythme (Rémy 23/09/2026) : jamais plus de 2 blocs de texte d'affilée sans visuel ──
+  // Un bloc qui porte sa photo (`block.image`) remet le compteur à zéro. Dès que deux
+  // blocs d'affilée n'en ont pas et qu'un autre bloc suit, on insère le schéma sourcé de
+  // la prestation (règle de choix dans components/schemas/ServiceSchema.tsx), puis le
+  // suivant de la liste si la page en exige un autre. Le premier schéma est toujours
+  // montré : s'il n'a pas trouvé de place dans le corps, il vient après le dernier bloc.
+  const schemaKeys = serviceSchemaKeys(service.slug)
+  const schemaAfter: (SchemaKey | null)[] = service.blocks.map(() => null)
+  {
+    let run = 0
+    let next = 0
+    service.blocks.forEach((b, i) => {
+      run = b.image ? 0 : run + 1
+      const isLast = i === service.blocks.length - 1
+      if (run >= 2 && !isLast && next < schemaKeys.length) {
+        schemaAfter[i] = schemaKeys[next++]
+        run = 0
+      }
+    })
+    if (next === 0 && service.blocks.length > 0) schemaAfter[service.blocks.length - 1] = schemaKeys[0]
+  }
+
   return (
     <>
       <script
@@ -55,10 +78,10 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             { name: service.navTitle, path: `/services/${service.slug}` },
           ]}
         />
-        <div className="container-site pt-8">
+        <div className="container-site pt-8 text-center lg:text-left">
           <BoltBadge label="Prestation" />
           {/* Accroche entière en serif italique, la ville en ambre */}
-          <h1 className="accroche mt-4 max-w-4xl text-[2.1rem] text-white sm:text-5xl">
+          <h1 className="accroche mx-auto mt-4 max-w-4xl text-[1.95rem] text-white max-lg:text-balance sm:text-5xl lg:mx-0">
             <AccentWord text={service.h1} word={siteConfig.city} className="not-italic text-accent" />
           </h1>
 
@@ -98,15 +121,18 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
               <Fragment key={b.heading}>
                 {i > 0 && <BoltDivider />}
                 <ServiceBlock block={b} eager={i === firstBlockImageIndex} />
+                {schemaAfter[i] && <ServiceSchema schema={schemaAfter[i]!} />}
               </Fragment>
             ))}
           </div>
 
+          <PrixBloc heading="Prix et devis" phrase={service.prixPhrase} />
+
           {/* Maillage interne : services liés */}
           {related.length > 0 && (
-            <nav aria-label="Services liés" className="mt-10">
+            <nav aria-label="Services liés" className="mt-10 text-center lg:text-left">
               <h2 className="text-xl">Prestations liées</h2>
-              <ul className="mt-3 flex flex-wrap gap-2">
+              <ul className="mt-3 flex flex-wrap justify-center gap-2 lg:justify-start">
                 {related.map((r) => (
                   <li key={r.slug}>
                     <Link href={`/services/${r.slug}`} className="rounded-full border border-slate-300 px-3 py-1.5 text-sm hover:border-primary">
@@ -120,7 +146,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
 
           {/* Maillage interne automatique : articles du cluster */}
           {articles.length > 0 && (
-            <nav aria-label="Conseils liés" className="mt-8">
+            <nav aria-label="Conseils liés" className="mt-8 text-center lg:text-left">
               <h2 className="text-xl">À lire aussi</h2>
               <ul className="mt-3 space-y-1 text-sm">
                 {articles.map((a) => (

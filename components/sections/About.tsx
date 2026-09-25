@@ -1,36 +1,36 @@
 import Image from 'next/image'
 import { siteConfig } from '@/config/site.config'
 import AccentWord from '@/components/ui/AccentWord'
+import HomeDiagnosticSchema from '@/components/schemas/HomeDiagnosticSchema'
 
+/**
+ * Bloc « À propos » de l'accueil.
+ * 25/09/2026 : plus aucune personne nommée ni photo de portrait (persona fictive
+ * retirée), plus de chiffre inventé. La photo montre le métier (tableau électrique).
+ * Le schéma d'aide au choix (diagnostic obligatoire ou non) occupe une seconde rangée
+ * pleine largeur dans ce même bloc : aucun bloc ajouté à l'accueil.
+ */
 export default function About() {
   return (
     <section className="section" aria-labelledby="about-title">
       <div className="container-site grid gap-10 md:grid-cols-2 md:items-center lg:gap-16">
-        {/* Visuel, photo persona (DEMO – à remplacer par les infos du loueur) */}
+        {/* Visuel métier */}
         <div className="relative order-2 md:order-1">
           <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-slate-100">
-            {/* DEMO – photo IA placeholder. Vraie photo fournie par Rémy → public/julien-perret.jpg */}
             <Image
-              src={siteConfig.persona.photo}
-              alt={`${siteConfig.persona.name}, électricien à Annecy`}
+              src="/a-propos-tableau.jpg"
+              alt="Tableau électrique neuf, porte ouverte, dans une buanderie claire et rangée"
               width={560}
               height={420}
               className="h-full w-full object-cover"
             />
           </div>
-          {/* Badge flottant, DEMO – à remplacer par les infos du loueur */}
-          <div className="absolute -bottom-4 -right-4 hidden rounded-xl bg-primary px-5 py-3 text-center text-white shadow-card-hover sm:block">
-            {/* DEMO – à remplacer par les infos du loueur */}
-            <p className="font-display text-3xl font-semibold leading-none">+400</p>
-            <p className="mt-0.5 text-xs font-medium text-white/90">pannes résolues</p>
-          </div>
         </div>
 
         {/* Texte */}
-        <div className="order-1 md:order-2">
-          {/* DEMO – nom persona à remplacer par les infos du loueur */}
+        <div className="order-1 text-center md:order-2 md:text-left">
           <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-accent-deep">
-            {siteConfig.persona.name}
+            Notre équipe
           </p>
           <h2 id="about-title" className="text-2xl font-bold md:text-3xl">
             <AccentWord text={siteConfig.about.title} word={siteConfig.city} />
@@ -38,14 +38,14 @@ export default function About() {
           <p className="mt-4 leading-relaxed text-slate-600">{siteConfig.about.body}</p>
 
           <div className="mt-6 inline-flex items-center gap-2 rounded-lg border border-primary/20 bg-primary/5 px-4 py-2.5">
-            <svg className="h-5 w-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+            <svg className="h-5 w-5 shrink-0 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
               <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.25C17.25 22.15 21 17.25 21 12V7L12 2z" />
               <path d="m9 12 2 2 4-4" />
             </svg>
             <span className="text-sm font-semibold text-primary">{siteConfig.about.highlight}</span>
           </div>
 
-          <ul className="mt-6 space-y-3" role="list">
+          <ul className="mx-auto mt-6 w-fit space-y-3 text-left md:mx-0" role="list">
             {siteConfig.methods.map((m) => (
               <li key={m} className="flex items-center gap-3 text-slate-700">
                 <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-dark">
@@ -58,6 +58,9 @@ export default function About() {
             ))}
           </ul>
         </div>
+
+        {/* Schéma d'aide au choix, rangée pleine largeur */}
+        <HomeDiagnosticSchema />
       </div>
     </section>
   )

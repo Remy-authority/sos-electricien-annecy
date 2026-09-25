@@ -2,46 +2,69 @@
   "slug": "sevrier",
   "name": "Sevrier",
   "postalCode": "74320",
-  "context": "Commune au bord du lac d'Annecy, au sud de la ville, entre habitat résidentiel et secteur touristique.",
-  "metaTitle": "Électricien à Sevrier (74)",
-  "metaDescription": "Électricien à Sevrier, près d'Annecy : dépannage, tableau électrique, mise aux normes. Intervention rapide. Contactez-nous.",
+  "context": "Commune riveraine du lac d'Annecy, côté ouest, adossée au Semnoz, forte de 4 333 habitants, dont le centre et les hameaux occupent une étroite bande de terre au bord de l'eau.",
+  "metaTitle": "Électricien à Sevrier : salle de bains, panne, tableau",
+  "metaDescription": "Au bord du lac à Sevrier, nous refaisons l'électricité des salles de bains, traquons les pannes dues à l'humidité et reprenons les tableaux. Appelez-nous.",
   "h1": "Électricien à Sevrier",
-  "intro": "Nous intervenons à Sevrier (74320) pour tout dépannage électrique, remplacement de tableau ou mise aux normes. Commune au bord du lac d'Annecy, Sevrier associe résidences permanentes et logements saisonniers, ce qui implique des installations d'âges très variés, des constructions récentes aux logements de vacances plus anciens. Nous diagnostiquons précisément avant toute intervention.",
+  "intro": "Nous rénovons, dépannons et sécurisons l'électricité des logements de Sevrier (74320), du centre aux hameaux de Létraz, Chuguet ou Cessenaz. Sevrier compte 4 333 habitants, population publiée par geo.api.gouv.fr. Son centre et ses hameaux sont établis sur une étroite bande de terre qui borde le lac d'Annecy, au pied du Semnoz. Vivre si près de l'eau a une conséquence directe sur l'électricité : les pièces humides et les circuits exposés demandent une attention particulière.",
   "blocks": [
     {
-      "heading": "Nos prestations à Sevrier",
-      "body": "Nous intervenons à Sevrier pour toutes les situations électriques : recherche de panne, remplacement de tableau électrique, mise aux normes avant une location saisonnière ou une vente, et rénovation électrique complète pour les logements les plus anciens du secteur lacustre. Nous établissons un diagnostic clair et un devis détaillé avant toute intervention."
+      "heading": "Électricien à Sevrier, entre le lac et le Semnoz",
+      "body": "Au bord du lac, l'air chargé d'humidité s'infiltre dans les caves, les garages et les abris de jardin. Sur une installation ancienne, il finit par attaquer les connexions mal protégées : boîtes de dérivation sans couvercle, prises de garage non étanches, douilles de cave oxydées. Ces petits défauts d'isolement expliquent souvent les déclenchements qui semblent survenir sans raison. Des appareillages conçus pour les pièces humides et des connexions bien fermées règlent la plupart de ces situations."
     },
     {
-      "heading": "Panne urgente à Sevrier",
-      "body": "En cas de panne urgente à Sevrier, appelez-nous directement. En attendant notre arrivée, coupez le disjoncteur du circuit concerné (ou le disjoncteur général en cas de doute ou d'odeur de brûlé) pour limiter les risques. Nous intervenons 7j/7 sur Sevrier et les communes voisines."
+      "heading": "Salle de bains : ce que la norme autorise dans chaque volume",
+      "body": "La NF C 15-100 découpe la salle de bains en volumes autour de la baignoire et de la douche. Plus on se rapproche de l'eau, plus les règles sont strictes : dans le volume le plus proche, seuls des appareils en très basse tension de sécurité sont admis, et les prises de courant doivent rester en dehors des volumes réglementés. L'éclairage placé près de la douche doit être étanche, et une liaison équipotentielle relie les éléments métalliques. Lors d'une rénovation, nous plaçons chaque point électrique en fonction de ces volumes, avant la pose du carrelage."
     },
     {
-      "heading": "Communes limitrophes desservies",
-      "body": "En plus de Sevrier, nous intervenons dans les communes voisines : Annecy (tous quartiers), Saint-Jorioz, Veyrier-du-Lac et les autres communes riveraines du lac d'Annecy. Notre zone de couverture s'étend sur un rayon de 30 km autour d'Annecy."
+      "heading": "Recherche de panne : le défaut qui va et vient",
+      "body": "Une panne qui apparaît par temps humide et disparaît quand il fait sec est la plus difficile à trouver, parce qu'elle n'est jamais là quand on la cherche. Nous ne comptons pas sur la chance : nous mesurons l'isolement de chaque circuit, même de ceux qui fonctionnent, pour repérer celui dont la valeur est faible. Le circuit en cause est souvent celui qui dessert une pièce basse, un extérieur ou une dépendance. Une fois identifié, nous suivons son parcours jusqu'à la connexion fautive."
+    },
+    {
+      "heading": "Reprendre un tableau électrique vieillissant",
+      "body": "Quand les déclenchements se répètent sur plusieurs circuits, le tableau lui-même peut être en cause : différentiel fatigué, bornes oxydées, protections trop anciennes. Un tableau neuf, avec plusieurs différentiels 30 mA répartis sur les circuits, limite aussi la gêne en cas de défaut : seule une partie de la maison s'éteint, pas l'ensemble. C'est souvent la première étape avant de reprendre, pièce par pièce, le reste de l'installation."
     }
   ],
+  "bodyImage": "/zones/sevrier-corps.jpg",
+  "bodyImageAlt": "Salle de bains rénovée avec douche à l'italienne vitrée, vasque en pierre et spots encastrés au plafond",
+  "bodyImageCaption": "Salle de bains rénovée : spots étanches au plafond, appareillage tenu à l'écart des volumes de la douche.",
   "neighbours": [
-    "Annecy",
-    "Saint-Jorioz",
-    "Veyrier-du-Lac"
+    "saint-jorioz",
+    "seynod",
+    "veyrier-du-lac"
+  ],
+  "relatedServices": [
+    "renovation-electrique-complete",
+    "recherche-panne-electrique",
+    "remise-aux-normes-tableau-electrique"
+  ],
+  "prixPhrase": "À Sevrier, une salle de bains à mettre aux normes ou une panne à localiser se chiffrent différemment : consultez ces repères avant notre passage.",
+  "sources": [
+    {
+      "label": "geo.api.gouv.fr, Sevrier (74267), population et code postal",
+      "url": "https://geo.api.gouv.fr/communes/74267?fields=nom,code,population,codesPostaux"
+    },
+    {
+      "label": "Wikipédia, Sevrier (situation au bord du lac, Semnoz, hameaux)",
+      "url": "https://fr.wikipedia.org/wiki/Sevrier"
+    }
   ],
   "faq": [
     {
-      "q": "Intervenez-vous à Sevrier pour le dépannage électrique ?",
-      "a": "Oui. Nous intervenons à Sevrier (74320) pour tout dépannage électrique : recherche de panne, disjoncteur qui saute, remplacement d'appareillage défectueux. Diagnostic précis, devis avant travaux."
+      "q": "Peut-on installer une prise près de la douche ?",
+      "a": "Pas dans les volumes réglementés qui entourent la douche ou la baignoire. Une prise se place en dehors de ces volumes, protégée par un différentiel 30 mA. Nous tenons compte de l'emplacement exact du receveur et des parois pour la positionner."
     },
     {
-      "q": "Quel est le délai d'intervention à Sevrier ?",
-      "a": "Sevrier est une commune proche d'Annecy, accessible rapidement depuis notre zone d'intervention. Nous vous donnons un délai estimatif lors de votre appel en fonction de notre planning du moment."
+      "q": "Le différentiel coupe surtout en hiver, pourquoi ?",
+      "a": "L'humidité et la condensation augmentent dans les pièces peu chauffées : garage, cave, dépendance. Un défaut d'isolement discret se révèle alors. Une mesure circuit par circuit permet de trouver celui qui en est responsable."
     },
     {
-      "q": "Faites-vous la mise aux normes avant une location saisonnière à Sevrier ?",
-      "a": "Oui. Nous réalisons le diagnostic et les travaux de mise en conformité nécessaires avant la mise en location d'un bien, qu'il s'agisse d'une location saisonnière ou longue durée."
+      "q": "Faut-il refaire l'électricité en même temps que la salle de bains ?",
+      "a": "C'est le meilleur moment : les murs sont ouverts, on peut déplacer les points électriques, poser un éclairage étanche et réaliser la liaison équipotentielle. Le faire après le carrelage oblige à casser ou à passer en apparent."
     },
     {
-      "q": "Intervenez-vous aussi à Saint-Jorioz et Veyrier-du-Lac ?",
-      "a": "Oui. Nous couvrons Saint-Jorioz, Veyrier-du-Lac et les autres communes riveraines du lac d'Annecy dans le cadre de notre zone d'intervention de 30 km autour d'Annecy."
+      "q": "Le plafonnier de la salle de bains clignote après la douche, est-ce dangereux ?",
+      "a": "C'est souvent le signe que la vapeur a pénétré dans un luminaire qui n'est pas prévu pour cet emplacement. Coupez son circuit et n'y touchez plus : nous le remplaçons par un modèle étanche et nous vérifions la boîte de connexion au plafond."
     }
   ]
 }

@@ -31,7 +31,8 @@ const fraunces = Fraunces({
 })
 
 const homeTitle = `${siteConfig.trade} à ${siteConfig.city}, ${siteConfig.businessName}`
-const homeDesc = `${siteConfig.trade} à ${siteConfig.city} et environs. Méthode non destructive, intervention rapide.`
+// 25/09/2026 : « Méthode non destructive » retiré (héritage du site pilote de recherche de fuite).
+const homeDesc = `${siteConfig.trade} à ${siteConfig.city} et environs : dépannage, recherche de panne, tableau électrique et mise aux normes, 24h/24 et 7j/7.`
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.seo.canonicalBase),

@@ -4,8 +4,8 @@
   "icon": "tools",
   "navTitle": "Rénovation électrique",
   "h1": "Rénovation électrique complète à Annecy",
-  "metaTitle": "Rénovation électrique complète à Annecy, artisan électricien",
-  "metaDescription": "Rénovation électrique complète à Annecy : installation vétuste, chalet ancien, appartement. Devis gratuit, artisan local.",
+  "metaTitle": "Rénovation électrique à Annecy : maison, appartement, chalet",
+  "metaDescription": "Fils sous tissu, tableau saturé, prises qui manquent : nous refaisons l'électricité de votre maison ou appartement à Annecy. Devis détaillé pièce par pièce.",
   "intro": "Installation électrique vieillissante, chalet ancien à rénover, appartement à reprendre entièrement ? Nous intervenons à Annecy pour la rénovation complète de votre installation électrique, du tableau jusqu'aux prises.",
   "bullets": [
     "Diagnostic complet",
@@ -15,9 +15,9 @@
   "blocks": [
     {
       "heading": "Quand envisager une rénovation complète",
-      "body": "Plusieurs signes indiquent qu'une simple réparation ne suffira plus : une installation datant d'avant les années 1990, des fils en tissu ou en aluminium au lieu du cuivre, un tableau saturé qui ne peut plus accueillir de nouveau circuit, ou un manque chronique de prises dans les pièces à vivre. Ce cas de figure est fréquent dans les chalets anciens et les bâtiments de caractère du bassin annécien, où l'installation d'origine n'a jamais été pensée pour les usages actuels. Une rénovation électrique complète devient alors le choix le plus sûr et le plus durable, en particulier si un projet de rénovation plus large du logement est déjà prévu.",
-      "image": "/services/renovation-electrique-complete-cablage.jpg",
-      "imageAlt": "Câblage électrique ancien apparent dans un mur",
+      "body": "Plusieurs signes indiquent qu'une simple réparation ne suffira plus : une installation d'origine jamais reprise depuis plusieurs décennies, des fils en tissu ou en aluminium au lieu du cuivre, un tableau saturé qui ne peut plus accueillir de nouveau circuit, ou un manque chronique de prises dans les pièces à vivre. Ce cas de figure est fréquent dans les chalets anciens et les bâtiments de caractère du bassin annécien, où l'installation d'origine n'a jamais été pensée pour les usages actuels. Une rénovation électrique complète devient alors le choix le plus sûr et le plus durable, en particulier si un projet de rénovation plus large du logement est déjà prévu.",
+      "image": "/services/renovation-electrique-complete-cablage-v2.jpg",
+      "imageAlt": "Pièce en rénovation aux murs blancs enduits, gaines grises dans des saignées droites vers les boîtiers",
       "imageCaption": "Fils textiles ou aluminium, tableau à fusibles : autant de signes qu'une rénovation complète s'impose."
     },
     {
@@ -29,7 +29,7 @@
     },
     {
       "heading": "Zones couvertes",
-      "body": "Nous intervenons à Annecy, dans les secteurs d'Annecy-le-Vieux, Cran-Gevrier, Meythet, Seynod et Pringy, et dans les communes de l'agglomération dans un rayon de 30 km : Poisy, Épagny Metz-Tessy, Argonay, Sevrier, Saint-Jorioz, Veyrier-du-Lac et les communes voisines. En cas de doute sur notre zone de couverture, appelez-nous."
+      "body": "Nous menons des rénovations électriques à Annecy, y compris à Annecy-le-Vieux, Cran-Gevrier, Meythet, Seynod et Pringy, et dans les communes alentour : Poisy, Épagny Metz-Tessy, Argonay, Sevrier, Saint-Jorioz, Veyrier-du-Lac, Rumilly. Un projet ailleurs en Haute-Savoie ? Décrivez-le nous, nous regardons s'il est à notre portée."
     }
   ],
   "relatedServices": [
@@ -39,7 +39,7 @@
   "faq": [
     {
       "q": "Combien de temps dure une rénovation électrique complète ?",
-      "a": "Pour un appartement ou une maison de taille moyenne, comptez généralement une à deux semaines selon la surface et l'accessibilité des murs. Une estimation précise vous est donnée après le diagnostic sur place."
+      "a": "La durée dépend de la surface, du nombre de pièces et de l'accès aux murs et aux plafonds. Nous vous remettons un calendrier précis après le diagnostic sur place, avant le début du chantier."
     },
     {
       "q": "Faut-il refaire les murs après une rénovation électrique ?",
@@ -54,5 +54,6 @@
       "a": "Cela dépend de l'ampleur du chantier et des pièces concernées. Pour une rénovation complète touchant plusieurs pièces à la fois, il est souvent plus confortable de libérer temporairement le logement ou d'organiser les travaux pièce par pièce. Nous en discutons ensemble avant le début du chantier."
     }
   ],
-  "image": "/services/renovation-electrique-complete.jpg"
+  "image": "/services/renovation-electrique-complete.jpg",
+  "prixPhrase": "Le coût d'une rénovation électrique varie selon la surface et l'état de départ : notre page tarifs en détaille les postes."
 }

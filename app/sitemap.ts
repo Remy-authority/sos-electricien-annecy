@@ -1,4 +1,6 @@
 import type { MetadataRoute } from 'next'
+import fs from 'node:fs'
+import path from 'node:path'
 import { absUrl } from '@/lib/seo'
 import { siteConfig } from '@/config/site.config'
 import { getServices, getZones, getArticles } from '@/lib/content'
@@ -11,6 +13,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date().toISOString()
 
   const staticPaths = ['/', '/zones', '/contact', '/mentions-legales']
+  // /tarifs (mise à jour du 25/09/2026) : listée dès que la page existe dans app/tarifs,
+  // jamais une URL de sitemap qui répondrait 404 sur un site du template qui ne l'a pas.
+  if (fs.existsSync(path.join(process.cwd(), 'app', 'tarifs', 'page.tsx'))) staticPaths.push('/tarifs')
   if (siteConfig.features.blog) staticPaths.push('/conseils')
 
   const entries: MetadataRoute.Sitemap = staticPaths.map((p) => ({

@@ -2,46 +2,72 @@
   "slug": "cran-gevrier",
   "name": "Cran-Gevrier",
   "postalCode": "74960",
-  "context": "Ancienne commune fusionnée avec Annecy en 2017, aujourd'hui secteur urbain dense à l'ouest d'Annecy, entre immeubles collectifs et zones d'activité.",
-  "metaTitle": "Électricien à Cran-Gevrier (74)",
-  "metaDescription": "Électricien dans le secteur de Cran-Gevrier : dépannage, tableau électrique, mise aux normes. Intervention rapide. Contactez-nous.",
-  "h1": "Électricien dans le secteur de Cran-Gevrier",
-  "intro": "Nous intervenons dans le secteur de Cran-Gevrier (74960) pour tout dépannage électrique, remise aux normes de tableau ou diagnostic avant vente. Ancienne commune devenue secteur d'Annecy depuis la fusion de 2017, Cran-Gevrier est le secteur le plus densément peuplé de l'agglomération, avec de nombreux immeubles collectifs en copropriété. Nous diagnostiquons précisément avant toute intervention.",
+  "context": "Secteur ouest d'Annecy, commune déléguée depuis 2017, traversé par le Thiou et bordée par le Fier, où grands ensembles, copropriétés et maisons se côtoient.",
+  "metaTitle": "Électricien à Cran-Gevrier : dépannage, remise aux normes",
+  "metaDescription": "Coupure, disjoncteur qui saute, tableau à remettre aux normes à Cran-Gevrier : nous trouvons la cause et expliquons le devis avant travaux. Appelez-nous.",
+  "h1": "Électricien à Cran-Gevrier",
+  "intro": "Nous dépannons, cherchons les pannes et remettons aux normes les installations électriques de Cran-Gevrier (74960), du quartier Chorus au Jourdil, de Vernay à Beauregard. Rattaché à Annecy lors de la fusion du 1er janvier 2017, Cran-Gevrier comptait 17 257 habitants au recensement de 2014 et mêle grands ensembles, immeubles en copropriété et maisons individuelles. Chaque type de logement a ses pannes typiques : nous commençons par comprendre le vôtre.",
   "blocks": [
     {
-      "heading": "Nos prestations dans le secteur de Cran-Gevrier",
-      "body": "Nous intervenons dans le secteur de Cran-Gevrier pour toutes les situations électriques : recherche de panne en appartement ou en copropriété, remise aux normes de tableau électrique, diagnostic avant vente ou location, et rénovation électrique pour les immeubles les plus anciens. Nous établissons un diagnostic clair et un devis détaillé avant toute intervention."
+      "heading": "Dépannage électrique à Cran-Gevrier : situer la panne d'abord",
+      "body": "Quand la lumière s'éteint dans un appartement, la première question n'est pas technique, elle est géographique : le voisin de palier a-t-il encore du courant ? Si tout l'immeuble est dans le noir, la panne se trouve sur le réseau public et c'est le distributeur qui intervient. Si votre logement est le seul touché, le problème est chez vous : disjoncteur de branchement déclenché, interrupteur différentiel tombé ou circuit en défaut. Nous lisons alors le tableau rangée par rangée, nous isolons le circuit fautif et nous mesurons avant de changer la moindre pièce. Réarmer à répétition un différentiel qui retombe ne répare rien : cela signale un défaut réel qu'il faut localiser."
     },
     {
-      "heading": "Panne urgente à Cran-Gevrier",
-      "body": "En cas de panne urgente dans le secteur de Cran-Gevrier, appelez-nous directement. En attendant notre arrivée, coupez le disjoncteur du circuit concerné (ou le disjoncteur général en cas de doute ou d'odeur de brûlé) pour limiter les risques. Nous intervenons 7j/7 sur Cran-Gevrier et les secteurs voisins."
+      "heading": "Remise aux normes électrique à Cran-Gevrier, dans les grands ensembles",
+      "body": "Dans les tours et les barres du secteur, beaucoup de logements ont gardé leur installation d'origine, retouchée par petites touches au fil des locataires. On y rencontre des fusibles à cartouche, des disjoncteurs sans protection différentielle 30 mA sur l'ensemble des circuits, des prises sans terre dans les chambres et une salle de bains sans liaison équipotentielle. La remise aux normes selon la NF C 15-100 vise d'abord la sécurité des personnes : protection différentielle sur tous les circuits, calibre de chaque disjoncteur adapté à la section de son câble, terre raccordée à chaque prise, puis mise en conformité de la salle de bains. Le reste, comme l'ajout de prises ou de circuits, vient ensuite, selon votre budget."
     },
     {
-      "heading": "Secteurs et communes voisines desservis",
-      "body": "En plus de Cran-Gevrier, nous intervenons dans le centre-ville d'Annecy, le secteur de Meythet, et la commune de Poisy à l'ouest de l'agglomération. Notre zone de couverture s'étend sur un rayon de 30 km autour d'Annecy."
+      "heading": "Copropriété : ce qui relève de vous, ce qui relève du syndic",
+      "body": "Dans un immeuble, tout ce qui est situé après votre compteur, à l'intérieur de l'appartement, est privatif : tableau, circuits, prises et éclairage relèvent de vous. La colonne montante, la gaine palière, l'éclairage des escaliers et la terre commune de l'immeuble relèvent de la copropriété ou du réseau. Cette frontière compte au moment du devis : si la terre de l'immeuble est défaillante, refaire votre tableau ne suffira pas à protéger vos prises, et il faut alerter le syndic. Nous vous indiquons clairement de quel côté se situe chaque défaut constaté, pour que vous sachiez qui doit payer quoi."
+    },
+    {
+      "heading": "Tableau électrique d'appartement : le changer sans tout refaire",
+      "body": "Remplacer le tableau ne signifie pas recâbler tout le logement. Quand les conducteurs sont en bon état, on peut garder les circuits existants et ne changer que ce qui les protège. Nous mesurons l'isolement de chaque ligne pour le vérifier, puis nous posons un coffret neuf sur rail DIN avec des interrupteurs différentiels 30 mA, des disjoncteurs divisionnaires calibrés et un repérage lisible de chaque départ. Nous gardons des emplacements libres pour une future plaque à induction ou un circuit de chauffage. Un tableau bien étiqueté vous fait aussi gagner du temps le jour d'une panne."
+    },
+    {
+      "heading": "Électricien à Cran-Gevrier, entre le Thiou et le Fier",
+      "body": "Le Thiou, souvent présenté comme la plus petite rivière de France, traverse le secteur avant de rejoindre le Fier. Ce territoire a longtemps été industriel, avec des filatures et des papeteries, avant de devenir l'un des secteurs les plus peuplés d'Annecy. Le bâti en garde la trace : grands ensembles des Tours de Cran et du Jourdil, immeubles du centre Chorus, maisons individuelles dans les quartiers plus calmes. Pour nous, cela veut dire des interventions très différentes d'une rue à l'autre, du simple remplacement d'interrupteur à la rénovation d'un logement entier."
+    },
+    {
+      "heading": "Locataire ou propriétaire : qui appelle l'électricien ?",
+      "body": "Dans un logement loué, les petites réparations courantes reviennent en principe au locataire : une ampoule, un fusible, un interrupteur abîmé par l'usage. La sécurité de l'installation, elle, reste à la charge du propriétaire : tableau vétuste, absence de terre, circuit qui chauffe. Si vous êtes locataire à Cran-Gevrier et qu'un défaut sérieux apparaît, prévenez votre bailleur ou l'agence par écrit. Nous pouvons établir un constat clair de l'état du tableau, utile pour que la décision se prenne vite des deux côtés."
     }
   ],
-  "neighbours": [
-    "Annecy centre-ville",
-    "Meythet",
-    "Poisy"
+  "bodyImage": "/zones/cran-gevrier-corps.jpg",
+  "bodyImageAlt": "Tableau électrique d'appartement en copropriété, capot ouvert, avec des disjoncteurs modulaires neufs sur rail DIN",
+  "bodyImageCaption": "Tableau d'appartement capot ouvert : disjoncteurs neufs alignés sur rail DIN, chaque départ repéré.",
+  "neighbours": ["meythet", "seynod", "poisy"],
+  "relatedServices": ["urgence-depannage-electrique", "remise-aux-normes-tableau-electrique", "recherche-panne-electrique"],
+  "prixPhrase": "À Cran-Gevrier, la plupart des demandes portent sur un tableau d'appartement : voici les repères de prix avant d'en parler ensemble.",
+  "sources": [
+    { "label": "Légifrance, arrêté du 14 juillet 2016 portant création de la commune nouvelle d'Annecy", "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000033313064" },
+    { "label": "geo.api.gouv.fr, Cran-Gevrier commune déléguée (74093)", "url": "https://geo.api.gouv.fr/communes_associees_deleguees/74093" },
+    { "label": "Wikipédia, Cran-Gevrier (population 2014, Thiou, quartiers)", "url": "https://fr.wikipedia.org/wiki/Cran-Gevrier" }
   ],
   "faq": [
     {
-      "q": "Cran-Gevrier est-elle toujours une commune indépendante ?",
-      "a": "Non. Depuis le 1er janvier 2017, Cran-Gevrier a fusionné avec Annecy et quatre autres anciennes communes pour former la commune nouvelle d'Annecy. C'est aujourd'hui un secteur d'Annecy avec sa propre identité et son code postal (74960), mais plus une commune autonome."
+      "q": "Tout l'immeuble est privé de courant, est-ce à vous qu'il faut téléphoner ?",
+      "a": "Non. Quand plusieurs logements ou toute la rue sont touchés, la panne vient du réseau public et c'est le service de dépannage du distributeur qu'il faut joindre. Nous intervenons quand la coupure ne concerne que votre appartement ou une partie de ses circuits."
     },
     {
-      "q": "Intervenez-vous dans le secteur de Cran-Gevrier pour le dépannage électrique ?",
-      "a": "Oui. Nous intervenons dans le secteur de Cran-Gevrier (74960) pour tout dépannage électrique : recherche de panne, disjoncteur qui saute, remise aux normes de tableau. Diagnostic précis, devis avant travaux."
+      "q": "Le différentiel tombe dès que je lance le four, pourquoi ?",
+      "a": "Soit le four lui-même a un défaut d'isolement interne, soit il partage son circuit avec d'autres appareils et la ligne est en défaut. Nous débranchons l'appareil, mesurons le circuit à vide puis en charge, et nous vous disons si c'est l'appareil ou l'installation qu'il faut traiter."
     },
     {
-      "q": "Intervenez-vous dans les immeubles en copropriété à Cran-Gevrier ?",
-      "a": "Oui. Nous intervenons aussi bien sur les parties privatives d'un appartement que, sur demande du syndic, sur les circuits communs d'un immeuble en copropriété."
+      "q": "Faut-il l'accord du syndic pour remplacer le tableau de mon appartement ?",
+      "a": "En règle générale non, car le tableau se trouve dans la partie privative. L'accord devient nécessaire si les travaux touchent aux parties communes : colonne montante, gaine palière ou terre de l'immeuble."
     },
     {
-      "q": "Intervenez-vous aussi à Meythet et Poisy ?",
-      "a": "Oui. Nous couvrons le secteur de Meythet, la commune de Poisy et les autres secteurs et communes de l'agglomération annécienne dans le cadre de notre zone d'intervention de 30 km."
+      "q": "Que contient une remise aux normes électrique à Cran-Gevrier ?",
+      "a": "Nous partons d'un état des lieux du logement, puis nous traitons dans l'ordre la protection différentielle de tous les circuits, le calibrage des disjoncteurs, la terre de chaque prise et la salle de bains. Le devis détaille ce qui relève de la sécurité et ce qui relève du confort."
+    },
+    {
+      "q": "Je suis locataire, qui paie la réparation ?",
+      "a": "L'entretien courant, comme une ampoule ou un fusible, est en principe à votre charge. Un défaut qui touche la sécurité de l'installation relève du propriétaire. Nous pouvons décrire le problème par écrit pour que votre bailleur tranche sans attendre."
+    },
+    {
+      "q": "Cran-Gevrier fait-elle encore partie des communes à part entière ?",
+      "a": "Non. Depuis le 1er janvier 2017, Cran-Gevrier est une commune déléguée de la commune nouvelle d'Annecy, avec Annecy-le-Vieux, Meythet, Pringy et Seynod. Le secteur garde son code postal 74960."
     }
   ]
 }

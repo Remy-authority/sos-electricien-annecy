@@ -6,15 +6,13 @@ import PhoneButton from '@/components/ui/PhoneButton'
 /**
  * Hero d'accueil.
  *
- * Itération design du 25/07/2026 (réserve n°1 du contrôle visuel CEO) : le hero
- * était le SEUL de tout le site sans photo réelle. Il repose maintenant sur une
- * photo d'intervention plein cadre, empilée en couches pour garder la lisibilité
- * du texte et la profondeur premium de la référence sniperpestcontrol3dservices.fr :
+ * Photo d'intervention plein cadre + UN SEUL voile plein cadre (25/09/2026, contrôle
+ * audit-design : voile cumulé 0,92 = aplat sombre, ramené sous 0,6). Le voile est plus
+ * dense à gauche, derrière le texte, et s'éclaircit vers le lac à droite ; en mobile il
+ * est uniforme car le texte occupe toute la largeur. Un fondu bas étroit (hors plein
+ * cadre) raccorde la photo au bandeau nuit qui suit.
  *
- *   photo → voile dégradé sombre → motif grille → halo accent → grain → contenu
- *
- * Le voile est volontairement dense à gauche (colonne de texte) et s'éclaircit à
- * droite pour laisser respirer le lac et les Alpes.
+ * La carte « Garantie 100 % » a été retirée le 25/09/2026 (garantie et délai inventés).
  */
 export default function Hero() {
   return (
@@ -31,28 +29,21 @@ export default function Hero() {
         fill
         sizes="100vw"
         priority
-        className="object-cover object-center"
+        className="object-cover object-[28%_50%] lg:object-center"
       />
 
-      {/* ── Couche 2 : voiles de lisibilité ──
-          Volontairement LÉGERS et localisés : la photo doit rester lisible (c'est
-          l'objet de l'itération), donc on assombrit surtout derrière le texte plutôt
-          que l'image entière. */}
-      {/* Teinte globale minimale, juste pour l'unité chromatique */}
-      <div className="pointer-events-none absolute inset-0 bg-dark/25" aria-hidden="true" />
-      {/* Scrim local sous la colonne de texte (gauche), s'efface avant la moitié droite */}
+      {/* ── Couche 2 : voile de lisibilité, UN seul calque plein cadre ──
+          Mobile : teinte uniforme (texte centré sur toute la largeur).
+          Ordinateur : dégradé gauche vers droite, arrêt le plus opaque à 0,55. */}
       <div
-        className="pointer-events-none absolute inset-y-0 left-0 w-full bg-gradient-to-r from-dark via-dark/75 to-transparent md:w-3/5"
+        className="pointer-events-none absolute inset-0 bg-dark/55 lg:bg-transparent lg:bg-gradient-to-r lg:from-dark/55 lg:via-dark/40 lg:to-dark/10"
         aria-hidden="true"
       />
-      {/* Fondu vertical : ancre le bloc en haut, fond avec la section suivante en bas */}
+      {/* Fondu bas étroit : raccord avec le bandeau nuit, ne couvre pas la photo */}
       <div
-        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-dark/60 via-transparent to-dark"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-b from-transparent to-dark"
         aria-hidden="true"
       />
-
-      {/* ── Couche 3 : motif grille technique, masqué en fondu radial ── */}
-      <div className="pointer-events-none absolute inset-0 pattern-grid" aria-hidden="true" />
 
       {/* ── Couche 4 : halo accent animé, chaleur « courant » ──
           Désactivé si prefers-reduced-motion (motion-safe). */}
@@ -71,9 +62,9 @@ export default function Hero() {
         }}
       />
 
-      <div className="container-site relative grid gap-10 py-16 md:grid-cols-2 md:items-center md:py-24 lg:gap-16">
-        {/* ── Colonne texte ── */}
-        <div>
+      <div className="container-site relative grid gap-10 py-16 md:py-24 lg:grid-cols-2 lg:items-center lg:gap-16">
+        {/* ── Colonne texte : centrée sur téléphone et tablette, à gauche en lg ── */}
+        <div className="text-center lg:text-left">
           {/* Badge urgence avec pulse */}
           <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-accent/15 px-4 py-1.5 text-sm font-semibold text-accent ring-1 ring-accent/25 backdrop-blur-sm">
             <span className="h-2 w-2 animate-pulse rounded-full bg-accent" aria-hidden="true" />
@@ -101,15 +92,15 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="mt-4 max-w-xl text-base leading-relaxed text-slate-200 sm:text-lg">
-            {siteConfig.responseTime}. Diagnostic précis par{' '}
-            {siteConfig.methods.join(', ')}. Devis gratuit, sans engagement.
+          <p className="mx-auto mt-4 max-w-xl text-base [text-shadow:0_1px_10px_rgb(0_0_0/0.5)] leading-relaxed text-slate-100 sm:text-lg lg:mx-0">
+            {siteConfig.responseTime}. Nous trouvons l'origine de la panne, à la caméra
+            thermique ou au traceur de câbles, avant de réparer. Devis gratuit.
           </p>
 
           {/* USPs, icônes SVG checkmark, zéro emoji */}
-          <ul className="mt-5 grid grid-cols-2 gap-x-4 gap-y-2 text-sm text-slate-200" role="list">
+          <ul className="mx-auto mt-5 grid max-w-md grid-cols-2 gap-x-4 gap-y-3 text-sm text-slate-100 [text-shadow:0_1px_8px_rgb(0_0_0/0.5)] lg:mx-0 lg:max-w-none lg:gap-y-2" role="list">
             {siteConfig.usps.map((u) => (
-              <li key={u} className="flex items-center gap-2">
+              <li key={u} className="flex flex-col items-center gap-1 lg:flex-row lg:gap-2">
                 <svg
                   className="h-4 w-4 shrink-0 text-accent"
                   viewBox="0 0 20 20"
@@ -128,7 +119,7 @@ export default function Hero() {
           </ul>
 
           {/* CTAs mobile */}
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row md:hidden">
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center md:hidden">
             <PhoneButton
               label={`Appeler le ${siteConfig.phoneDisplay}`}
               className="btn-accent justify-center text-base shadow-glow"
@@ -142,7 +133,7 @@ export default function Hero() {
           </div>
 
           {/* CTAs desktop */}
-          <div className="mt-8 hidden md:flex md:items-center md:gap-4">
+          <div className="mt-8 hidden md:flex md:items-center md:justify-center md:gap-4 lg:justify-start">
             <a
               href={`tel:${siteConfig.phone}`}
               className="flex items-center gap-3 rounded-2xl bg-accent px-6 py-4 text-dark shadow-glow transition hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
@@ -165,65 +156,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* ── Colonne droite : carte Garantie en verre, posée sur la photo ── */}
-        <div className="relative">
-          {/* Halo diffus derrière la carte : la détache du fond photo */}
-          <div
-            className="pointer-events-none absolute -inset-6 -z-10 rounded-[2.5rem] bg-gradient-to-br from-accent/20 via-primary/10 to-transparent blur-3xl"
-            aria-hidden="true"
-          />
-
-          <div className="rounded-2xl border border-white/15 bg-white/[0.08] p-6 shadow-2xl backdrop-blur-xl">
-            {/* Ligne supérieure : badge + stat vedette */}
-            <div className="flex items-start justify-between gap-4">
-              <span className="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent">
-                Garantie
-              </span>
-              <span className="font-display text-4xl font-semibold leading-none text-accent">
-                100 %
-              </span>
-            </div>
-
-            {/* Titre */}
-            <h2 className="mt-4 text-lg font-bold leading-snug text-white">
-              Panne réparée ou nous revenons
-            </h2>
-            <p className="mt-2 text-sm leading-relaxed text-slate-300">
-              Si la panne n'est pas résolue lors de notre passage, nous revenons sans frais
-              supplémentaire.
-            </p>
-
-            {/* 2 stats, chiffres en serif signature */}
-            <div className="mt-5 grid grid-cols-2 gap-3">
-              <div className="rounded-xl border border-white/5 bg-white/5 px-4 py-3.5">
-                <p className="font-display text-2xl font-semibold text-accent">30 min</p>
-                <p className="mt-0.5 text-xs text-slate-300">Réponse garantie</p>
-              </div>
-              <div className="rounded-xl border border-white/5 bg-white/5 px-4 py-3.5">
-                <p className="font-display text-2xl font-semibold text-accent">24h/7j</p>
-                <p className="mt-0.5 text-xs text-slate-300">Disponible</p>
-              </div>
-            </div>
-
-            {/* Pied de carte */}
-            <div className="mt-5 flex items-center gap-2 border-t border-white/10 pt-4">
-              <svg
-                className="h-4 w-4 shrink-0 text-accent"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                aria-hidden="true"
-              >
-                <path d="M12 2 3 7v5c0 5.25 3.75 10.15 9 11.25C17.25 22.15 21 17.25 21 12V7L12 2z" />
-                <path d="m9 12 2 2 4-4" />
-              </svg>
-              <p className="text-xs text-slate-300">
-                Artisan local · Devis gratuit · Sans engagement
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   )

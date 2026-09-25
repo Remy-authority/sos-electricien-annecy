@@ -27,8 +27,9 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const a = getArticle(params.slug)
   if (!a) return {}
+  // `seoTitle` (frontmatter, optionnel) sert le <title> ; le H1 de la page reste `title`.
   return buildMetadata({
-    title: a.title,
+    title: a.seoTitle || a.title,
     description: a.description,
     path: `/conseils/${a.slug}`,
     ogImage: a.cover,
@@ -68,10 +69,10 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
       <article className="container-site section">
         {/* En-tête d'article */}
-        <header className="mx-auto max-w-3xl">
+        <header className="mx-auto max-w-3xl text-center lg:text-left">
           <p className="text-xs font-semibold uppercase tracking-wider text-accent-deep">{article.category}</p>
-          <h1 className="mt-2 text-3xl leading-tight md:text-4xl">{article.title}</h1>
-          <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-slate-500">
+          <h1 className="mt-2 text-[1.65rem] leading-tight sm:text-3xl md:text-4xl">{article.title}</h1>
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-sm text-slate-500 lg:justify-start">
             <time dateTime={article.date}>{formatDateFr(article.date)}</time>
             <span className="text-slate-300" aria-hidden="true">•</span>
             <span>{readingMin} min de lecture</span>

@@ -1,7 +1,37 @@
+import Link from 'next/link'
 import { faqJsonLd, jsonLdScript } from '@/lib/seo'
 import type { FaqItem } from '@/lib/content'
 import AccentWord from './AccentWord'
 import { BoltBadge } from './Bolt'
+
+/** Lien interne écrit dans une réponse : [libellé](/chemin). Seuls les chemins
+ *  internes (commençant par « / ») sont reconnus : aucun lien sortant possible. */
+const LIEN = /\[([^\]]+)\]\((\/[^)\s]*)\)/g
+
+/** Texte seul, pour le JSON-LD : le lien garde son libellé. */
+function texteSeul(a: string) {
+  return a.replace(LIEN, '$1')
+}
+
+/** Rendu d'une réponse : texte + liens internes éventuels. */
+function Reponse({ a }: { a: string }) {
+  const morceaux: React.ReactNode[] = []
+  let dernier = 0
+  const lien = new RegExp(LIEN.source, 'g')
+  let m: RegExpExecArray | null
+  while ((m = lien.exec(a)) !== null) {
+    const i = m.index
+    if (i > dernier) morceaux.push(a.slice(dernier, i))
+    morceaux.push(
+      <Link key={i} href={m[2]} className="font-semibold text-accent underline underline-offset-2 hover:text-white">
+        {m[1]}
+      </Link>,
+    )
+    dernier = i + m[0].length
+  }
+  if (dernier < a.length) morceaux.push(a.slice(dernier))
+  return <>{morceaux}</>
+}
 
 /**
  * Faq, section accordéon accessible (<details>) + JSON-LD FAQPage.
@@ -10,6 +40,7 @@ import { BoltBadge } from './Bolt'
  */
 export default function Faq({ items, title = 'Questions fréquentes' }: { items: FaqItem[]; title?: string }) {
   if (!items?.length) return null
+  const itemsJsonLd = items.map((it) => ({ ...it, a: texteSeul(it.a) }))
   return (
     <section className="section-dark section" aria-labelledby="faq-title">
       <div className="container-site max-w-3xl">
@@ -21,7 +52,7 @@ export default function Faq({ items, title = 'Questions fréquentes' }: { items:
         </div>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: jsonLdScript(faqJsonLd(items)) }}
+          dangerouslySetInnerHTML={{ __html: jsonLdScript(faqJsonLd(itemsJsonLd)) }}
         />
         <div className="mt-7 space-y-3">
           {items.map((item, i) => (
@@ -43,7 +74,9 @@ export default function Faq({ items, title = 'Questions fréquentes' }: { items:
                 </svg>
               </summary>
               <div className="border-t border-white/10 px-5 pb-4 pt-3">
-                <p className="leading-relaxed text-slate-300">{item.a}</p>
+                <p className="leading-relaxed text-slate-300">
+                  <Reponse a={item.a} />
+                </p>
               </div>
             </details>
           ))}

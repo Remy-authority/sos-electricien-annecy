@@ -48,8 +48,8 @@ export default function Process() {
                   aria-hidden="true"
                 />
               )}
-              <div className="card flex h-full w-full flex-col gap-4">
-                <div className="flex items-start gap-4">
+              <div className="card flex h-full w-full flex-col gap-4 text-center sm:text-left">
+                <div className="flex items-start justify-center gap-4 sm:justify-start">
                   <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary text-white">
                     {STEP_ICONS[step.icon] ?? (
                       <span className="text-lg font-bold">{i + 1}</span>

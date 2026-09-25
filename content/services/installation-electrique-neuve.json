@@ -4,8 +4,8 @@
   "icon": "plug",
   "navTitle": "Installation électrique neuve",
   "h1": "Installation électrique neuve à Annecy",
-  "metaTitle": "Installation électrique neuve à Annecy, extension, garage",
-  "metaDescription": "Installation électrique neuve à Annecy : extension, garage, dépendance, borne de recharge. Étude, pose, mise en service. Devis gratuit.",
+  "metaTitle": "Installation électrique neuve à Annecy : garage, extension",
+  "metaDescription": "Garage, extension, dépendance ou borne de recharge à raccorder près d'Annecy : nous vérifions la puissance disponible et posons une ligne dédiée. Devis gratuit.",
   "intro": "Extension de maison, garage, dépendance à raccorder, ou borne de recharge à installer à Annecy ? Nous étudions votre installation existante et réalisons le câblage neuf adapté, en toute sécurité et dans le respect des normes en vigueur.",
   "bullets": [
     "Étude de faisabilité",
@@ -16,8 +16,8 @@
     {
       "heading": "Étude avant l'installation",
       "body": "Avant toute installation neuve, nous vérifions plusieurs éléments : la puissance disponible sur votre tableau et votre abonnement, la distance entre le tableau existant et le nouvel espace à raccorder (garage, extension, dépendance), et les protections dédiées nécessaires selon l'usage prévu. Cette étude s'applique aussi bien à une extension de maison qu'à l'installation d'une borne de recharge pour véhicule électrique, et permet de dimensionner correctement les nouveaux circuits sans surcharger l'installation existante.",
-      "image": "/services/installation-electrique-neuve-etude.jpg",
-      "imageAlt": "Étude d'implantation d'une installation électrique dans un garage",
+      "image": "/services/installation-electrique-neuve-etude-v2.jpg",
+      "imageAlt": "Maison en chantier propre, gaines grises et boîtiers d'encastrement alignés dans des murs de briques",
       "imageCaption": "La puissance disponible et la distance au tableau électrique déterminent le dimensionnement du nouveau circuit."
     },
     {
@@ -29,7 +29,7 @@
     },
     {
       "heading": "Zones couvertes",
-      "body": "Nous intervenons à Annecy, dans les secteurs d'Annecy-le-Vieux, Cran-Gevrier, Meythet, Seynod et Pringy, et dans les communes de l'agglomération dans un rayon de 30 km : Poisy, Épagny Metz-Tessy, Argonay, Sevrier, Saint-Jorioz, Veyrier-du-Lac et les communes voisines. En cas de doute sur notre zone de couverture, appelez-nous."
+      "body": "Nos installations neuves concernent Annecy et ses secteurs (Annecy-le-Vieux, Cran-Gevrier, Meythet, Seynod, Pringy), ainsi que Poisy, Épagny Metz-Tessy, Argonay, Sevrier, Saint-Jorioz, Veyrier-du-Lac et Rumilly. Votre chantier se situe hors de ces communes ? Écrivez-nous, la réponse dépend de la nature des travaux."
     }
   ],
   "relatedServices": [
@@ -39,7 +39,7 @@
   "faq": [
     {
       "q": "Installez-vous des bornes de recharge pour véhicule électrique ?",
-      "a": "Oui, l'installation d'une borne de recharge fait partie de nos installations électriques neuves. Nous étudions la puissance disponible sur votre tableau et posons une ligne dédiée avec une protection adaptée. Si votre prestataire vous demande une qualification IRVE spécifique, vérifiez ce point avec nous au moment du devis."
+      "a": "Oui, l'installation d'une borne de recharge fait partie de nos installations électriques neuves. Nous étudions la puissance disponible sur votre tableau et posons une ligne dédiée avec une protection adaptée. Au-delà d'une certaine puissance, la réglementation exige un installateur qualifié IRVE : nous vérifions ce point ensemble au moment du devis."
     },
     {
       "q": "Faut-il un abonnement électrique spécifique pour une nouvelle installation importante ?",
@@ -51,8 +51,9 @@
     },
     {
       "q": "Combien de temps prend une installation électrique neuve ?",
-      "a": "Pour une installation simple avec un tableau proche du nouvel espace, la pose se fait généralement en une demi-journée à une journée. Un raccordement plus long ou une mise à niveau du tableau existant peut demander davantage de temps. Nous vous donnons un délai précis après l'étude."
+      "a": "Cela dépend surtout de la distance entre le tableau et le nouvel espace, du passage des câbles et d'une éventuelle mise à niveau du tableau existant. Nous vous donnons un délai précis après l'étude sur place."
     }
   ],
-  "image": "/services/installation-electrique-neuve.jpg"
+  "image": "/services/installation-electrique-neuve.jpg",
+  "prixPhrase": "Le budget d'un raccordement de garage ou d'une ligne dédiée dépend surtout de la distance au tableau : les repères sont sur notre page tarifs."
 }

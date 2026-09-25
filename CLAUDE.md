@@ -85,3 +85,18 @@
   `lib/`, `content/`, `config/`) → ça part au Builder.
 - **Builder** : code (design + intégration). Reçoit des consignes précises du CEO.
 - **SEO** (plus tard) : contenu et optimisation, dans le respect de la doctrine SEO ci-dessus.
+
+---
+
+## 6. REQUÊTE D'ARGENT (mesurée le 25/09/2026, DataForSEO, Google France)
+
+- Requête d'argent : « électricien annecy »
+  590 recherches/mois, CPC 4,77 €, concurrence moyenne (la forme accentuée sort à 140, même intention).
+- Communes : « électricien rumilly » 90/mois (CPC 10,20 €), « électricien annecy le vieux » 50 (CPC 9,87 €),
+  « électricien seynod » 30, « électricien cran-gevrier » 20, « électricien meythet » 10 ; « électricien
+  haute savoie » 70. Formes « urgence », « dépannage », « sos » + Annecy : sans donnée (volume trop faible).
+- Cibles de /tarifs (France) : « prix tableau électrique » 1 300, « prix changement tableau électrique » 720,
+  « tarif électricien » 480, « taux horaire électricien » 480, « prix diagnostic électrique » 480,
+  « devis électricien » 390. Mesure brute : `../tasks/.maj-annecy/volumes-25-09.txt`.
+- Téléphone (Rémy 25/09/2026) : le faux 04 65 71 00 74 (DEMO) est remplacé par le 09 39 20 03 38,
+  repris de toiture-beauvais.fr (stock Twilio de 09 vide ce jour-là).

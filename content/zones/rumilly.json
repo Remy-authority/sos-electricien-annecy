@@ -1,0 +1,88 @@
+{
+  "slug": "rumilly",
+  "name": "Rumilly",
+  "postalCode": "74150",
+  "context": "Ville de 16 442 habitants au cœur de l'Albanais, à mi-chemin entre les lacs d'Annecy et du Bourget, dont le vieux bourg classé Site patrimonial remarquable est niché entre le Chéran et la Néphaz.",
+  "metaTitle": "Électricien à Rumilly : dépannage, tableau, rénovation",
+  "metaDescription": "Coupure, tableau d'origine, maison de ville à rénover à Rumilly : nous trouvons la panne et remettons l'installation en sécurité. Demandez un devis.",
+  "h1": "Électricien à Rumilly",
+  "image": "/zones/rumilly.jpg",
+  "imageAlt": "Vieilles maisons aux toits de tuiles au bord de l'eau, clocher et pont de pierre, au pied des montagnes",
+  "intro": "Nous dépannons, remettons aux normes et rénovons les installations électriques de Rumilly (74150), du vieux bourg aux quartiers résidentiels. Avec 16 442 habitants selon geo.api.gouv.fr, la ville se présente comme le centre urbain de l'Albanais, à mi-chemin entre les lacs d'Annecy et du Bourget. Son centre historique, niché entre les cours encaissés du Chéran et de la Néphaz, est classé Site patrimonial remarquable, avec des maisons à arcades du XVIe siècle. Maisons de ville anciennes, pavillons et logements récents : chaque quartier appelle une approche différente.",
+  "blocks": [
+    {
+      "heading": "Électricien à Rumilly, au cœur de l'Albanais",
+      "body": "Rumilly n'est pas une banlieue d'Annecy : c'est une ville à part entière, avec son centre ancien, ses quartiers de maisons et ses zones d'activité. Les installations électriques y sont aussi variées que le bâti. Dans le vieux bourg, nous rencontrons des logements installés dans des murs très anciens, souvent modernisés par morceaux. Dans les quartiers plus récents, l'installation est plus homogène, et les demandes portent sur des ajouts ou des pannes ponctuelles. Nous adaptons la méthode, mais le point de départ reste le même : lire le tableau avant tout."
+    },
+    {
+      "heading": "Dépannage électrique à Rumilly : nos premiers contrôles",
+      "body": "Face à une coupure, nous vérifions d'abord si le problème vient du réseau ou de votre logement, puis nous identifions l'organe qui a déclenché : disjoncteur de branchement, interrupteur différentiel ou disjoncteur d'un seul circuit. Chacun raconte une histoire différente. Le premier signale souvent une surcharge globale, le deuxième un défaut d'isolement, le troisième un problème localisé sur une ligne. Nous testons ensuite la ligne concernée, appareils débranchés, pour distinguer une panne de l'installation d'un appareil défectueux. Nous réparons ce qui est en cause, sans remplacer ce qui fonctionne."
+    },
+    {
+      "heading": "Maison de ville ancienne : moderniser sans abîmer",
+      "body": "Dans les murs épais du centre historique, faire des saignées pour encastrer de nouveaux câbles peut fragiliser un enduit ancien ou un décor que l'on souhaite garder. Selon les pièces, nous passons par les planchers, les doublages existants, les plinthes techniques ou des moulures électriques discrètes. Nous remplaçons les conducteurs sans terre, les anciens fusibles et l'appareillage d'un autre âge, en gardant le caractère des lieux. Dans le périmètre du Site patrimonial remarquable, tout ce qui se voit depuis la rue relève de règles d'urbanisme propres : nous en tenons compte avant de poser quoi que ce soit en façade."
+    },
+    {
+      "heading": "Remplacer un tableau électrique trop ancien",
+      "body": "Un tableau à fusibles, un coffret en bois ou un disjoncteur général sans différentiel ne protègent pas les personnes contre un défaut à la terre. Le remplacement consiste à installer un tableau moderne à disjoncteurs modulaires sur rail DIN, dont chaque rangée est protégée par un interrupteur différentiel 30 mA, avec un calibre adapté à chaque circuit et un repérage clair. Nous vérifions en même temps la prise de terre de la maison, sans laquelle un tableau neuf ne remplit qu'une partie de son rôle. C'est souvent la première étape, et parfois la seule nécessaire, pour sécuriser une installation ancienne."
+    },
+    {
+      "heading": "Vendre ou louer à Rumilly : le diagnostic électricité",
+      "body": "Si l'installation électrique d'un logement a plus de 15 ans, le propriétaire doit fournir un diagnostic électricité pour le vendre ou le louer : de moins de 3 ans pour une vente, de moins de 6 ans pour une location. Ce document est établi par un diagnostiqueur certifié, que nous ne remplaçons pas. Notre rôle vient après : lire les anomalies qu'il signale, vous dire lesquelles sont urgentes, et les corriger pour que le logement soit remis en sécurité avant l'arrivée des nouveaux occupants."
+    }
+  ],
+  "bodyImage": "/zones/rumilly-corps.jpg",
+  "bodyImageAlt": "Tableau électrique moderne installé dans une maison de ville ancienne rénovée, murs de pierre et enduits restaurés",
+  "bodyImageCaption": "Maison de ville ancienne rénovée : un tableau moderne sur rail DIN, dans des murs qui gardent leur caractère.",
+  "neighbours": [
+    "poisy",
+    "meythet",
+    "cran-gevrier"
+  ],
+  "relatedServices": [
+    "urgence-depannage-electrique",
+    "remise-aux-normes-tableau-electrique",
+    "renovation-electrique-complete"
+  ],
+  "prixPhrase": "À Rumilly, entre un dépannage ponctuel et la rénovation d'une maison du vieux bourg, les budgets n'ont rien à voir : ces repères vous situent dès maintenant.",
+  "sources": [
+    {
+      "label": "geo.api.gouv.fr, Rumilly (74225), population et code postal",
+      "url": "https://geo.api.gouv.fr/communes/74225?fields=nom,code,population,codesPostaux"
+    },
+    {
+      "label": "Ville de Rumilly, Bienvenue à Rumilly (Albanais, vieux bourg, Site patrimonial remarquable)",
+      "url": "https://www.mairie-rumilly74.fr/bienvenue-a-rumilly/"
+    },
+    {
+      "label": "Wikipédia, Rumilly (Haute-Savoie), centre urbain de l'Albanais",
+      "url": "https://fr.wikipedia.org/wiki/Rumilly_(Haute-Savoie)"
+    },
+    {
+      "label": "Service-Public.fr, diagnostic de l'installation intérieure d'électricité",
+      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F18692"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Intervenez-vous à Rumilly alors que vous êtes basés vers Annecy ?",
+      "a": "Oui. Rumilly fait partie de notre zone d'intervention, tout comme l'agglomération d'Annecy. Décrivez-nous la situation par téléphone ou par le formulaire et nous organisons le passage."
+    },
+    {
+      "q": "Des fusibles protègent encore ma maison du centre ancien, suis-je en danger ?",
+      "a": "Les fusibles protègent les câbles contre les surcharges, mais pas les personnes contre un défaut à la terre. Sans interrupteur différentiel 30 mA, un appareil défectueux peut rester sous tension au toucher. Remplacer le tableau est la priorité dans ce cas."
+    },
+    {
+      "q": "Peut-on refaire l'électricité d'une maison ancienne sans tout casser ?",
+      "a": "Souvent, oui. Nous passons par les planchers, les doublages et les plinthes techniques, et nous réservons les saignées aux endroits où elles ne posent pas de problème. Nous définissons le passage des câbles pièce par pièce avant de commencer."
+    },
+    {
+      "q": "Les lampes baissent quand le chauffe-eau démarre, faut-il s'en inquiéter ?",
+      "a": "Une baisse brève peut venir d'une ligne longue ou chargée. Si elle est marquée ou s'accompagne de grésillements, une connexion desserrée au tableau ou sur le neutre est possible, et elle peut chauffer. Dans ce cas, faites contrôler l'installation sans attendre."
+    },
+    {
+      "q": "Qui réalise le diagnostic électricité avant une vente à Rumilly ?",
+      "a": "Un diagnostiqueur certifié, indépendant de l'électricien. Nous intervenons ensuite pour corriger les anomalies qu'il a relevées, si vous le décidez."
+    }
+  ]
+}

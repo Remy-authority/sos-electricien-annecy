@@ -2,46 +2,57 @@
   "slug": "annecy-le-vieux",
   "name": "Annecy-le-Vieux",
   "postalCode": "74940",
-  "context": "Ancienne commune fusionnée avec Annecy en 2017, aujourd'hui secteur résidentiel au bord du lac, entre quartiers d'habitation et campus universitaire.",
-  "metaTitle": "Électricien à Annecy-le-Vieux (74)",
-  "metaDescription": "Électricien dans le secteur d'Annecy-le-Vieux : dépannage, tableau électrique, mise aux normes. Intervention rapide. Contactez-nous.",
-  "h1": "Électricien dans le secteur d'Annecy-le-Vieux",
-  "intro": "Nous intervenons dans le secteur d'Annecy-le-Vieux (74940) pour tout dépannage électrique, remise aux normes de tableau ou installation électrique neuve. Ancienne commune devenue secteur d'Annecy depuis la fusion de 2017, Annecy-le-Vieux conserve une identité propre entre quartiers résidentiels, bord du lac et campus universitaire. Nous diagnostiquons précisément avant toute intervention.",
+  "context": "Rive nord-est du lac et premiers contreforts du mont Veyrier : un secteur très résidentiel, fondu dans Annecy en 2017, avec le quartier d'Albigny et un campus universitaire.",
+  "metaTitle": "Électricien à Annecy-le-Vieux : rénovation et dépannage",
+  "metaDescription": "Maison de famille à rénover, studio loué près du campus, panne à Annecy-le-Vieux : nous refaisons tableau et circuits proprement. Parlez-nous du projet.",
+  "h1": "Électricien à Annecy-le-Vieux",
+  "intro": "Nous rénovons, remettons aux normes et dépannons les installations électriques d'Annecy-le-Vieux (74940), d'Albigny aux pentes du mont Veyrier. Fondue dans la commune nouvelle d'Annecy au 1er janvier 2017, l'ancienne commune réunissait 20 469 habitants en 2014. Décrite comme la banlieue très résidentielle de l'agglomération, elle abrite aussi un campus universitaire : maisons de famille en travaux et logements loués à des étudiants composent l'essentiel de nos demandes.",
   "blocks": [
     {
-      "heading": "Nos prestations dans le secteur d'Annecy-le-Vieux",
-      "body": "Nous intervenons dans le secteur d'Annecy-le-Vieux pour toutes les situations électriques : recherche de panne, remise aux normes de tableau électrique, diagnostic avant vente, ou installation électrique neuve pour une extension ou une borne de recharge. Nous établissons un diagnostic clair et un devis détaillé avant toute intervention."
+      "heading": "Électricien à Annecy-le-Vieux pour les maisons de famille",
+      "body": "Une maison qui change de propriétaire change souvent d'usage : cuisine ouverte, chambre ajoutée, bureau à domicile. L'installation, elle, a été pensée pour la famille précédente. Le signe le plus courant est la multiprise branchée sur une autre multiprise, parce qu'il manque des prises là où l'on vit vraiment. Nous reprenons le plan électrique pièce par pièce avec vous, en suivant la NF C 15-100 : nombre de prises, circuits spécialisés, commandes d'éclairage, avant de toucher au tableau."
     },
     {
-      "heading": "Panne urgente à Annecy-le-Vieux",
-      "body": "En cas de panne urgente dans le secteur d'Annecy-le-Vieux, appelez-nous directement. En attendant notre arrivée, coupez le disjoncteur du circuit concerné (ou le disjoncteur général en cas de doute ou d'odeur de brûlé) pour limiter les risques. Nous intervenons 7j/7 sur Annecy-le-Vieux et les secteurs voisins."
+      "heading": "Rénover l'électricité pendant les travaux de la maison",
+      "body": "Le meilleur moment pour refaire l'électricité, c'est quand les cloisons sont ouvertes et les sols déposés. Les câbles passent sans saignées supplémentaires, les boîtiers se placent au bon endroit et le tableau neuf, souvent logé dans le placard de l'entrée, se câble proprement. Nous nous coordonnons avec le plaquiste et le peintre pour intervenir au bon moment : passage des gaines avant fermeture des murs, pose de l'appareillage après les finitions. Vous évitez ainsi de refaire deux fois la même cloison."
     },
     {
-      "heading": "Secteurs et communes voisines desservis",
-      "body": "En plus d'Annecy-le-Vieux, nous intervenons dans le centre-ville d'Annecy, le secteur de Seynod, et les communes de Veyrier-du-Lac et Menthon-Saint-Bernard au bord du lac. Notre zone de couverture s'étend sur un rayon de 30 km autour d'Annecy."
+      "heading": "Logement loué près du campus : l'installation du bailleur",
+      "body": "Autour du campus, des propriétaires d'Annecy-le-Vieux louent un studio ou une chambre à des étudiants. Quand l'installation a plus de 15 ans, un diagnostic électricité de moins de 6 ans doit être remis au locataire lors de la signature du bail, établi par un diagnostiqueur certifié. Les anomalies qu'il relève se corrigent souvent sans gros chantier : une protection différentielle manquante, une prise sans terre, un luminaire mal fixé. Nous traitons ces points entre deux locations, pour que le logement soit prêt à la rentrée."
+    },
+    {
+      "heading": "Une panne à Annecy-le-Vieux : ce que nous regardons en premier",
+      "body": "Sur une maison déjà en partie rénovée, une panne vient souvent de la jonction entre l'ancien et le neuf : une boîte de dérivation oubliée derrière un doublage, un vieux circuit raccordé sur un différentiel neuf qui détecte enfin un défaut ancien. Nous suivons le circuit concerné depuis le tableau, nous mesurons l'isolement et nous retrouvons le point précis. Une panne réglée à sa source ne revient pas le mois suivant."
     }
   ],
-  "neighbours": [
-    "Annecy centre-ville",
-    "Seynod",
-    "Veyrier-du-Lac"
+  "bodyImage": "/zones/annecy-le-vieux-corps.jpg",
+  "bodyImageAlt": "Tableau électrique neuf installé dans le placard d'entrée clair d'une maison familiale rénovée",
+  "bodyImageCaption": "Dans une maison familiale rénovée, le tableau neuf trouve sa place dans le placard de l'entrée.",
+  "neighbours": ["veyrier-du-lac", "argonay", "pringy"],
+  "relatedServices": ["renovation-electrique-complete", "remise-aux-normes-tableau-electrique", "mise-en-conformite-diagnostic-electrique"],
+  "prixPhrase": "À Annecy-le-Vieux, le budget d'une rénovation dépend de la surface et de l'ouverture des murs : ces fourchettes vous donnent un premier repère.",
+  "sources": [
+    { "label": "Légifrance, arrêté du 14 juillet 2016 portant création de la commune nouvelle d'Annecy", "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000033313064" },
+    { "label": "geo.api.gouv.fr, Annecy-le-Vieux commune déléguée (74011)", "url": "https://geo.api.gouv.fr/communes_associees_deleguees/74011" },
+    { "label": "Wikipédia, Annecy-le-Vieux (population 2014, mont Veyrier, campus)", "url": "https://fr.wikipedia.org/wiki/Annecy-le-Vieux" },
+    { "label": "Service-Public.fr, diagnostic de l'installation intérieure d'électricité", "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F18692" }
   ],
   "faq": [
     {
-      "q": "Annecy-le-Vieux est-elle toujours une commune indépendante ?",
-      "a": "Non. Depuis le 1er janvier 2017, Annecy-le-Vieux a fusionné avec Annecy et quatre autres anciennes communes pour former la commune nouvelle d'Annecy. C'est aujourd'hui un secteur d'Annecy avec sa propre identité et son code postal (74940), mais plus une commune autonome."
+      "q": "Je loue un studio à un étudiant, quel document électrique dois-je fournir ?",
+      "a": "Dès que l'installation dépasse 15 ans, le bail s'accompagne d'un diagnostic électricité datant de moins de 6 ans, établi par un diagnostiqueur certifié. Nous ne réalisons pas ce diagnostic, mais nous corrigeons les anomalies qu'il signale."
     },
     {
-      "q": "Intervenez-vous dans le secteur d'Annecy-le-Vieux pour le dépannage électrique ?",
-      "a": "Oui. Nous intervenons dans le secteur d'Annecy-le-Vieux (74940) pour tout dépannage électrique : recherche de panne, disjoncteur qui saute, remise aux normes de tableau. Diagnostic précis, devis avant travaux."
+      "q": "Faut-il tout recâbler quand on rénove une maison ancienne ?",
+      "a": "Pas forcément. Si les câbles sont récents et bien isolés, on les conserve et on reprend le tableau et l'appareillage. Si les conducteurs sont anciens, sans terre ou abîmés, la réfection complète est plus sûre et souvent plus simple pendant les travaux."
     },
     {
-      "q": "Quel est le délai d'intervention à Annecy-le-Vieux ?",
-      "a": "Annecy-le-Vieux est un secteur proche du centre d'Annecy, accessible rapidement depuis notre zone d'intervention. Nous vous donnons un délai estimatif lors de votre appel en fonction de notre planning du moment."
+      "q": "Où placer le tableau électrique dans une maison rénovée ?",
+      "a": "Un placard d'entrée ou un cellier facile d'accès convient bien, à condition de laisser de la place devant le coffret. Le placer près de l'arrivée du compteur limite aussi la longueur du câble d'alimentation."
     },
     {
-      "q": "Intervenez-vous aussi à Seynod et Veyrier-du-Lac ?",
-      "a": "Oui. Nous couvrons le secteur de Seynod, la commune de Veyrier-du-Lac et les autres secteurs et communes autour du lac d'Annecy dans le cadre de notre zone d'intervention de 30 km."
+      "q": "Intervenez-vous sur les hauteurs d'Annecy-le-Vieux ?",
+      "a": "Oui, dans tout le secteur, des bords du lac à Albigny jusqu'aux quartiers sur les pentes du mont Veyrier, ainsi qu'à Veyrier-du-Lac et dans le reste de l'agglomération."
     }
   ]
 }
