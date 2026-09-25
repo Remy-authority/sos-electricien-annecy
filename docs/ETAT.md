@@ -8,6 +8,14 @@
 
 ---
 
+## 🔵 26/09/2026 (session Fable) : BLOC 1 = FOND BLEU, EN ATTENTE DU GO
+
+Reprise après l'arrêt du CEO précédent (6 refus du bloc 1 ordinateur). Décision Rémy : fond bleu nuit partout, aucune
+photo dans le bloc 1, ordinateur compris. Fait sur `maj-25-09` (commit `4d80945`), aperçu
+https://sos-electricien-annecy-61b4besgl-remy-2817s-projects.vercel.app, rien sur `main`. Le reste de la mise à jour
+du 25/09 (tarifs, 12 communes, 92 photos, 65 brouillons, 09 39 20 03 38) est inchangé. Suite dans `tasks/todo.md`
+(section REPRISE, puis « Reste après GO »).
+
 ## 🔖 POINT DE REPRISE (état exact au 25/07/2026 — à lire en premier)
 
 **Site n°2 du portefeuille** (métier : électricien d'urgence, ville : Annecy, 74). Playbook Étapes

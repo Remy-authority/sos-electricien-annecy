@@ -99,6 +99,21 @@
 - Téléphone (2e question, 25/09) : stock Twilio de 09 VIDE ; Rémy choisit de PRENDRE LE 09 DE BEAUVAIS (09 39 20 03 38, +33939200338, 0 appel, 1 clic/28 j). À faire au GO : config + legal.json d'Annecy, Beauvais à `phone: ''` (+ legal.json), Twilio friendly_name, annuaire-09.json, sites.json des deux, check-twilio CODE 0.
 - Requête d'argent mesurée : « électricien annecy » 590/mois, CPC 4,77 € (tasks/.maj-annecy/volumes-25-09.txt).
 
+## REPRISE le 26/09/2026 (session Fable, nouvelle conversation) : bloc 1 = FOND BLEU, GO attendu
+Décision Rémy (trois messages, sans appel) : « on s'en fout, on met un fond bleu », « j'en peux plus des photos du bloc 1 ».
+FAIT : bloc 1 de l'accueil sans aucune photo, dégradé bleu nuit à toutes les largeurs (téléphone comme ordinateur),
+texte à gauche + formulaire 3 étapes à droite sur ordinateur, tout centré sur téléphone ; `hero-v4.jpg` supprimé.
+Commit `4d80945` sur `maj-25-09`, aperçu : https://sos-electricien-annecy-61b4besgl-remy-2817s-projects.vercel.app
+(vérifié : plus aucune photo dans la page, H1 présent, capture 1440/1920/390 regardées). RIEN sur main.
+Erreur de la session : « un fond d'écran propre » lu comme une photo propre ; 45 min de composition photo pour rien
+(leçon #L268 au portefeuille). NE JAMAIS reproposer de photo dans le bloc 1 de ce site.
+Contrôle design : il signalera « aucune photo derrière le titre » sur l'accueil ; c'est l'arbitrage de Rémy, à écrire
+dans le journal du contrôle, pas à contourner.
+APRÈS LE GO : merge `maj-25-09` sur `main`, puis le « Reste après GO » de la section ARRÊT ci-dessous, inchangé
+(Beauvais phone '' + annuaire-09 + sites.json + Twilio friendly_name, check-twilio, check-fin-de-site, série des
+contrôles ré-ancrée sur le commit final, Rank OS travaux + cadence 5 + autoblogEndsAt + notes + capture,
+indexation-a-ajouter.json 12 pages, taches.json, protection Vercel remise, ETAT.md, lessons).
+
 ## ARRÊT le 26/09/2026 vers 03 h (Rémy) : « on arrête tout », nouvelle conversation à ouvrir
 État : branche `maj-25-09` (fbb7819) poussée, RIEN sur main. Aperçu : https://sos-electricien-annecy-iz3ephv6e-remy-2817s-projects.vercel.app
 FAIT et vert : /tarifs (30 prix sourcés), 12 communes (Rumilly ajoutée), 5 piliers, 58 titres et descriptions, 80 backlinks internes,
