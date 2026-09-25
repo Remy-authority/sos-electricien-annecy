@@ -98,3 +98,19 @@
 - Note AVANT : 0/10 (1 ❌ 2 ❌ 3 ❌ 4 ❌ 5 ❌ 6 ❌ 7 ❌ 8 ❌ 9 ❌ 10 ❌).
 - Téléphone (2e question, 25/09) : stock Twilio de 09 VIDE ; Rémy choisit de PRENDRE LE 09 DE BEAUVAIS (09 39 20 03 38, +33939200338, 0 appel, 1 clic/28 j). À faire au GO : config + legal.json d'Annecy, Beauvais à `phone: ''` (+ legal.json), Twilio friendly_name, annuaire-09.json, sites.json des deux, check-twilio CODE 0.
 - Requête d'argent mesurée : « électricien annecy » 590/mois, CPC 4,77 € (tasks/.maj-annecy/volumes-25-09.txt).
+
+## ARRÊT le 26/09/2026 vers 03 h (Rémy) : « on arrête tout », nouvelle conversation à ouvrir
+État : branche `maj-25-09` (fbb7819) poussée, RIEN sur main. Aperçu : https://sos-electricien-annecy-iz3ephv6e-remy-2817s-projects.vercel.app
+FAIT et vert : /tarifs (30 prix sourcés), 12 communes (Rumilly ajoutée), 5 piliers, 58 titres et descriptions, 80 backlinks internes,
+menus déroulants, pied de page mobile en volets, 92 photos refaites (prises françaises), 65 brouillons, cron 5/semaine, 09 39 20 03 38
+posé (repris de Beauvais, GO Rémy), relecture critique faite (12 corrections), contrôles blocs/navigation/visuels/anti-copie verts.
+BLOQUÉ : le BLOC 1 ORDINATEUR, refusé 6 fois par Rémy le 26/09. Téléphone : ACCEPTÉ (fond bleu nuit, titre, formulaire 3 étapes, appel).
+Ordinateur, ce que Rémy a refusé : tableau caché par le formulaire ; texte+formulaire empilés à gauche (moitié droite vide) ;
+tableau « dans un tiroir » avec lampe qui mange le texte ; tableau géant coupé en bas sur mur bleu (fbb7819, en ligne sur l'aperçu).
+Ce qu'il veut : une mise en page classique (texte à gauche, formulaire à droite), une photo PREMIUM où l'on voit le métier sans
+que le formulaire le cache, le tout en UN essai, deux au maximum. Photos candidates non intégrées : tasks/.maj-annecy/hero/g1..g4.jpg
+(g1 : tableau sur bois sombre, fenêtre lac à droite ; g3 idem avec sac ; g2 électricien accroupi ; g4 mur gris).
+Contrôle design : refuse un titre sur fond uni (aplat) ; Rémy a demandé un fond uni pour lire : à arbitrer avec lui.
+Reste après GO : merge main, Beauvais phone '' + annuaire-09 + sites.json + Twilio friendly_name, check-twilio, check-fin-de-site,
+Rank OS (travaux, cadence 5, autoblogEndsAt, notes > 120 car.), indexation-a-ajouter.json (12 pages), taches.json, protection Vercel
+remise (ssoProtection all_except_custom_domains, coupée le 25/09), ETAT.md, lessons.
