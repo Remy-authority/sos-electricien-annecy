@@ -106,7 +106,7 @@ texte à gauche + formulaire 3 étapes à droite sur ordinateur, tout centré su
 Commit `4d80945` sur `maj-25-09`, aperçu : https://sos-electricien-annecy-61b4besgl-remy-2817s-projects.vercel.app
 (vérifié : plus aucune photo dans la page, H1 présent, capture 1440/1920/390 regardées). RIEN sur main.
 Erreur de la session : « un fond d'écran propre » lu comme une photo propre ; 45 min de composition photo pour rien
-(leçon #L268 au portefeuille). NE JAMAIS reproposer de photo dans le bloc 1 de ce site.
+(leçon #L270 au portefeuille). NE JAMAIS reproposer de photo dans le bloc 1 de ce site.
 Contrôle design : il signalera « aucune photo derrière le titre » sur l'accueil ; c'est l'arbitrage de Rémy, à écrire
 dans le journal du contrôle, pas à contourner.
 APRÈS LE GO : merge `maj-25-09` sur `main`, puis le « Reste après GO » de la section ARRÊT ci-dessous, inchangé
