@@ -23,8 +23,8 @@
     {
       "heading": "Les travaux de mise en conformité les plus courants",
       "body": "Selon les anomalies relevées, les travaux les plus fréquents sont : l'ajout ou la reprise de la prise de terre, l'ajout d'un différentiel 30 mA sur les circuits qui en sont dépourvus, le remplacement d'un matériel électrique vétuste identifié comme dangereux, ou la mise aux normes de la salle de bain lorsque les volumes de sécurité autour de la douche et de la baignoire ne sont pas respectés. Ces travaux ciblés permettent souvent de lever les anomalies sans reprendre l'intégralité du câblage du logement.",
-      "image": "/services/mise-en-conformite-diagnostic-electrique-salle-de-bain.jpg",
-      "imageAlt": "Installation électrique aux normes dans une salle de bain",
+      "image": "/realisations/mise-aux-normes-v2.jpg",
+      "imageAlt": "Salle de bains rénovée en pierre claire, lavabo suspendu, miroir rond et baignoire îlot",
       "imageCaption": "Les volumes de sécurité autour de la douche et de la baignoire imposent des règles précises."
     },
     {
@@ -54,6 +54,6 @@
       "a": "Oui. Les mêmes obligations de sécurité s'appliquent aux logements mis en location. Nous intervenons pour corriger les anomalies identifiées, que ce soit dans le cadre d'une location classique ou d'une location meublée."
     }
   ],
-  "image": "/services/mise-en-conformite-diagnostic-electrique.jpg",
+  "image": "/services/mise-en-conformite-diagnostic-electrique-v2.jpg",
   "prixPhrase": "Pour estimer le budget des corrections qui suivent un diagnostic, consultez les repères de prix de notre page tarifs."
 }
