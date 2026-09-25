@@ -63,7 +63,7 @@ export default function Realisations() {
                   src={real.image}
                   alt={`${real.category}, ${real.title}`}
                   fill
-                  sizes="(min-width: 1024px) 25vw, 50vw"
+                  sizes="(min-width: 1024px) 45vw, 100vw"
                   className="object-cover"
                 />
                 {/* Fondu bas : ancre la photo dans la carte sombre */}

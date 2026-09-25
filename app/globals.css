@@ -156,12 +156,15 @@
         conserve la luminosité moyenne : le noir n'est pas délavé, contrairement à
         `screen` ou à un mélange normal. */
   .texture-noise {
-    @apply relative;
+    @apply relative isolate;
   }
+  /* z-index -1 (25/09/2026) : sans lui le grain passait PAR-DESSUS les photos et le
+     texte des sections sombres (bloc 1, couvertures, cartes), qui paraissaient floues. */
   .texture-noise::after {
     content: '';
     position: absolute;
     inset: 0;
+    z-index: -1;
     pointer-events: none;
     opacity: 0.65;
     mix-blend-mode: overlay;

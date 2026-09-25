@@ -23,12 +23,12 @@ export default function Hero() {
       {/* ── Couche 1 : photo d'intervention plein cadre ──
           alt descriptif (relecture du 25/09/2026) : la photo montre le métier. `priority` car c'est le plus grand visuel above-the-fold (LCP). */}
       <Image
-        src="/hero.jpg"
-        alt="Électricien contrôlant un tableau électrique ouvert, le lac d'Annecy et les montagnes derrière la baie vitrée"
+        src="/hero-v2.jpg"
+        alt="Tableau électrique neuf éclairé par une baladeuse dans un chalet rénové, le lac d'Annecy et les montagnes au crépuscule derrière la baie vitrée"
         fill
         sizes="100vw"
         priority
-        className="object-cover object-[28%_50%] lg:object-center"
+        className="object-cover object-[74%_50%] lg:object-center"
       />
 
       {/* ── Couche 2 : voile de lisibilité, UN seul calque plein cadre ──
