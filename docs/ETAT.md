@@ -1,20 +1,51 @@
 # ETAT.md — Journal de bord SOS Électricien Annecy
 
 > Mémoire du projet. Chaque session lit ce fichier en arrivant et le met à jour avant de finir.
-> Dernière mise à jour : 2026-07-26 (session Builder, les 68 covers de la vague Autoblog sont
+> Dernière mise à jour : 2026-09-26 (session Fable, mise à jour en ligne, bloc 1 fond bleu, 09 en service ; détail dans la section ✅ ci-dessous). Historique : 2026-07-26 (session Builder, les 68 covers de la vague Autoblog sont
 > générées et livrées dans public/conseils/, détail en §3vicies. Les 79 articles du site,
 > publiés et en file, ont désormais tous leur image. Reste : contrôle CEO puis commit groupé
 > drafts + covers).
 
 ---
 
-## 🔵 26/09/2026 (session Fable) : BLOC 1 = FOND BLEU, EN ATTENTE DU GO
+## ✅ 26/09/2026 (session Fable) : MISE À JOUR EN LIGNE, GO RÉMY (« Ok go »)
 
-Reprise après l'arrêt du CEO précédent (6 refus du bloc 1 ordinateur). Décision Rémy : fond bleu nuit partout, aucune
-photo dans le bloc 1, ordinateur compris. Fait sur `maj-25-09` (commit `4d80945`), aperçu
-https://sos-electricien-annecy-61b4besgl-remy-2817s-projects.vercel.app, rien sur `main`. Le reste de la mise à jour
-du 25/09 (tarifs, 12 communes, 92 photos, 65 brouillons, 09 39 20 03 38) est inchangé. Suite dans `tasks/todo.md`
-(section REPRISE, puis « Reste après GO »).
+Reprise après l'arrêt du CEO précédent (6 refus du bloc 1 ordinateur). Décision Rémy : bloc 1 sur fond bleu nuit
+partout, AUCUNE photo, ordinateur compris. Erreur de la session : « un fond d'écran propre » lu comme une photo
+propre, 45 minutes perdues (leçon portefeuille #L270). NE JAMAIS reproposer de photo dans le bloc 1 de ce site.
+
+**En ligne** : `main` = `b4409f6` (merge de `maj-25-09` en avance rapide, puis colonnes du bloc 1 alignées en haut).
+Preuves : curl 200 sur https://www.sos-electricien-annecy.fr/ avec le title « Électricien à Annecy, dépannage
+d'urgence 24h/24 », /tarifs 200 « Tarifs et prix d'un électricien à Annecy », /zones/rumilly 200, aucune photo dans
+le bloc 1 servi. Déploiement production Vercel READY sur b4409f6.
+
+**Téléphone** : 09 39 20 03 38 (+33939200338, sid PNbea3af93751989f87f1bf044ff3e470f) repris de toiture-beauvais.fr :
+Twilio friendly_name « sos-electricien-annecy.fr · rank&rent · en service », renvoi inchangé (twimlet vers le 07 de
+Rémy, aucun partenaire), `tasks/annuaire-09.json` à jour, Beauvais passé formulaire seul (commit 4d5b1f2, appels
+conditionnels, JSON-LD sans telephone, production READY, 0 occurrence du numéro sur l'accueil), Rank OS : Annecy
+« 09 39 20 03 38 », Beauvais `null`. `check-twilio.py` : CODE 0, « compte actif, solde 16.37 $, 28 numéros cohérents ».
+
+**Contrôles sur b4409f6** (journal `../tasks/.controles/sos-electricien-annecy.fr/`) :
+- `check-fin-de-site.py www.sos-electricien-annecy.fr` : CODE 0, « OK : contrôle SEO et GEO complet, aucun défaut »
+  (après la note Rank OS portée à 337 caractères). Reste l'action de Rémy : demander l'indexation de l'accueil.
+- blocs-pages CODE 0, navigation CODE 0, visuels-articles CODE 0.
+- design CODE 1, UN défaut : « titre du bloc 1 posé sur un aplat » = la décision de Rémy du 26/09 (fond bleu sans
+  photo), assumée, à ne pas contourner. Le défaut d'alignement (97 px) a été corrigé (b4409f6).
+- footprint : relancé sur b4409f6 après la mise en ligne (verdict dans le journal des contrôles, voir ci-dessous).
+- `check-serie.py` refusera tant que design est rouge : c'est l'arbitrage de Rémy, consigné ici.
+
+**Rank OS** (cockpit c570ee4, déployé) : fiche Annecy (phone, notes 337 car., `autoblogEndsAt` 2026-12-25 = 65
+brouillons à 5/semaine), entrée `travaux` du 26/09 (resume, 6 cases, 0 → 9), 12 pages dans Tâches › Indexation
+(`depuis` 2026-09-26), 5 tâches du site cochées dans « Sites à pousser », capture 1280x800 refaite sur le domaine.
+Protection Vercel remise : `ssoProtection all_except_custom_domains` (PATCH + GET vérifié), domaine public 200.
+
+**Note sur 10** : avant 0/10 (1 à 10 ❌, état des lieux du 25/09) ; après 9/10 (1 ✅ 2 ✅ 3 ✅ 4 ✅ 5 ✅ 6 ✅ 7 ✅ 8 ✅
+9 ✅ 10 ❌ : le contrôle design reste rouge sur l'aplat du bloc 1, voulu par Rémy).
+
+**À indexer par Rémy** (Rank OS › Tâches › Indexation) : /, /tarifs, /zones/cran-gevrier, /zones/seynod,
+/zones/meythet, /zones/epagny-metz-tessy, /zones/rumilly, /services/urgence-depannage-electrique,
+/services/mise-en-conformite-diagnostic-electrique, /services/recherche-panne-electrique,
+/services/remise-aux-normes-tableau-electrique, /contact.
 
 ## 🔖 POINT DE REPRISE (état exact au 25/07/2026 — à lire en premier)
 
