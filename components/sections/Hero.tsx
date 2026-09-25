@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Image from 'next/image'
+import { getImageProps } from 'next/image'
 import { siteConfig } from '@/config/site.config'
 import PhoneButton from '@/components/ui/PhoneButton'
 
@@ -14,6 +14,31 @@ import PhoneButton from '@/components/ui/PhoneButton'
  *
  * La carte « Garantie 100 % » a été retirée le 25/09/2026 (garantie et délai inventés).
  */
+// Photo du bloc 1 en direction artistique (25/09/2026) : une composition EN HAUTEUR pour le
+// téléphone et la tablette (1536 x 2752), une EN LARGEUR pour l'ordinateur (2400 x 1340).
+// Une seule image est visible à la fois ; étirer la photo large dans le cadre haut du
+// téléphone la rendait floue (Rémy, 25/09).
+const HERO_ALT =
+  "Tableau électrique neuf éclairé par une baladeuse dans un chalet rénové, le lac d'Annecy et les montagnes au crépuscule derrière la baie vitrée"
+
+function HeroPicture() {
+  const common = { alt: HERO_ALT, fill: true, sizes: '100vw', priority: true }
+  const {
+    props: { srcSet: desktop },
+  } = getImageProps({ ...common, src: '/hero-v2.jpg' })
+  const {
+    props: { srcSet: mobile, ...rest },
+  } = getImageProps({ ...common, src: '/hero-mobile.jpg' })
+  return (
+    <picture>
+      <source media="(min-width: 1024px)" srcSet={desktop} />
+      <source srcSet={mobile} />
+      {/* eslint-disable-next-line jsx-a11y/alt-text */}
+      <img {...rest} className="object-cover object-[50%_60%] lg:object-center" />
+    </picture>
+  )
+}
+
 export default function Hero() {
   return (
     <section
@@ -22,14 +47,7 @@ export default function Hero() {
     >
       {/* ── Couche 1 : photo d'intervention plein cadre ──
           alt descriptif (relecture du 25/09/2026) : la photo montre le métier. `priority` car c'est le plus grand visuel above-the-fold (LCP). */}
-      <Image
-        src="/hero-v2.jpg"
-        alt="Tableau électrique neuf éclairé par une baladeuse dans un chalet rénové, le lac d'Annecy et les montagnes au crépuscule derrière la baie vitrée"
-        fill
-        sizes="100vw"
-        priority
-        className="object-cover object-[74%_50%] lg:object-center"
-      />
+      <HeroPicture />
 
       {/* ── Couche 2 : voile de lisibilité, UN seul calque plein cadre ──
           Mobile : teinte uniforme (texte centré sur toute la largeur).
