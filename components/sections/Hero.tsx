@@ -26,22 +26,21 @@ export default function Hero() {
       {/* ── Ordinateur seulement : la photo (tableau éclairé à droite, hors du texte) ── */}
       <div className="absolute inset-0 hidden lg:block">
         <Image
-          src="/hero-v3.jpg"
-          alt="Tableau électrique neuf éclairé par une applique dans un chalet en bois, le lac d'Annecy et les montagnes au crépuscule par la baie vitrée"
+          src="/hero-v4.jpg"
+          alt="Tableau électrique neuf, porte ouverte, sur un mur bleu nuit, avec le salon et le lac d'Annecy par la baie vitrée"
           fill
           priority
           sizes="(min-width: 1024px) 100vw, 1px"
-          className="object-cover object-[50%_85%]"
+          className="object-cover object-[50%_100%]"
         />
-        {/* Voile à gauche, sous le texte et le formulaire ; transparent à droite, sur le tableau. */}
-        <div className="absolute inset-0 bg-gradient-to-b from-dark/25 via-dark/10 via-45% to-transparent to-70%" aria-hidden="true" />
+        {/* Aucun voile : le mur bleu nuit de la photo porte le titre à lui seul (26/09). */}
       </div>
       <div
         className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-b from-transparent to-dark"
         aria-hidden="true"
       />
 
-      <div className="container-site relative grid gap-8 py-12 md:py-16 lg:grid-cols-2 lg:items-start lg:gap-x-14 lg:gap-y-10 lg:py-20">
+      <div className="container-site relative grid gap-8 py-12 md:py-16 lg:min-h-[900px] lg:grid-cols-2 lg:items-start lg:gap-x-14 lg:gap-y-10 lg:py-20">
         {/* Texte : centré sur téléphone, à gauche sur ordinateur, en haut de la colonne gauche
             (le tableau de la photo est visible en dessous). */}
         <div className="mx-auto w-full max-w-lg text-center lg:col-start-1 lg:row-start-1 lg:mx-0 lg:max-w-none lg:text-left">
