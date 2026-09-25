@@ -118,8 +118,10 @@ export const siteConfig = {
 
   whyUs: [
     { icon: 'shield', title: 'Intervention sécurisée', desc: "Nous coupons et sécurisons l'installation avant toute intervention. Votre sécurité d'abord." },
-    { icon: 'clock', title: 'Disponible 24h/24', desc: 'Coupure subite ou travaux prévus de longue date, la ligne reste ouverte tous les jours de la semaine.' },
-    { icon: 'star', title: 'Artisan indépendant', desc: "Pas d'intermédiaire, pas de franchise. Un artisan local que vous pouvez rappeler directement." },
+    // 26/09/2026 (Rémy) : « Disponible 24h/24 » et « Artisan indépendant » répétaient le bandeau
+    // TrustBadges juste au-dessus ; remplacés par deux engagements qui n'y figurent pas.
+    { icon: 'clock', title: 'Murs ouverts au minimum', desc: "Nous suivons les câbles avec nos appareils de mesure avant d'ouvrir une cloison, pour limiter les saignées." },
+    { icon: 'star', title: 'Chantier laissé propre', desc: 'Sols protégés, poussière ramassée et circuits repérés au tableau avant de partir.' },
     { icon: 'doc', title: 'Devis clair avant travaux', desc: 'Diagnostic transparent et devis détaillé avant toute intervention, sans mauvaise surprise.' },
   ],
 

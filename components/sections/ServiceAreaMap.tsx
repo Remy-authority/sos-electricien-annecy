@@ -6,23 +6,24 @@ const REASSURANCE_CARDS = [
   {
     icon: (
       <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M12 6v6l4 2" />
+        <path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z" />
+        <circle cx="12" cy="10" r="2.5" />
       </svg>
     ),
-    title: 'Intervention rapide',
-    /* 25/09/2026 : « Réponse garantie en 30 min » retiré (délai promis, interdit). */
-    desc: `${siteConfig.responseTime}, week-ends et jours fériés inclus.`,
+    // 26/09/2026 (Rémy) : les anciennes cartes « Intervention rapide » et « Artisan local »
+    // répétaient le bandeau du haut et « Pourquoi nous choisir » ; place à deux repères de zone.
+    title: 'Annecy et ses communes déléguées',
+    desc: 'Annecy-le-Vieux, Cran-Gevrier, Meythet, Pringy et Seynod font partie d\'Annecy depuis 2017 : chacune a sa page.',
   },
   {
     icon: (
       <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-        <path d="M12 2 3 7v5c0 5.25 3.75 10.15 9 11.25C17.25 22.15 21 17.25 21 12V7L12 2z" />
-        <path d="m9 12 2 2 4-4" />
+        <path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z" />
+        <circle cx="12" cy="10" r="2.5" />
       </svg>
     ),
-    title: 'Artisan local',
-    desc: `Pas d'intermédiaire. Un artisan indépendant de ${siteConfig.region}, joignable directement à tout moment.`,
+    title: 'Du tour du lac à l\'Albanais',
+    desc: 'De Sevrier, Saint-Jorioz et Veyrier-du-Lac jusqu\'à Rumilly, dans un rayon de 30 km autour d\'Annecy.',
   },
 ]
 

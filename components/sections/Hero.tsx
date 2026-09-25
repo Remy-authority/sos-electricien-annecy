@@ -17,9 +17,9 @@ import PhoneButton from '@/components/ui/PhoneButton'
 // Photo du bloc 1 en direction artistique (25/09/2026) : une composition EN HAUTEUR pour le
 // téléphone et la tablette (1536 x 2752), une EN LARGEUR pour l'ordinateur (2400 x 1340).
 // Une seule image est visible à la fois ; étirer la photo large dans le cadre haut du
-// téléphone la rendait floue (Rémy, 25/09).
-const HERO_ALT =
-  "Tableau électrique neuf éclairé par une baladeuse dans un chalet rénové, le lac d'Annecy et les montagnes au crépuscule derrière la baie vitrée"
+// téléphone la rendait floue (Rémy, 25/09). Le 26/09, Rémy refuse la version téléphone où
+// le tableau disparaissait sous le texte : on sert un gros plan qui remplit tout l'écran.
+const HERO_ALT = 'Tableau électrique neuf, rangées de disjoncteurs modulaires et câblage soigné'
 
 function HeroPicture() {
   const common = { alt: HERO_ALT, fill: true, sizes: '100vw', priority: true }
@@ -28,13 +28,13 @@ function HeroPicture() {
   } = getImageProps({ ...common, src: '/hero-v2.jpg' })
   const {
     props: { srcSet: mobile, ...rest },
-  } = getImageProps({ ...common, src: '/hero-mobile.jpg' })
+  } = getImageProps({ ...common, src: '/hero-mobile-tableau-v2.jpg' })
   return (
     <picture>
       <source media="(min-width: 1024px)" srcSet={desktop} />
       <source srcSet={mobile} />
       {/* eslint-disable-next-line jsx-a11y/alt-text */}
-      <img {...rest} className="object-cover object-[50%_60%] lg:object-center" />
+      <img {...rest} className="object-cover object-center" />
     </picture>
   )
 }
@@ -110,30 +110,12 @@ export default function Hero() {
           </h1>
 
           <p className="mx-auto mt-4 max-w-xl text-base [text-shadow:0_1px_10px_rgb(0_0_0/0.5)] leading-relaxed text-slate-100 sm:text-lg lg:mx-0">
-            {siteConfig.responseTime}. Nous trouvons l'origine de la panne, à la caméra
-            thermique ou au traceur de câbles, avant de réparer. Devis gratuit.
+            Panne de courant, disjoncteur qui saute, tableau à refaire{'\u00a0'}: nous trouvons
+            l'origine de la panne avant de réparer. Devis gratuit.
           </p>
 
-          {/* USPs, icônes SVG checkmark, zéro emoji */}
-          <ul className="mx-auto mt-5 grid max-w-md grid-cols-2 gap-x-4 gap-y-3 text-sm text-slate-100 [text-shadow:0_1px_8px_rgb(0_0_0/0.5)] lg:mx-0 lg:max-w-none lg:gap-y-2" role="list">
-            {siteConfig.usps.map((u) => (
-              <li key={u} className="flex flex-col items-center gap-1 lg:flex-row lg:gap-2">
-                <svg
-                  className="h-4 w-4 shrink-0 text-accent"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                {u}
-              </li>
-            ))}
-          </ul>
+          {/* Liste des atouts retirée le 26/09/2026 (Rémy) : elle répétait mot pour mot le
+              bandeau TrustBadges placé juste dessous. */}
 
           {/* CTAs mobile */}
           <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center md:hidden">
