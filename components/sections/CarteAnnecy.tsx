@@ -108,7 +108,7 @@ export function CarteAnnecy({ zones }: { zones: Zone[] }) {
         </div>
 
         <div className="mt-10 grid gap-10 lg:mt-14 lg:grid-cols-[1.15fr_1fr] lg:items-start lg:gap-16">
-          <TraceAuDefilement className="carte-annecy mx-auto w-full max-w-[540px] lg:max-w-[470px]">
+          <TraceAuDefilement boucles className="carte-annecy mx-auto w-full max-w-[540px] lg:max-w-[470px]">
             <div className="relative overflow-hidden rounded-[3px] bg-[#0B1A2E]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/accueil/carte-voisines.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" width={CARTE_W} height={CARTE_H} className="absolute inset-0 h-full w-full" />

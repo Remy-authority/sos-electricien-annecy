@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, type FormEvent, type ReactNode } from 'react'
 import { siteConfig } from '@/config/site.config'
+import { useAnimeEnVue } from '@/lib/anime-en-vue'
 
 /**
  * Formulaire de demande, refait le 10/10/2026 (mise à jour du site, GO Rémy).
@@ -285,6 +286,8 @@ export function LeadForm({ variante = 'standard' }: LeadFormProps) {
   const [manque, setManque] = useState(false)
   const [communeEtape3, setCommuneEtape3] = useState(false)
   const titreRef = useRef<HTMLHeadingElement>(null)
+  const racineRef = useRef<HTMLDivElement>(null)
+  useAnimeEnVue(racineRef)
   const premierRendu = useRef(true)
   const minuteur = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
   const fieldsRef = useRef(fields)
@@ -344,6 +347,8 @@ export function LeadForm({ variante = 'standard' }: LeadFormProps) {
 
   return (
     <div
+      ref={racineRef}
+      data-anime=""
       className={`relative rounded-[3px] bg-dark text-center text-white shadow-[0_24px_60px_-20px_rgb(0_0_0/0.55)] lg:text-left ${hero ? 'p-5 md:p-7' : 'p-6 md:p-8'}`}
       role="region"
       aria-label="Formulaire de demande"

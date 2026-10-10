@@ -1,17 +1,20 @@
 'use client'
 
 import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { useAnimeEnVue } from '@/lib/anime-en-vue'
 
 /**
  * Enveloppe qui pose `data-etat` sur son bloc : « fixe » au rendu serveur (tout
  * visible, robots et sans JavaScript), « cache » au montage si le bloc est encore
  * sous l'écran, puis « vu » quand il y entre. Le CSS du bloc fait le reste
  * (traits qui se tracent, aplats qui se posent). « Réduire les animations » :
- * on reste en « fixe ».
+ * on reste en « fixe ». `boucles` : le bloc a des animations en boucle, jouées
+ * seulement à l'écran (useAnimeEnVue).
  */
-export function TraceAuDefilement({ className, children }: { className?: string; children: ReactNode }) {
+export function TraceAuDefilement({ className, boucles = false, children }: { className?: string; boucles?: boolean; children: ReactNode }) {
   const ref = useRef<HTMLDivElement>(null)
   const [etat, setEtat] = useState<'fixe' | 'cache' | 'vu'>('fixe')
+  useAnimeEnVue(ref, boucles)
 
   useEffect(() => {
     const el = ref.current
@@ -33,7 +36,7 @@ export function TraceAuDefilement({ className, children }: { className?: string;
   }, [])
 
   return (
-    <div ref={ref} data-etat={etat} className={className}>
+    <div ref={ref} data-etat={etat} data-anime={boucles ? '' : undefined} className={className}>
       {children}
     </div>
   )

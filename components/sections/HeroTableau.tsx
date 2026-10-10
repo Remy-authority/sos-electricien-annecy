@@ -245,6 +245,8 @@ export function HeroTableau() {
       if (montrer !== planVisible && planRef.current) {
         planVisible = montrer
         planRef.current.style.visibility = montrer ? 'visible' : 'hidden'
+        // L'étincelle de la fuite ne tourne que le mur ouvert (data-anime, globals.css).
+        planRef.current.toggleAttribute('data-en-vue', montrer)
       }
       const pp = Math.round(p * 1000) / 1000
       if (svgRef.current && pp !== pPose) {
@@ -330,7 +332,7 @@ export function HeroTableau() {
             </picture>
 
             {/* Le mur et ce qu'il cache, dans le repère de la photo (montés avec la séquence). */}
-            <div ref={planRef} className="pointer-events-none absolute left-0 top-0 origin-top-left" style={{ width: L, height: H, visibility: 'hidden' }}>
+            <div ref={planRef} data-anime="" className="pointer-events-none absolute left-0 top-0 origin-top-left" style={{ width: L, height: H, visibility: 'hidden' }}>
               {sequence && <MurAnnecy svgRef={svgRef} className="absolute inset-0 h-full w-full overflow-visible" />}
             </div>
 

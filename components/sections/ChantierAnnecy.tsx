@@ -2,6 +2,7 @@
 
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import AppartAnnecy, { CADRE, CADRE_MOBILE, CARTOUCHE, placerCartouche } from '@/components/ui/AppartAnnecy'
+import { useAnimeEnVue } from '@/lib/anime-en-vue'
 
 /**
  * ChantierAnnecy, « l'intervention chez vous » DESSINÉE AU DÉFILEMENT (bloc 3 de l'accueil,
@@ -308,6 +309,9 @@ export function ChantierAnnecy() {
   const texteRef = useRef<HTMLDivElement>(null)
   const fixeRef = useRef<HTMLDivElement>(null)
   const sectionRef = useRef<HTMLElement>(null)
+  // La sonnette qui clignote (aa-sonne) ne tourne que la section à l'écran ; chacun des trois
+  // rendus a sa propre section, observée à nouveau à chaque changement.
+  useAnimeEnVue(sectionRef, true, mode + format)
   const jaugesRef = useRef<(HTMLSpanElement | null)[]>([])
 
   /* Choix du rendu (largeur, « réduire les animations ») quand la section arrive à deux écrans. */
@@ -496,7 +500,7 @@ export function ChantierAnnecy() {
   /* ── REPLI : dessin final fixe et les cinq étapes en liste ── */
   if (mode === 'fixe') {
     return (
-      <section ref={sectionRef} id="deroulement" className="section bg-light" aria-labelledby="titre-chantier-annecy">
+      <section ref={sectionRef} id="deroulement" data-anime="" className="section bg-light" aria-labelledby="titre-chantier-annecy">
         <div className="container-site">
           {entete}
           <div className="mt-12 grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] lg:gap-12">
@@ -566,7 +570,7 @@ export function ChantierAnnecy() {
   /* ── ORDINATEUR : compteur et étapes à gauche, dessin à droite ── */
   if (format === 'ordi') {
     return (
-      <section id="deroulement" className="bg-light pb-16 pt-24 lg:pt-32" aria-labelledby="titre-chantier-annecy">
+      <section ref={sectionRef} id="deroulement" data-anime="" className="bg-light pb-16 pt-24 lg:pt-32" aria-labelledby="titre-chantier-annecy">
         <div className="container-site">{entete}</div>
         <div ref={pisteRef} className="relative mt-12">
           <div ref={sceneRef} className="sticky" style={{ top: 72 }}>
@@ -611,7 +615,7 @@ export function ChantierAnnecy() {
 
   /* ── TÉLÉPHONE ET TABLETTE : dessin en haut, étape en cours centrée dessous ── */
   return (
-    <section id="deroulement" className="bg-light pb-5 pt-14 md:pb-16 md:pt-24" aria-labelledby="titre-chantier-annecy">
+    <section ref={sectionRef} id="deroulement" data-anime="" className="bg-light pb-5 pt-14 md:pb-16 md:pt-24" aria-labelledby="titre-chantier-annecy">
       <div className="container-site">{entete}</div>
       <div ref={pisteRef} className="relative mt-8">
         <div ref={sceneRef} className="sticky" style={{ top: 72 }}>
