@@ -1,8 +1,13 @@
 'use client'
 
-import { useEffect, useLayoutEffect, useRef, useState } from 'react'
-import AppartAnnecy, { CADRE, CADRE_MOBILE, CARTOUCHE, placerCartouche } from '@/components/ui/AppartAnnecy'
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import dynamic from 'next/dynamic'
+import { CADRE, CADRE_MOBILE, CARTOUCHE, placerCartouche } from '@/components/ui/appart-annecy-logique'
 import { useAnimeEnVue } from '@/lib/anime-en-vue'
+
+/** Le dessin arrive dans un morceau à part, demandé à l'approche de la section : il ne pèse plus
+ *  dans le JavaScript de la page mesuré par Google (vitesse mobile #R68, 11/10/2026). */
+const AppartAnnecy = dynamic(() => import('@/components/ui/AppartAnnecy'), { ssr: false })
 
 /**
  * ChantierAnnecy, « l'intervention chez vous » DESSINÉE AU DÉFILEMENT (bloc 3 de l'accueil,
@@ -303,6 +308,11 @@ export function ChantierAnnecy() {
   const [actif, setActif] = useState(1)
   /** Le dessin n'entre dans la page qu'à l'approche de la section. */
   const [pret, setPret] = useState(false)
+  // Compte les arrivées du dessin (morceau chargé à part) : les effets qui le pilotent rejouent.
+  const [dessinN, setDessinN] = useState(0)
+  const dessinPose = useCallback((svg: SVGSVGElement | null) => {
+    if (svg) setDessinN((n) => n + 1)
+  }, [])
   const pisteRef = useRef<HTMLDivElement>(null)
   const sceneRef = useRef<HTMLDivElement>(null)
   const carteRef = useRef<HTMLDivElement>(null)
@@ -353,7 +363,7 @@ export function ChantierAnnecy() {
     ro.observe(svg)
     document.fonts?.ready.then(() => cadrer(svg, null))
     return () => ro.disconnect()
-  }, [mode, pret])
+  }, [mode, pret, dessinN])
 
   /* Moteur : mesures et dessin dans un seul requestAnimationFrame par défilement. */
   useIsoLayoutEffect(() => {
@@ -474,7 +484,7 @@ export function ChantierAnnecy() {
       scene.style.removeProperty('top')
       svg.setAttribute('viewBox', `${CADRE.x} ${CADRE.y} ${CADRE.w} ${CADRE.h}`)
     }
-  }, [mode, format, n])
+  }, [mode, format, n, dessinN])
 
   const entete = (
     <div className="mx-auto max-w-2xl text-center">
@@ -517,7 +527,7 @@ export function ChantierAnnecy() {
             </ol>
             <div ref={fixeRef} className="order-1 overflow-hidden rounded-[3px] border border-slate-300 lg:sticky lg:top-24 lg:order-2" style={{ background: FOND }}>
               {pret ? (
-                <AppartAnnecy fixe className="block h-auto w-full" />
+                <AppartAnnecy fixe svgRef={dessinPose} className="block h-auto w-full" />
               ) : (
                 <div className="w-full" style={{ aspectRatio: `${CADRE.w} / ${CADRE.h}` }} aria-hidden="true" />
               )}
@@ -560,7 +570,7 @@ export function ChantierAnnecy() {
       }`}
       style={{ background: FOND }}
     >
-      <AppartAnnecy className="absolute inset-0 block h-full w-full" />
+      <AppartAnnecy svgRef={dessinPose} className="absolute inset-0 block h-full w-full" />
     </div>
   )
 

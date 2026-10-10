@@ -1,9 +1,14 @@
 'use client'
 
-import { useEffect, useLayoutEffect, useRef, useState, type MouseEvent } from 'react'
+import { useCallback, useEffect, useLayoutEffect, useRef, useState, type MouseEvent } from 'react'
+import dynamic from 'next/dynamic'
 import { LeadForm } from '@/components/ui/LeadForm'
-import MurAnnecy, { CSS_MUR, VISE, placerLoupe, poserMur } from '@/components/ui/MurAnnecy'
+import { CSS_MUR, VISE, placerLoupe, poserMur } from '@/components/ui/mur-annecy-logique'
 import { siteConfig } from '@/config/site.config'
+
+/** Le mur dessiné arrive dans un morceau à part, demandé au premier geste du visiteur : il ne
+ *  pèse plus dans le JavaScript de la page mesuré par Google (vitesse mobile #R68, 11/10/2026). */
+const MurAnnecy = dynamic(() => import('@/components/ui/MurAnnecy'), { ssr: false })
 
 /**
  * HeroTableau, le bloc 1 de l'accueil (mise à jour du 10/10/2026, scénario validé par Rémy).
@@ -148,7 +153,14 @@ export function HeroTableau() {
   const netSourceRef = useRef<HTMLSourceElement>(null)
   const netRef = useRef<HTMLImageElement>(null)
   const planRef = useRef<HTMLDivElement>(null)
-  const svgRef = useRef<SVGSVGElement>(null)
+  const svgRef = useRef<SVGSVGElement | null>(null)
+  // Le dessin du mur n'est demandé qu'au premier geste (ou si la page s'ouvre déjà défilée).
+  const [plan, setPlan] = useState(false)
+  const surPlanRef = useRef<() => void>()
+  const svgPose = useCallback((el: SVGSVGElement | null) => {
+    svgRef.current = el
+    if (el) surPlanRef.current?.()
+  }, [])
 
   useEffect(() => {
     const mq = window.matchMedia('(min-width: 1024px)')
@@ -272,6 +284,9 @@ export function HeroTableau() {
       derniere = -1
       planifier()
     }
+    // Le dessin du mur qui arrive : la loupe placée, puis posé à la progression courante.
+    surPlanRef.current = retailler
+    if (window.scrollY > 0) setPlan(true)
 
     // La planche quitte son cadrage CSS : 1600 px que la caméra déplace, la photo (entière ou
     // tranche téléphone) gardant sa place dedans.
@@ -299,6 +314,7 @@ export function HeroTableau() {
     }
     const auGeste = () => {
       grandTirage()
+      setPlan(true)
       for (const g of GESTES) window.removeEventListener(g, auGeste)
     }
     for (const g of GESTES) window.addEventListener(g, auGeste, { passive: true })
@@ -356,7 +372,7 @@ export function HeroTableau() {
 
             {/* Le mur et ce qu'il cache, dans le repère de la photo (montés avec la séquence). */}
             <div ref={planRef} data-anime="" className="pointer-events-none absolute left-0 top-0 origin-top-left" style={{ width: L, height: H, visibility: 'hidden' }}>
-              {sequence && <MurAnnecy svgRef={svgRef} className="absolute inset-0 h-full w-full overflow-visible" />}
+              {sequence && plan && <MurAnnecy svgRef={svgPose} className="absolute inset-0 h-full w-full overflow-visible" />}
             </div>
 
             {/* Écran 1 : le titre sur le mur, le formulaire à droite (ordinateur). */}
@@ -426,20 +442,19 @@ export function HeroTableau() {
 /** Repli : le mur ouvert et fixe sous l'écran 1, tous les circuits nommés. */
 function MurFixe() {
   const r: Rect = { x: 340, y: 190, w: 470, h: 703 }
-  const boite = useRef<HTMLDivElement>(null)
   const pc = (v: number, t: number) => `${((v / t) * 100).toFixed(4)}%`
-  useEffect(() => {
-    const svg = boite.current?.querySelector('svg')
+  // Le dessin arrive dans son morceau à part : posé dès qu'il est là.
+  const poser = useCallback((svg: SVGSVGElement | null) => {
     if (svg) poserMur(svg, P_FIXE)
   }, [])
   return (
     <section aria-label="Ce qui passe dans le mur, derrière le tableau" className="bg-dark py-8 lg:py-12">
       <style>{CSS_MUR}</style>
-      <div ref={boite} className="relative mx-auto w-full max-w-[520px] overflow-hidden" style={{ aspectRatio: `${r.w} / ${r.h}` }}>
+      <div className="relative mx-auto w-full max-w-[520px] overflow-hidden" style={{ aspectRatio: `${r.w} / ${r.h}` }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={`${BASE}-1600.webp`} alt="" loading="lazy" decoding="async" className="absolute max-w-none" style={{ left: pc(-r.x, r.w), top: pc(-r.y, r.h), width: pc(L, r.w), height: pc(H, r.h) }} />
         <div className="absolute" style={{ left: pc(-r.x, r.w), top: pc(-r.y, r.h), width: pc(L, r.w), height: pc(H, r.h) }}>
-          <MurAnnecy className="absolute inset-0 h-full w-full" />
+          <MurAnnecy svgRef={poser} className="absolute inset-0 h-full w-full" />
         </div>
       </div>
     </section>

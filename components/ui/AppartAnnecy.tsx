@@ -1,4 +1,5 @@
 import { memo } from 'react'
+import { CADRE, CADRE_MOBILE, CARTOUCHE, placerCartouche, type V2 } from '@/components/ui/appart-annecy-logique'
 
 /**
  * AppartAnnecy, l'intervention dessinée en couleur (bloc 3 de l'accueil, scénario validé par Rémy
@@ -29,7 +30,6 @@ import { memo } from 'react'
  * Aucune cote, aucune distance, aucune durée : rien qui ne se vérifie sur place.
  */
 
-type V2 = [number, number]
 type Cote = 'haut' | 'bas' | 'gauche' | 'droite'
 
 const r1 = (v: number) => String(Math.round(v * 10) / 10)
@@ -69,16 +69,7 @@ const FENETRES = [340, 436, 532, 628, 724, 820]
 /** Hauteur des cartouches : sur la dalle du 3e, au-dessus de l'appartement. */
 const LIGNE = 326
 
-/** Zones toujours entières à l'écran : ordinateur, puis téléphone et tablette. */
-export const CADRE = { x: 230, y: 219, w: 800, h: 470 }
-export const CADRE_MOBILE = { x: 290, y: 296, w: 640, h: 300 }
 
-/* ── Cartouches (mesures en pixels d'écran ; le groupe est mis à l'échelle par `--kc`) ── */
-export const CARTOUCHE = { corps: 12.5, padG: 9, padD: 9, haut: 25 }
-export const placerCartouche = (cote: string, w: number, h: number): V2 => [
-  cote === 'gauche' ? -w : cote === 'droite' ? 0 : -w / 2,
-  cote === 'haut' ? -h : cote === 'bas' ? 0 : -h / 2,
-]
 
 /** Épaisseur en pixels d'écran, quel que soit le cadrage. */
 const px = (n: number) => ({ strokeWidth: `calc(var(--k, 1) * ${n}px)` })
@@ -315,10 +306,11 @@ function Testeur() {
   )
 }
 
-function AppartAnnecy({ className, fixe = false }: { className?: string; fixe?: boolean }) {
+function AppartAnnecy({ className, fixe = false, svgRef }: { className?: string; fixe?: boolean; svgRef?: React.Ref<SVGSVGElement> }) {
   const testeur: V2 = [PRISE_CUISINE[0] + 22, PRISE_CUISINE[1] - 8]
   return (
     <svg
+      ref={svgRef}
       viewBox={`${CADRE.x} ${CADRE.y} ${CADRE.w} ${CADRE.h}`}
       className={className}
       role="img"
