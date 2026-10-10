@@ -277,13 +277,9 @@ export function HeroTableau() {
       grandTirage()
       for (const g of GESTES) window.removeEventListener(g, auGeste)
     }
+    // Le tirage net du zoom attend le premier geste : chargé d'office, il redevenait
+    // l'image principale mesurée par Google (242 Ko, vitesse mobile 98 → 89).
     for (const g of GESTES) window.addEventListener(g, auGeste, { passive: true })
-    let tirage = 0
-    const apresChargement = () => {
-      tirage = window.setTimeout(grandTirage, 2500)
-    }
-    if (document.readyState === 'complete') apresChargement()
-    else window.addEventListener('load', apresChargement, { once: true })
     const ro = new ResizeObserver(retailler)
     ro.observe(scene)
     window.addEventListener('scroll', planifier, { passive: true })
@@ -291,8 +287,6 @@ export function HeroTableau() {
     document.fonts?.ready.then(retailler)
     peindre()
     return () => {
-      window.clearTimeout(tirage)
-      window.removeEventListener('load', apresChargement)
       for (const g of GESTES) window.removeEventListener(g, auGeste)
       ro.disconnect()
       window.removeEventListener('scroll', planifier)
