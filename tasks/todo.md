@@ -125,3 +125,49 @@ Contrôle design : refuse un titre sur fond uni (aplat) ; Rémy a demandé un fo
 Reste après GO : merge main, Beauvais phone '' + annuaire-09 + sites.json + Twilio friendly_name, check-twilio, check-fin-de-site,
 Rank OS (travaux, cadence 5, autoblogEndsAt, notes > 120 car.), indexation-a-ajouter.json (12 pages), taches.json, protection Vercel
 remise (ssoProtection all_except_custom_domains, coupée le 25/09), ETAT.md, lessons.
+
+## MISE À JOUR du 10/10/2026 (CEO Opus 5.5, GO Rémy, modèle sos-debouchage-metz.fr) : branche maj/scrollytelling-2026-10
+
+### §0 État des lieux (production main 933a86f, relevé du 10/10)
+Search Console : 28 j = 701 vues, 2 clics ; 7 j = 183 vues, 1 clic. Partenaire D.E.A-74 (Pringy), 10 €/demande depuis le 29/09, bilan le 29/10.
+
+**Liste 1, pages vues 10 fois ou plus sans clic (28 j)** : /conseils/lumiere-qui-clignote-cause 115 (place 5,2) ; /zones/cran-gevrier 71 (26) ;
+/zones/seynod 57 (31,8) ; /zones/meythet 54 (14,8) ; /zones/epagny-metz-tessy 53 (25,2) ; /services/installation-electrique-neuve 48 (73) ;
+/services/mise-en-conformite-diagnostic-electrique 48 (71) ; /zones 48 (53) ; /services/recherche-panne-electrique 42 (59) ; /contact 38 (74) ;
+/ 35 (52,5) ; /conseils/disjoncteur-fusible-differentiel-differences 24 (7,5) ; /zones/sevrier 24 (63) ; /services/renovation-electrique-complete 23 ;
+/conseils/panne-edf-enedis-ou-panne-interne-difference 22 (45) ; /conseils/depannage-electrique-cran-gevrier-acces-tableau 16 ; garage-dependance 15 ;
+une-piece-sans-electricite-cause 15 (13) ; remise-aux-normes-electrique-seynod-logement-occupe 14 ; remise-aux-normes-appartement-cran-gevrier 12 ;
+risque-incendie-electrique-signes 12 (6,8). Plus /conseils/surtension-apres-orage-que-faire 122 vues, 2 clics (6,8).
+**Liste 2, gains rapides (90 j, place 8 à 30)** : remise aux normes électrique à seynod 79 (9,5) ; dépannage électrique à cran-gevrier 75 (17,8) ;
+remise aux normes électrique à cran-gevrier 72 (14,5) ; électricien à cran-gevrier 70 (23,5) ; dépannage électrique à seynod 67 (27,1) ;
+dépannage électrique à epagny metz-tessy 25 (16,1) ; électricien à epagny metz-tessy 23 (29,3) ; électricien à meythet 24 (30,4) ; electricien seynod (21).
+**Liste 3, prix / devis** : aucune requête (90 j). /tarifs 9 vues, place 57,8.
+**Liste 4, page pilier** : /zones/cran-gevrier (317 vues sur 90 j, 3 requêtes en page 2), puis /zones/seynod (207).
+**Enjeu n°1** : Annecy même. Accueil place 52,5 ; « dépannage électrique à annecy » 58 vues place 65 ; « remise aux normes électrique à annecy » 62 place 73 ;
+« coupure electricite annecy » 61 place 54 ; « électricien annecy » 1 vue place 17.
+
+**Note AVANT : 6/10** (1 ✅ 2 ✅ 3 ✅ 4 ✅ 5 ❌ 6 ✅ 7 ❌ 8 ✅ 9 ❌ 10 ❌)
+5 ❌ articles en place 5 à 8 sans clic (titres non réécrits) ; 7 ❌ bloc 1 fond bleu, boutons pilules, « Continuer », case orpheline (7 options) ;
+9 ❌ 55 brouillons à 5/sem = 11 semaines (< 3 mois) ; 10 ❌ design 1 défaut (aplat), texte ECHEC (accueil 803 mots, paragraphe 48 mots ; intérieures 92, 116, 78 mots).
+
+**Contrôles sur la production (933a86f)** : footprint CODE 0 OK (10 frères d'urgence) ; blocs-pages CODE 0 ; navigation CODE 0 ; visuels-articles CODE 0 ;
+design CODE 1 (aplat bloc 1) ; check-texte accueil CODE 1 (803 / 48), recherche-panne CODE 1 (92), seynod CODE 1 (116), tarifs CODE 1 (78).
+**Vitesse mobile production** : 98 / 97 / 97, médiane 97, LCP médiane 2,30 s (tasks/.maj-annecy/vitesse-avant.txt).
+
+### §1 quater A : expressions à garder (Search Console page + requête, 90 j, ≥ 5 vues ou 1 clic ; tasks/.maj-annecy/gsc-page-query-90j.txt)
+- Accueil : électricien + Annecy (title, H1) ; dépannage électrique à annecy ; dépannage électrique à meythet ; dépannage électrique à seynod ;
+  coupure electricite annecy ; dépannage onduleur annecy (21 vues, mot ABSENT du HTML aujourd'hui : à placer une fois, FAQ) ; 24h/24 7j/7 (gardé).
+- /zones/cran-gevrier : dépannage électrique à cran-gevrier ; remise aux normes électrique à cran-gevrier ; électricien à cran-gevrier.
+- /zones/seynod : remise aux normes électrique à seynod ; dépannage électrique à seynod ; électricien à seynod.
+- /zones/meythet : remise aux normes électrique à meythet ; électricien à meythet ; dépannage électrique à meythet.
+- /zones/epagny-metz-tessy : dépannage, électricien, remise aux normes électrique à epagny metz-tessy.
+- /services/recherche-panne-electrique : coupure electricite annecy ; dépannage électrique à annecy.
+- /contact : dépannage électrique à annecy ; sos électricité.
+
+### Faits sourcés pour les scénarios
+- INSEE, dossier complet Annecy (74010), RP 2023 : 86,7 % d'appartements ; résidences principales 1971-1990 = 31,4 % (période la plus fréquente).
+- Legrand, FAQ « Pourquoi un interrupteur différentiel disjoncte-t-il ? » : fuite de courant par un appareil défectueux, un câble desserré ou l'humidité
+  dans les gaines ; méthode : abaisser les disjoncteurs divisionnaires puis les réenclencher un à un.
+
+### Argent
+Solde images (fal.ai) lu le 10/10 : 0,15 $. DataForSEO : non utilisé (Search Console seule).
