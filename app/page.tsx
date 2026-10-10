@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { siteConfig } from '@/config/site.config'
-import { getServices } from '@/lib/content'
+import { getServices, getZones } from '@/lib/content'
 import { buildMetadata } from '@/lib/seo'
 import CtaBanner from '@/components/ui/CtaBanner'
 import Faq from '@/components/ui/Faq'
@@ -12,7 +12,7 @@ import About from '@/components/sections/About'
 import { ChantierAnnecy } from '@/components/sections/ChantierAnnecy'
 import Stats from '@/components/sections/Stats'
 import WhyUs from '@/components/sections/WhyUs'
-import ServiceAreaMap from '@/components/sections/ServiceAreaMap'
+import { CarteAnnecy } from '@/components/sections/CarteAnnecy'
 import Realisations from '@/components/sections/Realisations'
 import { ServiceIcon } from '@/components/ui/ServiceIcon'
 import { BoltBadge } from '@/components/ui/Bolt'
@@ -108,7 +108,7 @@ export default function HomePage() {
 
       <CtaBanner />
 
-      <ServiceAreaMap />
+      <CarteAnnecy zones={getZones()} />
 
       <Faq items={homeFaq} />
     </>
