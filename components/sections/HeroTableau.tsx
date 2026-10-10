@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useLayoutEffect, useRef, useState, type MouseEvent } from 'react'
-import * as ReactDOM from 'react-dom'
 import { LeadForm } from '@/components/ui/LeadForm'
 import MurAnnecy, { CSS_MUR, VISE, placerLoupe, poserMur } from '@/components/ui/MurAnnecy'
 import { siteConfig } from '@/config/site.config'
@@ -31,6 +30,7 @@ import { siteConfig } from '@/config/site.config'
  */
 
 /* ---------- Photo ---------- */
+type Rect = { x: number; y: number; w: number; h: number }
 const BASE = '/accueil/tableau-lac'
 const LARGEURS = [900, 1600, 2752]
 const SRCSET_AVIF = LARGEURS.map((l) => `${BASE}-${l}.avif ${l}w`).join(', ')
@@ -43,18 +43,24 @@ const PLAFOND = 34
 /** Largeur affichée de la photo à l'écran 1 : le tableau au centre de l'écran, la photo calée en
  *  bas et assez haute pour couvrir la scène (ce que fait la caméra de départ, voir `depart`). */
 const TAILLES_ECRAN1 = '(max-width: 1023px) 190vh, 145vw'
-/** Après le chargement : la caméra s'approche jusqu'à deux fois, on demande un tirage plein et
- *  peu compressé (les écritures des modules restent nettes), jamais à l'écran 1 (vitesse). */
+/** Téléphone en portrait (11/10/2026, vitesse mobile #R68) : seule la tranche de la photo visible
+ *  à l'écran 1 est servie (34 Ko au lieu de 65), découpée au pixel près dans le tirage net ; elle
+ *  couvre tout le trajet de la caméra au téléphone, le tirage plein n'y est jamais chargé. */
+const TEL: Rect = { x: 183, y: 34, w: 760, h: 859 }
+const MEDIA_TEL = '(max-width: 1023px) and (max-aspect-ratio: 7/10)'
+const MEDIA_LARGE = '(min-width: 1024px), (min-aspect-ratio: 7/10)'
+const TEL_AVIF = `${BASE}-tel-1307.avif`
+const TEL_WEBP = `${BASE}-tel-1307.webp`
+/** Ordinateur et paysage, au premier geste : la caméra s'approche jusqu'à deux fois, on demande un
+ *  tirage plein et peu compressé (les écritures des modules restent nettes), jamais à l'écran 1. */
 const NET_AVIF = `${BASE}-net-2752.avif 2752w`
 const NET_WEBP = `${BASE}-net-2752.webp 2752w`
 const TAILLES_ZOOM = '2752px'
 const PRIORITE = { fetchpriority: 'high' } as Record<string, string>
-const precharger = (ReactDOM as unknown as { preload?: (href: string, options: Record<string, string>) => void }).preload
 
 /* ---------- Séquence ---------- */
 type Format = 'ordi' | 'mobile'
 type Camera = { s: number; vx: number; vy: number }
-type Rect = { x: number; y: number; w: number; h: number }
 /** Le mur ouvert, à faire tenir dans l'écran (repère de la photo). */
 const CADRE_MUR: Record<Format, Rect> = {
   ordi: { x: 330, y: 200, w: 800, h: 693 },
@@ -113,7 +119,10 @@ const CSS = `
 .bt[data-seq] .bt-piste{height:380svh}
 @media (min-width:1024px){.bt[data-seq] .bt-piste{height:380vh}}
 .bt[data-seq] .bt-scene{position:sticky;top:var(--haut)}
-.bt-photo{position:absolute;bottom:0;left:min(0px,calc(50% - var(--lw) * ${(VISE.x / L).toFixed(5)}));width:var(--lw);max-width:none;height:auto;aspect-ratio:${L}/${H}}
+.bt-planche{position:absolute;bottom:0;left:min(0px,calc(50% - var(--lw) * ${(VISE.x / L).toFixed(5)}));width:var(--lw);max-width:none;aspect-ratio:${L}/${H}}
+.bt-photo,.bt-net{position:absolute;left:0;top:0;width:100%;height:100%;max-width:none}
+.bt-net{visibility:hidden}
+@media ${MEDIA_TEL}{.bt-photo{left:${((TEL.x / L) * 100).toFixed(4)}%;top:${((TEL.y / H) * 100).toFixed(4)}%;width:${((TEL.w / L) * 100).toFixed(4)}%;height:${((TEL.h / H) * 100).toFixed(4)}%}}
 .bt-grille{display:grid;grid-template-columns:minmax(0,1fr);height:100%}
 @media (min-width:1024px){.bt-grille{width:min(100%,calc(56rem + 3rem + 4rem + ${((277 / (2 * VISE.x)) * 100).toFixed(2)}vw + 1rem));margin:0 auto;padding:0 2rem;column-gap:1.5rem;grid-template-columns:minmax(0,28rem) calc(${((277 / (2 * VISE.x)) * 100).toFixed(2)}vw + 1rem) minmax(0,28rem)}}
 @keyframes bt-appel{0%,100%{transform:rotate(0)}8%{transform:rotate(-14deg)}16%{transform:rotate(12deg)}24%{transform:rotate(-8deg)}32%{transform:rotate(0)}}
@@ -128,15 +137,16 @@ export function HeroTableau() {
   // Un seul formulaire dans la page : à droite sur ordinateur (rendu du serveur), après la
   // séquence sur téléphone et tablette.
   const [formEnBas, setFormEnBas] = useState(false)
-  precharger?.(`${BASE}-1600.avif`, { as: 'image', imageSrcSet: SRCSET_AVIF, imageSizes: TAILLES_ECRAN1, fetchPriority: 'high', type: 'image/avif' })
 
   const sectionRef = useRef<HTMLElement>(null)
   const pisteRef = useRef<HTMLDivElement>(null)
   const sceneRef = useRef<HTMLDivElement>(null)
   const calqueRef = useRef<HTMLDivElement>(null)
   const formRef = useRef<HTMLDivElement>(null)
+  const plancheRef = useRef<HTMLDivElement>(null)
   const photoRef = useRef<HTMLImageElement>(null)
-  const sourceRef = useRef<HTMLSourceElement>(null)
+  const netSourceRef = useRef<HTMLSourceElement>(null)
+  const netRef = useRef<HTMLImageElement>(null)
   const planRef = useRef<HTMLDivElement>(null)
   const svgRef = useRef<SVGSVGElement>(null)
 
@@ -239,7 +249,7 @@ export function HeroTableau() {
       else if (p <= T.retour0) c = cMur
       else if (p <= T.retour1) c = versCentre(cMur, c0, elan((p - T.retour0) / (T.retour1 - T.retour0), 0, 0), W / 2, Hs / 2)
       else c = c0
-      placer(photoRef.current, c)
+      placer(plancheRef.current, c)
       placer(planRef.current, c)
       const montrer = p > T.avance * 0.9 && p < T.texte0
       if (montrer !== planVisible && planRef.current) {
@@ -263,24 +273,34 @@ export function HeroTableau() {
       planifier()
     }
 
-    // La photo quitte son cadrage CSS : elle devient une planche de 1600 px que la caméra déplace.
-    const photo = photoRef.current
-    if (photo) Object.assign(photo.style, { inset: 'auto', left: '0px', top: '0px', bottom: 'auto', width: `${L}px`, height: `${H}px`, aspectRatio: 'auto', transformOrigin: '0 0', willChange: 'transform' })
+    // La planche quitte son cadrage CSS : 1600 px que la caméra déplace, la photo (entière ou
+    // tranche téléphone) gardant sa place dedans.
+    const planche = plancheRef.current
+    if (planche) Object.assign(planche.style, { inset: 'auto', left: '0px', top: '0px', bottom: 'auto', width: `${L}px`, height: `${H}px`, aspectRatio: 'auto', transformOrigin: '0 0', willChange: 'transform' })
     mesurer()
     if (svgRef.current) poserMur(svgRef.current, 0)
     const GESTES = ['scroll', 'wheel', 'touchstart', 'pointerdown', 'keydown'] as const
+    // Le tirage net du zoom attend le premier geste : chargé d'office, il redevenait l'image
+    // principale mesurée par Google (242 Ko, vitesse mobile 98 → 89). Il remplace l'écran 1
+    // une fois décodé, jamais avant (aucun saut d'image). Au téléphone, la tranche suffit.
     const grandTirage = () => {
-      const img = photoRef.current
-      const src = sourceRef.current
-      if (src && src.srcset !== NET_AVIF) Object.assign(src, { srcset: NET_AVIF, sizes: TAILLES_ZOOM })
-      if (img && img.srcset !== NET_WEBP) Object.assign(img, { srcset: NET_WEBP, sizes: TAILLES_ZOOM })
+      const src = netSourceRef.current
+      const img = netRef.current
+      if (!src || !img || src.srcset || window.matchMedia(MEDIA_TEL).matches) return
+      Object.assign(src, { srcset: NET_AVIF, sizes: TAILLES_ZOOM })
+      Object.assign(img, { srcset: NET_WEBP, sizes: TAILLES_ZOOM })
+      img
+        .decode()
+        .then(() => {
+          img.style.visibility = 'visible'
+          if (photoRef.current) photoRef.current.style.visibility = 'hidden'
+        })
+        .catch(() => {})
     }
     const auGeste = () => {
       grandTirage()
       for (const g of GESTES) window.removeEventListener(g, auGeste)
     }
-    // Le tirage net du zoom attend le premier geste : chargé d'office, il redevenait
-    // l'image principale mesurée par Google (242 Ko, vitesse mobile 98 → 89).
     for (const g of GESTES) window.addEventListener(g, auGeste, { passive: true })
     const ro = new ResizeObserver(retailler)
     ro.observe(scene)
@@ -294,7 +314,7 @@ export function HeroTableau() {
       window.removeEventListener('scroll', planifier)
       grand.removeEventListener('change', retailler)
       if (raf) cancelAnimationFrame(raf)
-      for (const el of [photoRef.current, calqueRef.current]) el?.removeAttribute('style')
+      for (const el of [plancheRef.current, photoRef.current, netRef.current, calqueRef.current]) el?.removeAttribute('style')
     }
   }, [mode])
 
@@ -315,21 +335,24 @@ export function HeroTableau() {
         <style>{CSS}</style>
         <div ref={pisteRef} className="bt-piste">
           <div ref={sceneRef} className="bt-scene bg-[#3B3E43]">
-            <picture>
-              <source ref={sourceRef} type="image/avif" srcSet={SRCSET_AVIF} sizes={TAILLES_ECRAN1} />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                ref={photoRef}
-                src={`${BASE}-1600.webp`}
-                srcSet={SRCSET_WEBP}
-                sizes={TAILLES_ECRAN1}
-                alt={ALT}
-                width={L}
-                height={H}
-                {...PRIORITE}
-                className="bt-photo pointer-events-none select-none"
-              />
-            </picture>
+            {/* La photo de l'écran 1 est la première image de la page : annoncée dès l'en-tête. */}
+            <link rel="preload" as="image" type="image/avif" href={TEL_AVIF} media={MEDIA_TEL} {...PRIORITE} />
+            <link rel="preload" as="image" type="image/avif" imageSrcSet={SRCSET_AVIF} imageSizes={TAILLES_ECRAN1} media={MEDIA_LARGE} {...PRIORITE} />
+            <div ref={plancheRef} className="bt-planche pointer-events-none select-none">
+              <picture>
+                <source type="image/avif" media={MEDIA_TEL} srcSet={TEL_AVIF} />
+                <source type="image/webp" media={MEDIA_TEL} srcSet={TEL_WEBP} />
+                <source type="image/avif" srcSet={SRCSET_AVIF} sizes={TAILLES_ECRAN1} />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img ref={photoRef} src={`${BASE}-1600.webp`} srcSet={SRCSET_WEBP} sizes={TAILLES_ECRAN1} alt={ALT} width={L} height={H} {...PRIORITE} className="bt-photo" />
+              </picture>
+              {/* Le tirage net du zoom, chargé au premier geste (ordinateur et paysage). */}
+              <picture>
+                <source ref={netSourceRef} type="image/avif" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img ref={netRef} alt="" aria-hidden="true" width={L} height={H} className="bt-net" />
+              </picture>
+            </div>
 
             {/* Le mur et ce qu'il cache, dans le repère de la photo (montés avec la séquence). */}
             <div ref={planRef} data-anime="" className="pointer-events-none absolute left-0 top-0 origin-top-left" style={{ width: L, height: H, visibility: 'hidden' }}>
