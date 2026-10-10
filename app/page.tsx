@@ -5,7 +5,7 @@ import { buildMetadata } from '@/lib/seo'
 import Faq from '@/components/ui/Faq'
 import LeadForm from '@/components/ui/LeadForm'
 import { Trace } from '@/components/ui/Trace'
-import Hero from '@/components/sections/Hero'
+import HeroTableau from '@/components/sections/HeroTableau'
 import Engagements from '@/components/sections/Engagements'
 import Prestations from '@/components/sections/Prestations'
 import { ChantierAnnecy } from '@/components/sections/ChantierAnnecy'
@@ -32,7 +32,7 @@ export default function HomePage() {
 
   return (
     <>
-      <Hero />
+      <HeroTableau />
       <Engagements />
       <Prestations services={getServices()} />
       <ChantierAnnecy />
