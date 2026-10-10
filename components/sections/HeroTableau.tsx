@@ -352,7 +352,7 @@ export function HeroTableau() {
                     id="titre-hero"
                     className="mt-3 font-display text-[clamp(1.85rem,8.4vw,3rem)] font-medium leading-[1.06] tracking-tight text-white [text-shadow:0_2px_18px_rgb(0_0_0/0.45)] lg:mt-4 lg:text-[clamp(2.3rem,3.05vw,3.6rem)]"
                   >
-                    <span className="block whitespace-nowrap">Électricien d'urgence</span>
+                    <span className="block whitespace-nowrap">Électricien d'urgence</span>{' '}
                     <span className="block whitespace-nowrap">
                       à <span className="text-accent">{siteConfig.city}</span>
                     </span>
