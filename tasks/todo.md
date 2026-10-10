@@ -182,4 +182,4 @@ Solde images (fal.ai) lu le 10/10 : 0,15 $. DataForSEO : non utilisé (Search Co
 - [x] 7. Trois articles : titres et descriptions réécrits + encart vers le formulaire sur chaque article
 - [x] 8. Pages intérieures à 45 mots par paragraphe (prestations, Seynod, tarifs)
 - [x] 9. Réserve d’articles portée à 13 semaines (65 brouillons à 5 par semaine, 080 à 088 ajoutés, dernier le 12/01/2027)
-- [ ] 10. Contrôles x2, relecture à froid, vitesse, expressions gardées, aperçu à Rémy
+- [x] 10. Contrôles x2, relecture à froid, vitesse (92 contre 90, règle des 3 points), 62 expressions gardées, aperçu validé, EN LIGNE le 11/10 (main 4a22932)

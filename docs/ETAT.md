@@ -1,12 +1,52 @@
 # ETAT.md — Journal de bord SOS Électricien Annecy
 
 > Mémoire du projet. Chaque session lit ce fichier en arrivant et le met à jour avant de finir.
-> Dernière mise à jour : 2026-09-26 (session Fable, mise à jour en ligne, bloc 1 fond bleu, 09 en service ; détail dans la section ✅ ci-dessous). Historique : 2026-07-26 (session Builder, les 68 covers de la vague Autoblog sont
+> Dernière mise à jour : 2026-10-11 (mise à jour scrollytelling en ligne, main 4a22932 ; détail dans la section ✅ ci-dessous). Précédente : 2026-09-26 (bloc 1 fond bleu, 09 en service). Historique : 2026-07-26 (session Builder, les 68 covers de la vague Autoblog sont
 > générées et livrées dans public/conseils/, détail en §3vicies. Les 79 articles du site,
 > publiés et en file, ont désormais tous leur image. Reste : contrôle CEO puis commit groupé
 > drafts + covers).
 
 ---
+
+## ✅ 11/10/2026 (CEO Opus 5.5 le 10/10, Fable 5.1 le 11/10) : MISE À JOUR SCROLLYTELLING EN LIGNE, GO RÉMY (« oui go »)
+
+**En ligne** : `main` = `4a22932` (avance rapide de `maj/scrollytelling-2026-10`), production Vercel READY, curl 200 sur
+https://www.sos-electricien-annecy.fr/ avec le title « Électricien à Annecy, dépannage d'urgence 24h/24 », marqueurs du nouvel
+accueil servis (bt-planche, « Quelle est la panne ? », #deroulement), /tarifs 200, /zones/seynod 200.
+
+**Ce qui a changé** : bloc 1 en scrollytelling (photo lac et tableau plein écran, 1 image à 0,15 $ GO Rémy ; le mur s'ouvre sur
+les circuits, fuite, testeur, retour du formulaire), bloc 3 coupe d'un appartement 1971-1990 (INSEE) en 5 étapes à cadre fixe,
+angles 3 px partout, formulaire noir 2 x 4 options qui avance au clic (mêmes champs envoyés, JSON comparé ordinateur et téléphone),
+accueil 750 mots à 25 mots par paragraphe, pages intérieures à 45, titres des communes calés sur les recherches vues, 3 articles
+réécrits avec encart formulaire, réserve 65 brouillons à 5/semaine (dernier 12/01/2027).
+
+**Vitesse mobile (#R68)** : production mesurée le 10/10 à 97. Le 11/10, les deux dessins (MurAnnecy, AppartAnnecy) sont sortis
+du JavaScript de la page (`components/ui/*-logique.ts` + `next/dynamic`, chargés au premier geste ou à l'approche : page 17,6 →
+12,4 Ko gz) et l'outil de commentaires Vercel de l'aperçu (`vercel.live`, absent en production, 5 points à lui seul) coupé
+(`enablePreviewFeedback: false`). Mesure v8 en alternance, médiane de 3 : production 92 (86, 93, 92), aperçu 90 (90, 76, 94),
+LCP 2,47 s contre 2,78 s : écart de 2 points, règle des 3 points respectée. Le bruit vient du processeur du Mac (Chrome à 165 %).
+
+**Contrôles sur 4a22932** (journal `../tasks/.controles/sos-electricien-annecy.fr/`) : footprint CODE 0 « OK : aucun
+copier-coller ni paraphrase proche détectés » ; blocs-pages CODE 0 (18 pages) ; navigation CODE 0 (12 contrôles) ;
+visuels-articles CODE 0 ; check-texte accueil CODE 0 « OK : texte court » (63 paragraphes, 21 mots max) et toutes les pages
+intérieures CODE 0 ; expressions.py « 62 expressions gardées sur 62 » ; check-lignes CODE 0 à 360, 390, 820, 1440 sur 71 pages ;
+json-form : mêmes champs ordinateur et téléphone ; check-googlebot CODE 0 ; dessins à part vérifiés (morceaux.mjs : mur absent
+à l'ouverture, posé au geste 22/22, animé, bloc 3 piloté, repli posé). design CODE 1, UN défaut : « titre du bloc 1 posé sur un
+aplat » = le mur gris de la photo validée par Rémy le 11/10 (« Non, c'est très bien ») : arbitrage, comme le 26/09 ;
+check-serie refuse donc (design rouge), consigné ici. check-fin-de-site CODE 1, UN point : « Resend : aucun email tracé » : la
+liste Resend ne garde que les 100 derniers envois du compte, le dernier mail réel d'Annecy date du 04/09 ; aucun test envoyé
+(le formulaire envoie exactement les mêmes champs et un test arriverait au partenaire payé à la demande). Tout le reste OK
+(GSC propriété et sitemap 71 URL, Bing, IndexNow, SEO on-page 10 pages, ciblage, GEO).
+
+**Rank OS** (cockpit poussé le 11/10) : notes, entrée `travaux` du 11/10 (6 → 9), `autoblog` 5/semaine relevé le 11/10,
+`autoblogEndsAt` 2027-01-10, capture 1280x800 refaite sur le domaine, 12 pages à indexer avec `depuis` 2026-10-11.
+Protection Vercel remise : `ssoProtection all_except_custom_domains` (PATCH + GET relu), domaine public 200.
+
+**Note sur 10** : avant 6/10 (5, 7, 9, 10 ❌) ; après 9/10 (1 à 9 ✅, 10 ❌ : design rouge sur l'aplat voulu par Rémy).
+
+**Leçons** : (1) le verrou du Mac se pose UNE fois : `vitesse.sh` et le serveur local le posent déjà, l'envelopper une
+deuxième fois bloque tout (deux lancements perdus) ; (2) un sélecteur de contrôle vise un marqueur UNIQUE (`svg.h-full.overflow-visible`),
+pas `[data-anime] svg` qui attrape les icônes du formulaire ; (3) `check-googlebot.py` prend l'adresse complète avec `https://`.
 
 ## ✅ 26/09/2026 (session Fable) : MISE À JOUR EN LIGNE, GO RÉMY (« Ok go »)
 
