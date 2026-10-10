@@ -2,14 +2,16 @@ import type { CSSProperties } from 'react'
 import Link from 'next/link'
 import { TraceAuDefilement } from '@/components/ui/TraceAuDefilement'
 import { siteConfig } from '@/config/site.config'
-import { CARTE_H, CARTE_W, COMMUNES_SERVIES, COMMUNES_VOISINES, LAC } from '@/lib/carte-annecy'
+import { CARTE_H, CARTE_W, COMMUNES_SERVIES, LAC } from '@/lib/carte-annecy'
 import type { Zone } from '@/lib/content'
 
 /**
  * Bloc 7 de l'accueil (mise à jour du 10/10/2026, règles #R60 et #R46) : CARTE DU BASSIN
  * ANNÉCIEN dessinée, jamais une photo ni une grille de pastilles (refus « zones en fouillis
  * au téléphone »). Contours réels figés dans lib/carte-annecy.ts (geo.api.gouv.fr pour les
- * communes, OpenStreetMap pour le lac) : aucune requête au rendu.
+ * communes, OpenStreetMap pour le lac) : aucune requête au rendu. Les communes voisines, décor
+ * gris non cliquable, sont une image à part (public/accueil/carte-voisines.svg, chargée à
+ * l'approche) : la page d'accueil s'allège d'autant (vitesse mobile, #R68).
  *
  * Au défilement, le réseau s'allume : Annecy d'abord, puis un câble miel part vers chaque
  * commune desservie, qui s'éclaire à son arrivée. Une étincelle court ensuite sur les câbles.
@@ -107,128 +109,127 @@ export function CarteAnnecy({ zones }: { zones: Zone[] }) {
 
         <div className="mt-10 grid gap-10 lg:mt-14 lg:grid-cols-[1.15fr_1fr] lg:items-start lg:gap-16">
           <TraceAuDefilement className="carte-annecy mx-auto w-full max-w-[540px] lg:max-w-[470px]">
-            <svg
-              viewBox={`0 0 ${CARTE_W} ${CARTE_H}`}
-              className="h-auto w-full"
-              role="group"
-              aria-label={`Carte d'${city} et des communes desservies autour du lac`}
-            >
-              <defs>
-                <clipPath id="cadre-annecy">
-                  <rect width={CARTE_W} height={CARTE_H} rx="3" />
-                </clipPath>
-                <radialGradient id="halo-annecy">
-                  <stop offset="0" stopColor={MIEL} stopOpacity="0.9" />
-                  <stop offset="1" stopColor={MIEL} stopOpacity="0" />
-                </radialGradient>
-              </defs>
-              <g clipPath="url(#cadre-annecy)">
-                <rect width={CARTE_W} height={CARTE_H} fill={NUIT} />
-                {COMMUNES_VOISINES.map((d, i) => (
-                  <path key={i} d={d} fill="#11223A" stroke="#1E3654" strokeWidth="1" />
-                ))}
-
-                <path d={ANNECY.d} data-annecy="" fill={AMBRE} fillOpacity="0.88" stroke={NUIT} strokeWidth="1.6" />
-                {dansLeCadre.map((c) => (
-                  <a key={c.slug} href={`/zones/${c.slug}`} aria-label={`Électricien à ${noms.get(c.slug)}`}>
-                    <title>{noms.get(c.slug)}</title>
-                    <path
-                      d={c.d}
-                      data-commune=""
-                      fill="#2C5079"
-                      fillOpacity="0.92"
-                      stroke="#6E8FB3"
-                      strokeOpacity="0.7"
-                      strokeWidth="1.2"
-                      style={{ '--d': `${delai(c.slug)}ms`, cursor: 'pointer' } as CSSProperties}
-                    />
-                  </a>
-                ))}
-
-                <path d={LAC} fill="#2F7DB5" stroke="#7FB9E0" strokeWidth="1.2" fillRule="evenodd" pointerEvents="none" />
-                <text
-                  x="505"
-                  y="640"
-                  transform="rotate(-64 505 640)"
-                  fontSize="17"
-                  fontStyle="italic"
-                  letterSpacing="2"
-                  fill="#D6ECFA"
-                  data-nom=""
-                  pointerEvents="none"
-                >
-                  lac d'Annecy
-                </text>
-
-                <g pointerEvents="none" fill="none" strokeLinecap="round">
-                  {communes.map((c, i) => (
-                    <g key={c.slug} style={{ '--d': `${delai(c.slug)}ms`, '--e': `${(i * 370) % 2800}ms` } as CSSProperties}>
-                      <path d={cable(c.slug, i)} pathLength={1} data-cable="" stroke={MIEL} strokeOpacity="0.75" strokeWidth="2" />
-                      <path d={cable(c.slug, i)} pathLength={1} data-etincelle="" stroke="#FFFFFF" strokeWidth="3.4" />
-                    </g>
+            <div className="relative overflow-hidden rounded-[3px] bg-[#0B1A2E]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/accueil/carte-voisines.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" width={CARTE_W} height={CARTE_H} className="absolute inset-0 h-full w-full" />
+              <svg
+                viewBox={`0 0 ${CARTE_W} ${CARTE_H}`}
+                className="relative block h-auto w-full"
+                role="group"
+                aria-label={`Carte d'${city} et des communes desservies autour du lac`}
+              >
+                <defs>
+                  <clipPath id="cadre-annecy">
+                    <rect width={CARTE_W} height={CARTE_H} rx="3" />
+                  </clipPath>
+                  <radialGradient id="halo-annecy">
+                    <stop offset="0" stopColor={MIEL} stopOpacity="0.9" />
+                    <stop offset="1" stopColor={MIEL} stopOpacity="0" />
+                  </radialGradient>
+                </defs>
+                <g clipPath="url(#cadre-annecy)">
+                  <path d={ANNECY.d} data-annecy="" fill={AMBRE} fillOpacity="0.88" stroke={NUIT} strokeWidth="1.6" />
+                  {dansLeCadre.map((c) => (
+                    <a key={c.slug} href={`/zones/${c.slug}`} aria-label={`Électricien à ${noms.get(c.slug)}`}>
+                      <title>{noms.get(c.slug)}</title>
+                      <path
+                        d={c.d}
+                        data-commune=""
+                        fill="#2C5079"
+                        fillOpacity="0.92"
+                        stroke="#6E8FB3"
+                        strokeOpacity="0.7"
+                        strokeWidth="1.2"
+                        style={{ '--d': `${delai(c.slug)}ms`, cursor: 'pointer' } as CSSProperties}
+                      />
+                    </a>
                   ))}
-                </g>
 
-                <circle cx={ANNECY.cx} cy={ANNECY.cy} r="30" fill="url(#halo-annecy)" pointerEvents="none" />
-                <circle cx={ANNECY.cx} cy={ANNECY.cy} r="7" fill="#FFFFFF" stroke={NUIT} strokeWidth="2.5" pointerEvents="none" />
+                  <path d={LAC} fill="#2F7DB5" stroke="#7FB9E0" strokeWidth="1.2" fillRule="evenodd" pointerEvents="none" />
+                  <text
+                    x="505"
+                    y="640"
+                    transform="rotate(-64 505 640)"
+                    fontSize="17"
+                    fontStyle="italic"
+                    letterSpacing="2"
+                    fill="#D6ECFA"
+                    data-nom=""
+                    pointerEvents="none"
+                  >
+                    lac d'Annecy
+                  </text>
 
-                {communes.map((c) => {
-                  const p = point(c.slug)
-                  return (
-                    <circle
-                      key={c.slug}
-                      cx={p.x}
-                      cy={p.y}
-                      r="5"
-                      data-point=""
-                      fill={MIEL}
-                      stroke={NUIT}
-                      strokeWidth="2"
-                      pointerEvents="none"
-                      style={{ '--d': `${delai(c.slug)}ms` } as CSSProperties}
-                    />
-                  )
-                })}
-
-                <g pointerEvents="none" fontWeight="600" fill="#FFFFFF" stroke={NUIT} strokeWidth="4.5" strokeLinejoin="round" paintOrder="stroke">
-                  {dansLeCadre.map((c) => {
-                    const e = ETIQUETTES[c.slug] ?? {}
-                    const lignes = e.lignes ?? [noms.get(c.slug)!]
-                    const x = e.x ?? c.cx
-                    const yBas = e.y ?? c.cy - 14
-                    return (
-                      <g key={c.slug} data-nom="" style={{ '--d': `${delai(c.slug)}ms` } as CSSProperties}>
-                        <text x={x} y={yBas} textAnchor={e.ancre ?? 'middle'}>
-                          {lignes.map((l, k) => (
-                            <tspan key={l} x={x} dy={k === 0 ? `${-(lignes.length - 1) * 1.1}em` : '1.1em'}>
-                              {l}
-                            </tspan>
-                          ))}
-                        </text>
+                  <g pointerEvents="none" fill="none" strokeLinecap="round">
+                    {communes.map((c, i) => (
+                      <g key={c.slug} style={{ '--d': `${delai(c.slug)}ms`, '--e': `${(i * 370) % 2800}ms` } as CSSProperties}>
+                        <path d={cable(c.slug, i)} pathLength={1} data-cable="" stroke={MIEL} strokeOpacity="0.75" strokeWidth="2" />
+                        <path d={cable(c.slug, i)} pathLength={1} data-etincelle="" stroke="#FFFFFF" strokeWidth="3.4" />
                       </g>
+                    ))}
+                  </g>
+
+                  <circle cx={ANNECY.cx} cy={ANNECY.cy} r="30" fill="url(#halo-annecy)" pointerEvents="none" />
+                  <circle cx={ANNECY.cx} cy={ANNECY.cy} r="7" fill="#FFFFFF" stroke={NUIT} strokeWidth="2.5" pointerEvents="none" />
+
+                  {communes.map((c) => {
+                    const p = point(c.slug)
+                    return (
+                      <circle
+                        key={c.slug}
+                        cx={p.x}
+                        cy={p.y}
+                        r="5"
+                        data-point=""
+                        fill={MIEL}
+                        stroke={NUIT}
+                        strokeWidth="2"
+                        pointerEvents="none"
+                        style={{ '--d': `${delai(c.slug)}ms` } as CSSProperties}
+                      />
                     )
                   })}
-                  <g data-nom="">
-                    <text className="aa-ville" x={ANNECY.cx + 4} y={ANNECY.cy + 40} textAnchor="middle" fontWeight="700" fill={MIEL}>
-                      {city}
-                    </text>
+
+                  <g pointerEvents="none" fontWeight="600" fill="#FFFFFF" stroke={NUIT} strokeWidth="4.5" strokeLinejoin="round" paintOrder="stroke">
+                    {dansLeCadre.map((c) => {
+                      const e = ETIQUETTES[c.slug] ?? {}
+                      const lignes = e.lignes ?? [noms.get(c.slug)!]
+                      const x = e.x ?? c.cx
+                      const yBas = e.y ?? c.cy - 14
+                      return (
+                        <g key={c.slug} data-nom="" style={{ '--d': `${delai(c.slug)}ms` } as CSSProperties}>
+                          <text x={x} y={yBas} textAnchor={e.ancre ?? 'middle'}>
+                            {lignes.map((l, k) => (
+                              <tspan key={l} x={x} dy={k === 0 ? `${-(lignes.length - 1) * 1.1}em` : '1.1em'}>
+                                {l}
+                              </tspan>
+                            ))}
+                          </text>
+                        </g>
+                      )
+                    })}
+                    <g data-nom="">
+                      <text className="aa-ville" x={ANNECY.cx + 4} y={ANNECY.cy + 40} textAnchor="middle" fontWeight="700" fill={MIEL}>
+                        {city}
+                      </text>
+                    </g>
                   </g>
                 </g>
-              </g>
 
-              {noms.has('rumilly') && (
-                <a href="/zones/rumilly" aria-label={`Électricien à ${noms.get('rumilly')}`}>
-                  <title>{noms.get('rumilly')}</title>
-                  <g data-nom="" style={{ '--d': `${delai('rumilly')}ms` } as CSSProperties}>
-                    <rect x="0" y={RUMILLY.y - 50} width="128" height="40" fill={NUIT} fillOpacity="0.01" />
-                    <path d={`M${RUMILLY.x + 13} ${RUMILLY.y - 37} l-8 7 l8 7`} stroke={MIEL} strokeWidth="2.6" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-                    <text x={RUMILLY.x + 22} y={RUMILLY.y - 24} fontWeight="600" fill="#FFFFFF" stroke={NUIT} strokeWidth="4.5" strokeLinejoin="round" paintOrder="stroke">
-                      {noms.get('rumilly')}
-                    </text>
-                  </g>
-                </a>
-              )}
-            </svg>
+                {noms.has('rumilly') && (
+                  <a href="/zones/rumilly" aria-label={`Électricien à ${noms.get('rumilly')}`}>
+                    <title>{noms.get('rumilly')}</title>
+                    <g data-nom="" style={{ '--d': `${delai('rumilly')}ms` } as CSSProperties}>
+                      <rect x="0" y={RUMILLY.y - 50} width="128" height="40" fill={NUIT} fillOpacity="0.01" />
+                      <path d={`M${RUMILLY.x + 13} ${RUMILLY.y - 37} l-8 7 l8 7`} stroke={MIEL} strokeWidth="2.6" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                      <text x={RUMILLY.x + 22} y={RUMILLY.y - 24} fontWeight="600" fill="#FFFFFF" stroke={NUIT} strokeWidth="4.5" strokeLinejoin="round" paintOrder="stroke">
+                        {noms.get('rumilly')}
+                      </text>
+                    </g>
+                  </a>
+                )}
+              </svg>
+            </div>
             <p className="mt-2 text-right text-[11px] text-slate-500">Lac et communes © OpenStreetMap, geo.api.gouv.fr</p>
           </TraceAuDefilement>
 
