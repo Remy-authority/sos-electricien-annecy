@@ -48,7 +48,7 @@ export default function About() {
           <ul className="mx-auto mt-6 w-fit space-y-3 text-left md:mx-0" role="list">
             {siteConfig.methods.map((m) => (
               <li key={m} className="flex items-center gap-3 text-slate-700">
-                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-dark">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-[3px] bg-accent text-dark">
                   <svg className="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clipRule="evenodd" />
                   </svg>

@@ -89,7 +89,7 @@ export default function ServiceAreaMap() {
             >
               {/* Annecy en premier, ville principale */}
               <li>
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-white">
+                <span className="inline-flex items-center gap-1.5 rounded-[3px] border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-white">
                   <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" />
                   {siteConfig.city}
                 </span>
@@ -98,7 +98,7 @@ export default function ServiceAreaMap() {
                 <li key={z.slug}>
                   <Link
                     href={`/zones/${z.slug}`}
-                    className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-slate-300 transition hover:border-accent/40 hover:bg-accent/10 hover:text-white"
+                    className="inline-flex items-center gap-1.5 rounded-[3px] border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-slate-300 transition hover:border-accent/40 hover:bg-accent/10 hover:text-white"
                   >
                     <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent/70" aria-hidden="true" />
                     {z.name}
@@ -108,7 +108,7 @@ export default function ServiceAreaMap() {
               {/* Quartiers d'Annecy, chips secondaires non liés (mais bien lisibles) */}
               {siteConfig.serviceArea.districts.map((d) => (
                 <li key={d}>
-                  <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-slate-200">
+                  <span className="inline-flex items-center gap-1.5 rounded-[3px] border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-slate-200">
                     <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent/70" aria-hidden="true" />
                     {d}
                   </span>
@@ -136,7 +136,7 @@ export default function ServiceAreaMap() {
           <div className="flex flex-col gap-4">
             {REASSURANCE_CARDS.map((card) => (
               <div key={card.title} className="card flex flex-col items-center gap-3 text-center sm:flex-row sm:items-start sm:gap-4 sm:text-left">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[3px] bg-primary/10 text-primary">
                   {card.icon}
                 </span>
                 <div>

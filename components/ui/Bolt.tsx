@@ -42,7 +42,7 @@ export function BoltBadge({
       : 'border-accent-deep/25 bg-accent/10 text-accent-deep'
   return (
     <span
-      className={`inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.14em] ${toneClass} ${className}`}
+      className={`inline-flex items-center gap-2 rounded-[3px] border px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.14em] ${toneClass} ${className}`}
     >
       <BoltIcon className="h-3.5 w-3.5" />
       {label}

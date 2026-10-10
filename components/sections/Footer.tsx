@@ -28,7 +28,7 @@ export default function Footer() {
           </p>
           <a
             href={`tel:${siteConfig.phone}`}
-            className="flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-bold text-dark shadow-md shadow-accent/20 transition hover:bg-accent/90"
+            className="flex items-center gap-2 rounded-[3px] bg-accent px-5 py-2.5 text-sm font-bold text-dark shadow-md shadow-accent/20 transition hover:bg-accent/90"
             aria-label={`Appeler le ${siteConfig.phoneDisplay}`}
           >
             <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -59,7 +59,7 @@ export default function Footer() {
           </p>
           <ul className="mt-4 hidden flex-wrap gap-1 lg:flex" role="list" aria-label="Engagements">
             {siteConfig.usps.map((u) => (
-              <li key={u} className="rounded-full bg-white/5 px-2 py-0.5 text-xs">{u}</li>
+              <li key={u} className="rounded-[3px] bg-white/5 px-2 py-0.5 text-xs">{u}</li>
             ))}
           </ul>
         </div>

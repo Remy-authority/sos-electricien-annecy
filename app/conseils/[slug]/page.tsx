@@ -111,7 +111,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                 <li key={s.slug}>
                   <Link
                     href={`/services/${s.slug}`}
-                    className="inline-flex rounded-full border border-slate-300 bg-white px-3 py-1.5 text-sm hover:border-primary hover:text-primary"
+                    className="inline-flex rounded-[3px] border border-slate-300 bg-white px-3 py-1.5 text-sm hover:border-primary hover:text-primary"
                   >
                     {s.navTitle}
                   </Link>

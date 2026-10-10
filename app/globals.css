@@ -56,13 +56,13 @@
      ⚠️ Texte NUIT et non blanc : le blanc sur ambre tombe à 1,85:1 (échec AA),
      le nuit sur ambre monte à 10,45:1. Vaut pour tous les boutons ambre du site. */
   .btn-accent {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3.5 min-h-[48px] font-bold text-dark transition-colors hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+    @apply inline-flex items-center justify-center gap-2 rounded-[3px] bg-accent px-6 py-3.5 min-h-[48px] font-bold text-dark transition-colors hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
   }
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 min-h-[48px] font-semibold text-white transition-colors hover:bg-primary-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
+    @apply inline-flex items-center justify-center gap-2 rounded-[3px] bg-primary px-6 py-3.5 min-h-[48px] font-semibold text-white transition-colors hover:bg-primary-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
   }
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-primary/30 bg-white px-6 py-3.5 min-h-[48px] font-semibold text-primary transition-colors hover:border-primary hover:bg-primary/5;
+    @apply inline-flex items-center justify-center gap-2 rounded-[3px] border border-primary/30 bg-white px-6 py-3.5 min-h-[48px] font-semibold text-primary transition-colors hover:border-primary hover:bg-primary/5;
   }
   /* Carte : ombre à 2 couches + bordure très claire = profondeur sans lourdeur.
      Le liseré supérieur blanc simule une arête éclairée (relief). */

@@ -24,7 +24,7 @@ export default function Hero() {
       <div className="container-site relative grid gap-8 py-12 md:py-16 lg:grid-cols-2 lg:items-start lg:gap-x-14 lg:gap-y-10 lg:py-20">
         {/* Texte : centré sur téléphone, à gauche sur ordinateur, en haut de la colonne gauche. */}
         <div className="mx-auto w-full max-w-lg text-center lg:col-start-1 lg:row-start-1 lg:mx-0 lg:max-w-none lg:text-left">
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-accent/15 px-4 py-1.5 text-sm font-semibold text-accent ring-1 ring-accent/30">
+          <div className="mb-5 inline-flex items-center gap-2 rounded-[3px] bg-accent/15 px-4 py-1.5 text-sm font-semibold text-accent ring-1 ring-accent/30">
             <span className="h-2 w-2 animate-pulse rounded-full bg-accent" aria-hidden="true" />
             {siteConfig.availability}
           </div>

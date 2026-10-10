@@ -9,7 +9,7 @@ import LeadForm from '@/components/ui/LeadForm'
 import Hero from '@/components/sections/Hero'
 import TrustBadges from '@/components/sections/TrustBadges'
 import About from '@/components/sections/About'
-import Process from '@/components/sections/Process'
+import { ChantierAnnecy } from '@/components/sections/ChantierAnnecy'
 import Stats from '@/components/sections/Stats'
 import WhyUs from '@/components/sections/WhyUs'
 import ServiceAreaMap from '@/components/sections/ServiceAreaMap'
@@ -82,7 +82,7 @@ export default function HomePage() {
 
       <Stats />
       <About />
-      <Process />
+      <ChantierAnnecy />
       {siteConfig.features.gallery && <Realisations />}
 
       {/* Formulaire devis, section dédiée (recommandation CEO, form hors hero) */}

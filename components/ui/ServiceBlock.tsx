@@ -39,7 +39,7 @@ export default function ServiceBlock({ block, eager = false }: { block: ContentB
               const isLoneLast = i === parsed.steps.length - 1 && parsed.steps.length % 2 === 1
               return (
               <li key={i} className={`flex gap-3 rounded-xl text-left border border-slate-200 bg-white p-4 shadow-sm${isLoneLast ? ' sm:col-span-2' : ''}`}>
-                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-bold text-dark" aria-hidden="true">
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-[3px] bg-accent text-sm font-bold text-dark" aria-hidden="true">
                   {i + 1}
                 </span>
                 <span className="text-sm leading-relaxed text-slate-700">{step}</span>
@@ -91,7 +91,7 @@ export function PrixBloc({ heading, phrase }: { heading: ReactNode; phrase?: str
     >
       <div className="flex flex-col items-center gap-4 lg:flex-row lg:items-start">
         <span
-          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent text-lg font-bold text-dark"
+          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[3px] bg-accent text-lg font-bold text-dark"
           aria-hidden="true"
         >
           €

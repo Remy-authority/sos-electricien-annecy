@@ -31,7 +31,7 @@ export default function CtaBanner({
             aria-hidden="true"
           />
           <div className="relative">
-            <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-accent/25 bg-accent/10 px-4 py-1.5 text-sm font-semibold text-accent">
+            <p className="mb-4 inline-flex items-center gap-2 rounded-[3px] border border-accent/25 bg-accent/10 px-4 py-1.5 text-sm font-semibold text-accent">
               <BoltIcon className="h-3.5 w-3.5" />
               {siteConfig.availability}
             </p>

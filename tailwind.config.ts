@@ -40,7 +40,14 @@ const config: Config = {
         display: ['var(--font-fraunces)', 'ui-serif', 'Georgia', 'serif'],
       },
       borderRadius: {
-        card: '20px',
+        // 10/10/2026 (mise à jour, refus de Rémy : pilules et gros arrondis « IA ») : angles
+        // presque droits partout, 3 px. Seuls les points et les halos flous restent ronds.
+        card: '3px',
+        md: '3px',
+        lg: '3px',
+        xl: '3px',
+        '2xl': '3px',
+        '3xl': '3px',
       },
       /* Ombres à 2 couches (contact + diffusion) : donnent de la profondeur réelle
          aux cartes, là où `shadow-sm` restait plat. Teintées avec le bleu du fond

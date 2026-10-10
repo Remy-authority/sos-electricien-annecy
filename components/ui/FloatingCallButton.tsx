@@ -10,12 +10,12 @@ export default function FloatingCallButton() {
   return (
     <a
       href={`tel:${siteConfig.phone}`}
-      className="group fixed bottom-6 right-6 z-40 hidden h-14 w-14 items-center justify-center rounded-full bg-accent text-dark shadow-lg shadow-accent/30 transition hover:scale-105 hover:bg-accent/90 md:flex"
+      className="group fixed bottom-6 right-6 z-40 hidden h-14 w-14 items-center justify-center rounded-[3px] bg-accent text-dark shadow-lg shadow-accent/30 transition hover:scale-105 hover:bg-accent/90 md:flex"
       aria-label={`Appeler le ${siteConfig.phoneDisplay}`}
       data-cta="phone-floating"
     >
       {/* Halo pulsé pour attirer l'œil */}
-      <span className="absolute inset-0 rounded-full bg-accent/40 motion-safe:animate-ping" aria-hidden="true" />
+      <span className="absolute inset-0 rounded-[3px] bg-accent/40 motion-safe:animate-ping" aria-hidden="true" />
       {/* Étiquette au survol */}
       <span className="pointer-events-none absolute right-16 whitespace-nowrap rounded-lg bg-dark px-3 py-1.5 text-sm font-semibold text-white opacity-0 shadow-md transition-opacity group-hover:opacity-100">
         {siteConfig.phoneDisplay}

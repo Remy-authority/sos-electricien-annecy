@@ -135,7 +135,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
               <ul className="mt-3 flex flex-wrap justify-center gap-2 lg:justify-start">
                 {related.map((r) => (
                   <li key={r.slug}>
-                    <Link href={`/services/${r.slug}`} className="rounded-full border border-slate-300 px-3 py-1.5 text-sm hover:border-primary">
+                    <Link href={`/services/${r.slug}`} className="rounded-[3px] border border-slate-300 px-3 py-1.5 text-sm hover:border-primary">
                       {r.navTitle}
                     </Link>
                   </li>

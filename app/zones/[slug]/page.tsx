@@ -183,7 +183,7 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
                   <ul className="mt-3 flex flex-wrap justify-center gap-2 lg:justify-start">
                     {linkedServices.map((s) => (
                       <li key={s.slug}>
-                        <Link href={`/services/${s.slug}`} className="inline-flex rounded-full border border-slate-300 px-3 py-1.5 text-sm hover:border-primary hover:text-primary">
+                        <Link href={`/services/${s.slug}`} className="inline-flex rounded-[3px] border border-slate-300 px-3 py-1.5 text-sm hover:border-primary hover:text-primary">
                           {s.navTitle}
                         </Link>
                       </li>
@@ -197,7 +197,7 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
                   <ul className="mt-3 flex flex-wrap justify-center gap-2 lg:justify-start">
                     {neighbours.map((n) => (
                       <li key={n.slug}>
-                        <Link href={`/zones/${n.slug}`} className="inline-flex rounded-full border border-slate-300 px-3 py-1.5 text-sm hover:border-primary hover:text-primary">
+                        <Link href={`/zones/${n.slug}`} className="inline-flex rounded-[3px] border border-slate-300 px-3 py-1.5 text-sm hover:border-primary hover:text-primary">
                           {n.name}
                         </Link>
                       </li>

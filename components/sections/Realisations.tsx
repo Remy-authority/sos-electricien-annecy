@@ -75,7 +75,7 @@ export default function Realisations() {
 
               <div className="p-3 text-center sm:p-4 sm:text-left">
                 {/* Badge catégorie */}
-                <span className="mb-2 inline-block rounded-full border border-accent/25 bg-accent/10 px-2 py-0.5 text-[9px] sm:px-2.5 sm:text-[10px] font-bold uppercase tracking-wider text-accent">
+                <span className="mb-2 inline-block rounded-[3px] border border-accent/25 bg-accent/10 px-2 py-0.5 text-[9px] sm:px-2.5 sm:text-[10px] font-bold uppercase tracking-wider text-accent">
                   {real.category}
                 </span>
                 <h3 className="text-sm leading-snug text-white">{real.title}</h3>
