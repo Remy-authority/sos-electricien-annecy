@@ -17,7 +17,7 @@ export default function FloatingCallButton() {
       {/* Halo pulsé pour attirer l'œil */}
       <span className="absolute inset-0 rounded-[3px] bg-accent/40 motion-safe:animate-ping" aria-hidden="true" />
       {/* Étiquette au survol */}
-      <span className="pointer-events-none absolute right-16 whitespace-nowrap rounded-lg bg-dark px-3 py-1.5 text-sm font-semibold text-white opacity-0 shadow-md transition-opacity group-hover:opacity-100">
+      <span className="pointer-events-none absolute right-16 whitespace-nowrap rounded-[3px] bg-dark px-3 py-1.5 text-sm font-semibold text-white opacity-0 shadow-md transition-opacity group-hover:opacity-100">
         {siteConfig.phoneDisplay}
       </span>
       <svg className="relative h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

@@ -23,7 +23,7 @@ export default function ServiceBlock({ block, eager = false }: { block: ContentB
   return (
     <section className="text-center lg:text-left">
       <h2 className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary" aria-hidden="true">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[3px] bg-primary/10 text-primary" aria-hidden="true">
           <BlockIcon heading={block.heading} className="h-5 w-5" />
         </span>
         {block.heading}
@@ -38,7 +38,7 @@ export default function ServiceBlock({ block, eager = false }: { block: ContentB
               // sur la dernière ligne (évite une carte orpheline seule à gauche).
               const isLoneLast = i === parsed.steps.length - 1 && parsed.steps.length % 2 === 1
               return (
-              <li key={i} className={`flex gap-3 rounded-xl text-left border border-slate-200 bg-white p-4 shadow-sm${isLoneLast ? ' sm:col-span-2' : ''}`}>
+              <li key={i} className={`flex gap-3 rounded-[3px] text-left border border-slate-200 bg-white p-4 shadow-sm${isLoneLast ? ' sm:col-span-2' : ''}`}>
                 <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-[3px] bg-accent text-sm font-bold text-dark" aria-hidden="true">
                   {i + 1}
                 </span>

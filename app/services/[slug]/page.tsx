@@ -161,10 +161,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       </article>
 
       <Faq items={service.faq} />
-      <CtaBanner
-        title={`${service.navTitle} à ${siteConfig.city} : parlons-en`}
-        subtitle="Devis gratuit, sans engagement. Appelez ou laissez vos coordonnées."
-      />
+      <CtaBanner title={`${service.navTitle} à ${siteConfig.city}, parlons-en`} />
     </>
   )
 }

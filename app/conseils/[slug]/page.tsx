@@ -16,6 +16,7 @@ import { siteConfig } from '@/config/site.config'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import Faq from '@/components/ui/Faq'
 import CtaBanner from '@/components/ui/CtaBanner'
+import EncartArticle from '@/components/ui/EncartArticle'
 
 export const dynamicParams = false
 
@@ -44,9 +45,36 @@ const mdxComponents = {
   ),
 }
 
+/**
+ * Coupe le corps MDX au premier tiers pour y poser l'encart de demande (10/10/2026,
+ * repris de drainage-agricole-normandie.fr). On coupe toujours AVANT un titre `## `
+ * (jamais au milieu d'une liste ou d'un tableau) : le H2 le plus proche du tiers du
+ * texte, à condition qu'au moins un cinquième ait été lu. Sans H2 utilisable,
+ * l'encart se pose après le corps.
+ */
+function couperAuTiers(md: string): [string, string] {
+  const total = md.length
+  let meilleur = -1
+  let ecart = Infinity
+  let pos = 0
+  for (const ligne of md.split('\n')) {
+    if (/^## /.test(ligne) && pos >= total * 0.2) {
+      const d = Math.abs(pos - total / 3)
+      if (d < ecart) {
+        ecart = d
+        meilleur = pos
+      }
+    }
+    pos += ligne.length + 1
+  }
+  if (meilleur < 0) return [md, '']
+  return [md.slice(0, meilleur), md.slice(meilleur)]
+}
+
 export default function ArticlePage({ params }: { params: { slug: string } }) {
   const article = getArticle(params.slug)
   if (!article) notFound()
+  const [debut, suite] = couperAuTiers(article.content)
 
   // Maillage interne automatique via front-matter relatedServices.
   const linked = getServices().filter((s) => article.relatedServices.includes(s.slug))
@@ -97,10 +125,16 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           </figure>
         )}
 
-        {/* Corps */}
+        {/* Corps, coupé au premier tiers par l'encart de demande adapté au sujet */}
         <div className="prose-content article-prose mx-auto mt-10 max-w-3xl">
-          <MDXRemote source={article.content} components={mdxComponents} />
+          <MDXRemote source={debut} components={mdxComponents} />
         </div>
+        <EncartArticle slug={article.slug} titre={article.title} />
+        {suite && (
+          <div className="prose-content article-prose mx-auto max-w-3xl [&>h2:first-child]:mt-0">
+            <MDXRemote source={suite} components={mdxComponents} />
+          </div>
+        )}
 
         {/* Maillage interne : services liés */}
         {linked.length > 0 && (

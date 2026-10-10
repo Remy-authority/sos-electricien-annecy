@@ -46,7 +46,7 @@ export default function SourcesListe() {
       </p>
       <ul className="mt-5 space-y-3 text-left text-sm">
         {liste.map((s) => (
-          <li key={s.cle} className="rounded-xl border border-slate-200 bg-white px-4 py-3">
+          <li key={s.cle} className="rounded-[3px] border border-slate-200 bg-white px-4 py-3">
             <span className="font-semibold text-slate-800">{s.nom}</span>
             <span className="text-slate-600"> : </span>
             <LienSource url={s.url} className="break-words text-primary">

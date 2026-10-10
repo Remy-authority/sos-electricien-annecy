@@ -73,7 +73,7 @@ export default function Faq({
               className={
                 clair
                   ? 'group rounded-[3px] border border-slate-200 bg-light transition-colors open:border-accent/60 hover:border-slate-300'
-                  : 'group rounded-xl border border-white/10 bg-white/[0.06] backdrop-blur-md transition-colors open:border-accent/30 hover:border-white/20'
+                  : 'group rounded-[3px] border border-white/10 bg-white/[0.06] backdrop-blur-md transition-colors open:border-accent/30 hover:border-white/20'
               }
             >
               <summary

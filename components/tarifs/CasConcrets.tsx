@@ -21,7 +21,7 @@ export default function CasConcrets() {
             <h3 className="mt-1 text-lg leading-snug">{c.titre}</h3>
             <ul className="mt-4 space-y-2 text-sm">
               {c.lignes.map((l) => (
-                <li key={l.libelle} className="rounded-lg bg-light px-3 py-2">
+                <li key={l.libelle} className="rounded-[3px] bg-light px-3 py-2">
                   <span className="block text-slate-600">{l.libelle}</span>
                   <span className="block font-semibold text-slate-900">{l.valeur}</span>
                 </li>

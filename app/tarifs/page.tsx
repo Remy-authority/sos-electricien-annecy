@@ -4,7 +4,6 @@ import { buildMetadata } from '@/lib/seo'
 import { siteConfig } from '@/config/site.config'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import Faq from '@/components/ui/Faq'
-import CtaBanner from '@/components/ui/CtaBanner'
 import LeadForm from '@/components/ui/LeadForm'
 import AccentWord from '@/components/ui/AccentWord'
 import { BoltBadge } from '@/components/ui/Bolt'
@@ -152,7 +151,7 @@ export default function TarifsPage() {
               Pour comparer deux devis de tableau, comptez les rangées et les interrupteurs différentiels prévus.
             </figcaption>
           </figure>
-          <BlocTexte id="devis" bloc={b.devis} />
+          <BlocTexte id="prix-du-devis" bloc={b.devis} />
           <BlocTexte id="tva" bloc={b.tva}>
             <SchemaTva />
           </BlocTexte>
@@ -179,10 +178,6 @@ export default function TarifsPage() {
         </div>
       </section>
 
-      <CtaBanner
-        title={`Un devis d'électricien clair à ${siteConfig.city}`}
-        subtitle="Devis gratuit et écrit, sans engagement. Appelez-nous ou laissez vos coordonnées."
-      />
     </>
   )
 }

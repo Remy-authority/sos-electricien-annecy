@@ -16,7 +16,7 @@ export default function About() {
       <div className="container-site grid gap-10 md:grid-cols-2 md:items-center lg:gap-16">
         {/* Visuel métier */}
         <div className="relative order-2 md:order-1">
-          <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-slate-100">
+          <div className="aspect-[4/3] overflow-hidden rounded-[3px] bg-slate-100">
             <Image
               src="/a-propos-tableau.jpg"
               alt="Tableau électrique neuf, porte ouverte, dans une buanderie claire et rangée"
@@ -37,7 +37,7 @@ export default function About() {
           </h2>
           <p className="mt-4 leading-relaxed text-slate-600">{siteConfig.about.body}</p>
 
-          <div className="mt-6 inline-flex items-center gap-2 rounded-lg border border-primary/20 bg-primary/5 px-4 py-2.5">
+          <div className="mt-6 inline-flex items-center gap-2 rounded-[3px] border border-primary/20 bg-primary/5 px-4 py-2.5">
             <svg className="h-5 w-5 shrink-0 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
               <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.25C17.25 22.15 21 17.25 21 12V7L12 2z" />
               <path d="m9 12 2 2 4-4" />

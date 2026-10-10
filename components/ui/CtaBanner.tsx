@@ -1,12 +1,17 @@
-import Link from 'next/link'
-import PhoneButton from './PhoneButton'
 import { siteConfig } from '@/config/site.config'
 import AccentWord from './AccentWord'
-import { BoltIcon } from './Bolt'
+import LeadForm from './LeadForm'
+import { Trace } from './Trace'
 
+/**
+ * Bloc de demande en bas des pages intérieures (10/10/2026). Remplace l'ancienne bande
+ * sombre avec le numéro de téléphone au-dessus du pied de page (refus de Rémy : numéro
+ * répété, bande d'appel sombre). Fond clair, le formulaire à étapes de l'accueil, les
+ * mêmes champs envoyés. Ancre `#devis` : l'encart des articles y mène.
+ */
 export default function CtaBanner({
-  title = `Une panne électrique à ${siteConfig.city} ? On intervient vite.`,
-  subtitle = siteConfig.responseTime,
+  title = `Une panne électrique à ${siteConfig.city} ?`,
+  subtitle = 'Décrivez-la en trois étapes, nous revenons vers vous pour fixer le diagnostic.',
   /** Mot du titre mis en valeur (serif italique). Défaut : la ville de base.
    *  Les pages commune passent le nom de la commune à la place. */
   accentWord = siteConfig.city,
@@ -16,41 +21,18 @@ export default function CtaBanner({
   accentWord?: string
 }) {
   return (
-    <section className="section" aria-label="Nous contacter">
+    <section id="devis" className="section scroll-mt-20 bg-slate-100" aria-labelledby="devis-bas">
       <div className="container-site">
-        <div className="texture-noise relative overflow-hidden rounded-2xl bg-dark px-6 py-14 text-center text-white shadow-card-hover md:px-14">
-          {/* Motif grille discret, masqué en fondu radial */}
-          <div className="pointer-events-none absolute inset-0 pattern-grid" aria-hidden="true" />
-          {/* Halo décoratif */}
-          <div
-            className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-primary/25 blur-3xl"
-            aria-hidden="true"
-          />
-          <div
-            className="pointer-events-none absolute -bottom-16 -left-16 h-64 w-64 rounded-full bg-accent/15 blur-3xl"
-            aria-hidden="true"
-          />
-          <div className="relative">
-            <p className="mb-4 inline-flex items-center gap-2 rounded-[3px] border border-accent/25 bg-accent/10 px-4 py-1.5 text-sm font-semibold text-accent">
-              <BoltIcon className="h-3.5 w-3.5" />
-              {siteConfig.availability}
-            </p>
-            {/* Accroche entière en serif italique : le titre est le visuel */}
-            <h2 className="accroche mx-auto max-w-3xl text-3xl text-white md:text-[2.75rem]">
-              <AccentWord text={title} word={accentWord} className="not-italic text-accent" />
+        <Trace className="apparait mx-auto max-w-2xl">
+          <div className="mb-6 text-center">
+            <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-accent-deep">Devis gratuit</p>
+            <h2 id="devis-bas" className="text-balance text-2xl md:text-3xl">
+              <AccentWord text={title} word={accentWord} className="accent-serif text-accent-deep" />
             </h2>
-            <p className="mt-4 text-slate-300">{subtitle}</p>
-            <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <PhoneButton label={`Appeler le ${siteConfig.phoneDisplay}`} className="btn-accent shadow-lg shadow-accent/30" />
-              <Link
-                href="/contact"
-                className="btn-outline !border-white/30 !bg-transparent !text-white hover:!bg-white/10"
-              >
-                Devis gratuit en ligne
-              </Link>
-            </div>
+            <p className="mx-auto mt-2 max-w-xl text-balance text-sm text-slate-600">{subtitle}</p>
           </div>
-        </div>
+          <LeadForm />
+        </Trace>
       </div>
     </section>
   )

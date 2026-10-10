@@ -149,7 +149,7 @@ export default function ServiceAreaMap() {
             {/* CTA orange principal, façon template */}
             <a
               href={`tel:${siteConfig.phone}`}
-              className="btn-accent w-full justify-center rounded-2xl py-4 text-base"
+              className="btn-accent w-full justify-center rounded-[3px] py-4 text-base"
               aria-label={`Vérifier ma zone, appeler le ${siteConfig.phoneDisplay}`}
             >
               <svg className="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

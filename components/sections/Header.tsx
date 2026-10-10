@@ -43,7 +43,7 @@ export default function Header() {
 
         {/* Nav desktop */}
         <nav aria-label="Navigation principale" className="hidden items-center gap-0.5 text-sm font-medium text-slate-700 lg:flex">
-          <Link href="/" className="rounded-lg px-3 py-2 transition-colors hover:bg-slate-100 hover:text-primary">Accueil</Link>
+          <Link href="/" className="rounded-[3px] px-3 py-2 transition-colors hover:bg-slate-100 hover:text-primary">Accueil</Link>
           <NavDropdown
             label="Prestations"
             liens={servicesMenu}
@@ -57,9 +57,9 @@ export default function Header() {
             toutLabel={TOUTES_ZONES.label}
           />
           {siteConfig.features.blog && (
-            <Link href="/conseils" className="rounded-lg px-3 py-2 transition-colors hover:bg-slate-100 hover:text-primary">Conseils</Link>
+            <Link href="/conseils" className="rounded-[3px] px-3 py-2 transition-colors hover:bg-slate-100 hover:text-primary">Conseils</Link>
           )}
-          <Link href="/contact" className="rounded-lg px-3 py-2 transition-colors hover:bg-slate-100 hover:text-primary">Contact</Link>
+          <Link href="/contact" className="rounded-[3px] px-3 py-2 transition-colors hover:bg-slate-100 hover:text-primary">Contact</Link>
         </nav>
 
         {/* CTA droite + menu mobile */}

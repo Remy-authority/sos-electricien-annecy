@@ -82,9 +82,9 @@ export default function ContactPage() {
             <li key={s.slug}>
               <Link
                 href={`/services/${s.slug}`}
-                className="flex h-full items-center gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 transition hover:border-primary hover:shadow-card"
+                className="flex h-full items-center gap-3 rounded-[3px] border border-slate-200 bg-white px-4 py-3 transition hover:border-primary hover:shadow-card"
               >
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary" aria-hidden="true">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[3px] bg-primary/10 text-primary" aria-hidden="true">
                   <ServiceIcon icon={s.icon} className="h-4 w-4" />
                 </span>
                 <span className="text-sm font-semibold text-slate-800">{s.navTitle}</span>

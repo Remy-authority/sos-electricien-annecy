@@ -28,7 +28,7 @@ export default function HeaderNavMobile({ groupes, blogEnabled }: { groupes: Gro
         aria-expanded={open}
         aria-controls="mobile-nav"
         onClick={() => setOpen(!open)}
-        className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-lg text-slate-700 transition hover:bg-slate-100 lg:hidden"
+        className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-[3px] text-slate-700 transition hover:bg-slate-100 lg:hidden"
       >
         <span className={`block h-0.5 w-5 rounded bg-current transition-all duration-200 ${open ? 'translate-y-2 rotate-45' : ''}`} />
         <span className={`block h-0.5 w-5 rounded bg-current transition-all duration-200 ${open ? 'opacity-0' : ''}`} />
@@ -43,7 +43,7 @@ export default function HeaderNavMobile({ groupes, blogEnabled }: { groupes: Gro
           <nav aria-label="Navigation mobile" className="container-site py-4">
             <ul className="space-y-1">
               <li>
-                <Link href="/" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2.5 font-medium text-slate-700 hover:bg-primary/5 hover:text-primary">
+                <Link href="/" onClick={() => setOpen(false)} className="block rounded-[3px] px-3 py-2.5 font-medium text-slate-700 hover:bg-primary/5 hover:text-primary">
                   Accueil
                 </Link>
               </li>
@@ -57,7 +57,7 @@ export default function HeaderNavMobile({ groupes, blogEnabled }: { groupes: Gro
                       aria-expanded={ouvert}
                       aria-controls={idListe}
                       onClick={() => setDeplie(ouvert ? null : g.label)}
-                      className="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-left font-medium text-slate-700 hover:bg-primary/5 hover:text-primary"
+                      className="flex w-full items-center justify-between rounded-[3px] px-3 py-2.5 text-left font-medium text-slate-700 hover:bg-primary/5 hover:text-primary"
                     >
                       {g.label}
                       <svg
@@ -77,7 +77,7 @@ export default function HeaderNavMobile({ groupes, blogEnabled }: { groupes: Gro
                           <Link
                             href={l.href}
                             onClick={() => setOpen(false)}
-                            className="block rounded-lg px-3 py-2 text-sm text-slate-600 hover:bg-primary/5 hover:text-primary"
+                            className="block rounded-[3px] px-3 py-2 text-sm text-slate-600 hover:bg-primary/5 hover:text-primary"
                           >
                             {l.label}
                           </Link>
@@ -87,7 +87,7 @@ export default function HeaderNavMobile({ groupes, blogEnabled }: { groupes: Gro
                         <Link
                           href={g.tout.href}
                           onClick={() => setOpen(false)}
-                          className="block rounded-lg px-3 py-2 text-sm font-semibold text-accent-deep hover:bg-accent/10"
+                          className="block rounded-[3px] px-3 py-2 text-sm font-semibold text-accent-deep hover:bg-accent/10"
                         >
                           {g.tout.label} →
                         </Link>
@@ -98,13 +98,13 @@ export default function HeaderNavMobile({ groupes, blogEnabled }: { groupes: Gro
               })}
               {blogEnabled && (
                 <li>
-                  <Link href="/conseils" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2.5 font-medium text-slate-700 hover:bg-primary/5 hover:text-primary">
+                  <Link href="/conseils" onClick={() => setOpen(false)} className="block rounded-[3px] px-3 py-2.5 font-medium text-slate-700 hover:bg-primary/5 hover:text-primary">
                     Conseils
                   </Link>
                 </li>
               )}
               <li>
-                <Link href="/contact" onClick={() => setOpen(false)} className="block rounded-lg px-3 py-2.5 font-medium text-slate-700 hover:bg-primary/5 hover:text-primary">
+                <Link href="/contact" onClick={() => setOpen(false)} className="block rounded-[3px] px-3 py-2.5 font-medium text-slate-700 hover:bg-primary/5 hover:text-primary">
                   Contact
                 </Link>
               </li>

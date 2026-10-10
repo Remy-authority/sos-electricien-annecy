@@ -71,7 +71,7 @@ export default function TableauPrix() {
             </p>
             <ul className="mt-3 space-y-1.5">
               {l.releves.map((r, i) => (
-                <li key={i} className="rounded-lg bg-light px-3 py-2">
+                <li key={i} className="rounded-[3px] bg-light px-3 py-2">
                   <p className="text-slate-600">
                     <span className="text-base font-bold text-slate-900">{r.fourchette}</span>{' '}
                     <span className="text-sm">{r.unite}</span>

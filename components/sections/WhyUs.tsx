@@ -43,7 +43,7 @@ export default function WhyUs() {
           {reasons.map((r) => (
             <div key={r.title} className="card flex flex-col items-center gap-4 text-center sm:flex-row sm:items-start sm:gap-5 sm:text-left">
               <dt className="shrink-0">
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                <span className="flex h-12 w-12 items-center justify-center rounded-[3px] bg-primary/10 text-primary">
                   {ICONS[r.icon] ?? (
                     <svg className="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                       <circle cx="12" cy="12" r="10" />
