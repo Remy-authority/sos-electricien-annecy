@@ -38,7 +38,7 @@ const CARTES: Record<string, { photo: string; alt: string; phrase: string; court
   'mise-en-conformite-diagnostic-electrique': {
     photo: '/services/mise-en-conformite-diagnostic-electrique-v2.jpg',
     alt: 'Tableau électrique fermé au mur d\'un séjour clair, une lampe allumée à côté',
-    phrase: 'Les anomalies du diagnostic avant vente ou location, reprises une à une.',
+    phrase: 'Mise en conformité après le diagnostic de vente ou de location, anomalie par anomalie.',
   },
   'installation-electrique-neuve': {
     photo: '/services/installation-electrique-neuve-pose.jpg',

@@ -105,12 +105,12 @@ export function CarteAnnecy({ zones }: { zones: Zone[] }) {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-10 lg:mt-14 lg:grid-cols-[1.15fr_1fr] lg:items-center lg:gap-16">
+        <div className="mt-10 grid gap-10 lg:mt-14 lg:grid-cols-[1.15fr_1fr] lg:items-start lg:gap-16">
           <TraceAuDefilement className="carte-annecy mx-auto w-full max-w-[540px] lg:max-w-[470px]">
             <svg
               viewBox={`0 0 ${CARTE_W} ${CARTE_H}`}
               className="h-auto w-full"
-              role="img"
+              role="group"
               aria-label={`Carte d'${city} et des communes desservies autour du lac`}
             >
               <defs>
@@ -229,11 +229,14 @@ export function CarteAnnecy({ zones }: { zones: Zone[] }) {
                 </a>
               )}
             </svg>
+            <p className="mt-2 text-right text-[11px] text-slate-500">Lac et communes © OpenStreetMap, geo.api.gouv.fr</p>
           </TraceAuDefilement>
 
-          <div className="text-center lg:text-left">
-            <h3 className="text-xl font-bold text-white lg:text-2xl">Les communes desservies</h3>
-            <ul className="mt-5 grid grid-cols-2 gap-x-6 border-t border-white/10" role="list">
+          <div className="text-center lg:flex lg:flex-col lg:justify-center lg:self-stretch lg:text-left">
+            {/* Au téléphone, la carte suffit (chaque commune s'y touche) : la liste reste pour
+                l'ordinateur, dans le HTML pour tous. */}
+            <h3 className="hidden text-xl font-bold text-white lg:block lg:text-2xl">Les communes desservies</h3>
+            <ul className="mt-5 hidden grid-cols-2 lg:grid gap-x-6 border-t border-white/10" role="list">
               {zones.map((z) => (
                 <li key={z.slug} className="border-b border-white/10">
                   <Link
@@ -248,14 +251,14 @@ export function CarteAnnecy({ zones }: { zones: Zone[] }) {
                 </li>
               ))}
             </ul>
-            <p className="mt-5 text-[15px] text-slate-400">
+            <p className="text-[15px] text-slate-400 lg:mt-5">
               Et tous les quartiers d'{city}, de la Vieille Ville aux Teppes.
             </p>
             <div className="mt-7 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start">
               <a href="#devis" className="btn-accent">
                 Vérifier ma commune
               </a>
-              <Link href="/zones" className="inline-flex min-h-[44px] items-center gap-1.5 text-[15px] font-semibold text-accent underline underline-offset-4 hover:text-accent/80">
+              <Link href="/zones" className="hidden min-h-[44px] lg:inline-flex items-center gap-1.5 text-[15px] font-semibold text-accent underline underline-offset-4 hover:text-accent/80">
                 Toutes les zones
               </Link>
             </div>

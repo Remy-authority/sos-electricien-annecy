@@ -18,7 +18,7 @@ type Encart = { sujet: string; titre: string; texte: string; bouton: string }
 const PAR_DEFAUT: Encart = {
   sujet: 'Votre installation',
   titre: 'Une panne chez vous ?',
-  texte: 'Décrivez-la en trois étapes, nous revenons vers vous pour fixer le diagnostic, puis vous recevez un devis écrit avant travaux.',
+  texte: 'Dites-nous ce qui ne marche plus. Nous fixons ensemble le passage, et vous avez un devis écrit avant toute réparation.',
   bouton: 'Décrire ma panne',
 }
 
@@ -73,7 +73,7 @@ const REGLES: { motif: RegExp; encart: Encart }[] = [
     encart: {
       sujet: 'Mise aux normes',
       titre: 'Un tableau ou des circuits à remettre aux normes ?',
-      texte: 'Nous venons voir l’installation, puis vous recevez un devis écrit, poste par poste.',
+      texte: 'Après une visite du tableau et des circuits, vous avez un devis détaillé ligne à ligne.',
       bouton: 'Demander la visite',
     },
   },

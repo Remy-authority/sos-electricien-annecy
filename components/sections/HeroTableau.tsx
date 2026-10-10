@@ -43,7 +43,10 @@ const PLAFOND = 34
 /** Largeur affichée de la photo à l'écran 1 : le tableau au centre de l'écran, la photo calée en
  *  bas et assez haute pour couvrir la scène (ce que fait la caméra de départ, voir `depart`). */
 const TAILLES_ECRAN1 = '(max-width: 1023px) 190vh, 145vw'
-/** Après le chargement : la caméra s'approche, on demande le tirage le plus fin. */
+/** Après le chargement : la caméra s'approche jusqu'à deux fois, on demande un tirage plein et
+ *  peu compressé (les écritures des modules restent nettes), jamais à l'écran 1 (vitesse). */
+const NET_AVIF = `${BASE}-net-2752.avif 2752w`
+const NET_WEBP = `${BASE}-net-2752.webp 2752w`
 const TAILLES_ZOOM = '2752px'
 const PRIORITE = { fetchpriority: 'high' } as Record<string, string>
 const precharger = (ReactDOM as unknown as { preload?: (href: string, options: Record<string, string>) => void }).preload
@@ -265,8 +268,10 @@ export function HeroTableau() {
     if (svgRef.current) poserMur(svgRef.current, 0)
     const GESTES = ['scroll', 'wheel', 'touchstart', 'pointerdown', 'keydown'] as const
     const grandTirage = () => {
-      if (photoRef.current && photoRef.current.sizes !== TAILLES_ZOOM) photoRef.current.sizes = TAILLES_ZOOM
-      if (sourceRef.current && sourceRef.current.sizes !== TAILLES_ZOOM) sourceRef.current.sizes = TAILLES_ZOOM
+      const img = photoRef.current
+      const src = sourceRef.current
+      if (src && src.srcset !== NET_AVIF) Object.assign(src, { srcset: NET_AVIF, sizes: TAILLES_ZOOM })
+      if (img && img.srcset !== NET_WEBP) Object.assign(img, { srcset: NET_WEBP, sizes: TAILLES_ZOOM })
     }
     const auGeste = () => {
       grandTirage()
@@ -353,7 +358,7 @@ export function HeroTableau() {
                     </span>
                   </h1>
                   <p className="mt-3 max-w-[19.5rem] text-[15px] leading-relaxed text-white/90 [text-shadow:0_1px_10px_rgb(0_0_0/0.55)] sm:max-w-md sm:text-base lg:mt-5 lg:max-w-[26rem] lg:text-[17.5px]">
-                    Panne de courant, disjoncteur qui saute ou tableau à refaire. Nous trouvons l'origine de la panne avant de réparer.
+                    Panne de courant, disjoncteur qui saute ou tableau à refaire. Nous trouvons l'origine avant de réparer.
                   </p>
                   <div className="mt-5 grid w-full max-w-[22rem] grid-cols-2 gap-2 sm:max-w-md lg:mt-8 lg:flex lg:w-auto lg:max-w-none lg:gap-2.5">
                     <a

@@ -198,6 +198,9 @@ function MurAnnecyBase({ svgRef, className, style }: { svgRef?: React.Ref<SVGSVG
         <path d={`M${FUITE[0] + 28} ${FUITE[1]}l6 6 11 -12`} fill="none" stroke="#fff" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
       </g>
 
+      {/* Tout coupe : l'ampoule de la photo s'éteint jusqu'au réarmement */}
+      <path d="M731 578H749L752 588L755 594L756 600L755 607H726L725 600L726 594L729 588Z" fill={ENCRE} fillOpacity="0.62" opacity="0" data-k-o={o(TEMPS.coupe, TEMPS.coupe + 0.01, TEMPS.rearme, TEMPS.rearme + 0.01)} />
+
       {/* Le courant revient : la lampe s'allume */}
       <circle cx="740" cy="585" r="120" fill="url(#mur-halo)" opacity="0" data-k-o={o(TEMPS.rearme + 0.01, TEMPS.rearme + 0.04, TEMPS.ferme[0], TEMPS.ferme[1])} />
 

@@ -149,7 +149,8 @@ const URGENCES = ["Aujourd'hui", 'Cette semaine'] as const
 
 const equilibre = '[text-wrap:balance]'
 
-/** Case de choix : vrai bouton radio dans un label. Un clic, Espace ou Entrée choisit ET avance. */
+/** Case de choix : vrai bouton radio dans un label. Un clic, Espace ou Entrée choisit ET avance ;
+ *  les flèches du clavier choisissent seulement (on parcourt les cases sans quitter l'étape). */
 function Choix({
   name,
   value,
@@ -163,23 +164,24 @@ function Choix({
   value: string
   label: string
   checked: boolean
-  onChoose: () => void
+  onChoose: (avancer: boolean) => void
   icone?: ReactNode
   compacte?: boolean
 }) {
   return (
-    <label className="group relative block h-full cursor-pointer">
+    // Souris ou doigt : le relâchement sur la case choisit et avance (un défilement au doigt
+    // annule le geste, rien ne part) ; les flèches ne passent que par `onChange`.
+    <label className="group relative block h-full cursor-pointer" onPointerUp={() => onChoose(true)}>
       <input
         type="radio"
         name={name}
         value={value}
         checked={checked}
-        onChange={onChoose}
-        onClick={onChoose}
+        onChange={() => onChoose(false)}
         onKeyDown={(e) => {
-          if (e.key === 'Enter') {
+          if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault()
-            onChoose()
+            onChoose(true)
           }
         }}
         className="peer sr-only"
@@ -371,9 +373,9 @@ export function LeadForm({ variante = 'standard' }: LeadFormProps) {
                     value={id}
                     label={label}
                     checked={fields.probleme === id}
-                    onChoose={() => {
+                    onChoose={(avancer) => {
                       set('probleme', id)
-                      avancerBientot(2)
+                      if (avancer) avancerBientot(2)
                     }}
                     icone={<Icon />}
                   />
@@ -413,9 +415,9 @@ export function LeadForm({ variante = 'standard' }: LeadFormProps) {
                       label={u}
                       compacte
                       checked={fields.urgence === u}
-                      onChoose={() => {
+                      onChoose={(avancer) => {
                         set('urgence', u)
-                        avancerBientot(3)
+                        if (avancer) avancerBientot(3)
                       }}
                     />
                   ))}

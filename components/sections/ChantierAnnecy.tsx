@@ -27,7 +27,7 @@ const ETAPES = [
   {
     cle: 'appel',
     titre: 'Votre appel, le prix annoncé',
-    texte: 'Vous décrivez la panne au téléphone, nous annonçons le prix du déplacement avant de partir.',
+    texte: 'Au téléphone, vous dites ce qui a coupé. Le déplacement est chiffré avant notre départ.',
   },
   {
     cle: 'securite',

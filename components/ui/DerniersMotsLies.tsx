@@ -13,12 +13,6 @@ import { usePathname } from 'next/navigation'
 
 const CIBLES = 'main :is(p, li, dt, dd, th, td, h1, h2, h3, h4, summary, figcaption, blockquote, [data-titre])'
 const INSECABLE = ' '
-const GLUON = '⁠'
-
-function sansCoupure(t: string) {
-  return t.replace(/-(?!⁠)/g, '-' + GLUON)
-}
-
 /** Remplace par une insécable l'espace qui précède le dernier mot du texte de `el`,
  *  quitte à remonter d'un nœud (dernier mot seul dans un lien, un gras, un span). */
 function lier(el: Element) {
@@ -36,11 +30,26 @@ function lier(el: Element) {
     const zone = motVu ? v : v.trimEnd()
     const k = zone.lastIndexOf(' ')
     if (k > 0 || (motVu && k === 0)) {
-      // Les deux derniers mots ne se coupent pas non plus à leur trait d'union
-      // (« court-circuit, concrètement ») : un gluon invisible suit chaque trait.
       const debut = zone.lastIndexOf(' ', k - 1) + 1
-      textes[i].nodeValue = v.slice(0, debut) + sansCoupure(v.slice(debut, k)) + INSECABLE + sansCoupure(v.slice(k + 1))
-      for (let j = i + 1; j < textes.length; j++) textes[j].nodeValue = sansCoupure(textes[j].nodeValue ?? '')
+      const fin = v.slice(debut, k) + INSECABLE + v.slice(k + 1)
+      textes[i].nodeValue = v.slice(0, debut) + fin
+      // Les deux derniers mots ne se coupent pas non plus à leur trait d'union
+      // (« intervenez-vous ») : ils passent dans un span insécable, texte inchangé.
+      const parent = textes[i].parentElement
+      if (fin.includes('-') && parent) {
+        // Dans un parent en flex ou grid (question de FAQ), le span deviendrait une colonne
+        // à part : tout le texte passe d'abord dans un span unique.
+        if (/flex|grid/.test(getComputedStyle(parent).display)) {
+          const ligne = document.createElement('span')
+          textes[i].replaceWith(ligne)
+          ligne.appendChild(textes[i])
+        }
+        const reste = textes[i].splitText(debut)
+        const bloc = document.createElement('span')
+        bloc.style.whiteSpace = 'nowrap'
+        reste.replaceWith(bloc)
+        bloc.appendChild(reste)
+      }
       return
     }
     if (zone.trim()) motVu = true
@@ -51,7 +60,7 @@ export default function DerniersMotsLies() {
   const chemin = usePathname()
   useEffect(() => {
     document.querySelectorAll(CIBLES).forEach((el) => {
-      if (el.hasAttribute('data-lie') || el.closest('svg,[aria-hidden="true"]') || el.querySelector('p,li,ul,ol,div')) return
+      if (el.hasAttribute('data-lie') || el.closest('svg,form,[aria-hidden="true"]') || el.querySelector('p,li,ul,ol,div')) return
       el.setAttribute('data-lie', '')
       lier(el)
     })

@@ -11,7 +11,7 @@ import { Trace } from './Trace'
  */
 export default function CtaBanner({
   title = `Une panne électrique à ${siteConfig.city} ?`,
-  subtitle = 'Décrivez-la en trois étapes, nous revenons vers vous pour fixer le diagnostic.',
+  subtitle = 'Trois étapes pour décrire la panne, puis nous convenons ensemble du jour du diagnostic.',
   /** Mot du titre mis en valeur (serif italique). Défaut : la ville de base.
    *  Les pages commune passent le nom de la commune à la place. */
   accentWord = siteConfig.city,

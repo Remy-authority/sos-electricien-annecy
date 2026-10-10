@@ -111,8 +111,9 @@ export default function Methode() {
   return (
     <section className="section bg-white" aria-labelledby="titre-methode">
       <style dangerouslySetInnerHTML={{ __html: STYLE }} />
-      <div className="container-site grid gap-8 lg:grid-cols-[1fr_1.15fr] lg:items-center lg:gap-16">
-        <div className="text-center lg:order-2 lg:text-left">
+      <div className="container-site grid gap-8 lg:grid-cols-[1fr_1.15fr] lg:items-start lg:gap-16">
+        {/* Colonnes alignées en haut, le texte centré dans la hauteur de la rangée. */}
+        <div className="text-center lg:order-2 lg:flex lg:flex-col lg:justify-center lg:self-stretch lg:text-left">
           <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-accent-deep">Notre façon de travailler</p>
           <h2 id="titre-methode" className="text-2xl font-bold md:text-4xl">
             <AccentWord text={siteConfig.about.title} word={siteConfig.city} />
