@@ -22,7 +22,7 @@ export default function CGU() {
           <h2 className="text-xl">2. Services</h2>
           <p className="mt-2">
             Ce site présente les services d'un {siteConfig.trade.toLowerCase()} à {siteConfig.city}
-            {' '}({siteConfig.department}) : dépannage, tableau électrique, mise aux normes et
+            {' '}({siteConfig.department}), pour le dépannage, le tableau électrique, la, mise aux normes et la
             rénovation électrique. Devis gratuit avant toute intervention.
           </p>
         </section>

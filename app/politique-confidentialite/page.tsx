@@ -20,7 +20,7 @@ export default function PolitiqueConfidentialite() {
         <section>
           <h2 className="text-xl">Finalité du traitement</h2>
           <p className="mt-2">{c.finalite}</p>
-          <p className="mt-1"><strong>Base légale :</strong> {c.baseLegale}</p>
+          <p className="mt-3"><strong className="block text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Base légale</strong>{c.baseLegale}</p>
         </section>
         <section>
           <h2 className="text-xl">Données collectées</h2>

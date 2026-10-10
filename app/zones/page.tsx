@@ -18,19 +18,19 @@ export default function ZonesHub() {
   const zones = getZones()
   const names = zones.map((z) => z.name)
   // Réponse courte factuelle « citable » (activité + zone + liste des communes).
-  const citable = `${siteConfig.businessName} couvre ${siteConfig.city} et ${zones.length} communes autour d'Annecy, dans un rayon de ${siteConfig.serviceArea.radiusKm} km : ${names.join(', ')}. Dépannage électrique et diagnostic précis, 7j/7.`
+  const citable = `${siteConfig.businessName} couvre ${siteConfig.city} et ${zones.length} communes autour d'Annecy, dans un rayon de ${siteConfig.serviceArea.radiusKm} km, à savoir ${names.join(', ')}. Dépannage électrique et diagnostic précis, 7j/7.`
 
   const hubFaq = [
     {
       q: `Quelles communes couvrez-vous autour d'${siteConfig.city} ?`,
-      a: `Nous intervenons à ${siteConfig.city} (tous quartiers) et dans les communes de l'agglomération dans un rayon d'environ ${siteConfig.serviceArea.radiusKm} km : ${names.join(', ')}.`,
+      a: `Nous intervenons à ${siteConfig.city} (tous quartiers) et dans les communes de l'agglomération dans un rayon d'environ ${siteConfig.serviceArea.radiusKm} km, à savoir ${names.join(', ')}.`,
     },
     {
-      q: 'Pas de page pour ma commune : est-elle pour autant hors de votre secteur ?',
-      a: `La liste ci-dessus regroupe les communes disposant d'une page dédiée, mais notre zone est plus large. Nous couvrons ${siteConfig.city} et ses environs dans un rayon d'environ ${siteConfig.serviceArea.radiusKm} km. Si votre adresse se trouve un peu au-delà, citez-la lors de l'appel : nous vous dirons si le trajet reste raisonnable.`,
+      q: 'Pas de page pour ma commune, est-elle pour autant hors de votre secteur ?',
+      a: `La liste ci-dessus regroupe les communes disposant d'une page dédiée, mais notre zone est plus large. Nous couvrons ${siteConfig.city} et ses environs dans un rayon d'environ ${siteConfig.serviceArea.radiusKm} km. Si votre adresse se trouve un peu au-delà, citez-la lors de l'appel, nous vous dirons si le trajet reste raisonnable.`,
     },
     {
-      q: 'Rumilly ou Saint-Jorioz : quand pouvez-vous être là ?',
+      q: 'Rumilly ou Saint-Jorioz, quand pouvez-vous être là ?',
       a: "Cela tient à la distance depuis Annecy et aux chantiers déjà prévus ce jour-là. Au téléphone, nous vous annonçons une heure d'arrivée réaliste, sans l'embellir, et les urgences sont prises en compte tous les jours, dimanches et fériés compris.",
     },
     {

@@ -127,7 +127,7 @@ export default function TarifsPage() {
               />
             </div>
             <figcaption className="mt-2 text-center text-sm text-slate-500 lg:text-left">
-              Un tableau modulaire se câble circuit par circuit : le nombre de rangées fait varier le prix.
+              Un tableau modulaire se câble circuit par circuit, et le nombre de rangées fait varier le prix.
             </figcaption>
           </figure>
 

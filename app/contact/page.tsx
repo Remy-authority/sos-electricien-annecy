@@ -38,7 +38,7 @@ function contactFaq(communes: string[]) {
     },
     {
       q: 'Le devis est-il gratuit, et arrive-t-il avant les travaux ?',
-      a: "Oui. Le devis ne vous coûte rien et vous est remis par écrit avant toute intervention : aucun travail ne démarre sans votre accord. Pour un dépannage à domicile, le déplacement est facturé, son montant est indiqué sur notre page Tarifs.",
+      a: "Oui. Le devis ne vous coûte rien et vous est remis par écrit avant toute intervention, et aucun travail ne démarre sans votre accord. Pour un dépannage à domicile, le déplacement est facturé, son montant est indiqué sur notre page Tarifs.",
     },
   ]
 }
@@ -56,13 +56,13 @@ export default function ContactPage() {
             <h1 className="text-3xl md:text-4xl">Contact et devis</h1>
             <p className="mt-4 text-slate-600">
               Panne électrique à {siteConfig.city} ou alentour, tableau à remettre aux normes, diagnostic
-              avant une vente : appelez-nous ou décrivez votre besoin dans le formulaire en 3 étapes.
+              avant une vente, appelez-nous ou décrivez votre besoin dans le formulaire en 3 étapes.
             </p>
             <div className="mt-6 space-y-3 text-slate-700">
-              <p><strong>Téléphone :</strong> {siteConfig.phoneDisplay}</p>
-              <p><strong>Email :</strong> {siteConfig.email}</p>
-              <p><strong>Disponibilité :</strong> {siteConfig.availability}</p>
-              <p><strong>Zone :</strong> {siteConfig.serviceArea.base} + rayon ~{siteConfig.serviceArea.radiusKm} km</p>
+              <p><strong className="block text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Téléphone</strong>{siteConfig.phoneDisplay}</p>
+              <p><strong className="block text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Email</strong>{siteConfig.email}</p>
+              <p><strong className="block text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Disponibilité</strong>{siteConfig.availability}</p>
+              <p><strong className="block text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Zone</strong>{siteConfig.serviceArea.base} + rayon ~{siteConfig.serviceArea.radiusKm} km</p>
             </div>
             <div className="mt-6 flex justify-center lg:justify-start">
               <PhoneButton label={`Appeler ${siteConfig.phoneDisplay}`} />

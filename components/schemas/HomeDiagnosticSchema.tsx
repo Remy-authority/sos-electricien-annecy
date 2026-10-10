@@ -1,10 +1,10 @@
 import Link from 'next/link'
 
 /**
- * Schéma d'aide au choix de l'accueil : « Diagnostic électrique : quand est-il obligatoire ? »
+ * Schéma d'aide au choix de l'accueil : « Diagnostic électrique, quand est-il obligatoire ? »
  *
  * Source (ouverte le 25/09/2026) : service-public.gouv.fr, fiche F18692
- * « Diagnostic immobilier : état de l'installation intérieure d'électricité »,
+ * « Diagnostic immobilier, état de l'installation intérieure d'électricité »,
  * vérifiée le 17/09/2026 :
  *   - obligatoire quand « l'installation d'électricité a plus de 15 ans » (vente et location) ;
  *   - vente : « réalisé depuis moins de 3 ans » ; location : « depuis moins de 6 ans » ;
@@ -19,10 +19,10 @@ export default function HomeDiagnosticSchema() {
   return (
     <figure className="card order-3 !p-4 sm:!p-8 md:col-span-2" aria-labelledby="schema-diag-titre">
       <h3 id="schema-diag-titre" className="text-center text-xl md:text-2xl lg:text-left">
-        Diagnostic électrique : quand est-il obligatoire ?
+        Diagnostic électrique, quand est-il obligatoire ?
       </h3>
       <p className="mt-2 text-center text-sm text-slate-600 lg:text-left">
-        Vous vendez ou vous louez : suivez les flèches.
+        Vous vendez ou vous louez ? Suivez les flèches.
       </p>
 
       <SchemaVertical />
@@ -39,9 +39,9 @@ export default function HomeDiagnosticSchema() {
         , tableau compris.
       </p>
       <figcaption className="mt-3 text-center text-xs leading-relaxed text-slate-500 lg:text-left">
-        Source :{' '}
+        <span className="mr-1.5 font-semibold uppercase tracking-[0.14em]">Source</span>
         <a href={SOURCE_URL} target="_blank" rel="noopener noreferrer" className="text-slate-600 underline underline-offset-2">
-          service-public.gouv.fr, « Diagnostic immobilier : état de l'installation intérieure d'électricité »
+          service-public.gouv.fr, « Diagnostic immobilier, état de l'installation intérieure d'électricité »
         </a>
         , fiche vérifiée le 17/09/2026, consultée le 25/09/2026.
       </figcaption>

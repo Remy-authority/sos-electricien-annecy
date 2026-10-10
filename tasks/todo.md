@@ -176,10 +176,10 @@ Solde images (fal.ai) lu le 10/10 : 0,15 $. DataForSEO : non utilisé (Search Co
 - [x] 1. Angles 3 px sur tout le site (boutons, cartes, encadrés), plus aucune pilule
 - [x] 2. Formulaire noir qui avance au clic, 8 choix en 2 x 4, mêmes champs envoyés (JSON comparé)
 - [x] 3. Bloc 3 : coupe en couleur d'un appartement 1970-1990, cadre fixe, 5 étapes (scrollytelling)
-- [ ] 4. Bloc 1 : photo plein écran (compte d'images à recharger) + tableau, mur transparent, circuits, différentiel, testeur, retour
+- [x] 4. Bloc 1 : photo plein écran (lac et tableau, 1 image 0,15 $) + mur qui s’ouvre, circuits, fuite, testeur, retour, a90e663
 - [x] 5. Accueil à 750 mots, 25 mots par paragraphe, icônes dessinées animées, carte des communes en bloc 7-8, FAQ fermée
 - [x] 6. Titres des communes (Seynod, Cran-Gevrier, Meythet, Épagny) avec les recherches vues, sans deux-points
 - [x] 7. Trois articles : titres et descriptions réécrits + encart vers le formulaire sur chaque article
 - [x] 8. Pages intérieures à 45 mots par paragraphe (prestations, Seynod, tarifs)
-- [ ] 9. Réserve d'articles portée à 13 semaines
+- [x] 9. Réserve d’articles portée à 13 semaines (65 brouillons à 5 par semaine, 080 à 088 ajoutés, dernier le 12/01/2027)
 - [ ] 10. Contrôles x2, relecture à froid, vitesse, expressions gardées, aperçu à Rémy

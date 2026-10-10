@@ -10,15 +10,15 @@
   "blocks": [
     {
       "heading": "Électricien à Épagny Metz-Tessy, deux villages devenus une commune",
-      "body": "La fusion a réuni deux villages qui avaient chacun leur histoire, et le bâti n'a pas le même âge d'une rue à l'autre : anciennes maisons de village, lotissements plus récents, petits immeubles. Pour un électricien, cette variété change tout : une maison récente a une installation conforme à la norme de son époque, qu'il suffit souvent de compléter, alors qu'une bâtisse ancienne peut cacher des circuits sans terre ou des protections dépassées. Nous commençons chaque visite par identifier l'âge réel de l'installation, qui n'est pas toujours celui de la maison."
+      "body": "La fusion a réuni deux villages qui avaient chacun leur histoire, et le bâti n'a pas le même âge d'une rue à l'autre (anciennes maisons de village, lotissements plus récents, petits immeubles). Pour un électricien, cette variété change tout. Une maison récente a une installation conforme à la norme de son époque, qu'il suffit souvent de compléter, alors qu'une bâtisse ancienne peut cacher des circuits sans terre ou des protections dépassées. Nous commençons chaque visite par identifier l'âge réel de l'installation, qui n'est pas toujours celui de la maison."
     },
     {
       "heading": "Dépannage électrique à Épagny Metz-Tessy, la coupure de fin de journée",
-      "body": "La panne arrive souvent au moment où tout fonctionne en même temps : four, lave-vaisselle, chauffage et recharge d'une voiture. Si le disjoncteur général saute à ce moment-là, la puissance souscrite est peut-être trop juste pour vos usages. S'il s'agit d'un interrupteur différentiel, c'est plutôt un défaut d'isolement quelque part sur les circuits qu'il protège. Dans les deux cas, nous identifions la cause précise avant de proposer quoi que ce soit : augmenter l'abonnement, répartir les circuits autrement ou réparer une ligne abîmée ne coûtent pas la même chose."
+      "body": "La panne arrive souvent au moment où tout fonctionne en même temps (four, lave-vaisselle, chauffage et recharge d'une voiture). Si le disjoncteur général saute à ce moment-là, la puissance souscrite est peut-être trop juste pour vos usages. S'il s'agit d'un interrupteur différentiel, c'est plutôt un défaut d'isolement quelque part sur les circuits qu'il protège. Dans les deux cas, nous identifions la cause précise avant de proposer quoi que ce soit, car augmenter l'abonnement, répartir les circuits autrement ou réparer une ligne abîmée ne coûtent pas la même chose."
     },
     {
       "heading": "Recharger une voiture électrique dans son garage",
-      "body": "Brancher une voiture sur une prise ordinaire du garage n'est pas prévu pour durer : la prise chauffe à force de fournir un courant élevé pendant des heures. Une recharge à domicile demande un circuit dédié depuis le tableau, avec sa propre protection différentielle adaptée au matériel choisi, et une vérification de la puissance disponible au compteur. Selon votre abonnement, un pilotage qui décale la recharge aux heures creuses ou qui la ralentit quand la maison consomme beaucoup évite de faire sauter le disjoncteur général. Nous vous conseillons sur le point de charge adapté à votre usage réel."
+      "body": "Brancher une voiture sur une prise ordinaire du garage n'est pas prévu pour durer, car la prise chauffe à force de fournir un courant élevé pendant des heures. Une recharge à domicile demande un circuit dédié depuis le tableau, avec sa propre protection différentielle adaptée au matériel choisi, et une vérification de la puissance disponible au compteur. Selon votre abonnement, un pilotage qui décale la recharge aux heures creuses ou qui la ralentit quand la maison consomme beaucoup évite de faire sauter le disjoncteur général. Nous vous conseillons sur le point de charge adapté à votre usage réel."
     },
     {
       "heading": "Un tableau électrique qui garde de la place pour demain",
@@ -26,15 +26,15 @@
     },
     {
       "heading": "Mise en conformité avant de vendre ou de louer",
-      "body": "Pour vendre ou louer un logement dont l'installation électrique dépasse 15 ans d'âge, la loi impose un diagnostic électricité. Le document vaut 3 ans lors d'une cession et 6 ans lors d'une mise en location, et seul un diagnostiqueur certifié peut l'établir, pas l'électricien qui fera les travaux. Si le rapport relève des anomalies, nous les corrigeons une par une : terre absente, différentiel manquant, matériel vétuste ou conducteurs apparents. Le rapport ne vous oblige pas à faire les travaux, mais l'acheteur ou le locataire en prendra connaissance."
+      "body": "Pour vendre ou louer un logement dont l'installation électrique dépasse 15 ans d'âge, la loi impose un diagnostic électricité. Le document vaut 3 ans lors d'une cession et 6 ans lors d'une mise en location, et seul un diagnostiqueur certifié peut l'établir, pas l'électricien qui fera les travaux. Si le rapport relève des anomalies, nous les corrigeons une par une (terre absente, différentiel manquant, matériel vétuste ou conducteurs apparents). Le rapport ne vous oblige pas à faire les travaux, mais l'acheteur ou le locataire en prendra connaissance."
     }
   ],
   "bodyImage": "/zones/epagny-metz-tessy-corps.jpg",
   "bodyImageAlt": "Borne de recharge murale fixée dans le garage d'une maison neuve, câble enroulé sur son support",
-  "bodyImageCaption": "Borne murale dans le garage d'une maison neuve : un circuit dédié part directement du tableau.",
+  "bodyImageCaption": "Borne murale dans le garage d'une maison neuve, sur un circuit dédié part directement du tableau.",
   "neighbours": ["meythet", "poisy", "argonay"],
   "relatedServices": ["urgence-depannage-electrique", "installation-electrique-neuve", "mise-en-conformite-diagnostic-electrique"],
-  "prixPhrase": "À Épagny Metz-Tessy, les projets vont de la simple réparation à l'ajout d'un circuit de recharge : ces repères de prix vous aident à préparer la discussion.",
+  "prixPhrase": "À Épagny Metz-Tessy, les projets vont de la simple réparation à l'ajout d'un circuit de recharge, et ces repères de prix vous aident à préparer la discussion.",
   "sources": [
     { "label": "geo.api.gouv.fr, Epagny Metz-Tessy (74112), population et codes postaux", "url": "https://geo.api.gouv.fr/communes/74112?fields=nom,code,population,codesPostaux" },
     { "label": "Wikipédia, Epagny Metz-Tessy (création au 1er janvier 2016, équipements)", "url": "https://fr.wikipedia.org/wiki/Epagny_Metz-Tessy" },
@@ -50,12 +50,12 @@
       "a": "Elle peut dépanner pour un usage léger, à condition d'être sur un circuit dédié et correctement protégé. Pour une recharge quotidienne, une borne murale est plus adaptée. Dans les deux cas, le circuit part directement du tableau."
     },
     {
-      "q": "Électricien à Épagny Metz-Tessy : intervenez-vous dans les deux anciens villages ?",
+      "q": "Électricien à Épagny Metz-Tessy, intervenez-vous dans les deux anciens villages ?",
       "a": "Oui, sur tout le territoire de la commune, côté Épagny comme côté Metz-Tessy, dans les maisons comme dans les appartements. Nous couvrons aussi les secteurs voisins de l'agglomération."
     },
     {
       "q": "Mon diagnostic avant vente signale des anomalies, pouvez-vous les corriger ?",
-      "a": "Oui. Transmettez-nous le rapport : chaque anomalie y porte un code et une description. Nous chiffrons les corrections point par point, et vous choisissez ce que vous faites avant la signature."
+      "a": "Oui. Transmettez-nous le rapport, chaque anomalie y porte un code et une description. Nous chiffrons les corrections point par point, et vous choisissez ce que vous faites avant la signature."
     },
     {
       "q": "Pourquoi mon tableau récent n'a-t-il plus de place ?",

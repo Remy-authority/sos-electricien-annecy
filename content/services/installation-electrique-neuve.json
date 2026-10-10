@@ -15,7 +15,7 @@
   "blocks": [
     {
       "heading": "Étude avant l'installation",
-      "body": "Avant toute installation neuve, nous vérifions plusieurs éléments : la puissance disponible sur votre tableau et votre abonnement, la distance entre le tableau existant et le nouvel espace à raccorder (garage, extension, dépendance), et les protections dédiées nécessaires selon l'usage prévu. Cette étude s'applique aussi bien à une extension de maison qu'à l'installation d'une borne de recharge pour véhicule électrique, et permet de dimensionner correctement les nouveaux circuits sans surcharger l'installation existante.",
+      "body": "Avant toute installation neuve, nous vérifions plusieurs éléments, dont la puissance disponible sur votre tableau et votre abonnement, la distance entre le tableau existant et le nouvel espace à raccorder (garage, extension, dépendance), et les protections dédiées nécessaires selon l'usage prévu. Cette étude s'applique aussi bien à une extension de maison qu'à l'installation d'une borne de recharge pour véhicule électrique, et permet de dimensionner correctement les nouveaux circuits sans surcharger l'installation existante.",
       "image": "/services/installation-electrique-neuve-etude-v2.jpg",
       "imageAlt": "Maison en chantier propre, gaines grises et boîtiers d'encastrement alignés dans des murs de briques",
       "imageCaption": "La puissance disponible et la distance au tableau électrique déterminent le dimensionnement du nouveau circuit."
@@ -39,7 +39,7 @@
   "faq": [
     {
       "q": "Installez-vous des bornes de recharge pour véhicule électrique ?",
-      "a": "Oui, l'installation d'une borne de recharge fait partie de nos installations électriques neuves. Nous étudions la puissance disponible sur votre tableau et posons une ligne dédiée avec une protection adaptée. Au-delà d'une certaine puissance, la réglementation exige un installateur qualifié IRVE : nous vérifions ce point ensemble au moment du devis."
+      "a": "Oui, l'installation d'une borne de recharge fait partie de nos installations électriques neuves. Nous étudions la puissance disponible sur votre tableau et posons une ligne dédiée avec une protection adaptée. Au-delà d'une certaine puissance, la réglementation exige un installateur qualifié IRVE. Nous vérifions ce point ensemble au moment du devis."
     },
     {
       "q": "Faut-il un abonnement électrique spécifique pour une nouvelle installation importante ?",
@@ -55,5 +55,5 @@
     }
   ],
   "image": "/services/installation-electrique-neuve.jpg",
-  "prixPhrase": "Le budget d'un raccordement de garage ou d'une ligne dédiée dépend surtout de la distance au tableau : les repères sont sur notre page tarifs."
+  "prixPhrase": "Le budget d'un raccordement de garage ou d'une ligne dédiée dépend surtout de la distance au tableau. Les repères sont sur notre page tarifs."
 }

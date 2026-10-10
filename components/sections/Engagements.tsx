@@ -126,7 +126,7 @@ function Annecy() {
 const TUILES = [
   { cle: 'heures', titre: `Ouvert ${siteConfig.availability.replace(' · ', ', ')}`, ligne: 'Week-ends et jours fériés compris.', dessin: <Horloge /> },
   { cle: 'devis', titre: 'Devis écrit avant travaux', ligne: 'Le prix est posé avant de commencer.', dessin: <Devis /> },
-  { cle: 'testeur', titre: 'La panne cherchée sur place', ligne: 'Circuit par circuit, au testeur.', dessin: <Testeur /> },
+  { cle: 'testeur', titre: 'La\u00a0panne cherchée\u00a0sur\u00a0place', ligne: 'Circuit par circuit, au testeur.', dessin: <Testeur /> },
   {
     cle: 'annecy',
     titre: `${siteConfig.city} et ${siteConfig.serviceArea.radiusKm}\u00a0km autour`,

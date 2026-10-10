@@ -18,7 +18,7 @@
       "body": "Plusieurs signes indiquent qu'une simple réparation ne suffira plus. Une installation d'origine jamais reprise depuis plusieurs décennies, des fils en tissu ou en aluminium au lieu du cuivre. Un tableau saturé qui ne peut plus accueillir de nouveau circuit, ou un manque chronique de prises dans les pièces à vivre. Ce cas de figure est fréquent dans les chalets anciens et les bâtiments de caractère du bassin annécien, où l'installation d'origine n'a jamais été pensée pour les usages actuels. Une rénovation électrique complète devient alors le choix le plus sûr et le plus durable, en particulier si un projet de rénovation plus large du logement est déjà prévu.",
       "image": "/services/renovation-electrique-complete-cablage-v2.jpg",
       "imageAlt": "Pièce en rénovation aux murs blancs enduits, gaines grises dans des saignées droites vers les boîtiers",
-      "imageCaption": "Fils textiles ou aluminium, tableau à fusibles : autant de signes qu'une rénovation complète s'impose."
+      "imageCaption": "Fils textiles ou aluminium, tableau à fusibles, autant de signes qu'une rénovation complète s'impose."
     },
     {
       "heading": "Du plan de câblage à la remise en service",
@@ -29,7 +29,7 @@
     },
     {
       "heading": "Où nous rénovons l'électricité",
-      "body": "Nous menons des rénovations électriques à Annecy, y compris à Annecy-le-Vieux, Cran-Gevrier, Meythet, Seynod et Pringy, et dans les communes alentour : Poisy, Épagny Metz-Tessy, Argonay, Sevrier, Saint-Jorioz, Veyrier-du-Lac, Rumilly. Un projet ailleurs en Haute-Savoie ? Décrivez-le nous, nous regardons s'il est à notre portée."
+      "body": "Nous menons des rénovations électriques à Annecy, y compris à Annecy-le-Vieux, Cran-Gevrier, Meythet, Seynod et Pringy, et dans les communes alentour, à Poisy, Épagny Metz-Tessy, Argonay, Sevrier, Saint-Jorioz, Veyrier-du-Lac, Rumilly. Un projet ailleurs en Haute-Savoie ? Décrivez-le nous, nous regardons s'il est à notre portée."
     }
   ],
   "relatedServices": [
@@ -55,5 +55,5 @@
     }
   ],
   "image": "/services/renovation-electrique-complete-v2.jpg",
-  "prixPhrase": "Le coût d'une rénovation électrique varie selon la surface et l'état de départ : notre page tarifs en détaille les postes."
+  "prixPhrase": "Le coût d'une rénovation électrique varie selon la surface et l'état de départ. Notre page tarifs en détaille les postes."
 }

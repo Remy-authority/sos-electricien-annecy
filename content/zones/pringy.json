@@ -18,19 +18,19 @@
     },
     {
       "heading": "Des prises RJ45 plutôt que des répéteurs wifi",
-      "body": "Le wifi traverse mal les dalles et les murs épais. Une prise réseau câblée dans chaque pièce de vie donne une connexion stable pour le télétravail, les écrans et les objets connectés. Quand les gaines sont posées en même temps que celles de l'électricité, le surcoût reste modeste. Après coup, il faut passer des câbles dans des gaines déjà occupées ou en apparent : il vaut mieux y penser au moment des plans."
+      "body": "Le wifi traverse mal les dalles et les murs épais. Une prise réseau câblée dans chaque pièce de vie donne une connexion stable pour le télétravail, les écrans et les objets connectés. Quand les gaines sont posées en même temps que celles de l'électricité, le surcoût reste modeste. Après coup, il faut passer des câbles dans des gaines déjà occupées ou en apparent, il vaut mieux y penser au moment des plans."
     },
     {
       "heading": "Une panne dans une maison récente de Pringy",
-      "body": "Même une installation neuve peut disjoncter. On trouve le plus souvent un appareil défectueux, une prise extérieure qui a pris l'eau ou un circuit chargé au-delà de ce qui avait été prévu. Sur un tableau récent et bien repéré, la recherche est rapide : nous identifions le différentiel qui tombe, nous déconnectons les appareils un par un, puis nous testons les lignes. La plupart du temps, l'installation est saine et c'est l'équipement branché qui est en cause."
+      "body": "Même une installation neuve peut disjoncter. On trouve le plus souvent un appareil défectueux, une prise extérieure qui a pris l'eau ou un circuit chargé au-delà de ce qui avait été prévu. Sur un tableau récent et bien repéré, la recherche est rapide. Nous identifions le différentiel qui tombe, nous déconnectons les appareils un par un, puis nous testons les lignes. La plupart du temps, l'installation est saine et c'est l'équipement branché qui est en cause."
     }
   ],
   "bodyImage": "/zones/pringy-corps.jpg",
   "bodyImageAlt": "Tableau de communication avec la box et les connexions réseau, installé à côté du tableau électrique d'une maison neuve",
-  "bodyImageCaption": "Maison neuve : le tableau de communication, qui distribue la fibre vers les prises RJ45, voisine avec le tableau électrique.",
+  "bodyImageCaption": "Maison neuve, le tableau de communication, qui distribue la fibre vers les prises RJ45, voisine avec le tableau électrique.",
   "neighbours": ["argonay", "epagny-metz-tessy", "annecy-le-vieux"],
   "relatedServices": ["installation-electrique-neuve", "urgence-depannage-electrique", "recherche-panne-electrique"],
-  "prixPhrase": "À Pringy, le prix d'une installation neuve suit la surface et le niveau d'équipement : voici les repères pour préparer votre budget.",
+  "prixPhrase": "À Pringy, le prix d'une installation neuve suit la surface et le niveau d'équipement. Voici les repères pour préparer votre budget.",
   "sources": [
     { "label": "Légifrance, arrêté du 14 juillet 2016 portant création de la commune nouvelle d'Annecy", "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000033313064" },
     { "label": "geo.api.gouv.fr, Pringy commune déléguée (74217)", "url": "https://geo.api.gouv.fr/communes_associees_deleguees/74217" },
@@ -43,7 +43,7 @@
     },
     {
       "q": "Combien de prises RJ45 prévoir dans une maison ?",
-      "a": "La norme fixe un minimum selon la taille du logement, mais le bon nombre dépend de vos usages : au moins une dans le séjour, le bureau et chaque chambre où un écran ou un ordinateur sera utilisé. Nous en discutons pièce par pièce sur les plans."
+      "a": "La norme fixe un minimum selon la taille du logement, mais le bon nombre dépend de vos usages, avec au moins une dans le séjour, le bureau et chaque chambre où un écran ou un ordinateur sera utilisé. Nous en discutons pièce par pièce sur les plans."
     },
     {
       "q": "Peut-on ajouter des prises réseau dans une maison déjà construite ?",

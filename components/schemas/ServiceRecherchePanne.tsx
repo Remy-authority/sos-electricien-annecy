@@ -9,11 +9,11 @@ import ServiceSchemaFrame from './ServiceSchemaFrame'
  * faire appel à un professionnel qualifié si le problème persiste.
  */
 const ETAPES = [
-  { titre: 'Regarder chez les voisins', ligne: 'Tout le quartier coupé : panne du réseau' },
+  { titre: 'Regarder chez les voisins', ligne: 'Tout le quartier coupé, panne du réseau' },
   { titre: 'Repérer ce qui est tombé', ligne: 'Au tableau, le disjoncteur abaissé' },
   { titre: 'Débrancher les appareils sensibles', ligne: 'Ordinateur, télévision, box du circuit' },
-  { titre: 'Réarmer, sans forcer', ligne: 'Le courant revient et tient : c’est réglé' },
-  { titre: 'Ça retombe : on s’arrête', ligne: 'Un professionnel cherche la cause' },
+  { titre: 'Réarmer, sans forcer', ligne: 'Le courant revient et tient, c’est réglé' },
+  { titre: 'Ça retombe, on s’arrête', ligne: 'Un professionnel cherche la cause' },
 ]
 
 export default function ServiceRecherchePanne() {
@@ -22,10 +22,10 @@ export default function ServiceRecherchePanne() {
   return (
     <ServiceSchemaFrame
       id="recherche-panne"
-      title="Recherche de panne : les étapes"
+      title="Les étapes d’une recherche de panne"
       sources={[
         {
-          label: 'Promotelec, « Coupures de courant : les erreurs à éviter pour ne pas aggraver la situation »',
+          label: 'Promotelec, « Coupures de courant, les erreurs à éviter pour ne pas aggraver la situation »',
           url: 'https://www.promotelec.com/particuliers/fiche/coupures-de-courant-les-erreurs-a-eviter-pour-ne-pas-aggraver-la-situation/',
           consulted: '25 septembre 2026',
         },

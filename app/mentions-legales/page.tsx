@@ -37,13 +37,13 @@ export default function MentionsLegales() {
       <div className="mt-8 space-y-8 text-slate-700">
         <section>
           <h2 className="text-xl">Éditeur du site</h2>
-          <ul className="mt-2 space-y-1">
-            <li><strong>Dénomination :</strong> <V>{e.raisonSociale}</V></li>
-            <li><strong>Forme juridique :</strong> <V>{e.formeJuridique}</V></li>
-            <li><strong>Numéro d'immatriculation :</strong> <V>{e.numeroImmatriculation}</V>, <V>{e.registre}</V></li>
-            <li><strong>Siège social :</strong> <V>{e.adresse}</V></li>
-            <li><strong>Directeur de la publication :</strong> <V>{e.directeurPublication}</V></li>
-            <li><strong>Contact :</strong> {e.emailContact} · {e.telephone}</li>
+          <ul className="mt-2 space-y-3">
+            <li><p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Dénomination</p><p><V>{e.raisonSociale}</V></p></li>
+            <li><p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Forme juridique</p><p><V>{e.formeJuridique}</V></p></li>
+            <li><p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Numéro d'immatriculation</p><p><V>{e.numeroImmatriculation}</V>, <V>{e.registre}</V></p></li>
+            <li><p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Siège social</p><p><V>{e.adresse}</V></p></li>
+            <li><p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Directeur de la publication</p><p><V>{e.directeurPublication}</V></p></li>
+            <li><p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Contact</p><p>{e.emailContact} · {e.telephone}</p></li>
           </ul>
         </section>
 
@@ -51,7 +51,7 @@ export default function MentionsLegales() {
           <section>
             <h2 className="text-xl">Assurance professionnelle</h2>
             <p className="mt-2">
-              <strong>Assureur :</strong> <V>{a.assureur}</V> · <strong>Police n° :</strong> <V>{a.police}</V>
+              <strong>Assureur</strong> <V>{a.assureur}</V>, <strong>police n°</strong> <V>{a.police}</V>
             </p>
           </section>
         )}
@@ -69,8 +69,8 @@ export default function MentionsLegales() {
         <section>
           <h2 className="text-xl">Propriété intellectuelle</h2>
           <p className="mt-2">
-            Les textes et images de ce site sont des œuvres couvertes par le droit d'auteur :
-            sauf mention contraire, leur reproduction, même partielle, exige l'accord écrit de
+            Les textes et images de ce site sont des œuvres couvertes par le droit d'auteur.
+            Sauf mention contraire, leur reproduction, même partielle, exige l'accord écrit de
             l'éditeur.
           </p>
         </section>

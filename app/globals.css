@@ -278,3 +278,9 @@
     opacity 620ms ease-out var(--t, 0ms),
     transform 620ms cubic-bezier(0.2, 0.7, 0.2, 1) var(--t, 0ms);
 }
+
+/* Lignes équilibrées (10/10/2026, contrôle check-lignes) : textes courts répartis
+   sur des lignes de longueur proche (le navigateur ne le fait que jusqu'à 6 lignes),
+   et jamais un mot seul en dernière ligne pour les textes plus longs. */
+h1, h2, h3, h4, summary, figcaption, p, li, dt, dd, th, td, a, button, label, legend, [data-titre] { text-wrap: balance; }
+.prose p, .prose li { text-wrap: pretty; }

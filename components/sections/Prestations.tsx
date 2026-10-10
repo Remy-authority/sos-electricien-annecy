@@ -13,8 +13,9 @@ import { Trace } from '@/components/ui/Trace'
  * Photos choisies pour l'accueil : la prestation se comprend en trois secondes, aucun visage,
  * une main au plus. Les pages de prestation gardent leur propre photo.
  */
-const CARTES: Record<string, { photo: string; alt: string; phrase: string }> = {
+const CARTES: Record<string, { photo: string; alt: string; phrase: string; court?: string }> = {
   'urgence-depannage-electrique': {
+    court: 'Dépannage d’urgence',
     photo: '/services/urgence-depannage-electrique-disjoncteur-v2.jpg',
     alt: 'Rangée de disjoncteurs dont un a sauté, levier en bas',
     phrase: "Coupure d'électricité ou disjoncteur qui saute, nous mettons en sécurité puis réparons.",
@@ -77,7 +78,16 @@ export default function Prestations({ services }: { services: Service[] }) {
                     />
                   </div>
                   <div className="flex flex-1 flex-col items-center px-3 pb-4 pt-3 text-center sm:px-5 sm:pb-5 sm:pt-4 lg:items-start lg:text-left">
-                    <h3 className="text-balance font-sans text-[15px] font-bold leading-snug text-white sm:text-lg">{s.navTitle}</h3>
+                    <h3 className="text-balance font-sans text-[15px] font-bold leading-snug text-white sm:text-lg">
+                      {c?.court ? (
+                        <>
+                          <span className="sm:hidden">{c.court}</span>
+                          <span className="hidden sm:inline">{s.navTitle}</span>
+                        </>
+                      ) : (
+                        s.navTitle
+                      )}
+                    </h3>
                     {c && <p className="mt-2 hidden text-sm leading-relaxed text-slate-300 sm:block">{c.phrase}</p>}
                     <span className="mt-auto hidden items-center gap-1.5 pt-4 text-sm font-semibold text-accent sm:inline-flex">
                       Voir la prestation

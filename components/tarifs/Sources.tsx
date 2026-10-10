@@ -9,7 +9,7 @@ export function LienSource({ url, children, className = '' }: { url: string; chi
   )
 }
 
-/** Ligne courte « Sources : A, B, consultées le … » posée sous un tableau ou un schéma. */
+/** Ligne courte « SOURCES A, B, consultées le … » posée sous un tableau ou un schéma. */
 export function SourcesLigne({ cles, className = '' }: { cles: string[]; className?: string }) {
   // Un même site cité pour deux pages n'apparaît qu'une fois ici (la liste complète, en
   // bas de page, donne chaque page).
@@ -18,7 +18,7 @@ export function SourcesLigne({ cles, className = '' }: { cles: string[]; classNa
   if (!liste.length) return null
   return (
     <p className={`text-xs leading-relaxed text-slate-500 ${className}`}>
-      {liste.length > 1 ? 'Sources' : 'Source'} :{' '}
+      <span className="mr-1.5 font-semibold uppercase tracking-[0.14em]">{liste.length > 1 ? 'Sources' : 'Source'}</span>
       {liste.map((s, i) => (
         <span key={s.cle}>
           {i > 0 && ', '}
@@ -48,7 +48,7 @@ export default function SourcesListe() {
         {liste.map((s) => (
           <li key={s.cle} className="rounded-[3px] border border-slate-200 bg-white px-4 py-3">
             <span className="font-semibold text-slate-800">{s.nom}</span>
-            <span className="text-slate-600"> : </span>
+            <span className="text-slate-600">, </span>
             <LienSource url={s.url} className="break-words text-primary">
               « {s.titre} »
             </LienSource>

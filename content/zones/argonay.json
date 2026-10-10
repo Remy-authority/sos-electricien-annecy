@@ -6,28 +6,28 @@
   "metaTitle": "Électricien à Argonay (74370), entre Fier et Fillière",
   "metaDescription": "Prise de terrasse, éclairage de jardin, panne après la pluie : à Argonay, nous posons et réparons vos circuits intérieurs et extérieurs. Écrivez-nous.",
   "h1": "Électricien à Argonay",
-  "intro": "Nous installons, réparons et faisons évoluer l'électricité des maisons d'Argonay (74370). La commune compte 3 807 habitants (geo.api.gouv.fr) et s'étend au confluent du Fier et de la Fillière, avec un chef-lieu à 525 m d'altitude. Village agricole jusqu'au milieu du XXe siècle, Argonay a changé de visage après l'implantation d'une usine Dassault Aviation en 1963 : la plupart des maisons ont été construites depuis, à des époques différentes, avec des installations qui ne se ressemblent pas.",
+  "intro": "Nous installons, réparons et faisons évoluer l'électricité des maisons d'Argonay (74370). La commune compte 3 807 habitants (geo.api.gouv.fr) et s'étend au confluent du Fier et de la Fillière, avec un chef-lieu à 525 m d'altitude. Village agricole jusqu'au milieu du XXe siècle, Argonay a changé de visage après l'implantation d'une usine Dassault Aviation en 1963, et la plupart des maisons ont été construites depuis, à des époques différentes, avec des installations qui ne se ressemblent pas.",
   "blocks": [
     {
       "heading": "Électricien à Argonay, pour des maisons de toutes les générations",
-      "body": "À Argonay, maisons anciennes et quartiers pavillonnaires plus récents se côtoient. Les maisons les plus anciennes ont aujourd'hui un tableau qui a souvent été complété sans être repensé, tandis que les plus récentes disposent d'une installation déjà protégée par des différentiels 30 mA. Nous adaptons l'intervention à ce que nous trouvons : simple ajout sur une installation saine, ou reprise du tableau quand les protections ne suivent plus."
+      "body": "À Argonay, maisons anciennes et quartiers pavillonnaires plus récents se côtoient. Les maisons les plus anciennes ont aujourd'hui un tableau qui a souvent été complété sans être repensé, tandis que les plus récentes disposent d'une installation déjà protégée par des différentiels 30 mA. Nous adaptons l'intervention à ce que nous trouvons, du simple ajout sur une installation saine, à la reprise du tableau quand les protections ne suivent plus."
     },
     {
       "heading": "Terrasse et jardin, des circuits extérieurs faits pour durer",
-      "body": "Une prise sur la terrasse, un éclairage le long de l'allée, un portail motorisé ou un abri de jardin alimenté : ces équipements vivent dehors toute l'année. Ils demandent un appareillage étanche, des boîtiers fermés, un câble prévu pour être enterré sous gaine quand il traverse le terrain, et un circuit protégé par son propre différentiel. Nous préférons un départ extérieur séparé au tableau : si l'eau atteint une connexion au fond du jardin, la maison garde la lumière."
+      "body": "Une prise sur la terrasse, un éclairage le long de l'allée, un portail motorisé ou un abri de jardin alimenté, ces équipements vivent dehors toute l'année. Ils demandent un appareillage étanche, des boîtiers fermés, un câble prévu pour être enterré sous gaine quand il traverse le terrain, et un circuit protégé par son propre différentiel. Nous préférons un départ extérieur séparé au tableau. Si l'eau atteint une connexion au fond du jardin, la maison garde la lumière."
     },
     {
       "heading": "Recherche de panne, le déclenchement qui suit l'averse",
-      "body": "Un différentiel qui tombe après une pluie, un arrosage ou un matin de brouillard désigne presque toujours un circuit exposé à l'humidité. La difficulté, c'est qu'au moment où nous arrivons, tout a séché et le défaut a disparu. Nous isolons alors les circuits extérieurs un par un et nous mesurons leur isolement, ce qui révèle un point faible même quand il ne déclenche pas encore. Boîtier fissuré, presse-étoupe absent, projecteur dont le joint a vieilli : la cause est souvent petite, mais il faut la trouver."
+      "body": "Un différentiel qui tombe après une pluie, un arrosage ou un matin de brouillard désigne presque toujours un circuit exposé à l'humidité. La difficulté, c'est qu'au moment où nous arrivons, tout a séché et le défaut a disparu. Nous isolons alors les circuits extérieurs un par un et nous mesurons leur isolement, ce qui révèle un point faible même quand il ne déclenche pas encore. Boîtier fissuré, presse-étoupe absent, projecteur dont le joint a vieilli, la cause est souvent petite, mais il faut la trouver."
     },
     {
       "heading": "Ajouter un circuit sans surcharger l'installation",
-      "body": "Avant de créer une prise extérieure ou un éclairage de jardin, nous regardons deux choses : combien de modules restent disponibles au tableau, et quelle puissance votre abonnement autorise. Raccorder un nouvel équipement sur une ligne existante paraît plus simple, mais c'est la meilleure façon de faire sauter un disjoncteur un soir d'été, quand la pompe de la piscine, l'éclairage et la cuisine fonctionnent ensemble. Un circuit dédié coûte un peu plus à la pose et évite des déclenchements pendant des années."
+      "body": "Avant de créer une prise extérieure ou un éclairage de jardin, nous regardons deux choses, à savoir combien de modules restent disponibles au tableau, et quelle puissance votre abonnement autorise. Raccorder un nouvel équipement sur une ligne existante paraît plus simple, mais c'est la meilleure façon de faire sauter un disjoncteur un soir d'été, quand la pompe de la piscine, l'éclairage et la cuisine fonctionnent ensemble. Un circuit dédié coûte un peu plus à la pose et évite des déclenchements pendant des années."
     }
   ],
   "bodyImage": "/zones/argonay-corps.jpg",
   "bodyImageAlt": "Prise extérieure étanche à clapet et applique d'éclairage sur la façade d'une maison récente, au bord de la terrasse",
-  "bodyImageCaption": "Terrasse d'une maison récente : prise étanche à clapet et éclairage extérieur sur un circuit séparé.",
+  "bodyImageCaption": "Terrasse d'une maison récente, prise étanche à clapet et éclairage extérieur sur un circuit séparé.",
   "neighbours": [
     "pringy",
     "annecy-le-vieux",
@@ -38,7 +38,7 @@
     "recherche-panne-electrique",
     "urgence-depannage-electrique"
   ],
-  "prixPhrase": "Pour un circuit extérieur à Argonay, la longueur de tranchée et le matériel étanche pèsent dans le devis : voici les repères avant de mesurer sur place.",
+  "prixPhrase": "Pour un circuit extérieur à Argonay, la longueur de tranchée et le matériel étanche pèsent dans le devis. Voici les repères avant de mesurer sur place.",
   "sources": [
     {
       "label": "geo.api.gouv.fr, Argonay (74019), population et code postal",
@@ -55,7 +55,7 @@
       "a": "C'est à éviter. Un éclairage extérieur doit avoir son propre circuit protégé par un différentiel 30 mA, avec du matériel étanche. Brancher des guirlandes permanentes sur une prise intérieure via une rallonge est une source fréquente de déclenchements et d'échauffements."
     },
     {
-      "q": "Un câble enterré jusqu'au portail : comment le protéger ?",
+      "q": "Un câble enterré jusqu'au portail, comment le protéger ?",
       "a": "Le câble passe sous gaine rouge dans une tranchée, avec un grillage avertisseur au-dessus, à une profondeur qui le protège des outils de jardinage. Nous posons le tout selon la NF C 15-100 et nous vous remettons le tracé pour éviter de le couper plus tard."
     },
     {
@@ -64,7 +64,7 @@
     },
     {
       "q": "Argonay est-elle rattachée à Annecy ?",
-      "a": "Non, Argonay est une commune à part entière, voisine de Pringy et d'Annecy-le-Vieux, qui font elles partie d'Annecy depuis 2017. Pour nos déplacements, cela ne change rien : la commune fait partie de notre secteur habituel."
+      "a": "Non, Argonay est une commune à part entière, voisine de Pringy et d'Annecy-le-Vieux, qui font elles partie d'Annecy depuis 2017. Pour nos déplacements, cela ne change rien, la commune fait partie de notre secteur habituel."
     }
   ]
 }

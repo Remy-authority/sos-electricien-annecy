@@ -27,7 +27,7 @@ export default function CasConcrets() {
                 </li>
               ))}
             </ul>
-            <p className="mt-4 text-xs text-slate-500">Calcul : {c.calcul}</p>
+            <p className="mt-4 text-xs text-slate-500">Soit {c.calcul.replace(/ : /g, ', ').replace(/ ; /g, ' et ')}</p>
             <p className="mt-auto pt-3 font-display text-2xl font-semibold text-primary">{c.total}</p>
             {c.note && <p className="mt-2 text-xs leading-relaxed text-slate-500">{c.note}</p>}
             <SourcesLigne cles={[...c.lignes.map((l) => l.source), ...(c.noteSource ? [c.noteSource] : [])]} className="mt-2" />

@@ -48,7 +48,7 @@ const svg = {
 const TYPES: { id: string; label: string; Icon: () => JSX.Element }[] = [
   {
     id: 'Urgence dépannage',
-    label: 'Plus de courant',
+    label: 'Plus de\u00a0courant',
     Icon: () => (
       <svg {...svg}>
         <path d="M9 17h6M10 20h4" />
@@ -97,7 +97,7 @@ const TYPES: { id: string; label: string; Icon: () => JSX.Element }[] = [
   },
   {
     id: 'Diagnostic avant vente',
-    label: 'Diagnostic avant vente',
+    label: 'Diagnostic avant\u00a0vente',
     Icon: () => (
       <svg {...svg}>
         <path d="M6 3h9l3 3v15H6z" />

@@ -15,21 +15,21 @@
   "blocks": [
     {
       "heading": "Du tableau au mur, notre ordre de recherche",
-      "body": "Nous procédons par élimination méthodique plutôt que par tâtonnement. Premier temps : examen visuel du tableau électrique pour repérer un disjoncteur qui a sauté ou un fusible grillé. Deuxième temps : mesures au multimètre et à la pince ampèremétrique pour tester chaque circuit et isoler celui qui pose problème. Si la panne reste invisible à l'œil nu, un traceur de câbles permet de suivre le cheminement d'une ligne dans les murs sans avoir à tout ouvrir. Cette méthode évite de couper plusieurs circuits au hasard et limite les travaux au strict nécessaire.",
+      "body": "Nous procédons par élimination méthodique plutôt que par tâtonnement. Premier temps, l'examen visuel du tableau électrique pour repérer un disjoncteur qui a sauté ou un fusible grillé. Deuxième temps, des mesures au multimètre et à la pince ampèremétrique pour tester chaque circuit et isoler celui qui pose problème. Si la panne reste invisible à l'œil nu, un traceur de câbles permet de suivre le cheminement d'une ligne dans les murs sans avoir à tout ouvrir. Cette méthode évite de couper plusieurs circuits au hasard et limite les travaux au strict nécessaire.",
       "image": "/services/remise-aux-normes-tableau-electrique-neuf.jpg",
       "imageAlt": "Tableau électrique blanc à deux rangées derrière sa porte transparente",
       "imageCaption": "Chaque circuit est testé méthodiquement pour isoler l'origine de la panne."
     },
     {
       "heading": "Les causes fréquentes d'une panne électrique",
-      "body": "Plusieurs origines reviennent régulièrement : un fil dénudé au contact d'un boîtier métallique, une prise ou un interrupteur défectueux, un disjoncteur usé qui déclenche trop tôt, une surcharge sur un circuit alimentant trop d'appareils, ou encore de l'humidité qui s'infiltre dans un boîtier de dérivation. Dans les logements anciens du bassin annécien, un câblage vieillissant ou une installation modifiée au fil des années sans plan à jour complique parfois le diagnostic. C'est justement pour ces cas que la recherche méthodique fait la différence.",
+      "body": "Plusieurs origines reviennent régulièrement, comme un fil dénudé au contact d'un boîtier métallique, une prise ou un interrupteur défectueux, un disjoncteur usé qui déclenche trop tôt, une surcharge sur un circuit alimentant trop d'appareils, ou encore de l'humidité qui s'infiltre dans un boîtier de dérivation. Dans les logements anciens du bassin annécien, un câblage vieillissant ou une installation modifiée au fil des années sans plan à jour complique parfois le diagnostic. C'est justement pour ces cas que la recherche méthodique fait la différence.",
       "image": "/services/recherche-panne-electrique-diagnostic-v2.jpg",
       "imageAlt": "Multimètre posé sur une étagère blanche devant un tableau électrique ouvert",
       "imageCaption": "Un boîtier de dérivation mal isolé est une cause fréquente de panne récurrente."
     },
     {
       "heading": "Secteur de nos recherches de panne",
-      "body": "Nous cherchons les pannes dans tous les secteurs d'Annecy (Annecy-le-Vieux, Cran-Gevrier, Meythet, Seynod, Pringy) et dans les communes proches : Poisy, Épagny Metz-Tessy, Argonay, Sevrier, Saint-Jorioz, Veyrier-du-Lac, ainsi que Rumilly. Pour une adresse plus éloignée, demandez-nous par téléphone ou par le formulaire."
+      "body": "Nous cherchons les pannes dans tous les secteurs d'Annecy (Annecy-le-Vieux, Cran-Gevrier, Meythet, Seynod, Pringy) et dans les communes proches, à Poisy, Épagny Metz-Tessy, Argonay, Sevrier, Saint-Jorioz, Veyrier-du-Lac, ainsi que Rumilly. Pour une adresse plus éloignée, demandez-nous par téléphone ou par le formulaire."
     }
   ],
   "relatedServices": [

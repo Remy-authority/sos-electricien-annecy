@@ -6,15 +6,15 @@
   "metaTitle": "Électricien Saint-Jorioz, chalets et maisons du lac",
   "metaDescription": "Chalet à rénover, meublé de tourisme à sécuriser, panne dans un hameau de Saint-Jorioz : une électricité refaite avec soin, lambris compris. Contactez-nous.",
   "h1": "Électricien à Saint-Jorioz",
-  "intro": "Nous rénovons, sécurisons et dépannons les installations électriques de Saint-Jorioz (74410), du bourg aux hameaux du Villard, de Berlet ou de Machevaz. Peuplée de 6 390 habitants d'après geo.api.gouv.fr, la commune s'étire sur la rive ouest du lac d'Annecy, adossée au Semnoz. Les maisons y dominent, et le tourisme y pèse lourd : plus de 5 000 lits touristiques recensés en 2014, dont de nombreuses locations meublées. Chalets rénovés et logements loués à la saison forment l'essentiel de ce que nous y rencontrons.",
+  "intro": "Nous rénovons, sécurisons et dépannons les installations électriques de Saint-Jorioz (74410), du bourg aux hameaux du Villard, de Berlet ou de Machevaz. Peuplée de 6 390 habitants d'après geo.api.gouv.fr, la commune s'étire sur la rive ouest du lac d'Annecy, adossée au Semnoz. Les maisons y dominent, et le tourisme y pèse lourd, avec plus de 5 000 lits touristiques recensés en 2014, dont de nombreuses locations meublées. Chalets rénovés et logements loués à la saison forment l'essentiel de ce que nous y rencontrons.",
   "blocks": [
     {
       "heading": "Électricien à Saint-Jorioz, sur la rive ouest du lac",
-      "body": "Entre le lac et la montagne, les maisons de Saint-Jorioz vivent avec l'humidité du bord de l'eau et les orages qui descendent du Semnoz. Deux conséquences pour l'électricité : des circuits extérieurs et des sous-sols qui réclament un appareillage résistant à l'humidité, et des appareils électroniques sensibles aux surtensions. Nous regardons ces deux points à chaque visite, en plus de l'état général du tableau."
+      "body": "Entre le lac et la montagne, les maisons de Saint-Jorioz vivent avec l'humidité du bord de l'eau et les orages qui descendent du Semnoz. Deux conséquences pour l'électricité en découlent, avec des circuits extérieurs et des sous-sols qui réclament un appareillage résistant à l'humidité, et des appareils électroniques sensibles aux surtensions. Nous regardons ces deux points à chaque visite, en plus de l'état général du tableau."
     },
     {
       "heading": "Chalet rénové, appliques et câbles cachés sous le lambris",
-      "body": "Dans un chalet, le bois est partout, et c'est lui qui dicte la façon de poser l'électricité. Les câbles passent sous conduit derrière le lambris, les boîtiers d'encastrement sont prévus pour les parois creuses, et les appliques se fixent sur un support solide plutôt que dans une lame de bois mince. Quand le lambris est déposé pour une rénovation, c'est le moment de remplacer les anciennes lignes, d'ajouter des points lumineux et de supprimer les rallonges visibles. Le résultat reste discret : on voit les appliques, pas le câblage."
+      "body": "Dans un chalet, le bois est partout, et c'est lui qui dicte la façon de poser l'électricité. Les câbles passent sous conduit derrière le lambris, les boîtiers d'encastrement sont prévus pour les parois creuses, et les appliques se fixent sur un support solide plutôt que dans une lame de bois mince. Quand le lambris est déposé pour une rénovation, c'est le moment de remplacer les anciennes lignes, d'ajouter des points lumineux et de supprimer les rallonges visibles. Le résultat reste discret, on voit les appliques, pas le câblage."
     },
     {
       "heading": "Meublé de tourisme, une installation à l'épreuve des locataires",
@@ -22,15 +22,15 @@
     },
     {
       "heading": "Une panne au Villard ou à Berlet",
-      "body": "Dans les hameaux éloignés du bourg, une coupure après un orage peut venir du réseau comme de votre installation. Regardez si vos voisins ont du courant : si oui, c'est chez vous que le problème se trouve. Nous vérifions alors le disjoncteur de branchement, les différentiels puis chaque circuit, et nous contrôlons que la surtension n'a pas endommagé un appareil. Pensez à noter l'heure de la coupure et ce qui s'est passé juste avant : cela oriente la recherche."
+      "body": "Dans les hameaux éloignés du bourg, une coupure après un orage peut venir du réseau comme de votre installation. Regardez si vos voisins ont du courant. Si oui, c'est chez vous que le problème se trouve. Nous vérifions alors le disjoncteur de branchement, les différentiels puis chaque circuit, et nous contrôlons que la surtension n'a pas endommagé un appareil. Pensez à noter l'heure de la coupure et ce qui s'est passé juste avant, cela oriente la recherche."
     }
   ],
   "bodyImage": "/zones/saint-jorioz-corps.jpg",
   "bodyImageAlt": "Intérieur d'un chalet rénové près du lac, appliques murales fixées sur un lambris clair",
-  "bodyImageCaption": "Chalet rénové : les appliques sur le lambris, le câblage invisible derrière le bois.",
+  "bodyImageCaption": "Chalet rénové, les appliques sur le lambris, le câblage invisible derrière le bois.",
   "neighbours": ["sevrier", "seynod", "veyrier-du-lac"],
   "relatedServices": ["renovation-electrique-complete", "recherche-panne-electrique", "mise-en-conformite-diagnostic-electrique"],
-  "prixPhrase": "À Saint-Jorioz, rénover un chalet ou sécuriser un meublé n'engage pas les mêmes travaux : voici de quoi vous faire un premier ordre d'idée.",
+  "prixPhrase": "À Saint-Jorioz, rénover un chalet ou sécuriser un meublé n'engage pas les mêmes travaux. Voici de quoi vous faire un premier ordre d'idée.",
   "sources": [
     { "label": "geo.api.gouv.fr, Saint-Jorioz (74242), population et code postal", "url": "https://geo.api.gouv.fr/communes/74242?fields=nom,code,population,codesPostaux" },
     { "label": "Wikipédia, Saint-Jorioz (rive ouest, hameaux, lits touristiques 2014)", "url": "https://fr.wikipedia.org/wiki/Saint-Jorioz" }

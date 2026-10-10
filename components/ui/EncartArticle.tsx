@@ -56,7 +56,7 @@ const REGLES: { motif: RegExp; encart: Encart }[] = [
       sujet: 'Signe de danger',
       titre: 'Une prise qui chauffe ou une odeur de brûlé ?',
       texte: 'Coupez le circuit concerné, puis décrivez-nous ce que vous voyez. Nous venons mettre en sécurité et chercher la cause.',
-      bouton: 'Demander une intervention',
+      bouton: 'Demander un dépannage',
     },
   },
   {
@@ -136,7 +136,7 @@ export default function EncartArticle({ slug, titre, ancre = '#devis' }: { slug:
       <p className="text-xs font-semibold uppercase tracking-wider text-accent">{e.sujet}</p>
       <p className="mt-2 font-display text-xl font-bold leading-snug text-white [text-wrap:balance] md:text-2xl">{insecable(e.titre)}</p>
       <p className="mt-2 text-slate-300 [text-wrap:balance]">{insecable(e.texte)}</p>
-      <Link href={ancre} className="btn-accent mt-5 inline-flex items-center gap-2">
+      <Link href={ancre} className="btn-accent mt-5 inline-flex max-w-full items-center gap-2 whitespace-nowrap px-5 sm:px-6">
         {e.bouton}
         <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
           <path d="M12 5v14M5 12l7 7 7-7" />

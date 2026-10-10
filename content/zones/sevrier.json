@@ -6,28 +6,28 @@
   "metaTitle": "Électricien à Sevrier : salle de bains, panne, tableau",
   "metaDescription": "Au bord du lac à Sevrier, nous refaisons l'électricité des salles de bains, traquons les pannes dues à l'humidité et reprenons les tableaux. Appelez-nous.",
   "h1": "Électricien à Sevrier",
-  "intro": "Nous rénovons, dépannons et sécurisons l'électricité des logements de Sevrier (74320), du centre aux hameaux de Létraz, Chuguet ou Cessenaz. Sevrier compte 4 333 habitants, population publiée par geo.api.gouv.fr. Son centre et ses hameaux sont établis sur une étroite bande de terre qui borde le lac d'Annecy, au pied du Semnoz. Vivre si près de l'eau a une conséquence directe sur l'électricité : les pièces humides et les circuits exposés demandent une attention particulière.",
+  "intro": "Nous rénovons, dépannons et sécurisons l'électricité des logements de Sevrier (74320), du centre aux hameaux de Létraz, Chuguet ou Cessenaz. Sevrier compte 4 333 habitants, population publiée par geo.api.gouv.fr. Son centre et ses hameaux sont établis sur une étroite bande de terre qui borde le lac d'Annecy, au pied du Semnoz. Vivre si près de l'eau a une conséquence directe sur l'électricité, car les pièces humides et les circuits exposés demandent une attention particulière.",
   "blocks": [
     {
       "heading": "Électricien à Sevrier, entre le lac et le Semnoz",
-      "body": "Au bord du lac, l'air chargé d'humidité s'infiltre dans les caves, les garages et les abris de jardin. Sur une installation ancienne, il finit par attaquer les connexions mal protégées : boîtes de dérivation sans couvercle, prises de garage non étanches, douilles de cave oxydées. Ces petits défauts d'isolement expliquent souvent les déclenchements qui semblent survenir sans raison. Des appareillages conçus pour les pièces humides et des connexions bien fermées règlent la plupart de ces situations."
+      "body": "Au bord du lac, l'air chargé d'humidité s'infiltre dans les caves, les garages et les abris de jardin. Sur une installation ancienne, il finit par attaquer les connexions mal protégées, comme les boîtes de dérivation sans couvercle, prises de garage non étanches, douilles de cave oxydées. Ces petits défauts d'isolement expliquent souvent les déclenchements qui semblent survenir sans raison. Des appareillages conçus pour les pièces humides et des connexions bien fermées règlent la plupart de ces situations."
     },
     {
       "heading": "Salle de bains, ce que la norme autorise dans chaque volume",
-      "body": "La NF C 15-100 découpe la salle de bains en volumes autour de la baignoire et de la douche. Plus on se rapproche de l'eau, plus les règles sont strictes : dans le volume le plus proche, seuls des appareils en très basse tension de sécurité sont admis, et les prises de courant doivent rester en dehors des volumes réglementés. L'éclairage placé près de la douche doit être étanche, et une liaison équipotentielle relie les éléments métalliques. Lors d'une rénovation, nous plaçons chaque point électrique en fonction de ces volumes, avant la pose du carrelage."
+      "body": "La NF C 15-100 découpe la salle de bains en volumes autour de la baignoire et de la douche. Plus on se rapproche de l'eau, plus les règles sont strictes. Dans le volume le plus proche, seuls des appareils en très basse tension de sécurité sont admis, et les prises de courant doivent rester en dehors des volumes réglementés. L'éclairage placé près de la douche doit être étanche, et une liaison équipotentielle relie les éléments métalliques. Lors d'une rénovation, nous plaçons chaque point électrique en fonction de ces volumes, avant la pose du carrelage."
     },
     {
       "heading": "Recherche de panne, le défaut qui va et vient",
-      "body": "Une panne qui apparaît par temps humide et disparaît quand il fait sec est la plus difficile à trouver, parce qu'elle n'est jamais là quand on la cherche. Nous ne comptons pas sur la chance : nous mesurons l'isolement de chaque circuit, même de ceux qui fonctionnent, pour repérer celui dont la valeur est faible. Le circuit en cause est souvent celui qui dessert une pièce basse, un extérieur ou une dépendance. Une fois identifié, nous suivons son parcours jusqu'à la connexion fautive."
+      "body": "Une panne qui apparaît par temps humide et disparaît quand il fait sec est la plus difficile à trouver, parce qu'elle n'est jamais là quand on la cherche. Nous ne comptons pas sur la chance, nous mesurons l'isolement de chaque circuit, même de ceux qui fonctionnent, pour repérer celui dont la valeur est faible. Le circuit en cause est souvent celui qui dessert une pièce basse, un extérieur ou une dépendance. Une fois identifié, nous suivons son parcours jusqu'à la connexion fautive."
     },
     {
       "heading": "Reprendre un tableau électrique vieillissant",
-      "body": "Quand les déclenchements se répètent sur plusieurs circuits, le tableau lui-même peut être en cause : différentiel fatigué, bornes oxydées, protections trop anciennes. Un tableau neuf, avec plusieurs différentiels 30 mA répartis sur les circuits, limite aussi la gêne en cas de défaut : seule une partie de la maison s'éteint, pas l'ensemble. C'est souvent la première étape avant de reprendre, pièce par pièce, le reste de l'installation."
+      "body": "Quand les déclenchements se répètent sur plusieurs circuits, le tableau lui-même peut être en cause (différentiel fatigué, bornes oxydées, protections trop anciennes). Un tableau neuf, avec plusieurs différentiels 30 mA répartis sur les circuits, limite aussi la gêne en cas de défaut, car seule une partie de la maison s'éteint, pas l'ensemble. C'est souvent la première étape avant de reprendre, pièce par pièce, le reste de l'installation."
     }
   ],
   "bodyImage": "/zones/sevrier-corps.jpg",
   "bodyImageAlt": "Salle de bains rénovée avec douche à l'italienne vitrée, vasque en pierre et spots encastrés au plafond",
-  "bodyImageCaption": "Salle de bains rénovée : spots étanches au plafond, appareillage tenu à l'écart des volumes de la douche.",
+  "bodyImageCaption": "Salle de bains rénovée, spots étanches au plafond, appareillage tenu à l'écart des volumes de la douche.",
   "neighbours": [
     "saint-jorioz",
     "seynod",
@@ -38,7 +38,7 @@
     "recherche-panne-electrique",
     "remise-aux-normes-tableau-electrique"
   ],
-  "prixPhrase": "À Sevrier, une salle de bains à mettre aux normes ou une panne à localiser se chiffrent différemment : consultez ces repères avant notre passage.",
+  "prixPhrase": "À Sevrier, une salle de bains à mettre aux normes ou une panne à localiser se chiffrent différemment, consultez ces repères avant notre passage.",
   "sources": [
     {
       "label": "geo.api.gouv.fr, Sevrier (74267), population et code postal",
@@ -56,15 +56,15 @@
     },
     {
       "q": "Le différentiel coupe surtout en hiver, pourquoi ?",
-      "a": "L'humidité et la condensation augmentent dans les pièces peu chauffées : garage, cave, dépendance. Un défaut d'isolement discret se révèle alors. Une mesure circuit par circuit permet de trouver celui qui en est responsable."
+      "a": "L'humidité et la condensation augmentent dans les pièces peu chauffées (garage, cave, dépendance). Un défaut d'isolement discret se révèle alors. Une mesure circuit par circuit permet de trouver celui qui en est responsable."
     },
     {
       "q": "Profiter du chantier de salle de bains pour revoir l'électricité, bonne idée ?",
-      "a": "C'est le meilleur moment : les murs sont ouverts, on peut déplacer les points électriques, poser un éclairage étanche et réaliser la liaison équipotentielle. Le faire après le carrelage oblige à casser ou à passer en apparent."
+      "a": "C'est le meilleur moment, les murs sont ouverts, on peut déplacer les points électriques, poser un éclairage étanche et réaliser la liaison équipotentielle. Le faire après le carrelage oblige à casser ou à passer en apparent."
     },
     {
       "q": "Le plafonnier de la salle de bains clignote après la douche, est-ce dangereux ?",
-      "a": "C'est souvent le signe que la vapeur a pénétré dans un luminaire qui n'est pas prévu pour cet emplacement. Coupez son circuit et n'y touchez plus : nous le remplaçons par un modèle étanche et nous vérifions la boîte de connexion au plafond."
+      "a": "C'est souvent le signe que la vapeur a pénétré dans un luminaire qui n'est pas prévu pour cet emplacement. Coupez son circuit et n'y touchez plus, nous le remplaçons par un modèle étanche et nous vérifions la boîte de connexion au plafond."
     }
   ]
 }

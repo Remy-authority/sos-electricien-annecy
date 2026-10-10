@@ -101,9 +101,9 @@ export function SchemaDiagnostic() {
       titre: 'Diagnostic électricité',
       sous: 'pour vendre ou louer',
       lignes: [
-        'Par : un diagnostiqueur certifié',
-        'Quand : installation de plus de 15 ans',
-        'Validité : 3 ans (vente), 6 ans (bail)',
+        'Fait par un diagnostiqueur certifié',
+        'Pour une installation de plus de 15 ans',
+        'Valable 3 ans (vente), 6 ans (bail)',
       ],
       prix: '65 à 190 € selon les sources',
       accent: false,
@@ -111,7 +111,7 @@ export function SchemaDiagnostic() {
     {
       titre: 'Recherche de panne',
       sous: 'quand le courant pose problème',
-      lignes: ['Par : un électricien, notre métier', 'Quand : disjoncteur qui saute,', 'circuit coupé, prise sans courant'],
+      lignes: ['Faite par un électricien, notre métier', 'Si un disjoncteur saute,', 'circuit coupé, prise sans courant'],
       prix: '100 à 200 € TTC, réparation incluse',
       accent: true,
     },
@@ -238,7 +238,7 @@ export function SchemaPrixM2() {
 export function SchemaTva() {
   return (
     <Figure
-      titre="TVA à 10 % ou à 20 % : quel taux pour vos travaux ?"
+      titre="TVA à 10 % ou à 20 %, quel taux pour vos travaux ?"
       label="Logement achevé depuis plus de deux ans et travaux d'amélioration, d'aménagement ou d'entretien : TVA à 10 %. Logement de moins de deux ans : 20 %. Restent à 20 % l'agrandissement de plus de 10 % de la surface et le matériel acheté soi-même."
       sources={['impots']}
     >

@@ -10,11 +10,11 @@ export default function ServiceDiagnosticObligatoire() {
   return (
     <ServiceSchemaFrame
       id="diagnostic-obligatoire"
-      title="Diagnostic électrique obligatoire : plus de 15 ans, 3 ans vente, 6 ans location"
+      title="Diagnostic électrique obligatoire après 15 ans, valable 3 ans en vente et 6 ans en location"
       sources={[
         {
           label:
-            'Service-public.gouv.fr, « Diagnostic immobilier : état de l’installation intérieure d’électricité »',
+            'Service-public.gouv.fr, « Diagnostic immobilier, état de l’installation intérieure d’électricité »',
           url: 'https://www.service-public.gouv.fr/particuliers/vosdroits/F18692',
           consulted: '25 septembre 2026',
         },

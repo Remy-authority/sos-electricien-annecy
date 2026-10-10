@@ -77,7 +77,7 @@ export default function TableauPrix() {
                     <span className="text-sm">{r.unite}</span>
                   </p>
                   <p className="text-xs text-slate-500">
-                    Source :{' '}
+                    <span className="mr-1.5 font-semibold uppercase tracking-[0.14em]">Source</span>
                     <LienSource url={tarifs.sources[r.source].url} className="hover:text-primary">
                       {tarifs.sources[r.source].nom}
                     </LienSource>

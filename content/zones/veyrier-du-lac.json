@@ -10,11 +10,11 @@
   "blocks": [
     {
       "heading": "Électricien à Veyrier-du-Lac, au pied du mont Veyrier",
-      "body": "Sur une parcelle en pente, l'électricité doit suivre le terrain : un tableau souvent placé au niveau de l'entrée, des pièces à des niveaux différents, une terrasse en contrebas et parfois un abri ou un garage au bord de la route. Chaque niveau a ses usages et gagne à avoir ses propres circuits. Nous commençons par relever où passent les lignes existantes, car sur ces maisons étagées, le parcours des câbles n'est pas toujours celui que l'on imagine."
+      "body": "Sur une parcelle en pente, l'électricité doit suivre le terrain, avec un tableau souvent placé au niveau de l'entrée, des pièces à des niveaux différents, une terrasse en contrebas et parfois un abri ou un garage au bord de la route. Chaque niveau a ses usages et gagne à avoir ses propres circuits. Nous commençons par relever où passent les lignes existantes, car sur ces maisons étagées, le parcours des câbles n'est pas toujours celui que l'on imagine."
     },
     {
       "heading": "Éclairer une terrasse face au lac",
-      "body": "Un bon éclairage de terrasse met en valeur la vue sans éblouir : appliques orientées vers le sol, spots encastrés dans les marches, lumière douce le long des garde-corps. Le matériel doit résister à la pluie, au gel et aux écarts de température, avec des boîtiers et des luminaires étanches. Un circuit extérieur dédié, protégé par son propre différentiel, et une commande depuis l'intérieur, par interrupteur ou minuterie, complètent l'ensemble. Nous vous proposons une implantation qui éclaire le passage autant que l'ambiance."
+      "body": "Un bon éclairage de terrasse met en valeur la vue sans éblouir, avec des appliques orientées vers le sol, spots encastrés dans les marches, lumière douce le long des garde-corps. Le matériel doit résister à la pluie, au gel et aux écarts de température, avec des boîtiers et des luminaires étanches. Un circuit extérieur dédié, protégé par son propre différentiel, et une commande depuis l'intérieur, par interrupteur ou minuterie, complètent l'ensemble. Nous vous proposons une implantation qui éclaire le passage autant que l'ambiance."
     },
     {
       "heading": "Maison secondaire, retrouver une installation saine à l'arrivée",
@@ -22,12 +22,12 @@
     },
     {
       "heading": "Jardin en pente, alimenter un abri ou un portail",
-      "body": "Amener le courant jusqu'au bas d'un terrain en pente demande un tracé réfléchi : le câble descend sous gaine dans une tranchée qui suit les escaliers ou les murets, loin des zones qu'on bêche. Sur une grande longueur, la section du câble doit être calculée pour limiter la chute de tension, sinon l'éclairage faiblit et les moteurs peinent. Nous calculons cette section, posons le câble et installons au bout un petit coffret protégé pour les prises et l'éclairage de l'abri."
+      "body": "Amener le courant jusqu'au bas d'un terrain en pente demande un tracé réfléchi. Le câble descend sous gaine dans une tranchée qui suit les escaliers ou les murets, loin des zones qu'on bêche. Sur une grande longueur, la section du câble doit être calculée pour limiter la chute de tension, sinon l'éclairage faiblit et les moteurs peinent. Nous calculons cette section, posons le câble et installons au bout un petit coffret protégé pour les prises et l'éclairage de l'abri."
     }
   ],
   "bodyImage": "/zones/veyrier-du-lac-corps.jpg",
   "bodyImageAlt": "Terrasse en bois au crépuscule face au lac, éclairage intégré au sol et aux marches",
-  "bodyImageCaption": "Terrasse au crépuscule face au lac : un éclairage bas et étanche qui guide le pas sans masquer la vue.",
+  "bodyImageCaption": "Terrasse au crépuscule face au lac, un éclairage bas et étanche qui guide le pas sans masquer la vue.",
   "neighbours": [
     "annecy-le-vieux",
     "sevrier",
@@ -38,7 +38,7 @@
     "recherche-panne-electrique",
     "renovation-electrique-complete"
   ],
-  "prixPhrase": "À Veyrier-du-Lac, un éclairage de terrasse ou une ligne vers le bas du jardin se chiffrent au mètre et au matériel : voici les repères de départ.",
+  "prixPhrase": "À Veyrier-du-Lac, un éclairage de terrasse ou une ligne vers le bas du jardin se chiffrent au mètre et au matériel. Voici les repères de départ.",
   "sources": [
     {
       "label": "geo.api.gouv.fr, Veyrier-du-Lac (74299), population et code postal",

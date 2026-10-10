@@ -13,7 +13,7 @@ const REASSURANCE_CARDS = [
     // 26/09/2026 (Rémy) : les anciennes cartes « Intervention rapide » et « Artisan local »
     // répétaient le bandeau du haut et « Pourquoi nous choisir » ; place à deux repères de zone.
     title: 'Annecy et ses communes déléguées',
-    desc: 'Annecy-le-Vieux, Cran-Gevrier, Meythet, Pringy et Seynod font partie d\'Annecy depuis 2017 : chacune a sa page.',
+    desc: 'Annecy-le-Vieux, Cran-Gevrier, Meythet, Pringy et Seynod font partie d\'Annecy depuis 2017, et chacune a sa page.',
   },
   {
     icon: (

@@ -6,28 +6,28 @@
   "metaTitle": "Électricien Poisy, du chef-lieu à la montagne d'Age",
   "metaDescription": "Nouvelle cuisine, plaques qui font disjoncter, maison à rénover à Poisy : nous créons les bons circuits et réglons ce qui coupe. Téléphonez-nous.",
   "h1": "Électricien à Poisy",
-  "intro": "Nous rénovons, dépannons et adaptons l'électricité des maisons et appartements de Poisy (74330), du chef-lieu aux hameaux. La commune compte aujourd'hui 9 291 habitants (source geo.api.gouv.fr), contre 838 en 1954 : ce changement d'échelle a fait naître des quartiers de maisons et de petits immeubles autour d'un village ancien. Entre 385 m au bord du Fier et 670 m à la montagne d'Age, les logements de Poisy ont des âges et des besoins électriques très différents.",
+  "intro": "Nous rénovons, dépannons et adaptons l'électricité des maisons et appartements de Poisy (74330), du chef-lieu aux hameaux. La commune compte aujourd'hui 9 291 habitants (source geo.api.gouv.fr), contre 838 en 1954, et ce changement d'échelle a fait naître des quartiers de maisons et de petits immeubles autour d'un village ancien. Entre 385 m au bord du Fier et 670 m à la montagne d'Age, les logements de Poisy ont des âges et des besoins électriques très différents.",
   "blocks": [
     {
       "heading": "Électricien à Poisy, du chef-lieu aux hameaux",
-      "body": "Au chef-lieu et dans les hameaux, on trouve encore des maisons anciennes où l'installation a été reprise par étapes. Dans les quartiers récents, les installations sont plus homogènes et bien protégées. Cette différence guide notre visite : dans une maison ancienne, nous vérifions en priorité la terre, les protections et l'état des conducteurs ; dans une construction récente, nous cherchons plutôt ce qui manque pour vos nouveaux usages."
+      "body": "Au chef-lieu et dans les hameaux, on trouve encore des maisons anciennes où l'installation a été reprise par étapes. Dans les quartiers récents, les installations sont plus homogènes et bien protégées. Cette différence guide notre visite. Dans une maison ancienne, nous vérifions en priorité la terre, les protections et l'état des conducteurs ; dans une construction récente, nous cherchons plutôt ce qui manque pour vos nouveaux usages."
     },
     {
       "heading": "Cuisine rénovée, prises et circuits du plan de travail",
-      "body": "Refaire une cuisine est le projet qui sollicite le plus l'installation. La plaque de cuisson, le four, le lave-vaisselle et le réfrigérateur ne se branchent pas tous sur la même ligne : la NF C 15-100 impose des circuits spécialisés pour les gros appareils et un nombre minimal de prises au-dessus du plan de travail. Ces prises ne se placent ni au-dessus de l'évier ni au-dessus des plaques. Nous posons les boîtiers avant la crédence, à la bonne hauteur, et nous vérifions que le tableau peut accueillir les nouveaux départs."
+      "body": "Refaire une cuisine est le projet qui sollicite le plus l'installation. La plaque de cuisson, le four, le lave-vaisselle et le réfrigérateur ne se branchent pas tous sur la même ligne, car la NF C 15-100 impose des circuits spécialisés pour les gros appareils et un nombre minimal de prises au-dessus du plan de travail. Ces prises ne se placent ni au-dessus de l'évier ni au-dessus des plaques. Nous posons les boîtiers avant la crédence, à la bonne hauteur, et nous vérifions que le tableau peut accueillir les nouveaux départs."
     },
     {
       "heading": "Dépannage électrique à Poisy, quand la cuisine fait tout couper",
-      "body": "Une plaque à induction installée sur un circuit prévu pour une ancienne cuisinière, un four branché sur une prise ordinaire, une bouilloire et un grille-pain sur la même multiprise : le déclenchement arrive toujours à l'heure du repas. Nous commençons par repérer quel appareil partage quelle ligne, puis nous remettons chaque équipement sur le circuit qui lui correspond. Si le disjoncteur ou le câble a chauffé, nous le remplaçons avant de remettre sous tension."
+      "body": "Une plaque à induction installée sur un circuit prévu pour une ancienne cuisinière, un four branché sur une prise ordinaire, une bouilloire et un grille-pain sur la même multiprise, et le déclenchement arrive toujours à l'heure du repas. Nous commençons par repérer quel appareil partage quelle ligne, puis nous remettons chaque équipement sur le circuit qui lui correspond. Si le disjoncteur ou le câble a chauffé, nous le remplaçons avant de remettre sous tension."
     },
     {
       "heading": "Acheter à Poisy, ce que le tableau vous apprend",
-      "body": "Acheter à Poisy, c'est souvent reprendre une maison ou un appartement déjà habité. Avant de signer, jetez un œil au tableau : présence d'étiquettes, différentiels 30 mA en tête des rangées, place libre, absence de fils qui dépassent. Au-delà de 15 ans d'installation, le vendeur doit vous remettre un diagnostic électricité. Nous pouvons ensuite chiffrer les corrections qu'il signale, ce qui vous donne un élément concret pour la négociation."
+      "body": "Acheter à Poisy, c'est souvent reprendre une maison ou un appartement déjà habité. Avant de signer, jetez un œil au tableau (présence d'étiquettes, différentiels 30 mA en tête des rangées, place libre, absence de fils qui dépassent). Au-delà de 15 ans d'installation, le vendeur doit vous remettre un diagnostic électricité. Nous pouvons ensuite chiffrer les corrections qu'il signale, ce qui vous donne un élément concret pour la négociation."
     }
   ],
   "bodyImage": "/zones/poisy-corps.jpg",
   "bodyImageAlt": "Cuisine rénovée sous poutres apparentes, meubles en chêne clair, îlot central et éclairage LED sous les meubles hauts",
-  "bodyImageCaption": "Cuisine rénovée : éclairage sous les meubles hauts et prises du plan de travail sur des circuits séparés.",
+  "bodyImageCaption": "Cuisine rénovée, éclairage sous les meubles hauts et prises du plan de travail sur des circuits séparés.",
   "neighbours": [
     "meythet",
     "epagny-metz-tessy",
@@ -38,7 +38,7 @@
     "urgence-depannage-electrique",
     "installation-electrique-neuve"
   ],
-  "prixPhrase": "À Poisy, une cuisine à équiper ou une maison à reprendre n'appellent pas le même budget : ces repères vous aident à situer votre projet.",
+  "prixPhrase": "À Poisy, une cuisine à équiper ou une maison à reprendre n'appellent pas le même budget, et ces repères vous aident à situer votre projet.",
   "sources": [
     {
       "label": "geo.api.gouv.fr, Poisy (74213), population et code postal",
@@ -64,7 +64,7 @@
     },
     {
       "q": "Peut-on garder l'ancienne ligne de la cuisinière pour une plaque neuve ?",
-      "a": "Parfois, si sa section et sa protection conviennent à la nouvelle plaque. Nous le vérifions sur place : un câble trop fin sur une plaque puissante chauffe, même si le disjoncteur ne coupe pas tout de suite."
+      "a": "Parfois, si sa section et sa protection conviennent à la nouvelle plaque. Nous le vérifions sur place, car un câble trop fin sur une plaque puissante chauffe, même si le disjoncteur ne coupe pas tout de suite."
     },
     {
       "q": "Vous déplacez-vous dans les hameaux de Poisy ?",

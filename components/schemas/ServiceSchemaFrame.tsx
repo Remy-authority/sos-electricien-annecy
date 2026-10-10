@@ -36,7 +36,7 @@ export default function ServiceSchemaFrame({
       data-schema={id}
       className="not-prose mx-auto my-10 w-full max-w-2xl rounded-card border border-slate-200 bg-white p-3 shadow-card sm:p-7"
     >
-      <div className="text-center font-display text-lg font-semibold leading-snug text-primary sm:text-xl lg:text-left">
+      <div data-titre className="text-center font-display text-lg font-semibold leading-snug text-primary [text-wrap:balance] sm:text-xl lg:text-left">
         {title}
       </div>
       <div className="mt-5">{children}</div>
@@ -44,7 +44,7 @@ export default function ServiceSchemaFrame({
         {note && <p>{note}</p>}
         {sources.map((s) => (
           <p key={s.url}>
-            Source :{' '}
+            <span className="mr-1.5 font-semibold uppercase tracking-[0.14em]">Source</span>
             <a
               href={s.url}
               target="_blank"
