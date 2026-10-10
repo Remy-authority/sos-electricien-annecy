@@ -100,8 +100,8 @@ export function CarteAnnecy({ zones }: { zones: Zone[] }) {
           <h2 id="titre-zone" className="text-2xl font-bold text-white md:text-4xl">
             {city}, son lac <span className="accent-serif text-accent">et l'Albanais</span>
           </h2>
-          <p className="mt-3 text-slate-300">
-            Nous intervenons dans un rayon d'environ {serviceArea.radiusKm} km. Touchez votre commune sur la carte.
+          <p className="mx-auto mt-3 max-w-xl text-balance text-slate-300">
+            Nous intervenons dans un rayon d'environ {serviceArea.radiusKm}&nbsp;km. Touchez votre commune sur la carte.
           </p>
         </div>
 

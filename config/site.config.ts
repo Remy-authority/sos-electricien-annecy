@@ -131,7 +131,7 @@ export const siteConfig = {
   homeFaq: [
     {
       q: 'Combien coûte une intervention électricien à Annecy ?',
-      a: "Tout dépend de ce que nous trouvons : un disjoncteur à remplacer ne demande pas le même travail qu'un circuit à reprendre sur plusieurs mètres. Nous établissons le diagnostic sur place, puis un devis écrit avant de commencer. Les prix de référence sont sur [nos tarifs détaillés](/tarifs).",
+      a: "Tout dépend de ce que nous trouvons : un disjoncteur à remplacer ne demande pas le même travail qu'un circuit à reprendre sur plusieurs mètres. Nous établissons le diagnostic sur place, puis un devis écrit avant de commencer.",
     },
     {
       q: 'Et si la panne tombe un 15 août ou un dimanche ?',
@@ -142,8 +142,12 @@ export const siteConfig = {
       a: "Vérifiez d'abord le disjoncteur général de votre tableau électrique : s'il a sauté, tentez de le réenclencher une fois. S'il resaute immédiatement, ne réessayez pas et appelez-nous : un court-circuit est probablement en cause.",
     },
     {
-      q: 'Faites-vous la mise aux normes des installations électriques anciennes ?',
+      q: "Faites-vous la mise aux normes d'une installation ancienne ?",
       a: "Oui. Nous reprenons les installations anciennes selon la norme NF C 15-100, par exemple pour corriger les anomalies relevées par un diagnostic électrique avant une vente ou une location.",
+    },
+    {
+      q: "Faites-vous le dépannage d'un onduleur à Annecy ?",
+      a: "Oui pour sa partie électrique : nous contrôlons la ligne qui l'alimente, sa protection au tableau et son raccordement. La réparation de l'appareil lui-même revient à son fabricant.",
     },
     {
       q: "Jusqu'où intervenez-vous autour d'Annecy ?",

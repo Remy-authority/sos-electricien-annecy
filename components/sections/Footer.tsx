@@ -20,24 +20,8 @@ export default function Footer() {
         className="pointer-events-none absolute -left-32 top-0 -z-10 h-72 w-72 rounded-full bg-primary/15 blur-3xl"
         aria-hidden="true"
       />
-      {/* Bande téléphone */}
-      <div className="border-b border-white/10 bg-primary/10">
-        <div className="container-site flex flex-col items-center justify-between gap-3 py-5 sm:flex-row">
-          <p className="text-center text-sm font-medium text-slate-300 sm:text-left">
-            {siteConfig.trade} à {siteConfig.city} · {siteConfig.availability}
-          </p>
-          <a
-            href={`tel:${siteConfig.phone}`}
-            className="flex items-center gap-2 rounded-[3px] bg-accent px-5 py-2.5 text-sm font-bold text-dark shadow-md shadow-accent/20 transition hover:bg-accent/90"
-            aria-label={`Appeler le ${siteConfig.phoneDisplay}`}
-          >
-            <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
-            </svg>
-            {siteConfig.phoneDisplay}
-          </a>
-        </div>
-      </div>
+      {/* Bande téléphone retirée le 10/10/2026 : numéro répété au-dessus du pied de page
+          (refus de Rémy). Il reste au header, au bouton flottant et à la barre du téléphone. */}
 
       {/* Grille nav.
           Ordinateur (lg:) : quatre colonnes, rendu inchangé.

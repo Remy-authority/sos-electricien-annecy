@@ -1,21 +1,16 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 import { siteConfig } from '@/config/site.config'
 import { getServices, getZones } from '@/lib/content'
 import { buildMetadata } from '@/lib/seo'
-import CtaBanner from '@/components/ui/CtaBanner'
 import Faq from '@/components/ui/Faq'
 import LeadForm from '@/components/ui/LeadForm'
+import { Trace } from '@/components/ui/Trace'
 import Hero from '@/components/sections/Hero'
-import TrustBadges from '@/components/sections/TrustBadges'
-import About from '@/components/sections/About'
+import Engagements from '@/components/sections/Engagements'
+import Prestations from '@/components/sections/Prestations'
 import { ChantierAnnecy } from '@/components/sections/ChantierAnnecy'
-import Stats from '@/components/sections/Stats'
-import WhyUs from '@/components/sections/WhyUs'
+import Methode from '@/components/sections/Methode'
 import { CarteAnnecy } from '@/components/sections/CarteAnnecy'
-import Realisations from '@/components/sections/Realisations'
-import { ServiceIcon } from '@/components/ui/ServiceIcon'
-import { BoltBadge } from '@/components/ui/Bolt'
 
 // 25/09/2026 : requête d'argent « électricien annecy » (590 recherches/mois, DataForSEO)
 // en tête du title ; le H1 reste « Électricien d'urgence à Annecy ».
@@ -25,92 +20,42 @@ const DESC =
 
 export const metadata: Metadata = buildMetadata({ title: TITLE, description: DESC, path: '/' })
 
+/*
+ * Accueil, mise à jour du 10/10/2026 : 8 blocs, chacun animé à l'apparition.
+ * 1 bloc 1 · 2 engagements dessinés · 3 prestations en photos · 4 déroulé au défilement
+ * · 5 notre façon de travailler · 6 formulaire · 7 carte des communes · 8 FAQ claire.
+ * Retirés (trop de texte, redites) : bandeau de badges, chiffres, « à propos »,
+ * « pourquoi nous », réalisations et bande d'appel au-dessus du pied de page.
+ */
 export default function HomePage() {
-  const services = getServices()
   const homeFaq = siteConfig.homeFaq as unknown as { q: string; a: string }[]
 
   return (
     <>
       <Hero />
-      <TrustBadges />
-
-      {/* Services : section immersive nuit, cartes en verre (pièce maîtresse) */}
-      <section id="services" className="section-dark section scroll-mt-20" aria-labelledby="services-title">
-        <div className="container-site">
-          <div className="mb-10 text-center sm:text-left">
-            <BoltBadge label="Ce que nous faisons" />
-            <h2
-              id="services-title"
-              className="mt-4 text-3xl text-white md:text-4xl"
-            >
-              Nos <span className="accent-serif text-accent">prestations</span>
-            </h2>
-          </div>
-
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((s) => (
-              <Link
-                key={s.slug}
-                href={`/services/${s.slug}`}
-                className="group card-glass card-glass-interactive block text-center sm:text-left"
-              >
-                <div className="chip-accent mx-auto mb-4 h-11 w-11 sm:mx-0">
-                  <ServiceIcon icon={s.icon} className="h-5 w-5" />
-                </div>
-                <h3 className="text-lg text-white transition-colors group-hover:text-accent">
-                  {s.navTitle}
-                </h3>
-                <ul className="mt-3 mx-auto w-fit space-y-1.5 text-sm text-slate-300 sm:mx-0">
-                  {s.bullets.map((b) => (
-                    <li key={b} className="flex items-center gap-2">
-                      <span className="h-1 w-1 shrink-0 rounded-full bg-accent" aria-hidden="true" />
-                      {b}
-                    </li>
-                  ))}
-                </ul>
-                <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-accent">
-                  En savoir plus
-                  <svg className="h-4 w-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
-                    <path d="m9 18 6-6-6-6" />
-                  </svg>
-                </span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <Stats />
-      <About />
+      <Engagements />
+      <Prestations services={getServices()} />
       <ChantierAnnecy />
-      {siteConfig.features.gallery && <Realisations />}
+      <Methode />
 
-      {/* Formulaire devis, section dédiée (recommandation CEO, form hors hero) */}
-      <section id="devis" className="section bg-slate-100" aria-labelledby="devis-title">
+      <section id="devis" className="section scroll-mt-20 bg-slate-100" aria-labelledby="devis-title">
         <div className="container-site">
-          <div className="mx-auto max-w-2xl">
+          <Trace className="apparait mx-auto max-w-2xl">
             <div className="mb-6 text-center">
-              <BoltBadge label="Devis gratuit" tone="light" />
-              <h2 id="devis-title" className="mt-4 text-2xl md:text-3xl">
-                Décrivez votre problème en{' '}
-                <span className="accent-serif text-accent-deep">3 étapes</span>
+              <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-accent-deep">Devis gratuit</p>
+              <h2 id="devis-title" className="text-2xl md:text-3xl">
+                Décrivez votre panne en <span className="accent-serif text-accent-deep">3 étapes</span>
               </h2>
-              <p className="mt-2 text-sm text-slate-600">
-                Nous revenons vers vous pour fixer le diagnostic, sans engagement.
-              </p>
+              <p className="mt-2 text-sm text-slate-600">Nous revenons vers vous pour fixer le diagnostic, sans engagement.</p>
             </div>
             <LeadForm />
-          </div>
+          </Trace>
         </div>
       </section>
-
-      <WhyUs />
-
-      <CtaBanner />
 
       <CarteAnnecy zones={getZones()} />
 
-      <Faq items={homeFaq} />
+      <Faq items={homeFaq} tone="light" />
     </>
   )
 }
