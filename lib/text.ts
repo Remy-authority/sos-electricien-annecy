@@ -54,3 +54,34 @@ export function extractNumberedSteps(body: string): NumberedSteps | null {
 
   return { lead, steps }
 }
+
+/**
+ * Découpe un paragraphe trop long en plusieurs paragraphes, aux fins de phrase,
+ * SANS changer un mot (10/10/2026, règle #R67 : 45 mots au plus par paragraphe sur
+ * les pages intérieures ; le texte qui rapporte des visites reste entier). Les phrases
+ * sont regroupées en parts de taille voisine ; un texte court revient tel quel.
+ */
+export function decouperParagraphe(texte: string, max = 45): string[] {
+  const mots = (t: string) => t.split(/\s+/).filter(Boolean).length
+  const total = mots(texte)
+  if (total <= max) return [texte]
+  const phrases = texte.split(/(?<=[.!?…])\s+(?=[A-ZÀ-ÝÉ«"0-9])/)
+  if (phrases.length < 2) return [texte]
+  const parts = Math.ceil(total / max)
+  const cible = total / parts
+  const sortie: string[] = []
+  let courant: string[] = []
+  let n = 0
+  for (const p of phrases) {
+    const m = mots(p)
+    if (courant.length && (n + m > max || n >= cible)) {
+      sortie.push(courant.join(' '))
+      courant = []
+      n = 0
+    }
+    courant.push(p)
+    n += m
+  }
+  if (courant.length) sortie.push(courant.join(' '))
+  return sortie
+}

@@ -9,19 +9,19 @@
   "intro": "Nous dépannons, cherchons les pannes et remettons aux normes les installations électriques de Cran-Gevrier (74960), du quartier Chorus au Jourdil, de Vernay à Beauregard. Rattaché à Annecy lors de la fusion du 1er janvier 2017, Cran-Gevrier comptait 17 257 habitants au recensement de 2014 et mêle grands ensembles, immeubles en copropriété et maisons individuelles. Chaque type de logement a ses pannes typiques : nous commençons par comprendre le vôtre.",
   "blocks": [
     {
-      "heading": "Dépannage électrique à Cran-Gevrier : situer la panne d'abord",
+      "heading": "Dépannage électrique à Cran-Gevrier, situer la panne d'abord",
       "body": "Quand la lumière s'éteint dans un appartement, la première question n'est pas technique, elle est géographique : le voisin de palier a-t-il encore du courant ? Si tout l'immeuble est dans le noir, la panne se trouve sur le réseau public et c'est le distributeur qui intervient. Si votre logement est le seul touché, le problème est chez vous : disjoncteur de branchement déclenché, interrupteur différentiel tombé ou circuit en défaut. Nous lisons alors le tableau rangée par rangée, nous isolons le circuit fautif et nous mesurons avant de changer la moindre pièce. Réarmer à répétition un différentiel qui retombe ne répare rien : cela signale un défaut réel qu'il faut localiser."
     },
     {
       "heading": "Remise aux normes électrique à Cran-Gevrier, dans les grands ensembles",
-      "body": "Dans les tours et les barres du secteur, beaucoup de logements ont gardé leur installation d'origine, retouchée par petites touches au fil des locataires. On y rencontre des fusibles à cartouche, des disjoncteurs sans protection différentielle 30 mA sur l'ensemble des circuits, des prises sans terre dans les chambres et une salle de bains sans liaison équipotentielle. La remise aux normes selon la NF C 15-100 vise d'abord la sécurité des personnes : protection différentielle sur tous les circuits, calibre de chaque disjoncteur adapté à la section de son câble, terre raccordée à chaque prise, puis mise en conformité de la salle de bains. Le reste, comme l'ajout de prises ou de circuits, vient ensuite, selon votre budget."
+      "body": "Dans les tours et les barres du secteur, beaucoup de logements ont gardé leur installation d'origine, retouchée par petites touches au fil des locataires. On y rencontre des fusibles à cartouche, des disjoncteurs sans protection différentielle 30 mA sur l'ensemble des circuits, des prises sans terre dans les chambres et une salle de bains sans liaison équipotentielle. La remise aux normes selon la NF C 15-100 vise d'abord la sécurité des personnes. Elle passe par la protection différentielle sur tous les circuits, le calibre de chaque disjoncteur adapté à la section de son câble, la terre raccordée à chaque prise, puis la mise en conformité de la salle de bains. Le reste, comme l'ajout de prises ou de circuits, vient ensuite, selon votre budget."
     },
     {
-      "heading": "Copropriété : ce qui relève de vous, ce qui relève du syndic",
+      "heading": "En copropriété, ce qui relève de vous et ce qui relève du syndic",
       "body": "Dans un immeuble, tout ce qui est situé après votre compteur, à l'intérieur de l'appartement, est privatif : tableau, circuits, prises et éclairage relèvent de vous. La colonne montante, la gaine palière, l'éclairage des escaliers et la terre commune de l'immeuble relèvent de la copropriété ou du réseau. Cette frontière compte au moment du devis : si la terre de l'immeuble est défaillante, refaire votre tableau ne suffira pas à protéger vos prises, et il faut alerter le syndic. Nous vous indiquons clairement de quel côté se situe chaque défaut constaté, pour que vous sachiez qui doit payer quoi."
     },
     {
-      "heading": "Tableau électrique d'appartement : le changer sans tout refaire",
+      "heading": "Tableau électrique d'appartement, le changer sans tout refaire",
       "body": "Remplacer le tableau ne signifie pas recâbler tout le logement. Quand les conducteurs sont en bon état, on peut garder les circuits existants et ne changer que ce qui les protège. Nous mesurons l'isolement de chaque ligne pour le vérifier, puis nous posons un coffret neuf sur rail DIN avec des interrupteurs différentiels 30 mA, des disjoncteurs divisionnaires calibrés et un repérage lisible de chaque départ. Nous gardons des emplacements libres pour une future plaque à induction ou un circuit de chauffage. Un tableau bien étiqueté vous fait aussi gagner du temps le jour d'une panne."
     },
     {
@@ -29,7 +29,7 @@
       "body": "Le Thiou, souvent présenté comme la plus petite rivière de France, traverse le secteur avant de rejoindre le Fier. Ce territoire a longtemps été industriel, avec des filatures et des papeteries, avant de devenir l'un des secteurs les plus peuplés d'Annecy. Le bâti en garde la trace : grands ensembles des Tours de Cran et du Jourdil, immeubles du centre Chorus, maisons individuelles dans les quartiers plus calmes. Pour nous, cela veut dire des interventions très différentes d'une rue à l'autre, du simple remplacement d'interrupteur à la rénovation d'un logement entier."
     },
     {
-      "heading": "Locataire ou propriétaire : qui appelle l'électricien ?",
+      "heading": "Locataire ou propriétaire, qui appelle l'électricien ?",
       "body": "Dans un logement loué, les petites réparations courantes reviennent en principe au locataire : une ampoule, un fusible, un interrupteur abîmé par l'usage. La sécurité de l'installation, elle, reste à la charge du propriétaire : tableau vétuste, absence de terre, circuit qui chauffe. Si vous êtes locataire à Cran-Gevrier et qu'un défaut sérieux apparaît, prévenez votre bailleur ou l'agence par écrit. Nous pouvons établir un constat clair de l'état du tableau, utile pour que la décision se prenne vite des deux côtés."
     }
   ],

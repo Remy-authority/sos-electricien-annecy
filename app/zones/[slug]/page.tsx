@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { decouperParagraphe } from '@/lib/text'
 import { Fragment, type ReactNode } from 'react'
 import fs from 'node:fs'
 import path from 'node:path'
@@ -149,7 +150,11 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
           </div>
 
           {/* Réponse courte factuelle « citable » (GEO) */}
-          <p className="card-glass mt-6 leading-relaxed text-slate-200">{zone.intro}</p>
+          <div className="card-glass mt-6 space-y-3 leading-relaxed text-slate-200">
+            {decouperParagraphe(zone.intro).map((t) => (
+              <p key={t.slice(0, 40)}>{t}</p>
+            ))}
+          </div>
         </div>
       </header>
 
@@ -159,7 +164,9 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
             <Fragment key={b.heading}>
               <section>
                 <h2>{b.heading}</h2>
-                <p>{b.body}</p>
+                {decouperParagraphe(b.body).map((t) => (
+                  <p key={t.slice(0, 40)}>{t}</p>
+                ))}
               </section>
               {afterBlock[i]}
             </Fragment>

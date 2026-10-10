@@ -180,49 +180,49 @@
       ]
     },
     "urgence": {
-      "titre": "Dépannage d'urgence : nuit, week-end et jour férié",
+      "titre": "Dépannage d'urgence la nuit, le week-end et les jours fériés",
       "corps": [
         "Une coupure ne prévient pas. Pour une intervention en soirée, le week-end ou un jour férié, Habitatpresto observe une majoration de 50 à 100 % sur le tarif horaire et affiche 90 à 120 € TTC l'heure d'urgence. Mon Club Elec situe l'heure de dépannage urgent entre 70 et 120 € HT.",
         "Avant d'appeler un dimanche, regardez le disjoncteur de branchement puis l'interrupteur différentiel qui a pu déclencher. Si un seul circuit est tombé et que le reste du logement fonctionne, attendre un jour ouvré évite la majoration. Odeur de brûlé, prise noircie, tableau chaud au toucher : là, on n'attend pas. Voir notre [dépannage électrique d'urgence](/services/urgence-depannage-electrique)."
       ]
     },
     "tableau": {
-      "titre": "Prix d'un tableau électrique : changement complet ou partiel",
+      "titre": "Prix d'un tableau électrique, changement complet ou partiel",
       "corps": [
         "C'est la question de prix la plus fréquente. Pour un remplacement total, installation incluse, Prix-pose relève 450 à 1 400 €. Prix-travaux-m2 donne 250 à 1 600 € HT, main-d'œuvre comprise, selon la taille du logement. Habitatpresto affiche 600 à 2 500 € TTC pour la pose ou le remplacement d'un tableau.",
         "L'écart suit le nombre de rangées, donc le nombre de circuits à protéger, et l'état des conducteurs qui arrivent au coffret. Un tableau à fusibles se remplace en entier ; un tableau modulaire récent auquel il manque un interrupteur différentiel se complète. Le détail de la prestation : [remise aux normes du tableau électrique](/services/remise-aux-normes-tableau-electrique)."
       ]
     },
     "normes": {
-      "titre": "Mise aux normes électrique : du coffret à toute l'installation",
+      "titre": "Mise aux normes électrique, du coffret à toute l'installation",
       "corps": [
         "Remettre aux normes le seul tableau coûte 250 à 800 €, fournitures et pose comprises, selon Prix-travaux-m2 ; une simple mise en sécurité du tableau revient à 200 à 550 € chez Prix-pose. Quand c'est l'installation ancienne entière qu'il faut reprendre, Habitatpresto relève 800 à 3 000 € TTC.",
         "Rapportée à la surface, une mise en sécurité (corriger les points dangereux, poser les protections manquantes, raccorder la terre) se situe entre 50 et 80 € le m², chez Prix-pose comme chez Mon Club Elec. La référence technique reste la norme NF C 15-100. Notre prestation : [mise en conformité électrique](/services/mise-en-conformite-diagnostic-electrique)."
       ]
     },
     "diagnostic": {
-      "titre": "Prix d'un diagnostic électrique : deux prestations différentes",
+      "titre": "Prix d'un diagnostic électrique, deux prestations différentes",
       "corps": [
         "Le diagnostic demandé pour vendre ou louer un logement dont l'installation a plus de 15 ans s'appelle l'état de l'installation intérieure d'électricité. Service-public.gouv.fr le précise : un diagnostiqueur certifié le réalise, et il doit dater de moins de 3 ans pour une vente, de moins de 6 ans pour un bail. Son prix : 80 à 180 € TTC selon Empruntis, 65 à 190 € selon Dimo Diagnostic. Ce document ne relève pas d'un électricien, donc pas de nous.",
         "L'autre « diagnostic » est une recherche de panne : trouver pourquoi un différentiel saute ou pourquoi une pièce reste privée de courant, puis réparer. Habitatpresto chiffre l'identification et la réparation d'un court-circuit à 100 à 200 € TTC, déplacement inclus. Ça, c'est notre travail : [recherche de panne électrique](/services/recherche-panne-electrique). Et si le rapport du diagnostiqueur liste des anomalies, nous les corrigeons."
       ]
     },
     "renovation": {
-      "titre": "Rénovation électrique complète : le prix au m²",
+      "titre": "Rénovation électrique complète, le prix au m²",
       "corps": [
         "Refaire toute l'électricité d'un logement (câbles, prises, interrupteurs, points lumineux, tableau) se chiffre au mètre carré : 125 à 200 € TTC chez Prix-pose, 130 à 220 € chez Habitatpresto, 110 à 180 € HT dans l'ancien chez Prix-travaux-m2.",
         "Entre la mise en sécurité et la réfection totale, Prix-pose place la rénovation partielle à 80 à 120 € TTC le m². Ce qui fait basculer vers la réfection totale : des circuits sans conducteur de terre, des fils posés sans gaine, un isolant qui s'effrite. Notre prestation : [rénovation électrique complète](/services/renovation-electrique-complete)."
       ]
     },
     "neuf": {
-      "titre": "Installation électrique neuve : le prix du premier câblage",
+      "titre": "Installation électrique neuve, le prix du premier câblage",
       "corps": [
         "En construction, Prix-travaux-m2 relève 70 à 125 € HT le m². Prix-pose donne 100 à 150 € TTC le m² pour une maison neuve sans chauffage électrique. Le montant dépend d'abord du plan : nombre de prises, de points lumineux et de circuits spécialisés (plaque, four, lave-linge, borne de recharge).",
         "Dans le neuf, pas de taux réduit : la TVA à 10 % ne concerne que les logements achevés depuis plus de deux ans (voir plus bas). Notre prestation : [installation électrique neuve](/services/installation-electrique-neuve)."
       ]
     },
     "devis": {
-      "titre": "Devis d'électricien : les lignes à vérifier",
+      "titre": "Devis d'électricien, les lignes à vérifier",
       "corps": [
         "Un devis lisible sépare le déplacement, la main-d'œuvre (à l'heure ou au forfait), chaque fourniture avec sa marque et sa quantité, la majoration s'il y en a une, et le taux de TVA appliqué. Le nôtre est gratuit et écrit : il fixe le prix avant le premier coup de tournevis.",
         "Pour comparer deux devis de tableau ou de rénovation, vérifiez qu'ils décrivent la même chose : même nombre de rangées, mêmes interrupteurs différentiels, même nombre de circuits. Un devis moins cher qui oublie un parafoudre ou une rangée n'est pas moins cher."
@@ -254,7 +254,7 @@
       },
       {
         "libelle": "Cas 2",
-        "titre": "Vente d'un appartement : diagnostic, puis tableau remplacé",
+        "titre": "Vente d'un appartement, du diagnostic au tableau remplacé",
         "lignes": [
           { "libelle": "Diagnostic électricité par un diagnostiqueur certifié", "valeur": "80 à 180 € TTC", "source": "empruntis" },
           { "libelle": "Remplacement complet du tableau", "valeur": "450 à 1 400 €", "source": "prixpose-tableau" }

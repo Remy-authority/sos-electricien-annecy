@@ -14,7 +14,7 @@
   ],
   "blocks": [
     {
-      "heading": "Du tableau au mur : notre ordre de recherche",
+      "heading": "Du tableau au mur, notre ordre de recherche",
       "body": "Nous procédons par élimination méthodique plutôt que par tâtonnement. Premier temps : examen visuel du tableau électrique pour repérer un disjoncteur qui a sauté ou un fusible grillé. Deuxième temps : mesures au multimètre et à la pince ampèremétrique pour tester chaque circuit et isoler celui qui pose problème. Si la panne reste invisible à l'œil nu, un traceur de câbles permet de suivre le cheminement d'une ligne dans les murs sans avoir à tout ouvrir. Cette méthode évite de couper plusieurs circuits au hasard et limite les travaux au strict nécessaire.",
       "image": "/services/remise-aux-normes-tableau-electrique-neuf.jpg",
       "imageAlt": "Tableau électrique blanc à deux rangées derrière sa porte transparente",

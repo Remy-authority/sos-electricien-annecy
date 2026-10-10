@@ -2,7 +2,7 @@ import type { ReactNode } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { BlockIcon } from './ServiceIcon'
-import { extractNumberedSteps } from '@/lib/text'
+import { decouperParagraphe, extractNumberedSteps } from '@/lib/text'
 import type { ContentBlock } from '@/lib/content'
 
 /**
@@ -31,7 +31,7 @@ export default function ServiceBlock({ block, eager = false }: { block: ContentB
 
       {parsed ? (
         <>
-          {parsed.lead && <p>{parsed.lead}</p>}
+          {parsed.lead && decouperParagraphe(parsed.lead).map((t) => <p key={t.slice(0, 40)}>{t}</p>)}
           <ol className="mt-4 grid gap-3 sm:grid-cols-2">
             {parsed.steps.map((step, i) => {
               // Nombre d'étapes impair : la dernière carte prend toute la largeur
@@ -49,7 +49,7 @@ export default function ServiceBlock({ block, eager = false }: { block: ContentB
           </ol>
         </>
       ) : (
-        <p>{block.body}</p>
+        decouperParagraphe(block.body).map((t) => <p key={t.slice(0, 40)}>{t}</p>)
       )}
 
       {block.image && (

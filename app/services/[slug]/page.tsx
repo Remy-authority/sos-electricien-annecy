@@ -3,6 +3,7 @@ import { Fragment } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
+import { decouperParagraphe } from '@/lib/text'
 import { getService, getServices, getRelatedArticles } from '@/lib/content'
 import { buildMetadata, serviceJsonLd, jsonLdScript } from '@/lib/seo'
 import { siteConfig } from '@/config/site.config'
@@ -104,7 +105,11 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           )}
 
           {/* En bref (réponse courte GEO), en carte de verre */}
-          <p className="card-glass mt-6 leading-relaxed text-slate-200">{service.intro}</p>
+          <div className="card-glass mt-6 space-y-3 leading-relaxed text-slate-200">
+            {decouperParagraphe(service.intro).map((t) => (
+              <p key={t.slice(0, 40)}>{t}</p>
+            ))}
+          </div>
         </div>
       </header>
 

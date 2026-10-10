@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { decouperParagraphe } from '@/lib/text'
 import Image from 'next/image'
 import { buildMetadata } from '@/lib/seo'
 import { siteConfig } from '@/config/site.config'
@@ -38,13 +39,15 @@ function BlocTexte({ id, bloc, children }: { id: string; bloc: Bloc; children?: 
       <h2 id={`bloc-${id}`} className="!mt-0">
         {bloc.titre}
       </h2>
-      <p>
-        <TexteLiens texte={bloc.corps[0]} />
-      </p>
+      {decouperParagraphe(bloc.corps[0]).map((t) => (
+        <p key={t.slice(0, 32)}>
+          <TexteLiens texte={t} />
+        </p>
+      ))}
       {children}
-      {bloc.corps.slice(1).map((p) => (
-        <p key={p.slice(0, 32)}>
-          <TexteLiens texte={p} />
+      {bloc.corps.slice(1).flatMap((p) => decouperParagraphe(p)).map((t) => (
+        <p key={t.slice(0, 32)}>
+          <TexteLiens texte={t} />
         </p>
       ))}
     </section>
@@ -86,7 +89,11 @@ export default function TarifsPage() {
             />
           </div>
 
-          <p className="card-glass mt-6 text-left leading-relaxed text-slate-200 max-lg:text-center">{tarifs.intro}</p>
+          <div className="card-glass mt-6 space-y-3 text-left leading-relaxed text-slate-200 max-lg:text-center">
+            {decouperParagraphe(tarifs.intro).map((t) => (
+              <p key={t.slice(0, 40)}>{t}</p>
+            ))}
+          </div>
         </div>
       </header>
 

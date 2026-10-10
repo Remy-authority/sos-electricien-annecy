@@ -41,9 +41,9 @@ export default function ServiceSchemaFrame({
       </div>
       <div className="mt-5">{children}</div>
       <figcaption className="mt-5 space-y-1 border-t border-slate-100 pt-3 text-center text-xs leading-relaxed text-slate-500 lg:text-left">
-        {note && <div>{note}</div>}
+        {note && <p>{note}</p>}
         {sources.map((s) => (
-          <div key={s.url}>
+          <p key={s.url}>
             Source :{' '}
             <a
               href={s.url}
@@ -54,7 +54,7 @@ export default function ServiceSchemaFrame({
               {s.label}
             </a>
             , consulté le {s.consulted}.
-          </div>
+          </p>
         ))}
       </figcaption>
     </figure>
