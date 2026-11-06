@@ -1,12 +1,35 @@
 # ETAT.md — Journal de bord SOS Électricien Annecy
 
 > Mémoire du projet. Chaque session lit ce fichier en arrivant et le met à jour avant de finir.
-> Dernière mise à jour : 2026-10-11 (mise à jour scrollytelling en ligne, main 4a22932 ; détail dans la section ✅ ci-dessous). Précédente : 2026-09-26 (bloc 1 fond bleu, 09 en service). Historique : 2026-07-26 (session Builder, les 68 covers de la vague Autoblog sont
+> Dernière mise à jour : 2026-11-06 (articles à 7 par semaine, section ci-dessous). Précédente : 2026-10-11 (mise à jour scrollytelling en ligne, main 4a22932). Avant : 2026-09-26 (bloc 1 fond bleu, 09 en service). Historique : 2026-07-26 (session Builder, les 68 covers de la vague Autoblog sont
 > générées et livrées dans public/conseils/, détail en §3vicies. Les 79 articles du site,
 > publiés et en file, ont désormais tous leur image. Reste : contrôle CEO puis commit groupé
 > drafts + covers).
 
 ---
+
+## 06/11/2026 (CEO Opus 5.5) : ARTICLES À 7 PAR SEMAINE (Rémy, kickoff `../tasks/KICKOFF-articles-7-semaine-electricien-annecy-06-11.md`)
+
+**Base Search Console (relevée le 06/11)** : 16 mois 11 clics, 2 678 vues, position 26,6 ; 90 j 11 clics, 2 436 vues,
+position 23,8 ; 28 j 7 clics, 954 vues, position 21,8. Articles sur 28 j : 6 clics, 517 vues, position 11,8, 28 articles vus.
+En tête : surtension-apres-orage-que-faire (5 clics), lumiere-qui-clignote (2 clics). Indexation (inspection d'URL) : 56 pages
+indexées sur 90 (62 %) ; 15 « Détectée, non indexée », 12 « Google ne reconnaît pas cette URL », 5 « En double sans canonique »,
+2 « Explorée, non indexée ». Données brutes : `../tasks/.a7-electricien-annecy-06-11/`.
+
+**Canonicals déclarés par Google vers des sites tiers (spam, à surveiller)** : fusible-grille-changer-ou-passer-au-disjoncteur et
+norme-salle-de-bain pointent vers 747live.bet, remplacement-tableau-devis vers marcustheatres.com. Notre balise canonique est
+correcte ; c'est Google qui choisit un autre site, rien à corriger chez nous, à relire à la prochaine inspection.
+
+**Ménage** : 16 articles publiés retirés avec redirection 301 (`next.config.js`, objet `articlesRetires`) : 8 articles de ville
+(Seynod, Meythet, Épagny, Annecy, lac, Haute-Savoie) vers la zone ou le service, 8 doublons vers l'article qui couvre le sujet.
+Restent 50 articles publiés. 36 couvertures de brouillons faites d'avance supprimées de `public/conseils` (règle #L572 : aucune
+image pour un brouillon) ; 54 images des articles retirés supprimées. Les 45 anciens brouillons 0xx : 36 sujets repris et
+réécrits en entier (lieux dans les titres, ouvertures courtes, chiffres non sourcés), 9 abandonnés.
+
+**Stock** : 91 brouillons neufs 101 à 191, du 06/11/2026 au 04/02/2027 (13 semaines), pannes facturées par D.E.A-74 en tête,
+5 sujets de saison épinglés ; calendrier `docs/CALENDRIER-EDITORIAL.md`. Publication tous les jours (`'24 5 * * *'`).
+Script de publication : garde (title 30-60, description 120-160, lieu interdit, image faite d'avance) et options `--a-blanc`,
+`--verifier`. Tableaux Markdown servis (remark-gfm + style).
 
 ## ✅ 11/10/2026 (CEO Opus 5.5 le 10/10, Fable 5.1 le 11/10) : MISE À JOUR SCROLLYTELLING EN LIGNE, GO RÉMY (« oui go »)
 

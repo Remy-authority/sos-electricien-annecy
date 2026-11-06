@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { MDXRemote } from 'next-mdx-remote/rsc'
+import remarkGfm from 'remark-gfm'
 import {
   getArticle,
   getArticles,
@@ -44,6 +45,10 @@ const mdxComponents = {
     <img loading="lazy" decoding="async" alt="" {...props} />
   ),
 }
+
+// Tableaux Markdown des articles (passage à 7 articles par semaine, 06/11/2026) : sans
+// remark-gfm, les « | » sortiraient en texte brut.
+const mdxOptions = { mdxOptions: { remarkPlugins: [remarkGfm] } }
 
 /**
  * Coupe le corps MDX au premier tiers pour y poser l'encart de demande (10/10/2026,
@@ -127,12 +132,12 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
         {/* Corps, coupé au premier tiers par l'encart de demande adapté au sujet */}
         <div className="prose-content article-prose mx-auto mt-10 max-w-3xl">
-          <MDXRemote source={debut} components={mdxComponents} />
+          <MDXRemote source={debut} components={mdxComponents} options={mdxOptions} />
         </div>
         <EncartArticle slug={article.slug} titre={article.title} />
         {suite && (
           <div className="prose-content article-prose mx-auto max-w-3xl [&>h2:first-child]:mt-0">
-            <MDXRemote source={suite} components={mdxComponents} />
+            <MDXRemote source={suite} components={mdxComponents} options={mdxOptions} />
           </div>
         )}
 
