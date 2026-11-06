@@ -31,6 +31,18 @@ réécrits en entier (lieux dans les titres, ouvertures courtes, chiffres non so
 Script de publication : garde (title 30-60, description 120-160, lieu interdit, image faite d'avance) et options `--a-blanc`,
 `--verifier`. Tableaux Markdown servis (remark-gfm + style).
 
+**Relecture** : relecture à froid d'un sous-agent (claude-opus-5-5[1m]) sur 10 articles, 7,4/10, sources déformées
+corrigées ; puis 201 phrases sourcées relues une à une par le CEO, 5 de plus recalées (différentiel « au moins un dans
+l'existant » sans 30 mA, « tableau divisionnaire » absent de la fiche, tournures des prix Habitatpresto).
+
+**Preuves (commit 9856a57, en ligne)** : verifier.py CODE 0 « OK : 91 brouillon(s) conformes » ; check-footprint.py contre
+Dijon, Metz, Le Havre, Le Mans, Reims CODE 0 « OK : aucun copier-coller ni paraphrase proche détectés » ;
+audit-visuels-articles CODE 0 (50 publiés OK, 91 à illustrer à la publication, 0 image d'avance) ; check-fin-de-site CODE 1
+« ECHEC : 1 point(s) en défaut » = Resend sans trace, inchangé depuis le 11/10, pas de test (il arriverait chez D.E.A-74) ;
+16 redirections 301 vérifiées au curl ; publication manuelle (workflow 42216283279, commit 9a19bdc) :
+plus-de-courant-sans-que-le-disjoncteur-saute en 200, 2 images regardées en gros plan. Rank OS : cockpit d2acf308b
+(7/semaine, réserve au 04/02/2027, entrée `travaux`, tâche A7 cochée).
+
 ## ✅ 11/10/2026 (CEO Opus 5.5 le 10/10, Fable 5.1 le 11/10) : MISE À JOUR SCROLLYTELLING EN LIGNE, GO RÉMY (« oui go »)
 
 **En ligne** : `main` = `4a22932` (avance rapide de `maj/scrollytelling-2026-10`), production Vercel READY, curl 200 sur
