@@ -9,6 +9,7 @@ import Footer from '@/components/sections/Footer'
 import MobileStickyBar from '@/components/ui/MobileStickyBar'
 import FloatingCallButton from '@/components/ui/FloatingCallButton'
 import DerniersMotsLies from '@/components/ui/DerniersMotsLies'
+import SuiviVisite from '@/components/ui/SuiviVisite'
 
 // next/font = polices self-hostées au build (pas de requête Google runtime, pas de FOUT).
 const sora = Sora({ subsets: ['latin'], variable: '--font-sora', display: 'swap' })
@@ -70,6 +71,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <MobileStickyBar />
         <FloatingCallButton />
+        <SuiviVisite />
       </body>
     </html>
   )

@@ -273,6 +273,10 @@ export interface LeadFormProps {
 export function LeadForm({ variante = 'standard' }: LeadFormProps) {
   const hero = variante === 'hero'
   const [step, setStep] = useState<Step>(1)
+  // Étape atteinte, comptée par `SuiviVisite` (Rémy 13/11/2026 : savoir à quelle étape on abandonne).
+  useEffect(() => {
+    if (step > 1) window.dispatchEvent(new CustomEvent('rr-etape', { detail: step }))
+  }, [step])
   const [fields, setFields] = useState<Fields>({
     probleme: '',
     ville: '',
@@ -347,6 +351,7 @@ export function LeadForm({ variante = 'standard' }: LeadFormProps) {
 
   return (
     <div
+      data-clic-formulaire
       ref={racineRef}
       data-anime=""
       className={`relative rounded-[3px] bg-dark text-center text-white shadow-[0_24px_60px_-20px_rgb(0_0_0/0.55)] lg:text-left ${hero ? 'p-5 md:p-7' : 'p-6 md:p-8'}`}
