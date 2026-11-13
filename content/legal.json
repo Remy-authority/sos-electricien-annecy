@@ -1,11 +1,11 @@
 {
-  "_comment": "Mentions légales, éditeur = société propriétaire du site (DYONISOS LTD, droit UK). Raison sociale/immatriculation/adresse = données réelles portefeuille (NOU-29). téléphone/emailContact = DEMO tant que Rémy n'a pas fourni le numéro dédié à ce site. L'éditeur du site n'est PAS le prestataire des interventions : les infos d'assurance d'un artisan seront ajoutées à la location, en remplissant assureur + police (la section « Assurance professionnelle » de /mentions-legales reste MASQUÉE tant que ces deux champs sont vides, pour n'annoncer aucune couverture non détenue). Ne jamais inventer de valeurs. Hébergeur (Vercel) = fait, pré-rempli.",
+  "_comment": "Mentions légales, éditeur = société propriétaire du site (LEGIONIS LTD, droit UK). Raison sociale/immatriculation/adresse = données réelles portefeuille (NOU-29). téléphone/emailContact = DEMO tant que Rémy n'a pas fourni le numéro dédié à ce site. L'éditeur du site n'est PAS le prestataire des interventions : les infos d'assurance d'un artisan seront ajoutées à la location, en remplissant assureur + police (la section « Assurance professionnelle » de /mentions-legales reste MASQUÉE tant que ces deux champs sont vides, pour n'annoncer aucune couverture non détenue). Ne jamais inventer de valeurs. Hébergeur (Vercel) = fait, pré-rempli.",
   "editeur": {
-    "raisonSociale": "DYONISOS LTD",
+    "raisonSociale": "LEGIONIS LTD",
     "formeJuridique": "Private Limited Company (société à responsabilité limitée de droit anglais)",
-    "numeroImmatriculation": "14807222",
+    "numeroImmatriculation": "17580608",
     "registre": "Companies House (Royaume-Uni)",
-    "adresse": "67 Eastover Road, High Littleton, Bristol, BS39 6HZ, Royaume-Uni",
+    "adresse": "82a James Carter Road, Mildenhall, IP28 7DE, Royaume-Uni",
     "directeurPublication": "Remy Zaoui",
     "emailContact": "contact@sos-electricien-annecy.fr",
     "telephone": "09 39 20 03 38"
@@ -21,7 +21,7 @@
     "contact": "privacy@vercel.com"
   },
   "confidentialite": {
-    "responsableTraitement": "DYONISOS LTD",
+    "responsableTraitement": "LEGIONIS LTD",
     "finalite": "Traitement des demandes de contact et de devis envoyées via le formulaire du site.",
     "baseLegale": "Consentement de la personne concernée (art. 6.1.a RGPD).",
     "donneesCollectees": ["nom", "téléphone", "ville / code postal", "message"],
