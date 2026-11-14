@@ -1,12 +1,29 @@
 # ETAT.md — Journal de bord SOS Électricien Annecy
 
 > Mémoire du projet. Chaque session lit ce fichier en arrivant et le met à jour avant de finir.
-> Dernière mise à jour : 2026-11-06 (articles à 7 par semaine, section ci-dessous). Précédente : 2026-10-11 (mise à jour scrollytelling en ligne, main 4a22932). Avant : 2026-09-26 (bloc 1 fond bleu, 09 en service). Historique : 2026-07-26 (session Builder, les 68 covers de la vague Autoblog sont
+> Dernière mise à jour : 2026-11-15 (page Meythet, section ci-dessous). Précédente : 2026-11-06 (articles à 7 par semaine). Précédente : 2026-10-11 (mise à jour scrollytelling en ligne, main 4a22932). Avant : 2026-09-26 (bloc 1 fond bleu, 09 en service). Historique : 2026-07-26 (session Builder, les 68 covers de la vague Autoblog sont
 > générées et livrées dans public/conseils/, détail en §3vicies. Les 79 articles du site,
 > publiés et en file, ont désormais tous leur image. Reste : contrôle CEO puis commit groupé
 > drafts + covers).
 
 ---
+
+## 15/11/2026 (CEO Opus 5.5) : PAGE PRESQUE EN TÊTE, MEYTHET (kickoff portefeuille 14-15/11)
+
+**Avant (Search Console 90 j, 15/08 au 13/11)** : /zones/meythet 147 vues, 0 clic, place 15,9 ; « remise aux normes électrique à
+meythet » 73 vues, 10,8 ; « électricien à meythet » 33 vues, 27,2 ; « dépannage électrique à meythet » 28 vues, 15,7.
+**Fait (site 84076a7, en ligne)** : titre « Dépannage électrique et remise aux normes à Meythet (74960) » (la base du kickoff
+« Électricien à Meythet : dépannage et remise aux normes » sortait à 0,71 contre Épagny au contrôle anti-copie), description
+réécrite (157 car.), partie « Remise aux normes électrique à Meythet, l'ordre et le budget » (prix repris de /tarifs). Liens
+depuis 4 articles à clics : vente-location (« remise aux normes électrique à Meythet »), surtension-apres-orage et
+panne-edf-enedis (« dépannage électrique à Meythet »), garage-dependance (« électricien à Meythet »).
+**Expressions dans la page, avant/après (curl)** : remise aux normes 3 → 8, électricien à Meythet 5 → 10, dépannage
+électrique à Meythet 11 → 7 (toujours présente). **Laissé tel quel** : l'article remise-aux-normes-meythet-points-verifies,
+4,1e place sur la même recherche (47 vues).
+**Preuves** : check-footprint --depuis origin/main CODE 0 « OK : aucun copier-coller ni paraphrase proche détectés » ;
+check-fin-de-site www.sos-electricien-annecy.fr CODE 1 « ECHEC : 1 point(s) en défaut » = Resend sans trace, inchangé
+depuis le 11/10, formulaire non touché. Rank OS cockpit ea7db6b78 (en ligne) : page à forcer (`reindexer`), site 7e de
+« Sites qui rapportent » (les 11 premiers = sites réécrits le 15/11), entrée `travaux`. Place à remesurer le 14/12.
 
 ## 06/11/2026 (CEO Opus 5.5) : ARTICLES À 7 PAR SEMAINE (Rémy, kickoff `../tasks/KICKOFF-articles-7-semaine-electricien-annecy-06-11.md`)
 
