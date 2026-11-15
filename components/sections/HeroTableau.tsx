@@ -421,7 +421,7 @@ export function HeroTableau() {
                       à <span className="text-accent">{siteConfig.city}</span>
                     </span>
                   </h1>
-                  <p className="mt-3 max-w-[21rem] text-[15px] leading-relaxed text-white/90 [text-shadow:0_1px_10px_rgb(0_0_0/0.55)] sm:max-w-md sm:text-base lg:mt-5 lg:max-w-[26rem] lg:text-[17.5px]">
+                  <p className="mt-3 max-w-[21rem] text-[15px] leading-relaxed text-white/90 [text-shadow:0_1px_10px_rgb(0_0_0/0.55)] sm:max-w-md sm:text-base lg:mt-5 lg:max-w-[26rem] lg:text-[clamp(16px,1.2vw,17.5px)]">
                     Panne, disjoncteur qui saute, tableau à refaire : nous trouvons la cause.
                   </p>
                   <div className="mt-6 hidden justify-center gap-2.5 md:flex lg:mt-8">
