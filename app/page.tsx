@@ -48,7 +48,9 @@ export default function HomePage() {
               </h2>
               <p className="mt-2 text-sm text-slate-600">Nous revenons vers vous pour fixer le diagnostic, sans engagement.</p>
             </div>
-            <LeadForm />
+            <div className="mx-auto max-w-xl">
+              <LeadForm />
+            </div>
           </Trace>
         </div>
       </section>

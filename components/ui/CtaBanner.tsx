@@ -31,7 +31,9 @@ export default function CtaBanner({
             </h2>
             <p className="mx-auto mt-2 max-w-xl text-balance text-sm text-slate-600">{subtitle}</p>
           </div>
-          <LeadForm />
+          <div className="mx-auto max-w-xl">
+            <LeadForm />
+          </div>
         </Trace>
       </div>
     </section>

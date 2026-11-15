@@ -1,38 +1,25 @@
 'use client'
 
-import { useEffect, useRef, useState, type FormEvent, type ReactNode } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { siteConfig } from '@/config/site.config'
 import { useAnimeEnVue } from '@/lib/anime-en-vue'
 
 /**
- * Formulaire de demande, refait le 10/10/2026 (mise à jour du site, GO Rémy).
+ * Formulaire court (16/11/2026, règle #R84, tasks/regle-formulaire.md), UN SEUL dessin sur tout le
+ * site : bloc 1, bas de l'accueil, contact, tarifs, prestations, communes, articles.
  *
- * 1. Il AVANCE AU CLIC : étape 1 = un clic sur la panne ; étape 2 = la commune puis l'urgence,
- *    un clic sur l'urgence ouvre l'étape 3. Aucun bouton « Continuer ». « Retour » visible dès
- *    l'étape 2. Commune non saisie : elle est redemandée à l'étape 3.
- * 2. NOIR OPAQUE (nuit profonde de la palette), angles de 3 px, aucune pilule, aucun halo.
- * 3. Grilles sans case orpheline : 8 situations en 2 x 4 (ou 4 x 2), 2 urgences en 2 x 1.
- * 4. Téléphone tout centré, ordinateur aligné à gauche.
+ * 1. « Quel est votre projet ? » : quatre vraies prestations en 2 x 2, un clic avance.
+ * 2. « C'est pour quand ? » : un clic avance.
+ * 3. Nom | Prénom, Téléphone | Code postal (qui trouve la commune), Précisions (facultatif).
  *
- * Ce qui part à /api/contact NE CHANGE PAS (chaîne de Mr Verhasselt et Rank OS) :
- * { probleme, ville, urgence, nom, telephone, email, message, company: '' }, mêmes libellés de
- * `probleme` et `urgence` qu'avant (un seul ajouté : « Disjoncteur qui saute », pour fermer la
- * grille), puis redirection vers /merci.
+ * Ce qui part à /api/contact NE CHANGE PAS (chaîne de D.E.A-74 et de Rank OS) : mêmes clés, même
+ * ordre { probleme, ville, urgence, nom, telephone, email, message, company: '' }, mêmes valeurs de
+ * `probleme`. L'email n'est plus demandé : la clé part vide. Seul ajout : l'urgence, que l'envoi ne
+ * lisait pas, devient la première ligne de `message` (« Urgence : Aujourd'hui »).
  */
 
-type Step = 1 | 2 | 3
-
-interface Fields {
-  probleme: string
-  ville: string
-  urgence: string
-  nom: string
-  telephone: string
-  email: string
-  message: string
-}
-
-const AVANCE_MS = 280
+type Etape = 1 | 2 | 3
+type Manque = 'nom' | 'telephone' | 'lieu'
 
 const svg = {
   viewBox: '0 0 24 24',
@@ -41,15 +28,16 @@ const svg = {
   strokeWidth: 1.7,
   strokeLinecap: 'round' as const,
   strokeLinejoin: 'round' as const,
-  className: 'h-6 w-6 overflow-visible',
+  className: 'h-[22px] w-[22px] shrink-0 overflow-visible sm:h-6 sm:w-6',
   'aria-hidden': true,
 }
 
-/** Les huit situations : `id` part tel quel dans le mail, `label` est affiché. */
-const TYPES: { id: string; label: string; Icon: () => JSX.Element }[] = [
+/** Les quatre prestations : `id` part tel quel dans le mail (valeurs d'avant, au caractère près),
+ *  `label` est affiché. Les quatre autres valeurs d'avant restent acceptées par l'envoi. */
+const PROJETS: { id: string; label: string; Icon: () => JSX.Element }[] = [
   {
     id: 'Urgence dépannage',
-    label: 'Plus de\u00a0courant',
+    label: 'Plus de courant',
     Icon: () => (
       <svg {...svg}>
         <path d="M9 17h6M10 20h4" />
@@ -60,24 +48,12 @@ const TYPES: { id: string; label: string; Icon: () => JSX.Element }[] = [
   },
   {
     id: 'Disjoncteur qui saute',
-    label: 'Disjoncteur qui saute',
+    label: 'Disjoncteur qui saute',
     Icon: () => (
       <svg {...svg}>
         <rect x="6" y="2.5" width="12" height="19" rx="1" />
         <rect x="9.5" y="7" width="5" height="10" rx="0.5" />
         <path className="lf-bascule" d="M10.5 9.5h3" strokeWidth="2.6" />
-      </svg>
-    ),
-  },
-  {
-    id: 'Recherche de panne',
-    label: 'Recherche de panne',
-    Icon: () => (
-      <svg {...svg}>
-        <rect x="5" y="2.5" width="10" height="14" rx="1" />
-        <path d="M7.5 5.5h5v3h-5z" />
-        <path className="lf-aiguille" d="M10 12.5 12 10" />
-        <path d="M8 16.5 6 21.5M12 16.5l5.5 3 2.5-1" />
       </svg>
     ),
   },
@@ -97,19 +73,8 @@ const TYPES: { id: string; label: string; Icon: () => JSX.Element }[] = [
     ),
   },
   {
-    id: 'Diagnostic avant vente',
-    label: 'Diagnostic avant\u00a0vente',
-    Icon: () => (
-      <svg {...svg}>
-        <path d="M6 3h9l3 3v15H6z" />
-        <path className="lf-coche" d="m9 12 2 2 4-4" pathLength={1} />
-        <path d="M9 18h6" strokeWidth="1.3" />
-      </svg>
-    ),
-  },
-  {
     id: 'Rénovation électrique',
-    label: 'Rénovation, mise aux normes',
+    label: 'Rénovation, mise aux normes',
     Icon: () => (
       <svg {...svg}>
         <path d="M3 20c4 0 5-4 9-4s5 4 9 4" />
@@ -119,440 +84,483 @@ const TYPES: { id: string; label: string; Icon: () => JSX.Element }[] = [
       </svg>
     ),
   },
+]
+
+/** « C'est pour quand ? » : les deux valeurs d'avant, plus « Dans le mois » pour une rénovation. */
+const QUAND: { valeur: string; Icon: () => JSX.Element }[] = [
   {
-    id: 'Installation neuve',
-    label: 'Installation neuve',
+    valeur: "Aujourd'hui",
     Icon: () => (
       <svg {...svg}>
-        <rect x="3" y="3" width="18" height="18" rx="1" />
-        <circle cx="12" cy="12" r="5.5" />
-        <circle cx="9.6" cy="12" r="0.9" fill="currentColor" stroke="none" />
-        <circle cx="14.4" cy="12" r="0.9" fill="currentColor" stroke="none" />
-        <path className="lf-voyant" d="M12 7.6v1.2" strokeWidth="2" />
+        <path className="lf-clignote" d="M13 2 5 13.5h6L10 22l9-12h-6z" />
       </svg>
     ),
   },
   {
-    id: 'Autre',
-    label: 'Autre problème',
+    valeur: 'Cette semaine',
     Icon: () => (
       <svg {...svg}>
-        <circle cx="12" cy="12" r="9" />
-        <path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5v.4" />
-        <path d="M12 17h.01" />
+        <rect x="3.5" y="5" width="17" height="15.5" rx="1" />
+        <path d="M3.5 10h17M8 3v4M16 3v4" />
+        <path className="lf-module lf-m1" d="M7.5 14h2" strokeWidth="2.2" />
+        <path className="lf-module lf-m2" d="M11 14h2" strokeWidth="2.2" />
+        <path className="lf-module lf-m3" d="M14.5 14h2" strokeWidth="2.2" />
+      </svg>
+    ),
+  },
+  {
+    valeur: 'Dans le mois',
+    Icon: () => (
+      <svg {...svg}>
+        <rect x="3.5" y="5" width="17" height="15.5" rx="1" />
+        <path d="M3.5 10h17M8 3v4M16 3v4" />
+        <path d="M7.5 13.5h2M11 13.5h2M14.5 13.5h2M7.5 17h2M11 17h2" strokeWidth="1.5" />
+        <path className="lf-coche" d="m14 17 1.3 1.3 2.4-2.6" pathLength={1} />
       </svg>
     ),
   },
 ]
 
-/** Mêmes valeurs qu'avant la mise à jour. */
-const URGENCES = ["Aujourd'hui", 'Cette semaine'] as const
-
-const equilibre = '[text-wrap:balance]'
-
-/** Case de choix : vrai bouton radio dans un label. Un clic, Espace ou Entrée choisit ET avance ;
- *  les flèches du clavier choisissent seulement (on parcourt les cases sans quitter l'étape). */
-function Choix({
-  name,
-  value,
-  label,
-  checked,
-  onChoose,
-  icone,
-  compacte = false,
-}: {
-  name: string
-  value: string
-  label: string
-  checked: boolean
-  onChoose: (avancer: boolean) => void
-  icone?: ReactNode
-  compacte?: boolean
-}) {
-  return (
-    // Souris ou doigt : le relâchement sur la case choisit et avance (un défilement au doigt
-    // annule le geste, rien ne part) ; les flèches ne passent que par `onChange`.
-    <label className="group relative block h-full cursor-pointer" onPointerUp={() => onChoose(true)}>
-      <input
-        type="radio"
-        name={name}
-        value={value}
-        checked={checked}
-        onChange={() => onChoose(false)}
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault()
-            onChoose(true)
-          }
-        }}
-        className="peer sr-only"
-      />
-      <span
-        className={`flex h-full w-full items-center rounded-[3px] border font-medium leading-snug transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-accent peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-dark ${
-          compacte ? 'min-h-[48px] justify-center px-2 py-2 text-center text-[14px]' : 'min-h-[54px] justify-start gap-2.5 px-3 py-2 text-left text-[13px]'
-        } ${
-          checked
-            ? 'border-accent bg-accent text-dark'
-            : 'border-white/15 bg-white/[0.06] text-white/85 group-hover:border-white/40 group-hover:bg-white/[0.1] group-hover:text-white'
-        }`}
-      >
-        {icone && <span className={`shrink-0 ${checked ? 'text-dark' : 'text-accent'}`}>{icone}</span>}
-        <span className={equilibre}>{label}</span>
-      </span>
-    </label>
-  )
+const TITRES: Record<Etape, { titre: string; aide: string }> = {
+  1: { titre: 'Quel est votre projet ?', aide: 'Devis gratuit en 30 secondes.' },
+  2: { titre: "C'est pour quand ?", aide: 'Un clic, pour organiser notre passage.' },
+  3: { titre: 'Où vous rappeler ?', aide: 'Nous vous rappelons pour fixer le diagnostic.' },
 }
 
-function Retour({ onClick }: { onClick: () => void }) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      className="-ml-1 inline-flex min-h-[40px] items-center gap-1.5 rounded-[3px] px-1 text-sm font-medium text-white/75 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-    >
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-4 w-4" aria-hidden="true">
-        <path d="m15 18-6-6 6-6" />
-      </svg>
-      Retour
-    </button>
-  )
+const NOM_DU_MANQUE: Record<Manque, string> = {
+  nom: 'votre nom',
+  telephone: 'votre téléphone',
+  lieu: 'votre code postal',
 }
 
-function Etapes({ step, onRetour }: { step: Step; onRetour: () => void }) {
-  return (
-    <div>
-      <div className="flex gap-1.5" aria-hidden="true">
-        {([1, 2, 3] as Step[]).map((s) => (
-          <div key={s} className={`h-1 flex-1 rounded-[1px] transition-colors duration-300 ${s <= step ? 'bg-accent' : 'bg-white/15'}`} />
-        ))}
-      </div>
-      <div className="mt-2 flex min-h-[40px] items-center justify-between">
-        {step > 1 ? <Retour onClick={onRetour} /> : <span />}
-        <span className="text-xs font-semibold uppercase tracking-widest text-white/60">Étape {step} sur 3</span>
-      </div>
-    </div>
-  )
+/** Les communes d'un département (« 74 » : { "74600": ["Seynod", …] }), chargées une fois. */
+const cacheCp = new Map<string, Promise<Record<string, string[]>>>()
+function communesDuDepartement(deux: string) {
+  let p = cacheCp.get(deux)
+  if (!p) {
+    p = fetch(`/cp/${deux}.json`)
+      .then((r) => (r.ok ? r.json() : {}))
+      .catch(() => ({}))
+    cacheCp.set(deux, p)
+  }
+  return p
 }
 
-const champ =
-  'w-full rounded-[3px] border border-white/20 bg-white/[0.07] px-4 py-3 text-base text-white placeholder:text-white/40 transition focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/30'
-const etiquette = `mb-1.5 block text-sm font-medium text-white/85 ${equilibre}`
-const facultatif = <span className="font-normal text-white/55">facultatif</span>
-
-/** Icônes du formulaire : l'ampoule grésille, la manette retombe, l'aiguille bat, les modules
- *  s'allument un à un, la coche s'écrit, le voyant de la prise s'allume. Coupé si l'on demande
- *  moins de mouvement. */
+/** Icônes : l'ampoule grésille, la manette retombe, les modules s'allument un à un, la coche
+ *  s'écrit. Jouées seulement à l'écran (data-anime), coupées si l'on demande moins de mouvement. */
 const CSS_FORM = `
 @keyframes lf-clignote{0%,40%,48%,56%,100%{opacity:1}44%,52%{opacity:.15}}
 @keyframes lf-bascule{0%,55%{transform:translateY(0)}65%,90%{transform:translateY(5px)}100%{transform:translateY(0)}}
-@keyframes lf-aiguille{0%,100%{transform:rotate(-28deg)}50%{transform:rotate(18deg)}}
 @keyframes lf-module{0%,100%{opacity:.35}30%,70%{opacity:1}}
 @keyframes lf-coche{0%,15%{stroke-dashoffset:1}55%,100%{stroke-dashoffset:0}}
-@keyframes lf-voyant{0%,100%{opacity:.25}50%{opacity:1}}
 @keyframes lf-courant{0%{transform:translateY(0);opacity:1}100%{transform:translateY(5px);opacity:0}}
 .lf-clignote{animation:lf-clignote 3s linear infinite}
 .lf-bascule{animation:lf-bascule 3.2s ease-in-out infinite}
-.lf-aiguille{transform-box:fill-box;transform-origin:0% 100%;animation:lf-aiguille 2.4s ease-in-out infinite}
 .lf-module{animation:lf-module 2.8s ease-in-out infinite}
 .lf-m2{animation-delay:.35s}.lf-m3{animation-delay:.7s}.lf-m4{animation-delay:1.05s}
 .lf-coche{stroke-dasharray:1;animation:lf-coche 2.8s ease-out infinite}
-.lf-voyant{animation:lf-voyant 2.2s ease-in-out infinite}
 .lf-courant{animation:lf-courant 1.4s ease-in infinite}
-@keyframes lf-in{from{opacity:0;transform:translateX(12px)}to{opacity:1;transform:none}}
-.lf-etape{animation:lf-in .3s cubic-bezier(.22,1,.36,1)}
-@media (prefers-reduced-motion:reduce){.lf-clignote,.lf-bascule,.lf-aiguille,.lf-module,.lf-coche,.lf-voyant,.lf-courant,.lf-etape{animation:none}}`
+@media (prefers-reduced-motion:reduce){.lf-clignote,.lf-bascule,.lf-module,.lf-coche,.lf-courant{animation:none}}`
+
+/* Classes écrites en entier (jamais assemblées par variable, Tailwind les lit dans ce fichier). */
+const TUILE_FORME =
+  'flex min-h-[68px] w-full flex-col items-center justify-center gap-1.5 rounded-[4px] border px-1.5 py-2.5 transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:min-h-[88px] sm:gap-2.5 sm:px-2 sm:py-4 lg:items-start lg:px-4'
+const TUILE_LIBRE =
+  'border-white/15 bg-primary text-white [@media(hover:hover)]:hover:border-accent [@media(hover:hover)]:hover:bg-primary-dark'
+const TUILE_CHOISIE = 'border-accent bg-accent text-dark'
+const LIBELLE = 'whitespace-nowrap font-semibold leading-tight text-[clamp(12px,3.7vw,14.5px)]'
+const ETIQUETTE = 'mb-1.5 block text-[13px] font-semibold text-white/90'
+const CHAMP =
+  'w-full rounded-[4px] border bg-white/[0.07] px-3 py-2.5 text-[16px] text-white transition focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/30'
+const CHAMP_OK = 'border-white/20'
+const CHAMP_ROUGE = 'border-red-400 ring-1 ring-red-400'
 
 export interface LeadFormProps {
-  /**
-   * `hero` : formulaire du bloc 1 (colonne étroite, 2 colonnes de choix).
-   * `standard` : accueil (bas de page), contact et tarifs (4 colonnes dès la tablette).
-   */
-  variante?: 'standard' | 'hero'
+  /** Carte du premier écran (bloc 1) : translucide sur la photo, noire dès le premier choix. */
+  ecran1?: boolean
+  /** Préfixe des id de champs (deux formulaires peuvent vivre sur une même page). */
+  idPrefix?: string
 }
 
-export function LeadForm({ variante = 'standard' }: LeadFormProps) {
-  const hero = variante === 'hero'
-  const [step, setStep] = useState<Step>(1)
-  // Étape atteinte, comptée par `SuiviVisite` (Rémy 13/11/2026 : savoir à quelle étape on abandonne).
-  useEffect(() => {
-    if (step > 1) window.dispatchEvent(new CustomEvent('rr-etape', { detail: step }))
-  }, [step])
-  const [fields, setFields] = useState<Fields>({
-    probleme: '',
-    ville: '',
-    urgence: '',
-    nom: '',
-    telephone: '',
-    email: '',
-    message: '',
-  })
-  const [status, setStatus] = useState<'idle' | 'sending' | 'error'>('idle')
-  const [manque, setManque] = useState(false)
-  const [communeEtape3, setCommuneEtape3] = useState(false)
-  const titreRef = useRef<HTMLHeadingElement>(null)
+export function LeadForm({ ecran1 = false, idPrefix = 'devis-' }: LeadFormProps) {
+  const [etape, setEtape] = useState<Etape>(1)
+  const [projet, setProjet] = useState('')
+  const [urgence, setUrgence] = useState('')
+  const [nom, setNom] = useState('')
+  const [prenom, setPrenom] = useState('')
+  const [telephone, setTelephone] = useState('')
+  const [lieu, setLieu] = useState('')
+  const [precision, setPrecision] = useState('')
+  // La commune trouvée (« Seynod 74600 ») et les communes du code postal à toucher.
+  const [commune, setCommune] = useState('')
+  const [propositions, setPropositions] = useState<string[]>([])
+  const [manques, setManques] = useState<Manque[]>([])
+  const [statut, setStatut] = useState<'repos' | 'envoi' | 'erreur'>('repos')
+
   const racineRef = useRef<HTMLDivElement>(null)
+  const titreRef = useRef<HTMLHeadingElement>(null)
+  const aBouge = useRef(false)
   useAnimeEnVue(racineRef)
-  const premierRendu = useRef(true)
-  const minuteur = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
-  const fieldsRef = useRef(fields)
-  fieldsRef.current = fields
 
-  useEffect(() => () => clearTimeout(minuteur.current), [])
-
-  // Focus sur le titre de chaque nouvelle étape (jamais au chargement de la page).
+  // Nouvelle étape : le titre reçoit le focus (lecteurs d'écran) sans faire défiler, et l'étape
+  // est comptée par `SuiviVisite` (Rémy 13/11/2026 : savoir à quelle étape on abandonne).
   useEffect(() => {
-    if (premierRendu.current) {
-      premierRendu.current = false
-      return
-    }
+    if (!aBouge.current) return
     titreRef.current?.focus({ preventScroll: true })
-  }, [step])
+    if (etape > 1) window.dispatchEvent(new CustomEvent('rr-etape', { detail: etape }))
+  }, [etape])
 
-  function set<K extends keyof Fields>(key: K, value: Fields[K]) {
-    setFields((prev) => ({ ...prev, [key]: value }))
+  // La carte change de hauteur (étape, communes, cases en rouge) : elle revient entière à l'écran
+  // si une partie en est sortie (52 px : la barre fixe du bas, au téléphone). Jamais au chargement.
+  useEffect(() => {
+    if (!aBouge.current) return
+    const carte = racineRef.current
+    if (!carte) return
+    const r = carte.getBoundingClientRect()
+    const barreDuBas = window.innerWidth < 768 ? 60 : 12
+    if (r.top < 72 || r.bottom > window.innerHeight - barreDuBas) {
+      carte.scrollIntoView({ behavior: 'instant' as ScrollBehavior, block: 'nearest' })
+    }
+  }, [etape, manques.length, propositions.length, commune])
+
+  // Dès deux chiffres, le département se charge ; au cinquième, la commune est trouvée. Une seule :
+  // retenue toute seule. Plusieurs : proposées à toucher. Code inconnu : le code postal part seul.
+  useEffect(() => {
+    if (lieu.length < 2) return
+    let fini = false
+    communesDuDepartement(lieu.slice(0, 2)).then((codes) => {
+      if (fini || lieu.length !== 5 || commune) return
+      const noms = codes[lieu] ?? []
+      if (noms.length === 1) setCommune(`${noms[0]} ${lieu}`)
+      else setPropositions(noms)
+    })
+    return () => {
+      fini = true
+    }
+  }, [lieu, commune])
+
+  function allerA(n: Etape) {
+    aBouge.current = true
+    setEtape(n)
   }
 
-  function aller(vers: Step) {
-    clearTimeout(minuteur.current)
-    if (vers === 3) setCommuneEtape3(!fieldsRef.current.ville.trim())
-    setManque(false)
-    setStep(vers)
+  function retirerManque(cle: Manque) {
+    setManques((prev) => (prev.includes(cle) ? prev.filter((m) => m !== cle) : prev))
   }
 
-  function avancerBientot(vers: Step) {
-    clearTimeout(minuteur.current)
-    minuteur.current = setTimeout(() => aller(vers), AVANCE_MS)
+  function saisirLieu(valeur: string) {
+    setLieu(valeur.replace(/\D/g, '').slice(0, 5))
+    setCommune('')
+    setPropositions([])
+    retirerManque('lieu')
   }
 
-  async function submit(e: FormEvent) {
-    e.preventDefault()
-    if (!fields.nom.trim() || !fields.telephone.trim() || !fields.ville.trim()) {
-      setManque(true)
-      if (!fields.ville.trim()) setCommuneEtape3(true)
+  const id = (cle: string) => `${idPrefix}${cle}`
+
+  async function envoyer() {
+    const cp = lieu.trim()
+    const oublis: Manque[] = []
+    if (!nom.trim()) oublis.push('nom')
+    if (telephone.replace(/\D/g, '').length < 8) oublis.push('telephone')
+    if (cp.length !== 5) oublis.push('lieu')
+    setManques(oublis)
+    if (oublis.length > 0) {
+      document.getElementById(id(oublis[0]))?.focus()
       return
     }
-    setManque(false)
-    setStatus('sending')
+
+    // Mêmes clés, même ordre qu'avant le 16/11/2026.
+    const champs = {
+      probleme: projet,
+      ville: commune || cp,
+      urgence,
+      nom: [prenom.trim(), nom.trim()].filter(Boolean).join(' '),
+      telephone: telephone.trim(),
+      email: '',
+      message: [urgence ? `Urgence : ${urgence}` : '', precision.trim()].filter(Boolean).join('\n'),
+    }
+
+    setStatut('envoi')
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...fields, company: '' }),
+        body: JSON.stringify({ ...champs, company: '' }),
       })
       if (!res.ok) throw new Error()
       window.location.href = '/merci'
     } catch {
-      setStatus('error')
+      setStatut('erreur')
     }
   }
 
-  const Titre = hero ? 'h2' : 'h3'
-  const titreClasses = `mt-3 font-display font-semibold leading-tight text-white outline-none ${equilibre} ${hero ? 'text-[1.4rem]' : 'text-xl md:text-2xl'}`
+  const carte = ecran1
+    ? projet
+      ? 'border-white/10 bg-dark'
+      : 'border-white/20 bg-dark/55 backdrop-blur-[2px]'
+    : 'border-white/10 bg-dark'
+
+  const champ = (cle?: Manque) => `${CHAMP} ${cle && manques.includes(cle) ? CHAMP_ROUGE : CHAMP_OK}`
 
   return (
     <div
-      data-clic-formulaire
       ref={racineRef}
+      data-clic-formulaire
+      data-lead-form=""
       data-anime=""
-      className={`relative rounded-[3px] bg-dark text-center text-white shadow-[0_24px_60px_-20px_rgb(0_0_0/0.55)] lg:text-left ${hero ? 'p-5 md:p-7' : 'p-6 md:p-8'}`}
       role="region"
-      aria-label="Formulaire de demande"
+      aria-label="Formulaire de devis gratuit"
+      className={`scroll-mb-20 scroll-mt-24 rounded-[4px] border p-5 text-center text-white shadow-[0_30px_70px_-30px_rgb(0_0_0/0.8)] transition-colors duration-300 sm:p-7 lg:text-left ${carte}`}
     >
       <style>{CSS_FORM}</style>
-      <form onSubmit={submit} noValidate>
-        {/* Piège à robots, invisible pour les humains. */}
-        <div className="hidden" aria-hidden="true">
-          <input type="text" name="company" tabIndex={-1} autoComplete="off" readOnly />
+      {/* Piège à robots, toujours vide */}
+      <div className="hidden" aria-hidden="true">
+        <input type="text" name="company" tabIndex={-1} autoComplete="off" readOnly />
+      </div>
+
+      {/* Progression, avec « Retour » dès l'étape 2 */}
+      <div className="flex items-center gap-3">
+        {etape > 1 && (
+          <button
+            type="button"
+            onClick={() => allerA((etape - 1) as Etape)}
+            className="-my-2 -ml-1 inline-flex shrink-0 items-center gap-1 rounded-[4px] py-2 pl-1 pr-1.5 text-[13px] font-semibold text-white/80 transition-colors hover:text-white"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" aria-hidden="true">
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+            Retour
+          </button>
+        )}
+        <div className="flex flex-1 gap-1.5" aria-hidden="true">
+          {([1, 2, 3] as Etape[]).map((n) => (
+            <span
+              key={n}
+              className={`h-1 flex-1 rounded-[2px] transition-colors duration-300 ${
+                n < etape ? 'bg-accent/50' : n === etape ? 'bg-accent' : 'bg-white/15'
+              }`}
+            />
+          ))}
         </div>
+        <span className="shrink-0 text-[11.5px] font-bold uppercase tracking-[0.14em] text-white/65">Étape {etape}/3</span>
+      </div>
 
-        <Etapes step={step} onRetour={() => aller((step - 1) as Step)} />
+      <h3 ref={titreRef} tabIndex={-1} className="mt-4 font-display text-[1.3rem] font-semibold tracking-tight text-white outline-none sm:mt-5 sm:text-[1.55rem]">
+        {TITRES[etape].titre}
+      </h3>
+      <p className="mt-1 whitespace-nowrap text-[13.5px] text-white/75">{TITRES[etape].aide}</p>
 
-        <div key={step} className="lf-etape">
-          {step === 1 && (
-            <fieldset>
-              <legend className="w-full">
-                <Titre ref={titreRef} tabIndex={-1} className={titreClasses}>
-                  Quelle est la panne ?
-                </Titre>
-              </legend>
-              <div className={`mt-4 grid grid-cols-2 gap-2 ${hero ? '' : 'md:grid-cols-4'}`}>
-                {TYPES.map(({ id, label, Icon }) => (
-                  <Choix
-                    key={id}
-                    name="probleme"
-                    value={id}
-                    label={label}
-                    checked={fields.probleme === id}
-                    onChoose={(avancer) => {
-                      set('probleme', id)
-                      if (avancer) avancerBientot(2)
-                    }}
-                    icone={<Icon />}
-                  />
-                ))}
-              </div>
-            </fieldset>
-          )}
-
-          {step === 2 && (
-            <div>
-              <Titre ref={titreRef} tabIndex={-1} className={titreClasses}>
-                Où, et pour quand ?
-              </Titre>
-              <div className="mt-4">
-                <label htmlFor={`ville-${variante}`} className={etiquette}>
-                  Commune ou code postal
-                </label>
-                <input
-                  id={`ville-${variante}`}
-                  name="ville"
-                  type="text"
-                  autoComplete="postal-code"
-                  placeholder="Annecy, Seynod, 74000"
-                  value={fields.ville}
-                  onChange={(e) => set('ville', e.target.value)}
-                  className={champ}
-                />
-              </div>
-              <fieldset className="mt-4">
-                <legend className={etiquette}>Votre urgence</legend>
-                <div className="grid grid-cols-2 gap-2">
-                  {URGENCES.map((u) => (
-                    <Choix
-                      key={u}
-                      name="urgence"
-                      value={u}
-                      label={u}
-                      compacte
-                      checked={fields.urgence === u}
-                      onChoose={(avancer) => {
-                        set('urgence', u)
-                        if (avancer) avancerBientot(3)
-                      }}
-                    />
-                  ))}
-                </div>
-              </fieldset>
-            </div>
-          )}
-
-          {step === 3 && (
-            <div>
-              <Titre ref={titreRef} tabIndex={-1} className={titreClasses}>
-                Comment vous joindre ?
-              </Titre>
-              <div className="mt-4 space-y-3">
-                {communeEtape3 && (
-                  <div>
-                    <label htmlFor={`ville3-${variante}`} className={etiquette}>
-                      Commune ou code postal
-                    </label>
-                    <input
-                      id={`ville3-${variante}`}
-                      name="ville"
-                      type="text"
-                      autoComplete="postal-code"
-                      required
-                      value={fields.ville}
-                      onChange={(e) => set('ville', e.target.value)}
-                      className={champ}
-                    />
-                  </div>
-                )}
-                <div className={`grid gap-3 ${hero ? '' : 'sm:grid-cols-2'}`}>
-                  <div>
-                    <label htmlFor={`nom-${variante}`} className={etiquette}>
-                      Nom
-                    </label>
-                    <input
-                      id={`nom-${variante}`}
-                      name="nom"
-                      type="text"
-                      required
-                      autoComplete="name"
-                      value={fields.nom}
-                      onChange={(e) => set('nom', e.target.value)}
-                      className={champ}
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor={`telephone-${variante}`} className={etiquette}>
-                      Téléphone
-                    </label>
-                    <input
-                      id={`telephone-${variante}`}
-                      name="telephone"
-                      type="tel"
-                      required
-                      autoComplete="tel"
-                      inputMode="tel"
-                      value={fields.telephone}
-                      onChange={(e) => set('telephone', e.target.value)}
-                      className={champ}
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor={`email-${variante}`} className={etiquette}>
-                    Email {facultatif}
-                  </label>
-                  <input
-                    id={`email-${variante}`}
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    value={fields.email}
-                    onChange={(e) => set('email', e.target.value)}
-                    className={champ}
-                  />
-                </div>
-                {!hero && (
-                  <div>
-                    <label htmlFor={`message-${variante}`} className={etiquette}>
-                      Précisions {facultatif}
-                    </label>
-                    <textarea
-                      id={`message-${variante}`}
-                      name="message"
-                      rows={3}
-                      value={fields.message}
-                      onChange={(e) => set('message', e.target.value)}
-                      className={`${champ} resize-none`}
-                    />
-                  </div>
-                )}
-              </div>
-
-              {manque && (
-                <p role="alert" className="mt-3 text-sm font-medium text-accent">
-                  Il manque {!fields.ville.trim() ? 'la commune, ' : ''}votre nom ou votre téléphone.
-                </p>
-              )}
-              {status === 'error' && (
-                <p role="alert" className="mt-3 text-sm font-medium text-accent">
-                  L&apos;envoi a échoué. Appelez-nous au {siteConfig.phoneDisplay}.
-                </p>
-              )}
-
+      {/* ── Étape 1 : la prestation, un clic avance ─────────────────────── */}
+      {etape === 1 && (
+        <div className="mt-4 grid grid-cols-2 gap-2 sm:mt-5 sm:gap-2.5">
+          {PROJETS.map(({ id: valeur, label, Icon }) => {
+            const choisi = projet === valeur
+            return (
               <button
-                type="submit"
-                disabled={status === 'sending'}
-                className="mt-4 inline-flex min-h-[52px] w-full items-center justify-center rounded-[3px] bg-accent px-6 text-[15px] font-bold text-dark transition hover:bg-accent/90 disabled:cursor-wait disabled:opacity-70"
+                key={valeur}
+                type="button"
+                data-clic-formulaire
+                aria-pressed={choisi}
+                onClick={() => {
+                  setProjet(valeur)
+                  allerA(2)
+                }}
+                className={`${TUILE_FORME} ${choisi ? TUILE_CHOISIE : TUILE_LIBRE}`}
               >
-                {status === 'sending' ? 'Envoi en cours' : 'Être rappelé'}
+                <span className={choisi ? 'text-dark' : 'text-accent'}>
+                  <Icon />
+                </span>
+                <span className={LIBELLE}>{label}</span>
               </button>
-              <p className={`mt-3 text-xs leading-relaxed text-white/55 ${equilibre}`}>
-                Vos données servent à vous rappeler, jamais revendues.{' '}
-                <a href="/politique-confidentialite" className="text-white/70 underline hover:text-white">
-                  Confidentialité
-                </a>
-              </p>
+            )
+          })}
+        </div>
+      )}
+
+      {/* ── Étape 2 : quand, un clic avance (la 3e case prend toute la ligne) ── */}
+      {etape === 2 && (
+        <div className="mt-4 grid grid-cols-2 gap-2 sm:mt-5 sm:gap-2.5">
+          {QUAND.map(({ valeur, Icon }, i) => {
+            const choisi = urgence === valeur
+            return (
+              <div key={valeur} className={i === QUAND.length - 1 ? 'col-span-2' : ''}>
+                <button
+                  type="button"
+                  data-clic-formulaire
+                  aria-pressed={choisi}
+                  onClick={() => {
+                    setUrgence(valeur)
+                    allerA(3)
+                  }}
+                  className={`${TUILE_FORME} ${choisi ? TUILE_CHOISIE : TUILE_LIBRE}`}
+                >
+                  <span className={choisi ? 'text-dark' : 'text-accent'}>
+                    <Icon />
+                  </span>
+                  <span className={LIBELLE}>{valeur}</span>
+                </button>
+              </div>
+            )
+          })}
+        </div>
+      )}
+
+      {/* ── Étape 3 : deux champs par ligne, puis l'envoi ──────────────── */}
+      {etape === 3 && (
+        <div className="mt-4 text-left sm:mt-5">
+          <div className="grid grid-cols-2 gap-x-2.5 gap-y-3">
+            <div>
+              <label htmlFor={id('nom')} className={ETIQUETTE}>
+                Nom
+              </label>
+              <input
+                id={id('nom')}
+                name="nom"
+                type="text"
+                autoComplete="family-name"
+                autoCapitalize="words"
+                aria-invalid={manques.includes('nom')}
+                value={nom}
+                onChange={(e) => {
+                  setNom(e.target.value)
+                  retirerManque('nom')
+                }}
+                className={champ('nom')}
+              />
+            </div>
+            <div>
+              <label htmlFor={id('prenom')} className={ETIQUETTE}>
+                Prénom
+              </label>
+              <input
+                id={id('prenom')}
+                name="prenom"
+                type="text"
+                autoComplete="given-name"
+                autoCapitalize="words"
+                value={prenom}
+                onChange={(e) => setPrenom(e.target.value)}
+                className={champ()}
+              />
+            </div>
+            <div>
+              <label htmlFor={id('telephone')} className={ETIQUETTE}>
+                Téléphone
+              </label>
+              <input
+                id={id('telephone')}
+                name="telephone"
+                type="tel"
+                autoComplete="tel"
+                inputMode="tel"
+                aria-invalid={manques.includes('telephone')}
+                value={telephone}
+                onChange={(e) => {
+                  setTelephone(e.target.value)
+                  retirerManque('telephone')
+                }}
+                className={champ('telephone')}
+              />
+            </div>
+            <div>
+              <label htmlFor={id('lieu')} className={ETIQUETTE}>
+                Code postal
+              </label>
+              <input
+                id={id('lieu')}
+                name="ville"
+                type="text"
+                autoComplete="postal-code"
+                inputMode="numeric"
+                maxLength={5}
+                aria-invalid={manques.includes('lieu')}
+                value={lieu}
+                onChange={(e) => saisirLieu(e.target.value)}
+                className={champ('lieu')}
+              />
+            </div>
+          </div>
+
+          {/* La commune trouvée, ou les communes du code postal à toucher (une ligne qui défile). */}
+          {commune && (
+            <p className="mt-2 flex items-center justify-center gap-1.5 text-[13px] font-semibold text-accent lg:justify-end">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="m5 12.5 4.5 4.5L19 7.5" />
+              </svg>
+              {commune}
+            </p>
+          )}
+          {!commune && propositions.length > 0 && (
+            <div className="mt-2 flex w-0 min-w-full gap-1.5 overflow-x-auto pb-1" role="group" aria-label="Votre commune">
+              {propositions.map((p) => (
+                <button
+                  key={p}
+                  type="button"
+                  onClick={() => {
+                    setCommune(`${p} ${lieu}`)
+                    setPropositions([])
+                  }}
+                  className="shrink-0 whitespace-nowrap rounded-[4px] border border-white/20 bg-white/[0.06] px-2.5 py-1.5 text-[13px] font-semibold text-white hover:border-accent"
+                >
+                  {p}
+                </button>
+              ))}
             </div>
           )}
+
+          <div className="mt-3">
+            <label htmlFor={id('precision')} className={ETIQUETTE}>
+              Précisions <span className="font-normal text-white/60">(facultatif)</span>
+            </label>
+            <input
+              id={id('precision')}
+              name="message"
+              type="text"
+              maxLength={300}
+              value={precision}
+              onChange={(e) => setPrecision(e.target.value)}
+              className={champ()}
+            />
+          </div>
+
+          {manques.length > 0 && (
+            <p role="alert" className="mt-3 text-center text-[13px] font-semibold text-red-300 lg:text-left">
+              Complétez les cases en rouge.
+              <span className="sr-only"> Il nous manque {manques.map((m) => NOM_DU_MANQUE[m]).join(' et ')}.</span>
+            </p>
+          )}
+          {statut === 'erreur' && (
+            <p role="alert" className="mt-3 rounded-[4px] bg-red-500/15 px-4 py-3 text-[14px] font-medium text-red-200">
+              L&apos;envoi a échoué. Appelez-nous au {siteConfig.phoneDisplay}.
+            </p>
+          )}
+
+          <button
+            type="button"
+            onClick={envoyer}
+            disabled={statut === 'envoi'}
+            data-cta={ecran1 ? 'devis-hero-carte' : 'devis-envoi'}
+            className="mt-4 inline-flex min-h-[52px] w-full items-center justify-center whitespace-nowrap rounded-[4px] bg-accent px-6 text-[15px] font-bold text-dark transition hover:bg-accent/90 disabled:cursor-wait disabled:opacity-70"
+          >
+            {statut === 'envoi' ? 'Envoi en cours…' : 'Demander mon devis gratuit'}
+          </button>
+          <p className="mt-2.5 text-center text-[13px] text-white/75 lg:text-left">
+            ou appelez le{' '}
+            <a href={`tel:${siteConfig.phone}`} data-cta="phone-form" className="font-semibold text-white underline underline-offset-2 hover:text-accent">
+              {siteConfig.phoneDisplay}
+            </a>
+          </p>
+          <p className="mt-1.5 text-center text-[12px] text-white/55 lg:text-left">
+            Uniquement pour vous rappeler.{' '}
+            <a href="/politique-confidentialite" className="underline underline-offset-2 hover:text-white">
+              Confidentialité
+            </a>
+          </p>
         </div>
-      </form>
+      )}
     </div>
   )
 }
 
 export default LeadForm
+

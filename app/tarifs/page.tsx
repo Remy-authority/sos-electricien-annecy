@@ -169,7 +169,7 @@ export default function TarifsPage() {
 
       <Faq items={tarifs.faq} title="Questions fréquentes sur nos tarifs" />
 
-      {/* Formulaire du site (LeadForm inchangé), en bas de page */}
+      {/* Le formulaire court du site (16/11/2026, #R84), en bas de page */}
       <section id="devis" className="section bg-light" aria-labelledby="devis-tarifs">
         <div className="container-site">
           <div className="mx-auto max-w-2xl">
@@ -180,7 +180,9 @@ export default function TarifsPage() {
               </h2>
               <p className="mt-3 leading-relaxed text-slate-600">{tarifs.formulaire.texte}</p>
             </div>
-            <LeadForm />
+            <div className="mx-auto max-w-xl">
+              <LeadForm />
+            </div>
           </div>
         </div>
       </section>

@@ -4,7 +4,6 @@ import { siteConfig } from '@/config/site.config'
 import { buildMetadata } from '@/lib/seo'
 import { getServices, getZones } from '@/lib/content'
 import LeadForm from '@/components/ui/LeadForm'
-import PhoneButton from '@/components/ui/PhoneButton'
 import Faq from '@/components/ui/Faq'
 import { ServiceIcon } from '@/components/ui/ServiceIcon'
 
@@ -50,27 +49,42 @@ export default function ContactPage() {
 
   return (
     <>
+      {/* Formulaire d'abord (16/11/2026, #R84) : le titre sur fond clair, puis la carte noire, sans
+          photo ni encadré d'appel au-dessus. Les coordonnées viennent après. */}
       <section className="container-site section">
-        <div className="grid gap-10 lg:grid-cols-2">
-          <div className="text-center lg:text-left">
+        <div className="mx-auto max-w-xl">
+          <div className="text-center">
             <h1 className="text-3xl md:text-4xl">Contact et devis</h1>
-            <p className="mt-4 text-slate-600">
+            <p className="mt-3 text-balance text-slate-600">
               Panne électrique à {siteConfig.city} ou alentour, tableau à remettre aux normes, diagnostic
-              avant une vente, appelez-nous ou décrivez votre besoin dans le formulaire en 3 étapes.
+              avant une vente : décrivez votre besoin dans le formulaire en 3 étapes.
             </p>
-            <div className="mt-6 space-y-3 text-slate-700">
-              <p><strong className="block text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Téléphone</strong>{siteConfig.phoneDisplay}</p>
-              <p><strong className="block text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Email</strong>{siteConfig.email}</p>
-              <p><strong className="block text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Disponibilité</strong>{siteConfig.availability}</p>
-              <p><strong className="block text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Zone</strong>{siteConfig.serviceArea.base} + rayon ~{siteConfig.serviceArea.radiusKm} km</p>
-            </div>
-            <div className="mt-6 flex justify-center lg:justify-start">
-              <PhoneButton label={`Appeler ${siteConfig.phoneDisplay}`} />
-            </div>
           </div>
-          <div id="formulaire">
+          <div id="formulaire" className="mt-7 scroll-mt-24">
             <LeadForm />
           </div>
+          <dl className="mt-8 grid grid-cols-2 gap-x-4 gap-y-4 text-center text-sm text-slate-700 sm:text-left">
+            <div>
+              <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Téléphone</dt>
+              <dd className="mt-1">
+                <a href={`tel:${siteConfig.phone}`} data-cta="phone-contact" className="font-semibold text-primary underline-offset-2 hover:underline">
+                  {siteConfig.phoneDisplay}
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Email</dt>
+              <dd className="mt-1 break-words">{siteConfig.email}</dd>
+            </div>
+            <div>
+              <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Disponibilité</dt>
+              <dd className="mt-1">{siteConfig.availability}</dd>
+            </div>
+            <div>
+              <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Zone</dt>
+              <dd className="mt-1">{siteConfig.serviceArea.base} + rayon ~{siteConfig.serviceArea.radiusKm} km</dd>
+            </div>
+          </dl>
         </div>
       </section>
 

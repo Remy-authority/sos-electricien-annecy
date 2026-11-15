@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useLayoutEffect, useRef, useState, type MouseEvent } from 'react'
 import dynamic from 'next/dynamic'
+import { flushSync } from 'react-dom'
 import { LeadForm } from '@/components/ui/LeadForm'
 import { CSS_MUR, VISE, placerLoupe, poserMur } from '@/components/ui/mur-annecy-logique'
 import { siteConfig } from '@/config/site.config'
@@ -16,8 +17,9 @@ const MurAnnecy = dynamic(() => import('@/components/ui/MurAnnecy'), { ssr: fals
  * tableau tout propre. Cinq temps, pilotés par le défilement :
  *
  *  1. ÉCRAN 1   un mur gris, le tableau ouvert, la lampe, la baie sur le lac d'Annecy ; le titre
- *               sur le mur, deux boutons de même forme, le formulaire noir (à droite sur
- *               ordinateur, après la séquence sur téléphone).
+ *               sur le mur, le formulaire court (#R84) translucide sur la photo puis noir au
+ *               premier choix : à droite sur ordinateur, sous le titre au téléphone. Formulaire
+ *               touché = film annulé pour de bon (16/11/2026).
  *  2. AVANCÉE   texte et formulaire s'effacent, la caméra s'approche du tableau.
  *  3. LE MUR    il devient transparent en cercle à partir du tableau, la caméra recule : les
  *               gaines se tracent une à une (éclairage, boîte de dérivation, interrupteur,
@@ -117,7 +119,8 @@ const versCentre = (a: Camera, b: Camera, e: number, cx: number, cy: number): Ca
 /* La scène : hauteur d'un écran sous l'en-tête. `--lw` est la largeur de la photo à l'écran 1
    (le tableau au centre, la photo calée en bas, assez haute pour cacher la bande de plafond). */
 const CSS = `
-.bt{--haut:64px;--hs:max(calc(100svh - var(--haut)),560px)}
+.bt{--haut:64px;--hs:max(calc(100svh - var(--haut)),440px)}
+@media (min-width:768px){.bt{--hs:max(calc(100svh - var(--haut)),560px)}}
 @media (min-width:1024px){.bt{--hs:max(calc(100vh - var(--haut)),640px)}}
 .bt-piste{position:relative}
 .bt-scene{position:relative;overflow:hidden;height:var(--hs);--lw:max(${((L / (2 * VISE.x)) * 100).toFixed(3)}%,calc(var(--hs) * ${(L / (H - PLAFOND)).toFixed(5)}),100%)}
@@ -128,8 +131,15 @@ const CSS = `
 .bt-photo,.bt-net{position:absolute;left:0;top:0;width:100%;height:100%;max-width:none}
 .bt-net{visibility:hidden}
 @media ${MEDIA_TEL}{.bt-photo{left:${((TEL.x / L) * 100).toFixed(4)}%;top:${((TEL.y / H) * 100).toFixed(4)}%;width:${((TEL.w / L) * 100).toFixed(4)}%;height:${((TEL.h / H) * 100).toFixed(4)}%}}
-.bt-grille{display:grid;grid-template-columns:minmax(0,1fr);height:100%}
-@media (min-width:1024px){.bt-grille{width:min(100%,calc(56rem + 3rem + 4rem + ${((277 / (2 * VISE.x)) * 100).toFixed(2)}vw + 1rem));margin:0 auto;padding:0 2rem;column-gap:1.5rem;grid-template-columns:minmax(0,28rem) calc(${((277 / (2 * VISE.x)) * 100).toFixed(2)}vw + 1rem) minmax(0,28rem)}}
+/* Téléphone et tablette : titre puis formulaire, centrés dans la hauteur visible (au-dessus de la
+   barre fixe du bas au téléphone). */
+.bt-grille{display:grid;grid-template-columns:minmax(0,1fr);height:100%;align-content:center;padding:14px 0 66px}
+@media (min-width:768px){.bt-grille{padding:28px 0}}
+/* Formulaire touché : plus de film, la scène prend la hauteur du formulaire (étape 3). */
+.bt[data-annule] .bt-scene{height:auto;min-height:var(--hs)}
+.bt[data-annule] .bt-calque{position:relative;inset:auto}
+.bt[data-annule] .bt-grille{height:auto;min-height:var(--hs)}
+@media (min-width:1024px){.bt-grille{align-content:stretch;width:min(100%,calc(56rem + 3rem + 4rem + ${((277 / (2 * VISE.x)) * 100).toFixed(2)}vw + 1rem));margin:0 auto;padding:0 2rem;column-gap:1.5rem;grid-template-columns:minmax(0,28rem) calc(${((277 / (2 * VISE.x)) * 100).toFixed(2)}vw + 1rem) minmax(0,28rem)}}
 @keyframes bt-appel{0%,100%{transform:rotate(0)}8%{transform:rotate(-14deg)}16%{transform:rotate(12deg)}24%{transform:rotate(-8deg)}32%{transform:rotate(0)}}
 .bt-appel{animation:bt-appel 3.2s ease-in-out infinite;transform-origin:50% 60%}
 @keyframes bt-veille{0%,100%{opacity:1}50%{opacity:.35}}
@@ -139,9 +149,10 @@ ${CSS_MUR}`
 
 export function HeroTableau() {
   const [mode, setMode] = useState<'fixe' | 'sequence' | 'repli'>('fixe')
-  // Un seul formulaire dans la page : à droite sur ordinateur (rendu du serveur), après la
-  // séquence sur téléphone et tablette.
-  const [formEnBas, setFormEnBas] = useState(false)
+  // Formulaire touché (16/11/2026, #R84) : le film est annulé pour de bon, le défilement mène
+  // directement au bloc 2 (jamais un dessin figé sous le formulaire).
+  const [annule, setAnnule] = useState(false)
+  const fige = useRef(false)
 
   const sectionRef = useRef<HTMLElement>(null)
   const pisteRef = useRef<HTMLDivElement>(null)
@@ -163,11 +174,23 @@ export function HeroTableau() {
   }, [])
 
   useEffect(() => {
-    const mq = window.matchMedia('(min-width: 1024px)')
-    const placerForm = () => setFormEnBas(!mq.matches)
-    placerForm()
-    mq.addEventListener('change', placerForm)
-    return () => mq.removeEventListener('change', placerForm)
+    const poser = (e: Event) => {
+      if (fige.current) return
+      const carte = (e.target as HTMLElement | null)?.closest?.<HTMLElement>('[data-clic-formulaire]')
+      if (!carte || !sectionRef.current?.contains(carte)) return
+      fige.current = true
+      // La carte reste sous le doigt : la piste du film disparaît, on recale le défilement.
+      const avant = carte.getBoundingClientRect().top
+      flushSync(() => setAnnule(true))
+      const ecart = carte.getBoundingClientRect().top - avant
+      if (Math.abs(ecart) > 0.5) window.scrollBy({ top: ecart, behavior: 'instant' as ScrollBehavior })
+    }
+    document.addEventListener('pointerdown', poser, true)
+    document.addEventListener('focusin', poser)
+    return () => {
+      document.removeEventListener('pointerdown', poser, true)
+      document.removeEventListener('focusin', poser)
+    }
   }, [])
 
   useEffect(() => {
@@ -191,7 +214,7 @@ export function HeroTableau() {
   }, [])
 
   effetAvantPeinture(() => {
-    if (mode !== 'sequence') return
+    if (mode !== 'sequence' || annule) return
     const section = sectionRef.current!
     const piste = pisteRef.current!
     const scene = sceneRef.current!
@@ -331,23 +354,29 @@ export function HeroTableau() {
       grand.removeEventListener('change', retailler)
       if (raf) cancelAnimationFrame(raf)
       for (const el of [plancheRef.current, photoRef.current, netRef.current, calqueRef.current]) el?.removeAttribute('style')
+      const plan = planRef.current
+      if (plan) {
+        plan.style.transform = ''
+        plan.style.visibility = 'hidden'
+        plan.removeAttribute('data-en-vue')
+      }
     }
-  }, [mode])
+  }, [mode, annule])
 
   // « Être rappelé » : sur ordinateur, le formulaire est déjà là, on y met le focus.
   const versFormulaire = (e: MouseEvent<HTMLAnchorElement>) => {
     if (!window.matchMedia('(min-width: 1024px)').matches) return
-    const cible = formRef.current?.querySelector<HTMLInputElement>('input[type="radio"]')
+    const cible = formRef.current?.querySelector<HTMLButtonElement>('button[aria-pressed]')
     if (!cible) return
     e.preventDefault()
     window.scrollTo({ top: 0, behavior: 'smooth' })
     cible.focus({ preventScroll: true })
   }
 
-  const sequence = mode === 'sequence'
+  const sequence = mode === 'sequence' && !annule
   return (
     <>
-      <section ref={sectionRef} id="top" aria-labelledby="titre-hero" data-seq={sequence ? '' : undefined} className="bt relative isolate bg-[#3B3E43] [overflow-x:clip]">
+      <section ref={sectionRef} id="top" aria-labelledby="titre-hero" data-seq={sequence ? '' : undefined} data-annule={annule ? '' : undefined} className="bt relative isolate bg-[#3B3E43] [overflow-x:clip]">
         <style>{CSS}</style>
         <div ref={pisteRef} className="bt-piste">
           <div ref={sceneRef} className="bt-scene bg-[#3B3E43]">
@@ -376,10 +405,10 @@ export function HeroTableau() {
             </div>
 
             {/* Écran 1 : le titre sur le mur, le formulaire à droite (ordinateur). */}
-            <div ref={calqueRef} className="absolute inset-0 z-10">
+            <div ref={calqueRef} className="bt-calque absolute inset-0 z-10">
               <div className="bt-grille">
-                <div className="flex flex-col items-center px-5 pt-[calc(1.25rem+4svh)] text-center sm:px-8 lg:col-start-1 lg:items-start lg:justify-center lg:px-0 lg:pt-0 lg:text-left">
-                  <p className="flex items-center gap-2.5 text-[12px] font-semibold uppercase tracking-[0.16em] text-accent [text-shadow:0_1px_8px_rgb(0_0_0/0.5)] lg:text-[13px]">
+                <div className="flex flex-col items-center px-5 text-center sm:px-8 lg:col-start-1 lg:row-start-1 lg:items-start lg:justify-center lg:px-0 lg:text-left">
+                  <p className="flex max-md:[@media(max-height:700px)]:hidden items-center gap-2.5 text-[12px] font-semibold uppercase tracking-[0.16em] text-accent [text-shadow:0_1px_8px_rgb(0_0_0/0.5)] lg:text-[13px]">
                     <span className="bt-veille h-2 w-2 rounded-full bg-accent" aria-hidden="true" />
                     Dépannage {siteConfig.availability}
                   </p>
@@ -395,7 +424,7 @@ export function HeroTableau() {
                   <p className="mt-3 max-w-[19.5rem] text-[15px] leading-relaxed text-white/90 [text-shadow:0_1px_10px_rgb(0_0_0/0.55)] sm:max-w-md sm:text-base lg:mt-5 lg:max-w-[26rem] lg:text-[17.5px]">
                     Panne de courant, disjoncteur qui saute ou tableau à refaire. Nous trouvons l'origine avant de réparer.
                   </p>
-                  <div className="mt-5 grid w-full max-w-[22rem] grid-cols-2 gap-2 sm:max-w-md lg:mt-8 lg:flex lg:w-auto lg:max-w-none lg:gap-2.5">
+                  <div className="mt-6 hidden justify-center gap-2.5 md:flex lg:mt-8">
                     <a
                       href={`tel:${siteConfig.phone}`}
                       data-cta="phone-hero"
@@ -410,7 +439,7 @@ export function HeroTableau() {
                     <a
                       href="#formulaire"
                       onClick={versFormulaire}
-                      className="inline-flex h-12 items-center justify-center gap-2 whitespace-nowrap rounded-[3px] bg-white px-3 text-[14px] font-bold text-dark transition hover:bg-slate-100 sm:px-6 sm:text-[15px]"
+                      className="hidden h-12 lg:inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-[3px] bg-white px-3 text-[14px] font-bold text-dark transition hover:bg-slate-100 sm:px-6 sm:text-[15px]"
                     >
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-[18px] w-[18px] shrink-0" aria-hidden="true">
                         <path d="M4 5h16v11H8l-4 4z" />
@@ -420,21 +449,18 @@ export function HeroTableau() {
                     </a>
                   </div>
                 </div>
-                {/* Ordinateur : le formulaire, centré dans la hauteur, à droite du tableau. */}
-                <div ref={formRef} className="hidden lg:col-start-3 lg:flex lg:flex-col lg:justify-center">
-                  {!formEnBas && <LeadForm variante="hero" />}
+                {/* Le formulaire, dès l'écran 1 : sous le titre au téléphone et à la tablette, à droite
+                    du tableau sur ordinateur, centré dans la hauteur. */}
+                <div id="formulaire" ref={formRef} className="mx-auto mt-5 w-full max-w-md scroll-mt-20 px-4 sm:px-8 md:mt-7 lg:col-start-3 lg:row-start-1 lg:mt-0 lg:flex lg:max-w-none lg:flex-col lg:justify-center lg:px-0">
+                  <LeadForm ecran1 idPrefix="hero-" />
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Téléphone et tablette : le formulaire après la séquence. */}
-        <div id="formulaire" className="scroll-mt-20 bg-dark px-5 pb-12 pt-8 sm:px-8 lg:hidden">
-          <div className="mx-auto w-full max-w-md">{formEnBas && <LeadForm variante="hero" />}</div>
-        </div>
       </section>
-      {mode === 'repli' && <MurFixe />}
+      {mode === 'repli' && !annule && <MurFixe />}
     </>
   )
 }
