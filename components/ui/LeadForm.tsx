@@ -348,7 +348,7 @@ export function LeadForm({ ecran1 = false, idPrefix = 'devis-' }: LeadFormProps)
       <h3 ref={titreRef} tabIndex={-1} className="mt-4 font-display text-[1.3rem] [@media(max-height:620px)]:mt-3 font-semibold tracking-tight text-white outline-none sm:mt-5 sm:text-[1.55rem]">
         {TITRES[etape].titre}
       </h3>
-      <p className="mt-1 whitespace-nowrap text-[13.5px] text-white/75">{TITRES[etape].aide}</p>
+      <p className="mt-1 text-balance text-[13.5px] text-white/75">{TITRES[etape].aide}</p>
 
       {/* ── Étape 1 : la prestation, un clic avance ─────────────────────── */}
       {etape === 1 && (
@@ -491,7 +491,7 @@ export function LeadForm({ ecran1 = false, idPrefix = 'devis-' }: LeadFormProps)
             </p>
           )}
           {!commune && propositions.length > 0 && (
-            <div className="mt-2 flex w-0 min-w-full gap-1.5 overflow-x-auto pb-1" role="group" aria-label="Votre commune">
+            <div className="mt-2 flex flex-wrap justify-center gap-1.5 lg:justify-start" role="group" aria-label="Votre commune">
               {propositions.map((p) => (
                 <button
                   key={p}
@@ -500,7 +500,7 @@ export function LeadForm({ ecran1 = false, idPrefix = 'devis-' }: LeadFormProps)
                     setCommune(`${p} ${lieu}`)
                     setPropositions([])
                   }}
-                  className="shrink-0 whitespace-nowrap rounded-[4px] border border-white/20 bg-white/[0.06] px-2.5 py-1.5 text-[13px] font-semibold text-white hover:border-accent"
+                  className="whitespace-nowrap rounded-[4px] border border-white/20 bg-white/[0.06] px-2.5 py-1.5 text-[13px] font-semibold text-white hover:border-accent"
                 >
                   {p}
                 </button>
