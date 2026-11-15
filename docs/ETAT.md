@@ -1,12 +1,31 @@
 # ETAT.md — Journal de bord SOS Électricien Annecy
 
 > Mémoire du projet. Chaque session lit ce fichier en arrivant et le met à jour avant de finir.
-> Dernière mise à jour : 2026-11-15 (page Meythet, section ci-dessous). Précédente : 2026-11-06 (articles à 7 par semaine). Précédente : 2026-10-11 (mise à jour scrollytelling en ligne, main 4a22932). Avant : 2026-09-26 (bloc 1 fond bleu, 09 en service). Historique : 2026-07-26 (session Builder, les 68 covers de la vague Autoblog sont
+> Dernière mise à jour : 2026-11-15 soir (formulaire court + 3 pages de communes, en ligne). Précédente : 2026-11-15 (page Meythet). Précédente : 2026-11-06 (articles à 7 par semaine). Précédente : 2026-10-11 (mise à jour scrollytelling en ligne, main 4a22932). Avant : 2026-09-26 (bloc 1 fond bleu, 09 en service). Historique : 2026-07-26 (session Builder, les 68 covers de la vague Autoblog sont
 > générées et livrées dans public/conseils/, détail en §3vicies. Les 79 articles du site,
 > publiés et en file, ont désormais tous leur image. Reste : contrôle CEO puis commit groupé
 > drafts + covers).
 
 ---
+
+## 15/11/2026 soir (CEO Opus 5.5) : FORMULAIRE COURT + 3 PAGES DE COMMUNES, EN LIGNE (kickoff `../tasks/KICKOFF-formulaire-court-sos-electricien-annecy-16-11.md`)
+
+**Mise en ligne : 15/11/2026, GO de Rémy (« Oui met en ligne stp »), main c1b5e6f (fast-forward depuis d7144e9).**
+**Formulaire court (#R84)** : 3 étapes partout (accueil haut et bas, contact, prestations, communes, tarifs) : projet au clic
+(4 prestations en 2 x 2), urgence au clic, puis Nom | Prénom, Téléphone | Code postal (commune trouvée) et Précisions
+facultatif. Envoi INCHANGÉ : clés `probleme, ville, urgence, nom, telephone, email, message, company`, objet du mail, piège à
+robots, marqueurs du compteur. Formulaire touché = animation du bloc 1 annulée. Aperçu sans envoi (`VERCEL_ENV=preview`).
+**Titres** : Cran-Gevrier « Électricien à Cran-Gevrier : dépannage et remise aux normes » (avant 15 / 10,9 / 19,3) ;
+Seynod « Électricien Seynod : remise aux normes, dépannage électrique » (avant 8,2 / 25,2 / 44,6) ; Épagny Metz-Tessy
+« Épagny Metz-Tessy : électricien et dépannage électrique » (« dépannage électrique à epagny metz-tessy » 14,8, 37 vues) ;
+Meythet reformulé « Remise aux normes à Meythet (74960) avec votre électricien » (le métier manquait). Liens ajoutés depuis
+les articles vers les 3 pages. À remesurer le 14/12/2026.
+**Preuves** : curl www des 6 titres OK, 200, pas de noindex, /api/contact `envoi:true` en production ; essai du formulaire
+sur l'aperçu « OK : formulaire en 3 étapes sur toutes les pages et tailles, corps conforme » (rien envoyé) ; footprint
+rapide c1b5e6f CODE 0 ; check-texte et navigation OK ; audit-design : 1 défaut ancien (aplat de la photo du bloc 1, non
+touchée) ; check-fin-de-site CODE 1 = Resend sans trace (accepté, test du portefeuille) + Rank OS en cours de
+déploiement. Rank OS cockpit fa483a853 : `formulaireCourtLe` 2026-11-15, compteur et mesure du 14/11 vérifiés, entrée
+`travaux`. Aucune tâche Rank OS ne portait ce chantier ; aucune page à indexer.
 
 ## 15/11/2026 (CEO Opus 5.5) : PAGE PRESQUE EN TÊTE, MEYTHET (kickoff portefeuille 14-15/11)
 
