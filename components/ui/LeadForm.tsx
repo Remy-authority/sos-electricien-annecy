@@ -164,11 +164,11 @@ const CSS_FORM = `
 
 /* Classes écrites en entier (jamais assemblées par variable, Tailwind les lit dans ce fichier). */
 const TUILE_FORME =
-  'flex min-h-[68px] w-full flex-col items-center justify-center gap-1.5 rounded-[4px] border px-1.5 py-2.5 transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:min-h-[88px] sm:gap-2.5 sm:px-2 sm:py-4 lg:items-start lg:px-4'
+  'flex min-h-[68px] [@media(max-height:620px)]:min-h-[58px] w-full flex-col items-center justify-center gap-1.5 rounded-[4px] border px-1.5 py-2.5 transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:min-h-[88px] sm:gap-2.5 sm:px-2 sm:py-4 lg:items-start lg:px-4'
 const TUILE_LIBRE =
   'border-white/15 bg-primary text-white [@media(hover:hover)]:hover:border-accent [@media(hover:hover)]:hover:bg-primary-dark'
 const TUILE_CHOISIE = 'border-accent bg-accent text-dark'
-const LIBELLE = 'whitespace-nowrap font-semibold leading-tight text-[clamp(12px,3.7vw,14.5px)]'
+const LIBELLE = 'text-balance text-center font-semibold leading-tight text-[13px] sm:text-[14.5px] lg:text-left'
 const ETIQUETTE = 'mb-1.5 block text-[13px] font-semibold text-white/90'
 const CHAMP =
   'w-full rounded-[4px] border bg-white/[0.07] px-3 py-2.5 text-[16px] text-white transition focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/30'
@@ -310,7 +310,7 @@ export function LeadForm({ ecran1 = false, idPrefix = 'devis-' }: LeadFormProps)
       data-anime=""
       role="region"
       aria-label="Formulaire de devis gratuit"
-      className={`scroll-mb-20 scroll-mt-24 rounded-[4px] border p-5 text-center text-white shadow-[0_30px_70px_-30px_rgb(0_0_0/0.8)] transition-colors duration-300 sm:p-7 lg:text-left ${carte}`}
+      className={`scroll-mb-20 scroll-mt-24 rounded-[4px] border p-5 text-center text-white shadow-[0_30px_70px_-30px_rgb(0_0_0/0.8)] transition-colors duration-300 [@media(max-height:620px)]:p-4 sm:p-7 lg:text-left ${carte}`}
     >
       <style>{CSS_FORM}</style>
       {/* Piège à robots, toujours vide */}
@@ -345,14 +345,14 @@ export function LeadForm({ ecran1 = false, idPrefix = 'devis-' }: LeadFormProps)
         <span className="shrink-0 text-[11.5px] font-bold uppercase tracking-[0.14em] text-white/65">Étape {etape}/3</span>
       </div>
 
-      <h3 ref={titreRef} tabIndex={-1} className="mt-4 font-display text-[1.3rem] font-semibold tracking-tight text-white outline-none sm:mt-5 sm:text-[1.55rem]">
+      <h3 ref={titreRef} tabIndex={-1} className="mt-4 font-display text-[1.3rem] [@media(max-height:620px)]:mt-3 font-semibold tracking-tight text-white outline-none sm:mt-5 sm:text-[1.55rem]">
         {TITRES[etape].titre}
       </h3>
       <p className="mt-1 whitespace-nowrap text-[13.5px] text-white/75">{TITRES[etape].aide}</p>
 
       {/* ── Étape 1 : la prestation, un clic avance ─────────────────────── */}
       {etape === 1 && (
-        <div className="mt-4 grid grid-cols-2 gap-2 sm:mt-5 sm:gap-2.5">
+        <div className="mt-4 grid grid-cols-2 gap-2 [@media(max-height:620px)]:mt-3 sm:mt-5 sm:gap-2.5">
           {PROJETS.map(({ id: valeur, label, Icon }) => {
             const choisi = projet === valeur
             return (
@@ -379,7 +379,7 @@ export function LeadForm({ ecran1 = false, idPrefix = 'devis-' }: LeadFormProps)
 
       {/* ── Étape 2 : quand, un clic avance (la 3e case prend toute la ligne) ── */}
       {etape === 2 && (
-        <div className="mt-4 grid grid-cols-2 gap-2 sm:mt-5 sm:gap-2.5">
+        <div className="mt-4 grid grid-cols-2 gap-2 [@media(max-height:620px)]:mt-3 sm:mt-5 sm:gap-2.5">
           {QUAND.map(({ valeur, Icon }, i) => {
             const choisi = urgence === valeur
             return (

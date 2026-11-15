@@ -421,8 +421,8 @@ export function HeroTableau() {
                       à <span className="text-accent">{siteConfig.city}</span>
                     </span>
                   </h1>
-                  <p className="mt-3 max-w-[19.5rem] text-[15px] leading-relaxed text-white/90 [text-shadow:0_1px_10px_rgb(0_0_0/0.55)] sm:max-w-md sm:text-base lg:mt-5 lg:max-w-[26rem] lg:text-[17.5px]">
-                    Panne de courant, disjoncteur qui saute ou tableau à refaire. Nous trouvons l'origine avant de réparer.
+                  <p className="mt-3 max-w-[21rem] text-[15px] leading-relaxed text-white/90 [text-shadow:0_1px_10px_rgb(0_0_0/0.55)] sm:max-w-md sm:text-base lg:mt-5 lg:max-w-[26rem] lg:text-[17.5px]">
+                    Panne, disjoncteur qui saute, tableau à refaire : nous trouvons la cause.
                   </p>
                   <div className="mt-6 hidden justify-center gap-2.5 md:flex lg:mt-8">
                     <a
@@ -451,7 +451,7 @@ export function HeroTableau() {
                 </div>
                 {/* Le formulaire, dès l'écran 1 : sous le titre au téléphone et à la tablette, à droite
                     du tableau sur ordinateur, centré dans la hauteur. */}
-                <div id="formulaire" ref={formRef} className="mx-auto mt-5 w-full max-w-md scroll-mt-20 px-4 sm:px-8 md:mt-7 lg:col-start-3 lg:row-start-1 lg:mt-0 lg:flex lg:max-w-none lg:flex-col lg:justify-center lg:px-0">
+                <div id="formulaire" ref={formRef} className="mx-auto mt-5 w-full max-w-md scroll-mt-20 [@media(max-height:620px)]:mt-3 px-4 sm:px-8 md:mt-7 lg:col-start-3 lg:row-start-1 lg:mt-0 lg:flex lg:max-w-none lg:flex-col lg:justify-center lg:px-0">
                   <LeadForm ecran1 idPrefix="hero-" />
                 </div>
               </div>
