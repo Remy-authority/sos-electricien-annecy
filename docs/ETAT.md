@@ -1,10 +1,30 @@
 # ETAT.md — Journal de bord SOS Électricien Annecy
 
 > Mémoire du projet. Chaque session lit ce fichier en arrivant et le met à jour avant de finir.
-> Dernière mise à jour : 2026-11-15 soir (formulaire court + 3 pages de communes, en ligne). Précédente : 2026-11-15 (page Meythet). Précédente : 2026-11-06 (articles à 7 par semaine). Précédente : 2026-10-11 (mise à jour scrollytelling en ligne, main 4a22932). Avant : 2026-09-26 (bloc 1 fond bleu, 09 en service). Historique : 2026-07-26 (session Builder, les 68 covers de la vague Autoblog sont
+> Dernière mise à jour : 2026-11-23 (atelier affiché, en ligne). Précédente : 2026-11-15 soir (formulaire court + 3 pages de communes, en ligne). Avant : 2026-11-15 (page Meythet). Précédente : 2026-11-06 (articles à 7 par semaine). Précédente : 2026-10-11 (mise à jour scrollytelling en ligne, main 4a22932). Avant : 2026-09-26 (bloc 1 fond bleu, 09 en service). Historique : 2026-07-26 (session Builder, les 68 covers de la vague Autoblog sont
 > générées et livrées dans public/conseils/, détail en §3vicies. Les 79 articles du site,
 > publiés et en file, ont désormais tous leur image. Reste : contrôle CEO puis commit groupé
 > drafts + covers).
+
+---
+
+## 22-23/11/2026 (CEO Opus 5.5) : ATELIER AFFICHÉ, PETITE RETOUCHE (kickoff portefeuille 22/11, sans sous-agent)
+
+**But** : montrer la rue de l'atelier de l'entreprise pour la confiance. Source : registre des entreprises (établissement
+actif, chemin des Contamines, Pringy), coordonnées api-adresse 45.946962 / 6.115586. Pas de fiche Google = aucune note.
+**Réglage unique** : `atelier` dans `config/site.config.ts` (rue, ville, lat, lon, note null, avis null, releveLe).
+Vide (`ATELIER = null`) = rien nulle part. Jamais le numéro, jamais le nom, jamais dans les données structurées.
+**Code** : `components/ui/Atelier.tsx` (repris de sos-chauffage-reims.fr, aux couleurs du site ; seuils de note 4,5 et
+15 avis contrôlés dans le code ; `NoteBloc1` prêt mais NON posé au bloc 1). Carte : point ambre qui pulse (figé si
+mouvement réduit) et étiquette « Notre atelier / chemin des Contamines » sous le point, « Épagny Metz-Tessy » décalé de
+14 vers la gauche (touchait le point au téléphone). La carte dessinée (`CarteAnnecyDessin`) remplace les pastilles de
+/zones, avec légende ; intitulé et département gardés ; lien de /zones vers /zones retiré. Contact : 5e case pleine
+largeur. Pied de page : une ligne au téléphone, deux sur ordinateur, colonnes alignées. Pages de communes : schéma sans
+échelle, donc pas de point.
+**Contrôles (commit b8115fc)** : build 103 pages ; audit-design 1 défaut ancien (aplat du bloc 1, identique en
+production, photo gardée par Rémy le 11/10) ; footprint rapide code 2 « aucun texte changé » (étiquettes de moins de
+9 mots, rien à mesurer) ; mots visibles comparés à la production sur 5 pages : rien de perdu sauf « Voir toutes »
+(lien de /zones vers elle-même). Aucune page à indexer.
 
 ---
 

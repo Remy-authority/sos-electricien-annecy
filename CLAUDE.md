@@ -100,3 +100,9 @@
   « devis électricien » 390. Mesure brute : `../tasks/.maj-annecy/volumes-25-09.txt`.
 - Téléphone (Rémy 25/09/2026) : le faux 04 65 71 00 74 (DEMO) est remplacé par le 09 39 20 03 38,
   repris de toiture-beauvais.fr (stock Twilio de 09 vide ce jour-là).
+
+---
+
+## 7. ATELIER DE L'ENTREPRISE
+
+- Atelier affiché (Rémy 22/11/2026) : si le partenaire part, vider `atelier` dans `config/site.config.ts` le jour même. Note Google relue à chaque mise à jour : sous 4,5 ou sous 15 avis, elle se retire.
