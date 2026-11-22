@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { siteConfig } from '@/config/site.config'
 import { getServices, getZones } from '@/lib/content'
 import Logo from '@/components/ui/Logo'
+import { atelier, texteAdresse, RepereAtelier, NoteGoogle } from '@/components/ui/Atelier'
 
 export default function Footer() {
   const services = getServices()
@@ -41,6 +42,21 @@ export default function Footer() {
               {siteConfig.email}
             </a>
           </p>
+          {/* Atelier de l'entreprise et note Google (Rémy 22/11/2026) : réglage `atelier`, vide = rien.
+              Téléphone : une ligne centrée ; ordinateur : deux lignes sous l'email. */}
+          {atelier && (
+            <p className="mt-2 flex items-start justify-center gap-2 text-sm text-slate-300 lg:justify-start">
+              <RepereAtelier className="mt-[1px] h-[17px] w-[14px] shrink-0 text-accent" />
+              <span className="flex flex-wrap justify-center gap-x-1 text-left lg:flex-col lg:justify-start">
+                <span>
+                  {atelier.libelle}
+                  <span className="lg:hidden"> ·</span>
+                </span>
+                <span>{texteAdresse()}</span>
+              </span>
+            </p>
+          )}
+          <NoteGoogle className="mt-2 text-sm text-slate-300" />
           <ul className="mt-4 hidden flex-wrap gap-1 lg:flex" role="list" aria-label="Engagements">
             {siteConfig.usps.map((u) => (
               <li key={u} className="rounded-[3px] bg-white/5 px-2 py-0.5 text-xs">{u}</li>

@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import { siteConfig } from '@/config/site.config'
 import { getZones } from '@/lib/content'
+import { CarteAnnecyDessin } from '@/components/sections/CarteAnnecy'
 
 const REASSURANCE_CARDS = [
   {
@@ -51,85 +51,17 @@ export default function ServiceAreaMap() {
         {/* Grille 2 colonnes */}
         <div className="grid gap-6 lg:grid-cols-[3fr_2fr] lg:items-start">
 
-          {/* Carte sombre premium, villes et quartiers */}
-          <div className="texture-noise relative overflow-hidden rounded-card border border-white/10 bg-dark p-7 shadow-card-hover md:p-8">
-            {/* Motif grille + halo : profondeur de la carte sombre */}
-            <div className="pointer-events-none absolute inset-0 pattern-grid" aria-hidden="true" />
-            <div
-              className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-primary/25 blur-3xl"
-              aria-hidden="true"
-            />
-            {/* Contenu au-dessus des calques décoratifs (motif + halo) */}
-            <div className="relative">
-            {/* Label département */}
-            <div className="mb-3 flex items-center gap-2">
-              <svg
-                className="h-4 w-4 text-accent"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                aria-hidden="true"
-              >
-                <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-              <span className="text-xs font-semibold uppercase tracking-[2px] text-slate-400">
-                {siteConfig.region} · {siteConfig.department}
-              </span>
-            </div>
-
-            <h3 className="text-xl font-bold text-white">Communes et quartiers desservis</h3>
-
-            {/* Pastilles villes, communes vague 1 (liées) */}
-            <ul
-              className="mt-5 flex flex-wrap gap-2"
-              role="list"
-              aria-label="Communes avec page dédiée"
-            >
-              {/* Annecy en premier, ville principale */}
-              <li>
-                <span className="inline-flex items-center gap-1.5 rounded-[3px] border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-white">
-                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" />
-                  {siteConfig.city}
-                </span>
-              </li>
-              {zones.map((z) => (
-                <li key={z.slug}>
-                  <Link
-                    href={`/zones/${z.slug}`}
-                    className="inline-flex items-center gap-1.5 rounded-[3px] border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-slate-300 transition hover:border-accent/40 hover:bg-accent/10 hover:text-white"
-                  >
-                    <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent/70" aria-hidden="true" />
-                    {z.name}
-                  </Link>
-                </li>
-              ))}
-              {/* Quartiers d'Annecy, chips secondaires non liés (mais bien lisibles) */}
-              {siteConfig.serviceArea.districts.map((d) => (
-                <li key={d}>
-                  <span className="inline-flex items-center gap-1.5 rounded-[3px] border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-slate-200">
-                    <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent/70" aria-hidden="true" />
-                    {d}
-                  </span>
-                </li>
-              ))}
-            </ul>
-
-            {/* Appel à l'action secondaire */}
-            <p className="mt-6 text-sm text-slate-400">
+          {/* Carte dessinée du bassin annécien (Rémy 22/11/2026), la même qu'à l'accueil, avec le point
+              de l'atelier et sa légende. Les communes ont leurs cartes au-dessus ; les quartiers
+              d'Annecy restent écrits sous la carte. */}
+          <div className="rounded-card bg-primary-dark p-4 text-slate-300 shadow-card-hover sm:p-6">
+            <CarteAnnecyDessin zones={zones} className="mx-auto w-full max-w-[540px]" />
+            <p className="mt-4 text-balance text-center text-sm text-slate-300">
+              Et tous les quartiers d'{siteConfig.city} : {siteConfig.serviceArea.districts.join(', ')}.
+            </p>
+            <p className="mt-2 text-balance text-center text-sm text-slate-400">
               Votre commune manque à la liste ? Donnez-nous l'adresse au téléphone et nous regardons la route ensemble.
             </p>
-            <Link
-              href="/zones"
-              className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-accent hover:text-accent/80"
-            >
-              Voir toutes nos zones
-              <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </Link>
-            </div>
           </div>
 
           {/* Colonne droite : cartes réassurance + CTA orange */}

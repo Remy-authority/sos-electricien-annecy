@@ -19,6 +19,37 @@
 
 export type SiteConfig = typeof siteConfig
 
+/**
+ * Atelier de l'entreprise qui fait le travail (Rémy, 22/11/2026) : la RUE, jamais le numéro,
+ * jamais le nom de l'entreprise. Source : registre des entreprises (établissement actif, Pringy,
+ * commune déléguée d'Annecy), relu le 22/11/2026 ; aucune fiche Google trouvée.
+ * - `lat`/`lon` : centre de la rue (adresse.data.gouv.fr, sans numéro), pour le point de la carte.
+ * - `note`/`avis` : note Google, affichée SEULEMENT si le partenaire paie, note ≥ 4,5 ET ≥ 15 avis ;
+ *   sinon `null`. Relue à chaque mise à jour du site (`releveLe`).
+ * Le partenaire part : `ATELIER = null`, le jour même (#R75). Plus rien ne s'affiche nulle part.
+ * Jamais dans les données structurées (ni address, ni aggregateRating).
+ */
+type Atelier = {
+  libelle: string
+  rue: string
+  ville: string
+  lat: number
+  lon: number
+  note: number | null
+  avis: number | null
+  releveLe: string
+}
+const ATELIER: Atelier | null = {
+  libelle: 'Notre atelier',
+  rue: 'chemin des Contamines',
+  ville: 'Pringy',
+  lat: 45.946962,
+  lon: 6.115586,
+  note: null,
+  avis: null,
+  releveLe: '2026-11-22',
+}
+
 export const siteConfig = {
   /* ── Identité commerciale (louable / remplaçable par l'artisan locataire) ── */
   businessName: 'SOS Électricien Annecy',
@@ -75,6 +106,9 @@ export const siteConfig = {
     // §3), donc ne figurent plus ici pour éviter le doublon zone-page / district-chip.
     districts: ['Centre-ville', 'Vieille Ville', 'Novel', 'Teppes', 'Les Romains'],
   },
+
+  /* ── Atelier de l'entreprise (carte des zones, contact, pied de page ; jamais au bloc 1) ── */
+  atelier: ATELIER,
 
   /* ── Leads / formulaire ── */
   // Endpoint de soumission. Vide => l'API interne /api/contact gère le fallback

@@ -6,6 +6,7 @@ import { getServices, getZones } from '@/lib/content'
 import LeadForm from '@/components/ui/LeadForm'
 import Faq from '@/components/ui/Faq'
 import { ServiceIcon } from '@/components/ui/ServiceIcon'
+import { atelier, texteAdresse, NoteGoogle } from '@/components/ui/Atelier'
 
 // Mise à jour du 25/09/2026 : title 50 caractères, description 145 (comptés au script).
 export const metadata: Metadata = buildMetadata({
@@ -84,6 +85,15 @@ export default function ContactPage() {
               <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Zone</dt>
               <dd className="mt-1">{siteConfig.serviceArea.base} + rayon ~{siteConfig.serviceArea.radiusKm} km</dd>
             </div>
+            {/* Atelier de l'entreprise (Rémy 22/11/2026) : réglage `atelier`, vide = rien. Cinquième
+                case : pleine largeur, jamais de case orpheline. */}
+            {atelier && (
+              <div className="col-span-2">
+                <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">{atelier.libelle}</dt>
+                <dd className="mt-1">{texteAdresse()}</dd>
+                <NoteGoogle className="mt-1.5 text-slate-700" />
+              </div>
+            )}
           </dl>
         </div>
       </section>
