@@ -55,6 +55,11 @@ export default function ServiceAreaMap() {
               de l'atelier et sa légende. Les communes ont leurs cartes au-dessus ; les quartiers
               d'Annecy restent écrits sous la carte. */}
           <div className="rounded-card bg-primary-dark p-4 text-slate-300 shadow-card-hover sm:p-6">
+            {/* Intitulé et département gardés de l'ancienne carte : aucun texte ne disparaît (#R68). */}
+            <p className="text-center text-xs font-semibold uppercase tracking-[2px] text-slate-400">
+              {siteConfig.region} · {siteConfig.department}
+            </p>
+            <h3 className="mb-3 mt-1 text-center text-xl font-bold text-white">Communes et quartiers desservis</h3>
             <CarteAnnecyDessin zones={zones} className="mx-auto w-full max-w-[540px]" />
             <p className="mt-4 text-balance text-center text-sm text-slate-300">
               Et tous les quartiers d'{siteConfig.city} : {siteConfig.serviceArea.districts.join(', ')}.
